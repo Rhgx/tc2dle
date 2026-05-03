@@ -92,16 +92,42 @@ export default function App() {
           <WeaponGame weapons={weapons} status={status} />
           <Box component="footer" sx={{ mt: 2.25, textAlign: "center", color: "text.secondary" }}>
             <Box
+              component="p"
               sx={{
-                display: "flex",
+                m: 0,
+                color: "text.secondary",
+                display: "inline-grid",
+                gridTemplateColumns: "auto 1.2ch auto",
                 alignItems: "center",
                 justifyContent: "center",
-                flexWrap: "wrap",
-                gap: { xs: 0.75, sm: 1.25 },
+                whiteSpace: "nowrap",
+                fontSize: { xs: "clamp(7px, 2.45vw, 11px)", sm: 12 },
+                fontWeight: 800,
+                lineHeight: 1.35,
+                maxWidth: "100%",
               }}
             >
               <ResetCountdown />
-              <Box component="span" aria-hidden="true" sx={{ color: "rgba(255,255,255,0.28)", fontWeight: 800 }}>•</Box>
+              <Box
+                component="span"
+                aria-hidden="true"
+                sx={{
+                  width: "1.2ch",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Box
+                  component="span"
+                  sx={{
+                    width: "0.32em",
+                    height: "0.32em",
+                    borderRadius: "50%",
+                    bgcolor: "rgba(255,255,255,0.32)",
+                  }}
+                />
+              </Box>
               <YesterdayAnswer weapons={weapons} />
             </Box>
             <Typography variant="caption" color="text.secondary" sx={{ display: "block", mt: 0.5 }}>

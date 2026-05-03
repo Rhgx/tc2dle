@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { useMemo } from "react";
 import { pickYesterday } from "../lib/hash";
 import type { Weapon } from "../types";
@@ -12,12 +12,8 @@ export function YesterdayAnswer({ weapons }: YesterdayAnswerProps) {
   if (!answer) return null;
 
   return (
-    <Typography
-      variant="caption"
-      color="text.secondary"
-      sx={{ fontWeight: 800 }}
-    >
+    <Box component="span">
       Yesterday&apos;s answer: <Box component="span" sx={{ color: "text.primary", fontWeight: 900 }}>{answer.name}</Box>
-    </Typography>
+    </Box>
   );
 }
