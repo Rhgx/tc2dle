@@ -1,9 +1,10 @@
 import { Box, Typography } from "@mui/material";
+import type { ResponsiveStyleValue } from "@mui/system";
 import type { Weapon } from "../types";
 
 type WeaponIconProps = {
   weapon?: Weapon;
-  size?: number;
+  size?: ResponsiveStyleValue<number | string>;
   bare?: boolean;
 };
 
@@ -35,7 +36,7 @@ export function WeaponIcon({ weapon, size = 44, bare = false }: WeaponIconProps)
           sx={{ width: "100%", height: "100%", objectFit: "contain", imageRendering: "auto", pointerEvents: "none", userSelect: "none" }}
         />
       ) : (
-        <Typography sx={{ fontWeight: 900, color: "primary.main", fontSize: size > 48 ? 28 : 18 }}>
+        <Typography sx={{ fontWeight: 900, color: "primary.main", fontSize: 22 }}>
           {weapon?.name?.slice(0, 1) || "?"}
         </Typography>
       )}

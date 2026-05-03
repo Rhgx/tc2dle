@@ -16,8 +16,8 @@ export function GuessGrid({ guesses, target }: GuessGridProps) {
   const arrow = (status: ComparisonStatus) => (status === "higher" ? " ↑" : status === "lower" ? " ↓" : "");
 
   return (
-    <Stack spacing={1}>
-      <Box sx={{ display: { xs: "none", md: "grid" }, gap: 0.75, gridTemplateColumns: columns }}>
+    <Stack spacing={{ xs: 1, lg: 1.35 }}>
+      <Box sx={{ display: { xs: "none", md: "grid" }, gap: { md: 0.75, lg: 1 }, gridTemplateColumns: columns }}>
         <HeaderCell>Image</HeaderCell>
         <HeaderCell>Class</HeaderCell>
         <HeaderCell>Slot</HeaderCell>
@@ -41,9 +41,9 @@ export function GuessGrid({ guesses, target }: GuessGridProps) {
 
           return (
             <Box key={entry.id}>
-              <Box sx={{ display: { xs: "none", md: "grid" }, gap: 0.75, gridTemplateColumns: columns }}>
+              <Box sx={{ display: { xs: "none", md: "grid" }, gap: { md: 0.75, lg: 1 }, gridTemplateColumns: columns }}>
                 <ResultCell status={imageStatus}>
-                  <WeaponIcon weapon={guess} size={82} bare />
+                  <WeaponIcon weapon={guess} size={{ md: 92, lg: 128, xl: 154 }} bare />
                 </ResultCell>
                 <FadeCell visible={stage >= 1} status={result.className}>{guess.className}</FadeCell>
                 <FadeCell visible={stage >= 2} status={result.slot}>{guess.slot}</FadeCell>
