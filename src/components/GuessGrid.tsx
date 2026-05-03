@@ -43,7 +43,7 @@ export function GuessGrid({ guesses, target }: GuessGridProps) {
             <Box key={entry.id}>
               <Box sx={{ display: { xs: "none", md: "grid" }, gap: { md: 0.75, lg: 1 }, gridTemplateColumns: columns }}>
                 <ResultCell status={imageStatus}>
-                  <WeaponIcon weapon={guess} size={{ md: 92, lg: 128, xl: 154 }} bare />
+                  <WeaponIcon weapon={guess} size={{ md: 88, lg: 112, xl: 126 }} bare />
                 </ResultCell>
                 <FadeCell visible={stage >= 1} status={result.className}>{guess.className}</FadeCell>
                 <FadeCell visible={stage >= 2} status={result.slot}>{guess.slot}</FadeCell>

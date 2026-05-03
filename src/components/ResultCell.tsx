@@ -23,7 +23,7 @@ export function ResultCell({ children, status = "neutral", title }: ResultCellPr
           p: { xs: 1, lg: 1.5 },
           borderRadius: 1,
           fontWeight: 900,
-          fontSize: { xs: 12, md: 14, lg: 17, xl: 19 },
+          fontSize: { xs: 12, md: 13, lg: 15, xl: 16 },
           textAlign: "center",
           border: "1px solid rgba(255,255,255,0.14)",
           lineHeight: 1.15,
@@ -60,7 +60,7 @@ export function HiddenCell() {
         bgcolor: "rgba(255,255,255,0.035)",
         color: "rgba(255,255,255,0.18)",
         fontWeight: 900,
-        fontSize: 28,
+        fontSize: { xs: 28, lg: 32 },
       }}
     >
       ?

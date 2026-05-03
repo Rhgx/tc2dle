@@ -66,7 +66,7 @@ export default function App() {
             : {},
         }}
       >
-        <Container maxWidth="xl" sx={{ position: "relative", zIndex: 1, px: { xs: 1.25, sm: 3 } }}>
+        <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1, px: { xs: 1.25, sm: 3 } }}>
           <Header />
           <WeaponGame weapons={weapons} status={status} />
           <Box component="footer" sx={{ mt: 2, textAlign: "center" }}>
