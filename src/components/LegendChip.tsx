@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import type { ComparisonStatus } from "../types";
-import { statusStyles } from "../styles/statusStyles";
+import { getStatusStyles } from "../styles/statusStyles";
 
 type LegendChipProps = {
   label: string;
@@ -10,7 +10,7 @@ type LegendChipProps = {
 export function LegendChip({ label, status }: LegendChipProps) {
   return (
     <Box sx={{ display: "flex", alignItems: "center", gap: { xs: 0.35, sm: 1 }, minWidth: 0, flex: "0 1 auto" }}>
-      <Box sx={{ width: { xs: 10, sm: 14 }, height: { xs: 10, sm: 14 }, borderRadius: "3px", flex: "0 0 auto", ...statusStyles[status] }} />
+      <Box sx={{ width: { xs: 10, sm: 14 }, height: { xs: 10, sm: 14 }, borderRadius: "3px", flex: "0 0 auto", ...getStatusStyles(status, "legend") }} />
       <Typography
         variant="caption"
         color="text.secondary"

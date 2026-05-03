@@ -1,7 +1,7 @@
 import { Box, Tooltip } from "@mui/material";
 import type { PropsWithChildren } from "react";
 import type { ComparisonStatus } from "../types";
-import { statusStyles } from "../styles/statusStyles";
+import { getStatusStyles } from "../styles/statusStyles";
 
 type ResultCellProps = PropsWithChildren<{
   status?: ComparisonStatus;
@@ -30,7 +30,7 @@ export function ResultCell({ children, status = "neutral", title }: ResultCellPr
           overflow: "hidden",
           transition: "background-color 700ms ease, color 700ms ease, border-color 700ms ease, box-shadow 700ms ease",
           willChange: "background-color, color, border-color",
-          ...statusStyles[status],
+          ...getStatusStyles(status, "cell"),
         }}
       >
         {children}

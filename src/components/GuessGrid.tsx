@@ -1,7 +1,7 @@
 import { Box, Paper, Stack, Typography } from "@mui/material";
 import type { PropsWithChildren } from "react";
 import { compareWeapon } from "../lib/compare";
-import { statusStyles } from "../styles/statusStyles";
+import { getStatusStyles } from "../styles/statusStyles";
 import type { ComparisonStatus, GuessEntry, Weapon } from "../types";
 import { FadeCell, HeaderCell, ResultCell } from "./ResultCell";
 import { WeaponIcon } from "./WeaponIcon";
@@ -132,7 +132,7 @@ function MobileValue({ children, status, revealed }: PropsWithChildren<{ status:
         overflowWrap: "anywhere",
         animation: revealed ? "tc2dleFadeIn 420ms ease both" : "none",
         ...(revealed
-          ? statusStyles[status]
+          ? getStatusStyles(status, "cell")
           : {
               bgcolor: "rgba(255,255,255,0.035)",
               color: "rgba(255,255,255,0.18)",
