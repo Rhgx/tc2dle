@@ -12,7 +12,7 @@ export function ResetCountdown() {
 
   return (
     <Typography variant="caption" color="text.secondary" sx={{ display: "block", mt: 0.75, fontWeight: 800 }}>
-      Next TC2DLE reset in {remaining}
+      Next reset in {remaining}
     </Typography>
   );
 }
