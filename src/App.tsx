@@ -35,6 +35,26 @@ export default function App() {
         }}
       />
       <Box
+        component="svg"
+        aria-hidden="true"
+        focusable="false"
+        sx={{ position: "absolute", width: 0, height: 0, overflow: "hidden" }}
+      >
+        <filter id="weapon-alpha-shadow" x="-80%" y="-80%" width="260%" height="260%" colorInterpolationFilters="sRGB">
+          <feComponentTransfer in="SourceAlpha" result="alphaCutoff">
+            <feFuncA type="linear" slope="8" intercept="-0.45" />
+          </feComponentTransfer>
+          <feGaussianBlur in="alphaCutoff" stdDeviation="5" result="shadowBlur" />
+          <feOffset in="shadowBlur" dx="0" dy="8" result="shadowOffset" />
+          <feFlood floodColor="#000000" floodOpacity="0.38" result="shadowColor" />
+          <feComposite in="shadowColor" in2="shadowOffset" operator="in" result="shadow" />
+          <feMerge>
+            <feMergeNode in="shadow" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </Box>
+      <Box
         sx={{
           minHeight: "100vh",
           bgcolor: "background.default",

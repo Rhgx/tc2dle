@@ -20,7 +20,8 @@ export function WeaponIcon({ weapon, size = 44, bare = false }: WeaponIconProps)
         border: bare ? 0 : "1px solid rgba(255,255,255,0.12)",
         display: "grid",
         placeItems: "center",
-        overflow: "hidden",
+        overflow: bare ? "visible" : "hidden",
+        position: "relative",
         flex: "0 0 auto",
       }}
     >
@@ -33,7 +34,15 @@ export function WeaponIcon({ weapon, size = 44, bare = false }: WeaponIconProps)
           onContextMenu={(event) => event.preventDefault()}
           loading="eager"
           decoding="async"
-          sx={{ width: "100%", height: "100%", objectFit: "contain", imageRendering: "auto", pointerEvents: "none", userSelect: "none" }}
+          sx={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+            imageRendering: "auto",
+            pointerEvents: "none",
+            userSelect: "none",
+            filter: "url(#weapon-alpha-shadow)",
+          }}
         />
       ) : (
         <Typography sx={{ fontWeight: 900, color: "primary.main", fontSize: 22 }}>
