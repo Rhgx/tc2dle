@@ -92,7 +92,7 @@ export default function App() {
           <WeaponGame weapons={weapons} status={status} />
           <Box component="footer" sx={{ mt: 2, textAlign: "center" }}>
             <Typography variant="caption" color="text.secondary">
-              Data from <Box component="a" href={WIKI_PAGE_URL} target="_blank" rel="noreferrer" sx={{ color: "primary.main", fontWeight: 800 }}>TC2 Wiki Weapons</Box>.
+              Data from <Box component="a" href={WIKI_PAGE_URL} target="_blank" rel="noreferrer" sx={{ color: "primary.main", fontWeight: 800 }}>TC2 Wiki</Box>
             </Typography>
             <ResetCountdown />
             <YesterdayAnswer weapons={weapons} />
