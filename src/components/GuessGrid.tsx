@@ -22,7 +22,7 @@ export function GuessGrid({ guesses, target }: GuessGridProps) {
         <HeaderCell>Class</HeaderCell>
         <HeaderCell>Slot</HeaderCell>
         <HeaderCell>Source</HeaderCell>
-        <HeaderCell>Cap.</HeaderCell>
+        <HeaderCell>Clip</HeaderCell>
         <HeaderCell>Ammo</HeaderCell>
       </Box>
 
@@ -82,7 +82,7 @@ function MobileGuessCard({ guess, imageStatus, result, stage, arrow }: MobileGue
           <MobileField label="Slot" value={guess.slot} status={result.slot} revealed={stage >= 2} />
           <MobileField label="Source" value={guess.source} status={result.source} revealed={stage >= 3} />
           <Box sx={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 0.75 }}>
-            <MobileField label="Cap." value={`${guess.capacity}${arrow(result.capacity)}`} status={result.capacity} revealed={stage >= 4} />
+            <MobileField label="Clip" value={`${guess.capacity}${arrow(result.capacity)}`} status={result.capacity} revealed={stage >= 4} />
             <MobileField label="Ammo" value={`${guess.ammo}${arrow(result.ammo)}`} status={result.ammo} revealed={stage >= 5} />
           </Box>
         </Box>
