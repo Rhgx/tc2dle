@@ -35,11 +35,11 @@ function setCompare(guessValue: string, targetValue: string, roleAware = false):
   const target = splitValue(targetValue);
   const overlap = guess.filter((item) => target.includes(item));
   if (overlap.length) return "partial";
-  if (roleAware) {
-    const guessRoles = new Set(guess.map((item) => CLASS_ROLES[item]).filter(Boolean));
-    const targetRoles = new Set(target.map((item) => CLASS_ROLES[item]).filter(Boolean));
-    if ([...guessRoles].some((role) => targetRoles.has(role))) return "partial-light";
-  }
+  // if (roleAware) {
+  //   const guessRoles = new Set(guess.map((item) => CLASS_ROLES[item]).filter(Boolean));
+  //   const targetRoles = new Set(target.map((item) => CLASS_ROLES[item]).filter(Boolean));
+  //   if ([...guessRoles].some((role) => targetRoles.has(role))) return "partial-light";
+  // }
   return "wrong";
 }
 

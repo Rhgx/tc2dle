@@ -229,6 +229,7 @@ export function WeaponGame({ weapons, status }: WeaponGameProps) {
         >
           <LegendChip label="Correct" status="correct" />
           <LegendChip label="Partial" status="partial" />
+          {/* <LegendChip label="Same role" status="partial-light" /> */}
           <LegendChip label="Higher" status="higher" />
           <LegendChip label="Lower" status="lower" />
           <LegendChip label="Wrong" status="wrong" />
