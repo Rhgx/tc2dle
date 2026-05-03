@@ -90,12 +90,23 @@ export default function App() {
         <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1, px: { xs: 1.25, sm: 3 } }}>
           <Header />
           <WeaponGame weapons={weapons} status={status} />
-          <Box component="footer" sx={{ mt: 2, textAlign: "center" }}>
-            <Typography variant="caption" color="text.secondary">
-              Data from <Box component="a" href={WIKI_PAGE_URL} target="_blank" rel="noreferrer" sx={{ color: "primary.main", fontWeight: 800 }}>TC2 Wiki</Box>
+          <Box component="footer" sx={{ mt: 2.25, textAlign: "center", color: "text.secondary" }}>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexWrap: "wrap",
+                gap: { xs: 0.75, sm: 1.25 },
+              }}
+            >
+              <ResetCountdown />
+              <Box component="span" aria-hidden="true" sx={{ color: "rgba(255,255,255,0.28)", fontWeight: 800 }}>•</Box>
+              <YesterdayAnswer weapons={weapons} />
+            </Box>
+            <Typography variant="caption" color="text.secondary" sx={{ display: "block", mt: 0.5 }}>
+              Made by Rocks • Data from the <Box component="a" href={WIKI_PAGE_URL} target="_blank" rel="noreferrer" sx={{ color: "primary.main", fontWeight: 800 }}>TC2 Wiki</Box>
             </Typography>
-            <ResetCountdown />
-            <YesterdayAnswer weapons={weapons} />
           </Box>
         </Container>
       </Box>

@@ -15,7 +15,7 @@ export function YesterdayAnswer({ weapons }: YesterdayAnswerProps) {
     <Typography
       variant="caption"
       color="text.secondary"
-      sx={{ display: "block", width: "100%", mt: 1, textAlign: "center", fontWeight: 800 }}
+      sx={{ fontWeight: 800 }}
     >
       Yesterday&apos;s answer: <Box component="span" sx={{ color: "text.primary", fontWeight: 900 }}>{answer.name}</Box>
     </Typography>
