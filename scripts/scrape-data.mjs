@@ -224,6 +224,13 @@ function tableToGrid(table) {
       colIndex += colspan;
     });
 
+    while (spans[colIndex]) {
+      gridRow[colIndex] = spans[colIndex].cell;
+      spans[colIndex].remaining -= 1;
+      if (spans[colIndex].remaining <= 0) spans[colIndex] = null;
+      colIndex += 1;
+    }
+
     grid[rowIndex] = gridRow;
   });
 
@@ -241,14 +248,45 @@ function getCurrentSlotFromHeading(text, currentSlot) {
   return ["Primary", "Secondary", "Melee", "PDA"].find((slot) => heading.includes(slot)) || currentSlot || "Unknown";
 }
 
-function extractNotes(cell) {
+function weaponAttribute(kind, text) {
+  const labels = {
+    positive: "Positive trait",
+    negative: "Negative trait",
+    neutral: "Neutral note",
+    "vs-bosses-positive": "Vs. Bosses benefit",
+    "vs-bosses-negative": "Vs. Bosses drawback",
+  };
+
+  return { kind, label: labels[kind], text };
+}
+
+function extractAttributes(cell) {
   if (!cell) return [];
+  const statBlocks = [...cell.querySelectorAll(".bannedgun, .bosspro, .pro, .con, .note")];
+  if (statBlocks.length) {
+    return statBlocks
+      .map((block) => {
+        const textNode = block.querySelector(".pro-text, .con-text, .note-text") || block;
+        const text = cleanText(textNode.textContent)
+          .replace(/This item always /gi, "Always ")
+          .replace(/Image:/gi, "");
+        if (!text) return null;
+
+        if (block.classList.contains("bannedgun")) return weaponAttribute("vs-bosses-negative", text);
+        if (block.classList.contains("bosspro")) return weaponAttribute("vs-bosses-positive", text);
+        if (block.classList.contains("pro")) return weaponAttribute("positive", text);
+        if (block.classList.contains("con")) return weaponAttribute("negative", text);
+        return weaponAttribute("neutral", text);
+      })
+      .filter(Boolean);
+  }
+
   const text = cellText(cell).replace(/This item always /gi, "Always ").replace(/Image:/gi, "").replace(/\s+/g, " ");
   return text
     .split(/\s*•\s*|(?<=\.)\s+(?=[A-Z+\-0-9])/)
     .map(cleanText)
     .filter((note) => note && note.length > 2)
-    .slice(0, 8);
+    .map((note) => weaponAttribute("neutral", note));
 }
 
 function headerText(cell) {
@@ -264,15 +302,15 @@ function getTableColumnIndexes(grid) {
   const weapon = Math.max(0, findHeader([/^weapon$/, /weapon name/, /^item$/]));
   const capacity = findHeader([/capacity/, /clip/, /magazine/, /loaded/]);
   const ammo = findHeader([/^ammo$/, /reserve/, /ammo carried/, /ammunition/]);
-  let notes = findHeader([/notes?/, /stats?/, /attributes?/, /description/, /information/, /info/, /effects?/]);
+  let attributes = findHeader([/notes?/, /stats?/, /attributes?/, /description/, /information/, /info/, /effects?/]);
 
-  if (notes < 0) notes = headers.findIndex((_, index) => index !== weapon && index !== capacity && index !== ammo);
+  if (attributes < 0) attributes = headers.findIndex((_, index) => index !== weapon && index !== capacity && index !== ammo);
 
   return {
     weapon,
     capacity,
     ammo,
-    notes,
+    attributes,
     dataStart: headerRowIndex >= 0 ? headerRowIndex + 1 : 1,
   };
 }
@@ -285,8 +323,23 @@ function normalizeStatCell(value) {
   return text;
 }
 
-function inferType(name, slot, notes) {
-  const text = `${name} ${slot} ${notes}`.toLowerCase();
+function extractRowAttributes(cells, indexes) {
+  const attributesCell = indexes.attributes >= 0 ? cells[indexes.attributes] : null;
+  const attributes = extractAttributes(attributesCell);
+  if (attributes.length) return attributes;
+
+  const fallbackCell = cells.find((cell, index) => {
+    if (!cell || index === indexes.weapon || index === indexes.capacity || index === indexes.ammo) return false;
+    if (cell.querySelector(".bannedgun, .bosspro, .pro, .con, .note")) return true;
+    const text = cleanText(cell.textContent);
+    return /(^|[.\s])[+\-][0-9]|always|on hit|on kill|alt-fire|wearer|damage|reload|speed/i.test(text);
+  });
+
+  return extractAttributes(fallbackCell);
+}
+
+function inferType(name, slot, attributes) {
+  const text = `${name} ${slot} ${attributes}`.toLowerCase();
   if (/pda|watch|cloak|disguise|sapper|building/.test(text)) return "PDA";
   if (/melee|bat|pan|fists|sword|knife|wrench|saw|axe|shovel|bottle|club|blade|machete|sign|racket|cane/.test(text)) return "Melee";
   if (/lunchbox|cola|milk|drink|consume|sandvich|burger|banana|sneakers|boots|wearer/.test(text)) return "Utility";
@@ -294,6 +347,14 @@ function inferType(name, slot, notes) {
   if (/flame|fire|burn|ignite|afterburn/.test(text)) return "Flame";
   if (/medigun|heal|overheal|supercharge/.test(text)) return "Healing";
   return "Hitscan";
+}
+
+function attributeKey(attribute) {
+  return `${attribute.kind}\u0000${attribute.text}`;
+}
+
+function attributesText(attributes) {
+  return attributes.map((attribute) => `${attribute.label}: ${attribute.text}`).join(" ");
 }
 
 function addSetValue(map, key, value) {
@@ -324,7 +385,7 @@ function dedupeWeapons(rows) {
         sourceSet: new Set(),
         capacitySet: new Set(),
         ammoSet: new Set(),
-        notesSet: new Set(),
+        attributesByKey: new Map(),
         iconUrl: row.iconUrl || "",
       });
     }
@@ -335,7 +396,7 @@ function dedupeWeapons(rows) {
     addSetValue(item, "sourceSet", row.source);
     addSetValue(item, "capacitySet", row.capacity);
     addSetValue(item, "ammoSet", row.ammo);
-    row.notes.forEach((note) => item.notesSet.add(note));
+    row.attributes.forEach((attribute) => item.attributesByKey.set(attributeKey(attribute), attribute));
   });
 
   return [...byName.values()]
@@ -345,7 +406,7 @@ function dedupeWeapons(rows) {
       const sourceSet = [...item.sourceSet];
       const capacitySet = [...item.capacitySet].filter(Boolean);
       const ammoSet = [...item.ammoSet].filter(Boolean);
-      const notes = [...item.notesSet].slice(0, 8);
+      const attributes = [...item.attributesByKey.values()];
       return {
         name: item.name,
         className: classSet.includes("All Classes") ? "All Classes" : classSet.join(" / ") || "Unknown",
@@ -353,9 +414,9 @@ function dedupeWeapons(rows) {
         source: sourceSet.join(" / ") || "Unknown",
         capacity: capacitySet.join(" / ") || "N/A",
         ammo: ammoSet.join(" / ") || "N/A",
-        notes,
+        attributes,
         iconUrl: item.iconUrl || "",
-        type: inferType(item.name, slotSet.join(" "), notes.join(" ")),
+        type: inferType(item.name, slotSet.join(" "), attributesText(attributes)),
       };
     })
     .sort((a, b) => a.name.localeCompare(b.name));
@@ -406,15 +467,13 @@ function parseWeaponsHtml(html) {
 
         const capacityCell = indexes.capacity >= 0 ? cells[indexes.capacity] : null;
         const ammoCell = indexes.ammo >= 0 ? cells[indexes.ammo] : null;
-        const notesCell = indexes.notes >= 0 ? cells[indexes.notes] : null;
-
         parsed.push({
           ...weapon,
           className: currentClass || "Unknown",
           slot: currentSlot || "Unknown",
           capacity: normalizeStatCell(cellText(capacityCell)),
           ammo: normalizeStatCell(cellText(ammoCell)),
-          notes: extractNotes(notesCell),
+          attributes: extractRowAttributes(cells, indexes),
         });
       });
     }

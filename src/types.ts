@@ -1,3 +1,11 @@
+export type WeaponAttributeKind = "positive" | "negative" | "neutral" | "vs-bosses-positive" | "vs-bosses-negative";
+
+export type WeaponAttribute = {
+  kind: WeaponAttributeKind;
+  label: string;
+  text: string;
+};
+
 export type Weapon = {
   name: string;
   className: string;
@@ -6,7 +14,7 @@ export type Weapon = {
   capacity: string;
   ammo: string;
   iconUrl: string;
-  notes: string[];
+  attributes: WeaponAttribute[];
   type: string;
 };
 
