@@ -1,6 +1,6 @@
 import type { Weapon } from "../types";
 
-export const generatedAt = "2026-05-03T12:43:31.144Z";
+export const generatedAt = "2026-05-03T13:28:56.467Z";
 export const weapons: Weapon[] = [
   {
     "name": "50-AE",
@@ -322,7 +322,7 @@ export const weapons: Weapon[] = [
   {
     "name": "Bloxy Award",
     "className": "All Classes",
-    "slot": "Melee / Unknown",
+    "slot": "Melee",
     "source": "Distributed",
     "capacity": "N / A",
     "ammo": "N / A",
@@ -1265,7 +1265,7 @@ export const weapons: Weapon[] = [
   {
     "name": "Frying Pan",
     "className": "All Classes",
-    "slot": "Melee / Unknown",
+    "slot": "Melee",
     "source": "Distributed",
     "capacity": "N / A",
     "ammo": "N / A",
@@ -1358,7 +1358,7 @@ export const weapons: Weapon[] = [
   {
     "name": "Golden Frying Pan",
     "className": "All Classes",
-    "slot": "Melee / Unknown",
+    "slot": "Melee",
     "source": "Distributed",
     "capacity": "N / A",
     "ammo": "N / A",
@@ -2193,7 +2193,7 @@ export const weapons: Weapon[] = [
   {
     "name": "Mod Max",
     "className": "All Classes",
-    "slot": "Melee / Unknown",
+    "slot": "Melee",
     "source": "Battle Pass",
     "capacity": "N / A",
     "ammo": "N / A",
@@ -2283,7 +2283,7 @@ export const weapons: Weapon[] = [
   {
     "name": "Objector",
     "className": "All Classes",
-    "slot": "Melee / Unknown",
+    "slot": "Melee",
     "source": "Shop",
     "capacity": "N / A",
     "ammo": "N / A",

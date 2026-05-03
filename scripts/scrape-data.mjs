@@ -306,6 +306,11 @@ function addSetValue(map, key, value) {
     .forEach((item) => map[key].add(item));
 }
 
+function normalizeSlotSet(slotSet) {
+  const slots = slotSet.filter((slot) => slot && slot !== "Unknown");
+  return slots.length ? slots : slotSet;
+}
+
 function dedupeWeapons(rows) {
   const byName = new Map();
 
@@ -336,7 +341,7 @@ function dedupeWeapons(rows) {
   return [...byName.values()]
     .map((item) => {
       const classSet = [...item.classSet];
-      const slotSet = [...item.slotSet];
+      const slotSet = normalizeSlotSet([...item.slotSet]);
       const sourceSet = [...item.sourceSet];
       const capacitySet = [...item.capacitySet].filter(Boolean);
       const ammoSet = [...item.ammoSet].filter(Boolean);
