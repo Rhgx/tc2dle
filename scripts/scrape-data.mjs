@@ -446,9 +446,9 @@ function parseWeaponsHtml(html) {
       }
       const className = getCurrentClassFromHeading(headingText);
       if (className) {
-        withinWeapons = true;
+        withinWeapons = className !== "Community Only";
         currentClass = className;
-        currentSlot = className === "Community Only" ? "Community" : "Unknown";
+        currentSlot = "Unknown";
       }
     }
 

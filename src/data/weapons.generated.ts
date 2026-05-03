@@ -1,6 +1,6 @@
 import type { Weapon } from "../types";
 
-export const generatedAt = "2026-05-03T14:05:08.370Z";
+export const generatedAt = "2026-05-03T14:27:56.980Z";
 export const weapons: Weapon[] = [
   {
     "name": "50-AE",
@@ -3817,23 +3817,6 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/gutbuster-08d9e392e1.png",
-    "type": "Hitscan"
-  },
-  {
-    "name": "Hand",
-    "className": "Community Only",
-    "slot": "Community",
-    "source": "Community",
-    "capacity": "N / A",
-    "ammo": "N / A",
-    "attributes": [
-      {
-        "kind": "vs-bosses-positive",
-        "label": "Vs. Bosses benefit",
-        "text": "Always crits."
-      }
-    ],
-    "iconUrl": "tc2-assets/weapons/hand-d6d6547ab9.png",
     "type": "Hitscan"
   },
   {

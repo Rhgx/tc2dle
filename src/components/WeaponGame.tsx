@@ -1,4 +1,3 @@
-import confetti from "canvas-confetti";
 import { Alert, Box, Button, CircularProgress, Divider, Paper, Stack, TextField, Typography } from "@mui/material";
 import { useEffect, useMemo, useState } from "react";
 import { fuzzyScore } from "../lib/compare";
@@ -241,7 +240,8 @@ export function WeaponGame({ weapons, status }: WeaponGameProps) {
   );
 }
 
-function celebrateWin() {
+async function celebrateWin() {
+  const { default: confetti } = await import("canvas-confetti");
   confetti({ particleCount: 120, spread: 72, origin: { y: 0.62 }, scalar: 0.95 });
   confetti({ particleCount: 60, spread: 120, origin: { x: 0.2, y: 0.72 }, scalar: 0.8 });
   confetti({ particleCount: 60, spread: 120, origin: { x: 0.8, y: 0.72 }, scalar: 0.8 });
