@@ -1,6 +1,6 @@
 import type { Weapon } from "../types";
 
-export const generatedAt = "2026-05-03T08:14:15.602Z";
+export const generatedAt = "2026-05-03T12:43:31.144Z";
 export const weapons: Weapon[] = [
   {
     "name": "50-AE",
@@ -12,7 +12,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "Always crits."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/e/e0/50-AE.png/revision/latest?cb=20240713101757",
+    "iconUrl": "tc2-assets/weapons/50-ae-dbf003d959.png",
     "type": "Hitscan"
   },
   {
@@ -27,7 +27,7 @@ export const weapons: Weapon[] = [
       "Shoots a pipe grenade projectile with an arcing path that deals 100 damage.",
       "Has a clip of 4 with a 1 second reload for each individual pipe."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/c/c2/Acid_Trader.png/revision/latest?cb=20250209095333",
+    "iconUrl": "tc2-assets/weapons/acid-trader-54696cbcec.png",
     "type": "Projectile"
   },
   {
@@ -47,7 +47,7 @@ export const weapons: Weapon[] = [
       "+20% move speed while cloaked.",
       "On Cloak: remove debuffs."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/3/3c/Afterimage.png/revision/latest?cb=20250209095150",
+    "iconUrl": "tc2-assets/weapons/afterimage-21de5f27a0.png",
     "type": "PDA"
   },
   {
@@ -62,7 +62,7 @@ export const weapons: Weapon[] = [
       "On Kill: A small health pack is dropped.",
       "+50% health from packs on wearer."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/c/ca/Amputator.png/revision/latest?cb=20240713024903",
+    "iconUrl": "tc2-assets/weapons/amputator-d0a066b7ac.png",
     "type": "Melee"
   },
   {
@@ -73,7 +73,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/1/14/Apollo.png/revision/latest?cb=20240713025102",
+    "iconUrl": "tc2-assets/weapons/apollo-3eb5a35a62.png",
     "type": "Hitscan"
   },
   {
@@ -84,7 +84,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/8/89/Armington.png/revision/latest?cb=20240713025315",
+    "iconUrl": "tc2-assets/weapons/armington-bddfb17831.png",
     "type": "Hitscan"
   },
   {
@@ -98,7 +98,7 @@ export const weapons: Weapon[] = [
       "Always crits.",
       "Crit targets under 25% health."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/78/Atomizer.png/revision/latest?cb=20240713070704",
+    "iconUrl": "tc2-assets/weapons/atomizer-08cb3ae724.png",
     "type": "Melee"
   },
   {
@@ -109,7 +109,7 @@ export const weapons: Weapon[] = [
     "capacity": "6",
     "ammo": "32",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/8/87/Avengeance.png/revision/latest?cb=20240714141929",
+    "iconUrl": "tc2-assets/weapons/avengeance-f415a753d0.png",
     "type": "Hitscan"
   },
   {
@@ -120,7 +120,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/6/63/AWSM-SCE.png/revision/latest?cb=20251221031344",
+    "iconUrl": "tc2-assets/weapons/awsm-sce-98ce5d3ab0.png",
     "type": "Hitscan"
   },
   {
@@ -140,7 +140,7 @@ export const weapons: Weapon[] = [
       "20% slower move speed on wearer.",
       "-30% damage penalty."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/e/e5/Baby_Face%27s_Blaster.png/revision/latest?cb=20240713062213",
+    "iconUrl": "tc2-assets/weapons/baby-face-s-blaster-715777317f.png",
     "type": "Utility"
   },
   {
@@ -154,7 +154,7 @@ export const weapons: Weapon[] = [
       "Always crits.",
       "Crit targets under 25% health."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/a/ad/Bat.png/revision/latest?cb=20240401083045",
+    "iconUrl": "tc2-assets/weapons/bat-9703426a92.png",
     "type": "Melee"
   },
   {
@@ -171,7 +171,7 @@ export const weapons: Weapon[] = [
       "Bleed effect is removed after hitting a bleeding target.",
       "Cannot be picked up after being thrown"
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/9/96/Batarang.png/revision/latest?cb=20250209095343",
+    "iconUrl": "tc2-assets/weapons/batarang-1c003a5de6.png",
     "type": "Melee"
   },
   {
@@ -187,7 +187,7 @@ export const weapons: Weapon[] = [
       "Provides a defensive buff that protects nearby team members from crits, incoming sentry damage by 50% and 35% from all other sources.",
       "Rage increases through damage done or taken."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/7e/Battalion%27s_Backup.png/revision/latest?cb=20240713062909",
+    "iconUrl": "tc2-assets/weapons/battalion-s-backup-e40679e83f.png",
     "type": "Melee"
   },
   {
@@ -200,7 +200,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "Always crits."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/c/ca/Battle_Axe.png/revision/latest?cb=20240731102138",
+    "iconUrl": "tc2-assets/weapons/battle-axe-064f68e589.png",
     "type": "Melee"
   },
   {
@@ -217,7 +217,7 @@ export const weapons: Weapon[] = [
       "'Alt-Fire': Share a burrito with a friend! (Small Health Kit)",
       "Can be refilled by picking up a health pack while at full health."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/e/ef/Battle_Burrito.png/revision/latest?cb=20240713063019",
+    "iconUrl": "tc2-assets/weapons/battle-burrito-0d2733b66f.png",
     "type": "Melee"
   },
   {
@@ -228,7 +228,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/a/ad/Big_Bite.png/revision/latest?cb=20240713063219",
+    "iconUrl": "tc2-assets/weapons/big-bite-9269d4a446.png",
     "type": "Hitscan"
   },
   {
@@ -241,7 +241,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "+10% explosive resistance when spun up."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/4/45/Biker%27s_Blitz.png/revision/latest?cb=20240713064252",
+    "iconUrl": "tc2-assets/weapons/biker-s-blitz-fa62c11276.png",
     "type": "Hitscan"
   },
   {
@@ -254,7 +254,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "Always crits."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/2/28/Black_Death.png/revision/latest?cb=20240731104437",
+    "iconUrl": "tc2-assets/weapons/black-death-c94898e9a3.png",
     "type": "Melee"
   },
   {
@@ -272,7 +272,7 @@ export const weapons: Weapon[] = [
       "+20% damage vulnerability while disguised.",
       "20% slower firing speed."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/e/e9/Block-17.png/revision/latest?cb=20240713135734",
+    "iconUrl": "tc2-assets/weapons/block-17-5c35d4247e.png",
     "type": "PDA"
   },
   {
@@ -288,7 +288,7 @@ export const weapons: Weapon[] = [
       "Supercharge will build slower on players that are already healthy.",
       "On full Supercharge: Press 'Alt-Fire' to make you and your patient invincible to all damage for 8 seconds."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/c/cd/Blood_Doctor_render.png/revision/latest?cb=20220419022512",
+    "iconUrl": "tc2-assets/weapons/blood-doctor-b6dba9a03c.png",
     "type": "Flame"
   },
   {
@@ -305,7 +305,7 @@ export const weapons: Weapon[] = [
       "+15% bullet damage resistance on wearer.",
       "'Alt-Fire': Charge towards your enemies and remove debuffs."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/79/Bloody_Blossom.png/revision/latest?cb=20250809223759",
+    "iconUrl": "tc2-assets/weapons/bloody-blossom-64e4a446c3.png",
     "type": "Melee"
   },
   {
@@ -316,7 +316,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/5/54/Bloxaide.png/revision/latest?cb=20240713063917",
+    "iconUrl": "tc2-assets/weapons/bloxaide-32601f7c94.png",
     "type": "Hitscan"
   },
   {
@@ -336,7 +336,7 @@ export const weapons: Weapon[] = [
       "+25% faster weapon switch speed.",
       "+20% faster reload time on shotguns."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/d/d5/Bloxy_Award.png/revision/latest?cb=20240713063936",
+    "iconUrl": "tc2-assets/weapons/bloxy-award-a525216f52.png",
     "type": "Melee"
   },
   {
@@ -354,7 +354,7 @@ export const weapons: Weapon[] = [
       "Damage absorbed will slow you when the effect ends.",
       "+25% more knockback vulnerability under the effects."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/b/bd/Bloxy_Cola.png/revision/latest?cb=20240713063959",
+    "iconUrl": "tc2-assets/weapons/bloxy-cola-d91a082560.png",
     "type": "Utility"
   },
   {
@@ -373,7 +373,7 @@ export const weapons: Weapon[] = [
       "-10% explosion radius.",
       "Blunder'd! Bomb explosions after a cannonball impact will deal mini-crits to impact victims."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/7f/BlunderBrass.png/revision/latest?cb=20250809223812",
+    "iconUrl": "tc2-assets/weapons/blunderbrass-eac99683f3.png",
     "type": "Projectile"
   },
   {
@@ -389,7 +389,7 @@ export const weapons: Weapon[] = [
       "Fires one bullet per shot that does 40 base damage.",
       "This weapon reloads its entire clip at once."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/1/1d/Boonie_Blaster.png/revision/latest?cb=20240713064120",
+    "iconUrl": "tc2-assets/weapons/boonie-blaster-2ac4048681.png",
     "type": "Flame"
   },
   {
@@ -400,7 +400,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/0/07/Bottled_Lemonade.png/revision/latest?cb=20240713064146",
+    "iconUrl": "tc2-assets/weapons/bottled-lemonade-c129c79457.png",
     "type": "Melee"
   },
   {
@@ -415,7 +415,7 @@ export const weapons: Weapon[] = [
       "+20% faster reload time on shotguns.",
       "Increased launch power on thrown lunchbox items."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/3/3b/Boxing_Gloves.png/revision/latest?cb=20240713135802",
+    "iconUrl": "tc2-assets/weapons/boxing-gloves-281c05f89a.png",
     "type": "Melee"
   },
   {
@@ -432,7 +432,7 @@ export const weapons: Weapon[] = [
       "'Alt-Fire': Share a burrito with a friend! (Small Health Kit)",
       "Can be refilled by picking up a health pack while at full health."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/75/Brash_Burger.png/revision/latest?cb=20240713065026",
+    "iconUrl": "tc2-assets/weapons/brash-burger-5278ca034a.png",
     "type": "Utility"
   },
   {
@@ -445,7 +445,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "Always crits."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/b/b7/Broken_Sword.png/revision/latest?cb=20240713064703",
+    "iconUrl": "tc2-assets/weapons/broken-sword-c54ed33948.png",
     "type": "Melee"
   },
   {
@@ -459,7 +459,7 @@ export const weapons: Weapon[] = [
       "Always crits.",
       "Crit targets under 25% health."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/6/63/Brooklyn_Basher.png/revision/latest?cb=20240713064724",
+    "iconUrl": "tc2-assets/weapons/brooklyn-basher-84b20c1121.png",
     "type": "Melee"
   },
   {
@@ -476,7 +476,7 @@ export const weapons: Weapon[] = [
       "Provides an offensive buff that causes nearby team members to do mini-crits and pierce damage resistance effects.",
       "Rage increases through damage done or taken."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/72/Buff_Banner.png/revision/latest?cb=20240713064835",
+    "iconUrl": "tc2-assets/weapons/buff-banner-2eb9ff384e.png",
     "type": "Utility"
   },
   {
@@ -487,7 +487,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/7c/Buffin%27_Blitz.png/revision/latest?cb=20241027033522",
+    "iconUrl": "tc2-assets/weapons/buffin-blitz-dba25e1141.png",
     "type": "Hitscan"
   },
   {
@@ -498,7 +498,7 @@ export const weapons: Weapon[] = [
     "capacity": "6",
     "ammo": "32",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/78/Bullet-stormer.png/revision/latest?cb=20240713064959",
+    "iconUrl": "tc2-assets/weapons/bullet-stormer-15d17c7654.png",
     "type": "Hitscan"
   },
   {
@@ -511,7 +511,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "Always crits."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/7f/Camper%27s_Climber.png/revision/latest?cb=20240713074115",
+    "iconUrl": "tc2-assets/weapons/camper-s-climber-1cb47fc194.png",
     "type": "Melee"
   },
   {
@@ -525,7 +525,7 @@ export const weapons: Weapon[] = [
       "Always crits.",
       "Crit targets under 25% health."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/1/13/Candy_Cane.png/revision/latest?cb=20240713074157",
+    "iconUrl": "tc2-assets/weapons/candy-cane-8eda076994.png",
     "type": "Melee"
   },
   {
@@ -541,7 +541,7 @@ export const weapons: Weapon[] = [
       "+30% explosion damage resistance on wearer.",
       "'Alt-Fire': Charge towards your enemies and remove debuffs."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/c/cb/Chargin%27_Targe.png/revision/latest?cb=20240713074730",
+    "iconUrl": "tc2-assets/weapons/chargin-targe-c7fb68e0d0.png",
     "type": "Utility"
   },
   {
@@ -552,7 +552,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/8/89/Citric_Reaction.png/revision/latest?cb=20240713074809",
+    "iconUrl": "tc2-assets/weapons/citric-reaction-7e48de89ce.png",
     "type": "Hitscan"
   },
   {
@@ -568,7 +568,7 @@ export const weapons: Weapon[] = [
       "Deals 20% less damage under 40 studs and over 120 studs.",
       "Charged kills will gib victims (cosmetic feature)."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/5/57/Classic.png/revision/latest?cb=20240713074828",
+    "iconUrl": "tc2-assets/weapons/classic-71e88f3d5f.png",
     "type": "Flame"
   },
   {
@@ -588,7 +588,7 @@ export const weapons: Weapon[] = [
       "+100% cloak regen rate.",
       "No cloak meter from ammo boxes while cloaked."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/a/a4/Cloak_and_Dagger.png/revision/latest?cb=20240713073719",
+    "iconUrl": "tc2-assets/weapons/cloak-and-dagger-13eb4e7877.png",
     "type": "PDA"
   },
   {
@@ -606,7 +606,7 @@ export const weapons: Weapon[] = [
       "-20% damage penalty.",
       "Deals 33% less damage vs sentries disabled by your sapper."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/b/b1/Cloak_Revolver.png/revision/latest?cb=20240713074936",
+    "iconUrl": "tc2-assets/weapons/cloak-revolver-4d5d8bf41f.png",
     "type": "PDA"
   },
   {
@@ -626,7 +626,7 @@ export const weapons: Weapon[] = [
       "-33% less rampup.",
       "-33% clip size."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/4/4e/Colbat.png/revision/latest?cb=20250209095323",
+    "iconUrl": "tc2-assets/weapons/colbat-3313734a60.png",
     "type": "Melee"
   },
   {
@@ -640,7 +640,7 @@ export const weapons: Weapon[] = [
       "Always crits.",
       "Crit targets under 25% health."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/78/Cold_Shoulder.png/revision/latest?cb=20241024094828",
+    "iconUrl": "tc2-assets/weapons/cold-shoulder-bc82567dc0.png",
     "type": "Melee"
   },
   {
@@ -653,7 +653,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "Always mini-crits"
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/5/55/Concealed_Carry.png/revision/latest?cb=20241027033324",
+    "iconUrl": "tc2-assets/weapons/concealed-carry-3e4910a8b5.png",
     "type": "Hitscan"
   },
   {
@@ -670,7 +670,7 @@ export const weapons: Weapon[] = [
       "Provides an offensive buff that causes nearby team members to do mini-crits and pierce damage resistance effects.",
       "Rage increases through damage done or taken."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/d/d4/Concheror.png/revision/latest?cb=20240713075448",
+    "iconUrl": "tc2-assets/weapons/concheror-7d7a5d1d2f.png",
     "type": "Utility"
   },
   {
@@ -683,7 +683,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "Always mini-crits."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/2/24/Conniver%27s_Kunai.png/revision/latest?cb=20240713075513",
+    "iconUrl": "tc2-assets/weapons/conniver-s-kunai-0f92167c44.png",
     "type": "Melee"
   },
   {
@@ -696,7 +696,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "Allows the player to place the Sentry, Dispenser and both Teleporters in the map."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/8/8d/Construct.png/revision/latest?cb=20240713075604",
+    "iconUrl": "tc2-assets/weapons/construct-85b1d7ca58.png",
     "type": "PDA"
   },
   {
@@ -713,7 +713,7 @@ export const weapons: Weapon[] = [
       "-20% damage penalty.",
       "25% less accurate."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/b/b0/Conventional_render.png/revision/latest?cb=20260419140106",
+    "iconUrl": "tc2-assets/weapons/conventional-917ed6dbe4.png",
     "type": "Hitscan"
   },
   {
@@ -724,7 +724,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/8/8c/Counter-Service.png/revision/latest?cb=20250809223711",
+    "iconUrl": "tc2-assets/weapons/counter-service-c8c5a0e4a2.png",
     "type": "Hitscan"
   },
   {
@@ -743,7 +743,7 @@ export const weapons: Weapon[] = [
       "This weapon deploys 50% faster.",
       "Weapon spread increases as health decreases."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/f/f6/Crankenstein.png/revision/latest?cb=20240730082236",
+    "iconUrl": "tc2-assets/weapons/crankenstein-e0f0f2cd38.png",
     "type": "Flame"
   },
   {
@@ -759,7 +759,7 @@ export const weapons: Weapon[] = [
       "This weapon deploys 30% faster.",
       "-50% reduction in push force taken from damage and airblast."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/c/c0/Crowbar.png/revision/latest?cb=20240713080143",
+    "iconUrl": "tc2-assets/weapons/crowbar-929f7cce41.png",
     "type": "Melee"
   },
   {
@@ -770,7 +770,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/d/dc/Cuteness_Overload.png/revision/latest?cb=20250210051504",
+    "iconUrl": "tc2-assets/weapons/cuteness-overload-381f591353.png",
     "type": "Melee"
   },
   {
@@ -786,7 +786,7 @@ export const weapons: Weapon[] = [
       "Projectile cannot be deflected.",
       "This weapon will reload when not active."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/a/a9/Dairy_Douser.png/revision/latest?cb=20250209095655",
+    "iconUrl": "tc2-assets/weapons/dairy-douser-30e36d84c3.png",
     "type": "Projectile"
   },
   {
@@ -797,7 +797,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/c/c0/Darkness.png/revision/latest?cb=20241021060000",
+    "iconUrl": "tc2-assets/weapons/darkness-cc701682a3.png",
     "type": "Melee"
   },
   {
@@ -817,7 +817,7 @@ export const weapons: Weapon[] = [
       "+34% cloak regen rate.",
       "-50% cloak meter when Feign Death is activated."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/e/e2/Dead_Ringer.png/revision/latest?cb=20240713100958",
+    "iconUrl": "tc2-assets/weapons/dead-ringer-84ac7122a9.png",
     "type": "PDA"
   },
   {
@@ -836,7 +836,7 @@ export const weapons: Weapon[] = [
       "+60% more falloff.",
       "60% more falloff."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/e/e0/Deathblow_render.png/revision/latest?cb=20241029054537",
+    "iconUrl": "tc2-assets/weapons/deathblow-1d91af520b.png",
     "type": "Hitscan"
   },
   {
@@ -855,7 +855,7 @@ export const weapons: Weapon[] = [
       "Afterburn reduces Medigun healing by -50%.",
       "Alt Fire: Release a blast of air that pushes enemies and projectiles and extinguish teammates that are on fire."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/6/67/Degreaser.png/revision/latest?cb=20240713101338",
+    "iconUrl": "tc2-assets/weapons/degreaser-1c65161c28.png",
     "type": "Projectile"
   },
   {
@@ -868,7 +868,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "Allows the player to destroy their Sentry, Dispenser and both Teleporters."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/4/45/Demolish.png/revision/latest?cb=20240713101443",
+    "iconUrl": "tc2-assets/weapons/demolish-568207f5f3.png",
     "type": "PDA"
   },
   {
@@ -883,7 +883,7 @@ export const weapons: Weapon[] = [
       "On Kill: A small health pack is dropped.",
       "+50% health from packs on wearer."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/a/a0/Dentist%27s_Delight.png/revision/latest?cb=20240713101559",
+    "iconUrl": "tc2-assets/weapons/dentist-s-delight-92f528ace4.png",
     "type": "Melee"
   },
   {
@@ -902,7 +902,7 @@ export const weapons: Weapon[] = [
       "Flares can cause self-damage.",
       "-50% afterburn duration."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/a/a3/Detonator.png/revision/latest?cb=20240713101850",
+    "iconUrl": "tc2-assets/weapons/detonator-2ce7f9fb40.png",
     "type": "Projectile"
   },
   {
@@ -921,7 +921,7 @@ export const weapons: Weapon[] = [
       "Deals 33% less damage vs sentries disabled by your sapper.",
       "Rimane solo il risuitato che voi sarete distrutti."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/1/11/Diavolo.png/revision/latest?cb=20251106060114",
+    "iconUrl": "tc2-assets/weapons/diavolo-c6786acf60.png",
     "type": "PDA"
   },
   {
@@ -932,7 +932,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/4/4a/Diggity_Dog.png/revision/latest?cb=20240713102104",
+    "iconUrl": "tc2-assets/weapons/diggity-dog-c1b7425fac.png",
     "type": "Hitscan"
   },
   {
@@ -949,7 +949,7 @@ export const weapons: Weapon[] = [
       "'Alt-Fire': Share a burrito with a friend! (Small Health Kit)",
       "Can be refilled by picking up a health pack while at full health."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/5/57/Dire_Donut.png/revision/latest?cb=20240713102216",
+    "iconUrl": "tc2-assets/weapons/dire-donut-7601572365.png",
     "type": "Flame"
   },
   {
@@ -960,7 +960,7 @@ export const weapons: Weapon[] = [
     "capacity": "4",
     "ammo": "20",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/f/fd/Direct_Hit.png/revision/latest?cb=20240713102253",
+    "iconUrl": "tc2-assets/weapons/direct-hit-9e5c2e8cde.png",
     "type": "Hitscan"
   },
   {
@@ -973,7 +973,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "Allows the Agent to disguise herself as an enemy or a friendly player."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/76/Sapper.png/revision/latest?cb=20240731101945",
+    "iconUrl": "tc2-assets/weapons/sapper-7bee1a187e.png",
     "type": "PDA"
   },
   {
@@ -984,7 +984,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/5/58/Doll_Maker.png/revision/latest?cb=20240713103202",
+    "iconUrl": "tc2-assets/weapons/doll-maker-ae910c76a7.png",
     "type": "Melee"
   },
   {
@@ -995,7 +995,7 @@ export const weapons: Weapon[] = [
     "capacity": "1",
     "ammo": "20",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/b/bc/Double_Trouble.png/revision/latest?cb=20240713103323",
+    "iconUrl": "tc2-assets/weapons/double-trouble-ee69b6dfe4.png",
     "type": "Hitscan"
   },
   {
@@ -1014,7 +1014,7 @@ export const weapons: Weapon[] = [
       "-20% damage penalty.",
       "Deals 20% less damage under 40 studs and over 120 studs."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/5/50/Efficient_Eliminator.png/revision/latest?cb=20240713140121",
+    "iconUrl": "tc2-assets/weapons/efficient-eliminator-6b2dc01166.png",
     "type": "Hitscan"
   },
   {
@@ -1032,7 +1032,7 @@ export const weapons: Weapon[] = [
       "-30% damage penalty.",
       "Deals only 20% damage to buildings."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/5/5b/Einsteinium.png/revision/latest?cb=20240713140003",
+    "iconUrl": "tc2-assets/weapons/einsteinium-caa13db0d7.png",
     "type": "PDA"
   },
   {
@@ -1045,7 +1045,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "Always crits."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/3/30/Elegant_Blade.png/revision/latest?cb=20240713135858",
+    "iconUrl": "tc2-assets/weapons/elegant-blade-5c8680c314.png",
     "type": "Melee"
   },
   {
@@ -1061,7 +1061,7 @@ export const weapons: Weapon[] = [
       "This weapon deploys 30% faster.",
       "-50% reduction in push force taken from damage and airblast."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/9/96/Equalizer.png/revision/latest?cb=20240713135647",
+    "iconUrl": "tc2-assets/weapons/equalizer-43e149c3c5.png",
     "type": "Melee"
   },
   {
@@ -1077,7 +1077,7 @@ export const weapons: Weapon[] = [
       "This weapon deploys 30% faster.",
       "-50% reduction in push force taken from damage and airblast."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/2/27/Escape_Plan.png/revision/latest?cb=20240713135629",
+    "iconUrl": "tc2-assets/weapons/escape-plan-d226405d86.png",
     "type": "Melee"
   },
   {
@@ -1091,7 +1091,7 @@ export const weapons: Weapon[] = [
       "Always crits.",
       "On Hit Teammate: Remove debuffs on teammate and restores 50 health."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/a/a7/Escapist%27s_Escapade.png/revision/latest?cb=20240727142607",
+    "iconUrl": "tc2-assets/weapons/escapist-s-escapade-9bc1477c36.png",
     "type": "Melee"
   },
   {
@@ -1105,7 +1105,7 @@ export const weapons: Weapon[] = [
       "Always crits.",
       "Upgrades, repairs, and speeds up construction of friendly buildings on hit."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/4/43/Eureka_Effect.png/revision/latest?cb=20240713135303",
+    "iconUrl": "tc2-assets/weapons/eureka-effect-aba1ba6fbd.png",
     "type": "PDA"
   },
   {
@@ -1120,7 +1120,7 @@ export const weapons: Weapon[] = [
       "+20% faster reload time on shotguns.",
       "Increased launch power on thrown lunchbox items."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/3/30/Eviction_Notice.png/revision/latest?cb=20240713135229",
+    "iconUrl": "tc2-assets/weapons/eviction-notice-82d88dea1e.png",
     "type": "Melee"
   },
   {
@@ -1131,7 +1131,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/3/3c/Eyes_of_Bermuda.png/revision/latest?cb=20240713135136",
+    "iconUrl": "tc2-assets/weapons/eyes-of-bermuda-3760a1cffb.png",
     "type": "Hitscan"
   },
   {
@@ -1146,7 +1146,7 @@ export const weapons: Weapon[] = [
       "+15% faster firing speed.",
       "-20% damage penalty."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/9/9c/Family_Business.png/revision/latest?cb=20240714141029",
+    "iconUrl": "tc2-assets/weapons/family-business-71585564d4.png",
     "type": "Hitscan"
   },
   {
@@ -1160,7 +1160,7 @@ export const weapons: Weapon[] = [
       "Always crits.",
       "On Hit Teammate: Remove debuffs on teammate and restores 50 health."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/0/0a/Fire_Extinguisher.png/revision/latest?cb=20240713030613",
+    "iconUrl": "tc2-assets/weapons/fire-extinguisher-eb1c2ebf4b.png",
     "type": "Melee"
   },
   {
@@ -1180,7 +1180,7 @@ export const weapons: Weapon[] = [
       "On shot fired: Take 2 damage.",
       "+50% faster overheal decay."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/8/89/First_Responder.png/revision/latest?cb=20240728095815",
+    "iconUrl": "tc2-assets/weapons/first-responder-848719cc94.png",
     "type": "Flame"
   },
   {
@@ -1195,7 +1195,7 @@ export const weapons: Weapon[] = [
       "+20% faster reload time on shotguns.",
       "Increased launch power on thrown lunchbox items."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/1/1f/Fists_render.png/revision/latest?cb=20220324203645",
+    "iconUrl": "tc2-assets/weapons/fists-c34773b98f.png",
     "type": "Melee"
   },
   {
@@ -1213,7 +1213,7 @@ export const weapons: Weapon[] = [
       "-40% health from healers on wearer.",
       "This weapon deploys and holsters 100% slower."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/c/cd/Fists_of_Steel.png/revision/latest?cb=20240714141348",
+    "iconUrl": "tc2-assets/weapons/fists-of-steel-5208062763.png",
     "type": "Melee"
   },
   {
@@ -1228,7 +1228,7 @@ export const weapons: Weapon[] = [
       "Afterburn reduces Medigun healing by -50%.",
       "Alt Fire: Release a blast of air that pushes enemies and projectiles and extinguish teammates that are on fire."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/a/ad/Flamethrower.png/revision/latest?cb=20240714141455",
+    "iconUrl": "tc2-assets/weapons/flamethrower-d027385023.png",
     "type": "Projectile"
   },
   {
@@ -1243,7 +1243,7 @@ export const weapons: Weapon[] = [
       "This weapon will reload when not active.",
       "Crits burning targets."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/5/57/Flare_Gun.png/revision/latest?cb=20240714141619",
+    "iconUrl": "tc2-assets/weapons/flare-gun-e42c63d30a.png",
     "type": "Projectile"
   },
   {
@@ -1259,7 +1259,7 @@ export const weapons: Weapon[] = [
       "+30% faster reload time on secondaries.",
       "-100% reduction in push force taken from damage and airblasts."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/e/eb/Friendly_Fire_Foiler.png/revision/latest?cb=20240714140907",
+    "iconUrl": "tc2-assets/weapons/friendly-fire-foiler-1c90e020a3.png",
     "type": "Flame"
   },
   {
@@ -1270,7 +1270,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/1/13/Frying_Pan_render.png/revision/latest?cb=20240913150654",
+    "iconUrl": "tc2-assets/weapons/frying-pan-89d60215fa.png",
     "type": "Melee"
   },
   {
@@ -1289,7 +1289,7 @@ export const weapons: Weapon[] = [
       "10% faster move speed on wearer while active.",
       "10% bullet damage vulnerability on wearer."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/5/57/Furious_Flagxe.png/revision/latest?cb=20230717080144",
+    "iconUrl": "tc2-assets/weapons/furious-flagxe-e45cf151ce.png",
     "type": "Melee"
   },
   {
@@ -1309,7 +1309,7 @@ export const weapons: Weapon[] = [
       "+65% damage to self from blast jumps.",
       "-75% clip size."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/0/0b/G-Bomb.png/revision/latest?cb=20240723145013",
+    "iconUrl": "tc2-assets/weapons/g-bomb-9b96d759a2.png",
     "type": "PDA"
   },
   {
@@ -1325,7 +1325,7 @@ export const weapons: Weapon[] = [
       "-80% reduction in push force taken from damage and airblasts.",
       "Wearer deals 3x stomp damage."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/c/c5/Galway_Greaves.png/revision/latest?cb=20240723145108",
+    "iconUrl": "tc2-assets/weapons/galway-greaves-d2596d1ee5.png",
     "type": "Utility"
   },
   {
@@ -1341,7 +1341,7 @@ export const weapons: Weapon[] = [
       "+25% increase in recharge rate.",
       "'Alt-Fire': Charge towards your enemies and remove debuffs."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/4/42/Gladiator%27s_Guard.png/revision/latest?cb=20240723144905",
+    "iconUrl": "tc2-assets/weapons/gladiator-s-guard-ccb5cd9dc6.png",
     "type": "Flame"
   },
   {
@@ -1352,7 +1352,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/5/56/Goala_Cola.png/revision/latest?cb=20250210051455",
+    "iconUrl": "tc2-assets/weapons/goala-cola-63a1229777.png",
     "type": "Utility"
   },
   {
@@ -1363,7 +1363,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/4/4c/Golden_Frying_Pan_render.png/revision/latest?cb=20240914061128",
+    "iconUrl": "tc2-assets/weapons/golden-frying-pan-e4f3f49920.png",
     "type": "Melee"
   },
   {
@@ -1374,7 +1374,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/1/12/Golden_Knife.png/revision/latest?cb=20240723145522",
+    "iconUrl": "tc2-assets/weapons/golden-knife-eb888e3124.png",
     "type": "Melee"
   },
   {
@@ -1385,7 +1385,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/5/59/Golden_Wrench.png/revision/latest?cb=20240723145606",
+    "iconUrl": "tc2-assets/weapons/golden-wrench-97e0a7f961.png",
     "type": "Melee"
   },
   {
@@ -1399,7 +1399,7 @@ export const weapons: Weapon[] = [
       "Always crits.",
       "This weapon has a large melee range and deploys and holsters slower."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/5/5d/Golf_Club.png/revision/latest?cb=20240723145710",
+    "iconUrl": "tc2-assets/weapons/golf-club-c6c61b33ff.png",
     "type": "Melee"
   },
   {
@@ -1419,7 +1419,7 @@ export const weapons: Weapon[] = [
       "-25% slower movement speed.",
       "-25% damage penalty."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/6/6e/Gravity_Coil.png/revision/latest?cb=20240723145920",
+    "iconUrl": "tc2-assets/weapons/gravity-coil-f1bdc203bd.png",
     "type": "Melee"
   },
   {
@@ -1434,7 +1434,7 @@ export const weapons: Weapon[] = [
       "-25% clip size.",
       "Kyoto at all costs, victory at all costs"
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/5/51/Great_Unifier.png/revision/latest?cb=20250809223837",
+    "iconUrl": "tc2-assets/weapons/great-unifier-a8d894a525.png",
     "type": "Healing"
   },
   {
@@ -1449,7 +1449,7 @@ export const weapons: Weapon[] = [
       "Shoots a pipe grenade projectile with an arcing path that deals 100 damage.",
       "Has a clip of 4 with a 1 second reload for each individual pipe."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/6/67/Grenade_Launcher.png/revision/latest?cb=20240723150044",
+    "iconUrl": "tc2-assets/weapons/grenade-launcher-357783074b.png",
     "type": "Projectile"
   },
   {
@@ -1466,7 +1466,7 @@ export const weapons: Weapon[] = [
       "Mini-crits burning targets.",
       "60% slower firing speed."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/0/09/Grill_Scout.png/revision/latest?cb=20240731110143",
+    "iconUrl": "tc2-assets/weapons/grill-scout-0803e48991.png",
     "type": "Melee"
   },
   {
@@ -1477,7 +1477,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/b/b3/Grin_Reaper.png/revision/latest?cb=20251106060930",
+    "iconUrl": "tc2-assets/weapons/grin-reaper-7c67953848.png",
     "type": "Melee"
   },
   {
@@ -1488,7 +1488,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/b/bd/Groovy_Grinder.png/revision/latest?cb=20240723150109",
+    "iconUrl": "tc2-assets/weapons/groovy-grinder-2d2e9f2a1d.png",
     "type": "Hitscan"
   },
   {
@@ -1499,7 +1499,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/e/e0/Guardian%27s_Oath.png/revision/latest?cb=20241021055952",
+    "iconUrl": "tc2-assets/weapons/guardian-s-oath-f85a24c86a.png",
     "type": "Melee"
   },
   {
@@ -1514,7 +1514,7 @@ export const weapons: Weapon[] = [
       "-60% blast damage from blast jumps.",
       "Wearer takes 60% less falling damage."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/d/d2/Gunboats.png/revision/latest?cb=20240723150216",
+    "iconUrl": "tc2-assets/weapons/gunboats-f09fb95b80.png",
     "type": "Utility"
   },
   {
@@ -1533,7 +1533,7 @@ export const weapons: Weapon[] = [
       "Replaces the Sentry with a Mini-Sentry.",
       "Upgrades, repairs, and speeds up construction of friendly buildings on hit."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/c/c2/Gunslinger.png/revision/latest?cb=20240723150247",
+    "iconUrl": "tc2-assets/weapons/gunslinger-525934b6c3.png",
     "type": "PDA"
   },
   {
@@ -1546,7 +1546,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "Always crits."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/6/61/Gustabe.png/revision/latest?cb=20250809223909",
+    "iconUrl": "tc2-assets/weapons/gustabe-a4aae70075.png",
     "type": "Melee"
   },
   {
@@ -1560,7 +1560,7 @@ export const weapons: Weapon[] = [
       "Gain 20% more accuracy and mini-crits against your sentry's target.",
       "-15% damage penalty."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/4/4c/Gutbuster.png/revision/latest?cb=20240723150313",
+    "iconUrl": "tc2-assets/weapons/gutbuster-08d9e392e1.png",
     "type": "Hitscan"
   },
   {
@@ -1573,7 +1573,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "Always crits."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/0/0a/Fist_render.png/revision/latest?cb=20220608211325",
+    "iconUrl": "tc2-assets/weapons/hand-d6d6547ab9.png",
     "type": "Hitscan"
   },
   {
@@ -1584,7 +1584,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/5/51/Handyman.png/revision/latest?cb=20241027033500",
+    "iconUrl": "tc2-assets/weapons/handyman-1d29b51812.png",
     "type": "Melee"
   },
   {
@@ -1599,7 +1599,7 @@ export const weapons: Weapon[] = [
       "+7% faster move speed on wearer.",
       "Does not increase metal gained from small and medium ammo packs. (Unlisted)"
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/2/23/Heavy_Metal.png/revision/latest?cb=20240727142943",
+    "iconUrl": "tc2-assets/weapons/heavy-metal-60459181cf.png",
     "type": "Utility"
   },
   {
@@ -1614,7 +1614,7 @@ export const weapons: Weapon[] = [
       "No flinching when aiming and fully charged.",
       "Knockback reduced by -20% when aiming."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/a/aa/Hermits%27_Haversack.png/revision/latest?cb=20250209095642",
+    "iconUrl": "tc2-assets/weapons/hermits-haversack-2afcb4caaf.png",
     "type": "Utility"
   },
   {
@@ -1625,7 +1625,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/d/da/Holy_Mackerel.png/revision/latest?cb=20240727142754",
+    "iconUrl": "tc2-assets/weapons/holy-mackerel-9b7ae79e75.png",
     "type": "Melee"
   },
   {
@@ -1636,7 +1636,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/5/5f/Hot_Coco_Blast.png/revision/latest?cb=20240727142621",
+    "iconUrl": "tc2-assets/weapons/hot-coco-blast-94064f394b.png",
     "type": "Hitscan"
   },
   {
@@ -1650,7 +1650,7 @@ export const weapons: Weapon[] = [
       "Always crits.",
       "On Hit Teammate: Remove debuffs on teammate and restores 50 health."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/c/c8/Hotwire.png/revision/latest?cb=20240727142708",
+    "iconUrl": "tc2-assets/weapons/hotwire-b33160a582.png",
     "type": "Melee"
   },
   {
@@ -1669,7 +1669,7 @@ export const weapons: Weapon[] = [
       "Extinguishing teammates restores 50 health.",
       "50% slower firing speed on Alt-Fire."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/c/c2/HuangLong%27s_Wrath.png/revision/latest?cb=20241027033616",
+    "iconUrl": "tc2-assets/weapons/huanglong-s-wrath-3221b56325.png",
     "type": "Projectile"
   },
   {
@@ -1687,7 +1687,7 @@ export const weapons: Weapon[] = [
       "-33% move speed while aiming.",
       "-45% max reserve ammo. (Unlisted)"
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/75/Huntsman.png/revision/latest?cb=20240727142227",
+    "iconUrl": "tc2-assets/weapons/huntsman-d943e8ec92.png",
     "type": "Projectile"
   },
   {
@@ -1704,7 +1704,7 @@ export const weapons: Weapon[] = [
       "On Kill: Turns victim to ice.",
       "-20 max health on wearer."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/2/23/Icicle.png/revision/latest?cb=20240728104116",
+    "iconUrl": "tc2-assets/weapons/icicle-1e7baf79d8.png",
     "type": "Melee"
   },
   {
@@ -1720,7 +1720,7 @@ export const weapons: Weapon[] = [
       "+50% health from packs on wearer.",
       "-75% health from healers on wearer."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/7a/Improvised_Innovator.png/revision/latest?cb=20240728104058",
+    "iconUrl": "tc2-assets/weapons/improvised-innovator-6a99f208ca.png",
     "type": "Melee"
   },
   {
@@ -1738,7 +1738,7 @@ export const weapons: Weapon[] = [
       "Afterburn reduces Medigun healing by -50%.",
       "Alt Fire: Release a blast of air that pushes enemies and projectiles and extinguish teammates that are on fire."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/c/cf/Interceptor.png/revision/latest?cb=20240713062307",
+    "iconUrl": "tc2-assets/weapons/interceptor-e91aea920f.png",
     "type": "Projectile"
   },
   {
@@ -1753,7 +1753,7 @@ export const weapons: Weapon[] = [
       "Cannot attack while invisible.",
       "Bumping into enemies or taking damage will make you slightly visible to enemies."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/4/45/Invis-Watch.png/revision/latest?cb=20240728103930",
+    "iconUrl": "tc2-assets/weapons/invis-watch-cda54b6786.png",
     "type": "PDA"
   },
   {
@@ -1773,7 +1773,7 @@ export const weapons: Weapon[] = [
       "+100% max secondary ammo on wearer.",
       "+0.4 second slower bomb arm time."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/f/f1/Irish_Guard.png/revision/latest?cb=20240728103901",
+    "iconUrl": "tc2-assets/weapons/irish-guard-f3c3d680f4.png",
     "type": "Utility"
   },
   {
@@ -1792,7 +1792,7 @@ export const weapons: Weapon[] = [
       "-10% explosion radius.",
       "Blunder'd! Bomb explosions after a cannonball impact will deal mini-crits to impact victims."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/c/c2/Iron_Force.png/revision/latest?cb=20240728100004",
+    "iconUrl": "tc2-assets/weapons/iron-force-796db5037f.png",
     "type": "Projectile"
   },
   {
@@ -1803,7 +1803,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/f/f1/Jack-O_Roger.png/revision/latest?cb=20240728103323",
+    "iconUrl": "tc2-assets/weapons/jack-o-roger-7a91d7c120.png",
     "type": "Hitscan"
   },
   {
@@ -1814,7 +1814,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/e/ee/Jolly_Gingerbread.png/revision/latest?cb=20240723144829",
+    "iconUrl": "tc2-assets/weapons/jolly-gingerbread-4eeb8b9b37.png",
     "type": "Hitscan"
   },
   {
@@ -1834,7 +1834,7 @@ export const weapons: Weapon[] = [
       "+25% damage vulnerability on wearer.",
       "This weapon has a large melee range and deploys and holsters slower."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/e/e9/Katana.png/revision/latest?cb=20240728103117",
+    "iconUrl": "tc2-assets/weapons/katana-3d8f9b5fd1.png",
     "type": "Melee"
   },
   {
@@ -1847,7 +1847,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "Always mini-crits."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/5/58/Knife.png/revision/latest?cb=20240728102803",
+    "iconUrl": "tc2-assets/weapons/knife-9a8b461c25.png",
     "type": "Melee"
   },
   {
@@ -1861,7 +1861,7 @@ export const weapons: Weapon[] = [
       "+25% Supercharge rate.",
       "Supercharge grants crits."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/d/d5/Kritzkrieg.png/revision/latest?cb=20240713062608",
+    "iconUrl": "tc2-assets/weapons/kritzkrieg-7546e6a027.png",
     "type": "Healing"
   },
   {
@@ -1872,7 +1872,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/f/fb/Last_Rite.png/revision/latest?cb=20251106060930",
+    "iconUrl": "tc2-assets/weapons/last-rite-b4378c5a5d.png",
     "type": "Melee"
   },
   {
@@ -1885,7 +1885,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "Always crits."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/0/01/Lemoblade.png/revision/latest?cb=20240731104153",
+    "iconUrl": "tc2-assets/weapons/lemoblade-3d8d9ec4bd.png",
     "type": "Melee"
   },
   {
@@ -1903,7 +1903,7 @@ export const weapons: Weapon[] = [
       "-33% clip size.",
       "45% slower firing speed."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/2/2a/Lemonade.png/revision/latest?cb=20240728104240",
+    "iconUrl": "tc2-assets/weapons/lemonade-af447948bb.png",
     "type": "Flame"
   },
   {
@@ -1914,7 +1914,7 @@ export const weapons: Weapon[] = [
     "capacity": "6",
     "ammo": "32",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/7a/Lever_Shotgun_render.png/revision/latest?cb=20260418134301",
+    "iconUrl": "tc2-assets/weapons/lever-shotgun-a506f49ab6.png",
     "type": "Hitscan"
   },
   {
@@ -1930,7 +1930,7 @@ export const weapons: Weapon[] = [
       "+40% projectile speed.",
       "-20% damage penalty."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/e/e2/Liberty_Launcher.png/revision/latest?cb=20240728100128",
+    "iconUrl": "tc2-assets/weapons/liberty-launcher-7fbd51a336.png",
     "type": "Projectile"
   },
   {
@@ -1941,7 +1941,7 @@ export const weapons: Weapon[] = [
     "capacity": "6",
     "ammo": "32",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/d/d1/Lupara_DB_render.png/revision/latest?cb=20260418134318",
+    "iconUrl": "tc2-assets/weapons/lupara-db-85c7bd1d93.png",
     "type": "Hitscan"
   },
   {
@@ -1958,7 +1958,7 @@ export const weapons: Weapon[] = [
       "-30% fuse time on grenades.",
       "-15% explosion radius."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/b/be/M1_Garandier.png/revision/latest?cb=20241027033409",
+    "iconUrl": "tc2-assets/weapons/m1-garandier-5ba7d65b5b.png",
     "type": "Projectile"
   },
   {
@@ -1978,7 +1978,7 @@ export const weapons: Weapon[] = [
       "-33% slower movement speed while active.",
       "No explosive damage resistance."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/9/96/M249.png/revision/latest?cb=20240729074001",
+    "iconUrl": "tc2-assets/weapons/m249-3f56b628a1.png",
     "type": "Hitscan"
   },
   {
@@ -1991,7 +1991,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "Always crits."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/5/57/MAC-10_render.png/revision/latest?cb=20260419002234",
+    "iconUrl": "tc2-assets/weapons/mac-10-727e4a4e92.png",
     "type": "Hitscan"
   },
   {
@@ -2002,7 +2002,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/b/bf/Mach-Coach.png/revision/latest?cb=20240729074158",
+    "iconUrl": "tc2-assets/weapons/mach-coach-3fa991a962.png",
     "type": "Hitscan"
   },
   {
@@ -2015,7 +2015,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "Always crits."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/0/0c/Machete.png/revision/latest?cb=20240729074218",
+    "iconUrl": "tc2-assets/weapons/machete-0242556cca.png",
     "type": "Melee"
   },
   {
@@ -2033,7 +2033,7 @@ export const weapons: Weapon[] = [
       "Damage absorbed will slow you when the effect ends.",
       "+25% more knockback vulnerability under the effects."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/b/bd/Mad_Milk.png/revision/latest?cb=20240729073751",
+    "iconUrl": "tc2-assets/weapons/mad-milk-9f7b50465a.png",
     "type": "Utility"
   },
   {
@@ -2044,7 +2044,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/71/Malpractitioner.png/revision/latest?cb=20240729074316",
+    "iconUrl": "tc2-assets/weapons/malpractitioner-423d002edc.png",
     "type": "Hitscan"
   },
   {
@@ -2055,7 +2055,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/3/31/Mantreads.png/revision/latest?cb=20240729074350",
+    "iconUrl": "tc2-assets/weapons/mantreads-b38d607278.png",
     "type": "Hitscan"
   },
   {
@@ -2075,7 +2075,7 @@ export const weapons: Weapon[] = [
       "+50% more knockback vulnerability.",
       "Damage is reduced by 20% if the wielder is moving slower than 30 studs per second while crit boosted. (Unlisted)"
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/f/fb/Market_Gardener.png/revision/latest?cb=20241014071241",
+    "iconUrl": "tc2-assets/weapons/market-gardener-149b131246.png",
     "type": "Melee"
   },
   {
@@ -2092,7 +2092,7 @@ export const weapons: Weapon[] = [
       "-15% damage penalty.",
       "Rockets arc."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/73/Maverick.png/revision/latest?cb=20240729080241",
+    "iconUrl": "tc2-assets/weapons/maverick-c3522f2772.png",
     "type": "Projectile"
   },
   {
@@ -2112,7 +2112,7 @@ export const weapons: Weapon[] = [
       "No ammo from dispensers when active.",
       "-50% strafing speed when spun up."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/f/f8/Maxine.png/revision/latest?cb=20240729080258",
+    "iconUrl": "tc2-assets/weapons/maxine-cbf08f69b0.png",
     "type": "Utility"
   },
   {
@@ -2128,7 +2128,7 @@ export const weapons: Weapon[] = [
       "Supercharge will build slower on players that are already healthy.",
       "On full Supercharge: Press 'Alt-Fire' to make you and your patient invincible to all damage for 8 seconds."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/1/1f/Medigun.png/revision/latest?cb=20240729080349",
+    "iconUrl": "tc2-assets/weapons/medigun-03eda18f71.png",
     "type": "Flame"
   },
   {
@@ -2144,7 +2144,7 @@ export const weapons: Weapon[] = [
       "20% slower firing speed.",
       "This weapon holsters 50% slower."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/f/fb/Mending_Mallet.png/revision/latest?cb=20240401085107",
+    "iconUrl": "tc2-assets/weapons/mending-mallet-063f4340da.png",
     "type": "Melee"
   },
   {
@@ -2161,7 +2161,7 @@ export const weapons: Weapon[] = [
       "Dashing requires stamina.",
       "Each dash consumes 33% stamina."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/a/ac/Mercy_Kill.png/revision/latest?cb=20240729080857",
+    "iconUrl": "tc2-assets/weapons/mercy-kill-6d80331d6a.png",
     "type": "Utility"
   },
   {
@@ -2174,7 +2174,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "+10% explosive resistance when spun up."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/7e/Minigun_render.png/revision/latest?cb=20260418134411",
+    "iconUrl": "tc2-assets/weapons/minigun-17112b997c.png",
     "type": "Hitscan"
   },
   {
@@ -2187,7 +2187,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "Always crits."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/8/8c/Mischievous_Machete.png/revision/latest?cb=20240731102731",
+    "iconUrl": "tc2-assets/weapons/mischievous-machete-bcaade1211.png",
     "type": "Melee"
   },
   {
@@ -2198,7 +2198,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/8/80/Mod_Max.png/revision/latest?cb=20240729081224",
+    "iconUrl": "tc2-assets/weapons/mod-max-94cf45caec.png",
     "type": "Melee"
   },
   {
@@ -2216,7 +2216,7 @@ export const weapons: Weapon[] = [
       "-33% move speed while aiming.",
       "-45% max reserve ammo. (Unlisted)"
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/d/d0/Model_IV.png/revision/latest?cb=20240728100319",
+    "iconUrl": "tc2-assets/weapons/model-iv-330a95c2e5.png",
     "type": "Projectile"
   },
   {
@@ -2227,7 +2227,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/c/c7/Monitor_of_Duty.png/revision/latest?cb=20240729081318",
+    "iconUrl": "tc2-assets/weapons/monitor-of-duty-5224726bc4.png",
     "type": "Hitscan"
   },
   {
@@ -2238,7 +2238,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/70/Mule_Mauler_600.png/revision/latest?cb=20240729081501",
+    "iconUrl": "tc2-assets/weapons/mule-mauler-600-d75a9dc2ca.png",
     "type": "Hitscan"
   },
   {
@@ -2249,7 +2249,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/2/2e/Mummy_Khopesh.png/revision/latest?cb=20240729081811",
+    "iconUrl": "tc2-assets/weapons/mummy-khopesh-bc1a933d54.png",
     "type": "Melee"
   },
   {
@@ -2260,7 +2260,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/f/f4/Night_Sky_Ignitor.png/revision/latest?cb=20240730080732",
+    "iconUrl": "tc2-assets/weapons/night-sky-ignitor-4ad3901b64.png",
     "type": "Hitscan"
   },
   {
@@ -2277,7 +2277,7 @@ export const weapons: Weapon[] = [
       "-50% clip size.",
       "-50% max reserve ammo."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/5/5d/Noisy_Cricket.png/revision/latest?cb=20240730080847",
+    "iconUrl": "tc2-assets/weapons/noisy-cricket-1bcf23dd32.png",
     "type": "Hitscan"
   },
   {
@@ -2288,7 +2288,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/9/94/Objector.png/revision/latest?cb=20240713075541",
+    "iconUrl": "tc2-assets/weapons/objector-e46ca228b4.png",
     "type": "Melee"
   },
   {
@@ -2299,7 +2299,7 @@ export const weapons: Weapon[] = [
     "capacity": "4",
     "ammo": "20",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/7f/Original.png/revision/latest?cb=20240730082001",
+    "iconUrl": "tc2-assets/weapons/original-d11ca15af4.png",
     "type": "Hitscan"
   },
   {
@@ -2313,7 +2313,7 @@ export const weapons: Weapon[] = [
       "Movement speed increases based on SuperCharge percentage to a maximum of +15%",
       "+10% faster move speed on wearer."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/a/ab/Overdrive.png/revision/latest?cb=20240730082111",
+    "iconUrl": "tc2-assets/weapons/overdrive-dca99e04c8.png",
     "type": "Utility"
   },
   {
@@ -2332,7 +2332,7 @@ export const weapons: Weapon[] = [
       "-30% damage penalty vs buildings.",
       "Upgrades, repairs, and speeds up construction of friendly buildings on hit."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/9/9a/P.D.Q.png/revision/latest?cb=20240730082133",
+    "iconUrl": "tc2-assets/weapons/p-d-q-3df3066f2e.png",
     "type": "PDA"
   },
   {
@@ -2349,7 +2349,7 @@ export const weapons: Weapon[] = [
       "Deployed parachutes slow your descent.",
       "Deployed parachutes reduces your air strafing by -50% and reduces your speed."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/f/ff/Parabomber.png/revision/latest?cb=20240730082319",
+    "iconUrl": "tc2-assets/weapons/parabomber-0c628f3a46.png",
     "type": "Hitscan"
   },
   {
@@ -2364,7 +2364,7 @@ export const weapons: Weapon[] = [
       "-10% less pellets.",
       "20% slower reload speed."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/8/8f/Perceptionist.png/revision/latest?cb=20240730082526",
+    "iconUrl": "tc2-assets/weapons/perceptionist-86b097c394.png",
     "type": "Flame"
   },
   {
@@ -2384,7 +2384,7 @@ export const weapons: Weapon[] = [
       "+25% faster reload time.",
       "-34% clip size."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/a/aa/Personal_Death_Ray_render.png/revision/latest?cb=20250302054039",
+    "iconUrl": "tc2-assets/weapons/personal-death-ray-61122fff98.png",
     "type": "Projectile"
   },
   {
@@ -2401,7 +2401,7 @@ export const weapons: Weapon[] = [
       "-25% damage penalty.",
       "This weapon holsters 30% slower."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/4/48/Pestilence_Poker.png/revision/latest?cb=20240730082644",
+    "iconUrl": "tc2-assets/weapons/pestilence-poker-23af86ff2d.png",
     "type": "Melee"
   },
   {
@@ -2418,7 +2418,7 @@ export const weapons: Weapon[] = [
       "Airblast cannot be used on players.",
       "Airblast destroys projectiles."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/1/15/Phlogistinator.png/revision/latest?cb=20240730082717",
+    "iconUrl": "tc2-assets/weapons/phlogistinator-1d976238fd.png",
     "type": "Projectile"
   },
   {
@@ -2429,7 +2429,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/d/d3/Pirate_Cutlass.png/revision/latest?cb=20240730083154",
+    "iconUrl": "tc2-assets/weapons/pirate-cutlass-19468f5a17.png",
     "type": "Melee"
   },
   {
@@ -2443,7 +2443,7 @@ export const weapons: Weapon[] = [
       "Always mini-crits",
       "Always mini-crits."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/2/24/Pistol_render.png/revision/latest?cb=20260423231730",
+    "iconUrl": "tc2-assets/weapons/pistol-5fd04c6a5a.png",
     "type": "Hitscan"
   },
   {
@@ -2459,7 +2459,7 @@ export const weapons: Weapon[] = [
       "No zoom or damage charge.",
       "-12% damage penalty."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/f/f0/Poacher%27s_Pride.png/revision/latest?cb=20240730083320",
+    "iconUrl": "tc2-assets/weapons/poacher-s-pride-dc73f7a848.png",
     "type": "Hitscan"
   },
   {
@@ -2479,7 +2479,7 @@ export const weapons: Weapon[] = [
       "-15% damage penalty.",
       "Deals 33% less damage vs sentries disabled by your sapper."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/7d/Quick_Draw_render.png/revision/latest?cb=20240819152652",
+    "iconUrl": "tc2-assets/weapons/quick-draw-2109ec3680.png",
     "type": "PDA"
   },
   {
@@ -2499,7 +2499,7 @@ export const weapons: Weapon[] = [
       "-15% damage penalty.",
       "'Alt-Fire': Detonate all Stickybombs."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/78/Quickiebomb_Launcher.png/revision/latest?cb=20240730084050",
+    "iconUrl": "tc2-assets/weapons/quickiebomb-launcher-c89840ff1b.png",
     "type": "Projectile"
   },
   {
@@ -2516,7 +2516,7 @@ export const weapons: Weapon[] = [
       "Effect is only visible for the user.",
       "Weapon cannot sap buildings."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/a/af/Radius_Scanner.png/revision/latest?cb=20240731085149",
+    "iconUrl": "tc2-assets/weapons/radius-scanner-0886fd62e5.png",
     "type": "PDA"
   },
   {
@@ -2533,7 +2533,7 @@ export const weapons: Weapon[] = [
       "No turning control while charging.",
       "'Alt-Fire': Charge towards your enemies and remove debuffs."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/f/f8/Ragin%27_Bull.png/revision/latest?cb=20240731084902",
+    "iconUrl": "tc2-assets/weapons/ragin-bull-734e46b48e.png",
     "type": "Melee"
   },
   {
@@ -2544,7 +2544,7 @@ export const weapons: Weapon[] = [
     "capacity": "Bat: N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/5/55/Rally_Racket.png/revision/latest?cb=20240731084922",
+    "iconUrl": "tc2-assets/weapons/rally-racket-cd72dc0a7c.png",
     "type": "Melee"
   },
   {
@@ -2555,7 +2555,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/6/66/Raven.png/revision/latest?cb=20240731085245",
+    "iconUrl": "tc2-assets/weapons/raven-c94c13eed0.png",
     "type": "Hitscan"
   },
   {
@@ -2573,7 +2573,7 @@ export const weapons: Weapon[] = [
       "-100% maximum overheal on wearer.",
       "Regenerates after 30 seconds."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/0/0d/Razorback.png/revision/latest?cb=20240731085330",
+    "iconUrl": "tc2-assets/weapons/razorback-9e765feb03.png",
     "type": "Utility"
   },
   {
@@ -2591,7 +2591,7 @@ export const weapons: Weapon[] = [
       "Mini-crits whenever it would normally crit.",
       "20% slower reload time."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/0/0d/RECOIL.png/revision/latest?cb=20251106060403",
+    "iconUrl": "tc2-assets/weapons/re-coil-467a445013.png",
     "type": "PDA"
   },
   {
@@ -2608,7 +2608,7 @@ export const weapons: Weapon[] = [
       "50% max overheal.",
       "Mirror blast jumps and shield charges of patients."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/3/3b/Rejuvenator.png/revision/latest?cb=20240713064540",
+    "iconUrl": "tc2-assets/weapons/rejuvenator-65d1f0a6a6.png",
     "type": "Healing"
   },
   {
@@ -2626,7 +2626,7 @@ export const weapons: Weapon[] = [
       "-50% max reserve ammo.",
       "Marked for death while hauling buildings."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/d/d2/Rescue_Ranger.png/revision/latest?cb=20240731085548",
+    "iconUrl": "tc2-assets/weapons/rescue-ranger-b7adad2e48.png",
     "type": "PDA"
   },
   {
@@ -2643,7 +2643,7 @@ export const weapons: Weapon[] = [
       "-15% damage penalty.",
       "-34% clip size."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/b/b7/Reserve_Shooter.png/revision/latest?cb=20240731085612",
+    "iconUrl": "tc2-assets/weapons/reserve-shooter-35580f02ad.png",
     "type": "Hitscan"
   },
   {
@@ -2657,7 +2657,7 @@ export const weapons: Weapon[] = [
       "Always mini-crits.",
       "Deals 33% less damage vs sentries disabled by your sapper."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/f/f5/Revolver_render.png/revision/latest?cb=20260419002334",
+    "iconUrl": "tc2-assets/weapons/revolver-d20819e855.png",
     "type": "PDA"
   },
   {
@@ -2677,7 +2677,7 @@ export const weapons: Weapon[] = [
       "Imbued with an ancient power.",
       "Honorbound: Once drawn, sheathing deals 25 damage to yourself unless it kills."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/3/31/Rising_Sun_Katana.png/revision/latest?cb=20240731085802",
+    "iconUrl": "tc2-assets/weapons/rising-sun-katana-e43fa6c751.png",
     "type": "Melee"
   },
   {
@@ -2695,7 +2695,7 @@ export const weapons: Weapon[] = [
       "'Alt-Fire': Share some Candy with a friend! (Small Health Kit)",
       "Can be refilled by picking up a health pack while at full health."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/8/81/ROBAR.png/revision/latest?cb=20240731085211",
+    "iconUrl": "tc2-assets/weapons/robar-15dff559e4.png",
     "type": "Flame"
   },
   {
@@ -2713,7 +2713,7 @@ export const weapons: Weapon[] = [
       "-100% damage penalty.",
       "Wearer cannot carry the intelligence briefcase."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/d/d8/Rocket_Jumper.png/revision/latest?cb=20240731085934",
+    "iconUrl": "tc2-assets/weapons/rocket-jumper-2338917fd2.png",
     "type": "Utility"
   },
   {
@@ -2724,7 +2724,7 @@ export const weapons: Weapon[] = [
     "capacity": "4",
     "ammo": "20",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/d/d0/Rocket_Launcher_render.png/revision/latest?cb=20260418134442",
+    "iconUrl": "tc2-assets/weapons/rocket-launcher-3021d5e700.png",
     "type": "Projectile"
   },
   {
@@ -2735,7 +2735,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/d/d2/Rubber_Chicken.png/revision/latest?cb=20241027033255",
+    "iconUrl": "tc2-assets/weapons/rubber-chicken-fefd9916d9.png",
     "type": "Melee"
   },
   {
@@ -2750,7 +2750,7 @@ export const weapons: Weapon[] = [
       "'Alt-Fire': Launches a ball that slows opponents.",
       "-20% damage penalty."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/d/d1/Sandman.png/revision/latest?cb=20240731100947",
+    "iconUrl": "tc2-assets/weapons/sandman-12a14df774.png",
     "type": "Melee"
   },
   {
@@ -2764,7 +2764,7 @@ export const weapons: Weapon[] = [
       "Disables and slowly destroys enemy Mechanic's buildings.",
       "Placing a sapper does not remove your disguise."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/76/Sapper.png/revision/latest?cb=20240731101945",
+    "iconUrl": "tc2-assets/weapons/sapper-7bee1a187e.png",
     "type": "PDA"
   },
   {
@@ -2779,7 +2779,7 @@ export const weapons: Weapon[] = [
       "On Kill: A small health pack is dropped.",
       "+50% health from packs on wearer."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/0/0a/Saw.png/revision/latest?cb=20240731102004",
+    "iconUrl": "tc2-assets/weapons/saw-385e5cd6a3.png",
     "type": "Melee"
   },
   {
@@ -2792,7 +2792,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "Deals 20% less damage under 40 studs and over 120 studs."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/c/c2/Scythe_for_Sore_Eyes.png/revision/latest?cb=20240731102221",
+    "iconUrl": "tc2-assets/weapons/scythe-for-sore-eyes-dd681ac61e.png",
     "type": "Hitscan"
   },
   {
@@ -2803,7 +2803,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/d/d0/Second_Banana.png/revision/latest?cb=20240713135826",
+    "iconUrl": "tc2-assets/weapons/second-banana-d80b631b7f.png",
     "type": "Utility"
   },
   {
@@ -2814,7 +2814,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/9/9e/Shadow_Blessing.png/revision/latest?cb=20240731102438",
+    "iconUrl": "tc2-assets/weapons/shadow-blessing-abc15ecaba.png",
     "type": "Melee"
   },
   {
@@ -2834,7 +2834,7 @@ export const weapons: Weapon[] = [
       "50% more knockback vulnerability.",
       "The first hit will creates an explosion which deals 60 damage."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/e/e4/Shock_and_Awe.png/revision/latest?cb=20240401084852",
+    "iconUrl": "tc2-assets/weapons/shock-and-awe-b1f1244c0c.png",
     "type": "Melee"
   },
   {
@@ -2853,7 +2853,7 @@ export const weapons: Weapon[] = [
       "Uses metal for ammo",
       "Projectile deals tick damage. (Up to 2 times)"
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/a/a4/Short_Circuit.png/revision/latest?cb=20240731103009",
+    "iconUrl": "tc2-assets/weapons/short-circuit-8434996ba1.png",
     "type": "Projectile"
   },
   {
@@ -2864,7 +2864,7 @@ export const weapons: Weapon[] = [
     "capacity": "6",
     "ammo": "32",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/c/c6/Shotgun_render.png/revision/latest?cb=20260423231727",
+    "iconUrl": "tc2-assets/weapons/shotgun-b45a3ef676.png",
     "type": "Hitscan"
   },
   {
@@ -2882,7 +2882,7 @@ export const weapons: Weapon[] = [
       "-30% clip size.",
       "-20% damage penalty."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/3/3c/Shotgun_Cannon.png/revision/latest?cb=20240731103731",
+    "iconUrl": "tc2-assets/weapons/shotgun-cannon-bbdae2a1db.png",
     "type": "Projectile"
   },
   {
@@ -2901,7 +2901,7 @@ export const weapons: Weapon[] = [
       "-30% damage penalty.",
       "Deals 33% less damage vs sentries disabled by your sapper."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/e/e2/Silenced_Pistol.png/revision/latest?cb=20240731103905",
+    "iconUrl": "tc2-assets/weapons/silenced-pistol-27a749fbaa.png",
     "type": "PDA"
   },
   {
@@ -2920,7 +2920,7 @@ export const weapons: Weapon[] = [
       "-45% damage penalty.",
       "Deals 33% less damage vs sentries disabled by your sapper."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/e/e7/Sinister_Suit.png/revision/latest?cb=20250209095130",
+    "iconUrl": "tc2-assets/weapons/sinister-suit-c8aa2884fd.png",
     "type": "PDA"
   },
   {
@@ -2936,7 +2936,7 @@ export const weapons: Weapon[] = [
       "Damage decreases as your charge rate increases.",
       "Deals 20% less damage under 40 studs and over 120 studs."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/9/95/Skullbuster.png/revision/latest?cb=20240731104058",
+    "iconUrl": "tc2-assets/weapons/skullbuster-e4a991c63d.png",
     "type": "Hitscan"
   },
   {
@@ -2952,7 +2952,7 @@ export const weapons: Weapon[] = [
       "This weapon deploys 30% faster.",
       "-50% reduction in push force taken from damage and airblast."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/1/18/SlapJock%21.png/revision/latest?cb=20251106060429",
+    "iconUrl": "tc2-assets/weapons/slapjock-4e4f3b1f15.png",
     "type": "Melee"
   },
   {
@@ -2968,7 +2968,7 @@ export const weapons: Weapon[] = [
       "-50% Sapper health.",
       "-25% Sapper damage."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/6/62/Slow_Burn.png/revision/latest?cb=20240731104211",
+    "iconUrl": "tc2-assets/weapons/slow-burn-28ca082f4b.png",
     "type": "PDA"
   },
   {
@@ -2981,7 +2981,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "Deals 20% less damage under 40 studs and over 120 studs."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/c/cf/Sniper_Rifle.png/revision/latest?cb=20240731104251",
+    "iconUrl": "tc2-assets/weapons/sniper-rifle-3e56c4adc6.png",
     "type": "Hitscan"
   },
   {
@@ -2992,7 +2992,7 @@ export const weapons: Weapon[] = [
     "capacity": "2",
     "ammo": "32",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/d/d3/Soda_Popper.png/revision/latest?cb=20240731104314",
+    "iconUrl": "tc2-assets/weapons/soda-popper-1ee5e361c4.png",
     "type": "Hitscan"
   },
   {
@@ -3011,7 +3011,7 @@ export const weapons: Weapon[] = [
       "Headshots only deal critical hits against lemoned players.",
       "10% slower reload time."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/a/af/Sour_Shots.png/revision/latest?cb=20240731104528",
+    "iconUrl": "tc2-assets/weapons/sour-shots-749fee25b5.png",
     "type": "Hitscan"
   },
   {
@@ -3030,7 +3030,7 @@ export const weapons: Weapon[] = [
       "25% slower firing speed.",
       "Upgrades, repairs, and speeds up construction of friendly buildings on hit."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/1/1f/Southern_Hospitality.png/revision/latest?cb=20240731104507",
+    "iconUrl": "tc2-assets/weapons/southern-hospitality-09ad170fe2.png",
     "type": "PDA"
   },
   {
@@ -3041,7 +3041,7 @@ export const weapons: Weapon[] = [
     "capacity": "Bat: N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/1/15/Spare_Hand.png/revision/latest?cb=20241021055936",
+    "iconUrl": "tc2-assets/weapons/spare-hand-b71b336c5d.png",
     "type": "Melee"
   },
   {
@@ -3061,7 +3061,7 @@ export const weapons: Weapon[] = [
       "50% more knockback vulnerability.",
       "The first hit will creates an explosion which deals 60 damage."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/8/8c/Spartan_Savior.png/revision/latest?cb=20240731104850",
+    "iconUrl": "tc2-assets/weapons/spartan-savior-f09ddc9da3.png",
     "type": "Melee"
   },
   {
@@ -3076,7 +3076,7 @@ export const weapons: Weapon[] = [
       "Overheal does not decay for 20 seconds.",
       "'Alt-Fire': Share some Sushi with a friend! (Medium Health Kit, overheals 34% of base health)"
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/1/17/Special-Ops_Sushi.png/revision/latest?cb=20240731101122",
+    "iconUrl": "tc2-assets/weapons/special-ops-sushi-4337329d1e.png",
     "type": "Flame"
   },
   {
@@ -3091,7 +3091,7 @@ export const weapons: Weapon[] = [
       "Provides a +30% faster firing and +20% faster reload speed while doing an objective.",
       "-15% damage penalty."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/0/06/Specialist.png/revision/latest?cb=20240731104904",
+    "iconUrl": "tc2-assets/weapons/specialist-1eea41d971.png",
     "type": "Utility"
   },
   {
@@ -3106,7 +3106,7 @@ export const weapons: Weapon[] = [
       "Marked For death when active and for a short time after.",
       "This weapon holsters 50% slower."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/6/64/Speed_Coil.png/revision/latest?cb=20240731104920",
+    "iconUrl": "tc2-assets/weapons/speed-coil-a4a1327c98.png",
     "type": "Melee"
   },
   {
@@ -3117,7 +3117,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/1/1b/Spider_Bite.png/revision/latest?cb=20221103230354",
+    "iconUrl": "tc2-assets/weapons/spider-bite-f28970dbec.png",
     "type": "Hitscan"
   },
   {
@@ -3137,7 +3137,7 @@ export const weapons: Weapon[] = [
       "Cannot sap buildings.",
       "I've covered wars, you know."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/f/f0/Spy_Camera.png/revision/latest?cb=20240731105041",
+    "iconUrl": "tc2-assets/weapons/spy-camera-c711cd42a1.png",
     "type": "PDA"
   },
   {
@@ -3148,7 +3148,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/1/12/Squid_Coil.png/revision/latest?cb=20240731105118",
+    "iconUrl": "tc2-assets/weapons/squid-coil-67f4b4cfca.png",
     "type": "Melee"
   },
   {
@@ -3164,7 +3164,7 @@ export const weapons: Weapon[] = [
       "+200% increased turn control while charging.",
       "Melee kills refill 25% of your charge meter."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/1/1d/Squire_Boots.png/revision/latest?cb=20240713073930",
+    "iconUrl": "tc2-assets/weapons/squire-boots-5490c9b90b.png",
     "type": "Melee"
   },
   {
@@ -3180,7 +3180,7 @@ export const weapons: Weapon[] = [
       "Clip size increased on kill. (up to +2)",
       "-30% explosion radius."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/74/Stellar_Carpet.png/revision/latest?cb=20250809223931",
+    "iconUrl": "tc2-assets/weapons/stellar-carpet-41f570c150.png",
     "type": "Projectile"
   },
   {
@@ -3200,7 +3200,7 @@ export const weapons: Weapon[] = [
       "Wearer cannot carry the intelligence briefcase.",
       "'Alt-Fire': Detonate all Stickybombs."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/5/5d/Sticky_Jumper.png/revision/latest?cb=20240731105213",
+    "iconUrl": "tc2-assets/weapons/sticky-jumper-61e71a1768.png",
     "type": "Utility"
   },
   {
@@ -3213,7 +3213,7 @@ export const weapons: Weapon[] = [
     "notes": [
       "'Alt-Fire': Detonate all Stickybombs."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/f/f2/Stickybomb_Launcher.png/revision/latest?cb=20241027033348",
+    "iconUrl": "tc2-assets/weapons/stickybomb-launcher-98f763be8b.png",
     "type": "Projectile"
   },
   {
@@ -3227,7 +3227,7 @@ export const weapons: Weapon[] = [
       "+30% Sapper damage.",
       "-99% Sapper health."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/a/ab/Stray_Reflex.png/revision/latest?cb=20240731105749",
+    "iconUrl": "tc2-assets/weapons/stray-reflex-911d40f365.png",
     "type": "PDA"
   },
   {
@@ -3243,7 +3243,7 @@ export const weapons: Weapon[] = [
       "-90% less healing from healers.",
       "-34% clip size."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/0/0e/Sub_Shotgun.png/revision/latest?cb=20240731105829",
+    "iconUrl": "tc2-assets/weapons/sub-shotgun-b97ea9a0ba.png",
     "type": "Utility"
   },
   {
@@ -3258,7 +3258,7 @@ export const weapons: Weapon[] = [
       "+250% air control on wearer",
       "Wearer deals 3x stomp damage"
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/e/e0/Super_Sneakers.png/revision/latest?cb=20240731110242",
+    "iconUrl": "tc2-assets/weapons/super-sneakers-d2baee8a24.png",
     "type": "Utility"
   },
   {
@@ -3274,7 +3274,7 @@ export const weapons: Weapon[] = [
       "40% slower firing speed.",
       "Cannot gain Supercharge while under the effect of another Supercharge."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/2/27/Supersaw.png/revision/latest?cb=20240731110308",
+    "iconUrl": "tc2-assets/weapons/supersaw-f02d50d3de.png",
     "type": "Melee"
   },
   {
@@ -3292,7 +3292,7 @@ export const weapons: Weapon[] = [
       "-33% clip size.",
       "45% slower firing speed."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/9/98/Suppressed_Solution.png/revision/latest?cb=20240713074919",
+    "iconUrl": "tc2-assets/weapons/suppressed-solution-de85b56ce1.png",
     "type": "Flame"
   },
   {
@@ -3308,7 +3308,7 @@ export const weapons: Weapon[] = [
       "Gain a speed boost on kill.",
       "-25 max health on wearer."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/b/b5/Swift_Stiletto.png/revision/latest?cb=20240401084049",
+    "iconUrl": "tc2-assets/weapons/swift-stiletto-d40fa56129.png",
     "type": "PDA"
   },
   {
@@ -3324,7 +3324,7 @@ export const weapons: Weapon[] = [
       "Projectile cannot be deflected.",
       "This weapon will reload when not active."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/e/ec/Syringe_Crossbow.png/revision/latest?cb=20241027033433",
+    "iconUrl": "tc2-assets/weapons/syringe-crossbow-2375533d17.png",
     "type": "Projectile"
   },
   {
@@ -3342,7 +3342,7 @@ export const weapons: Weapon[] = [
       "Dart does not damage enemies.",
       "+50% more falloff. (Unlisted)."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/9/97/Syringe_SMG.png/revision/latest?cb=20250228152046",
+    "iconUrl": "tc2-assets/weapons/syringe-smg-508e6f3583.png",
     "type": "Projectile"
   },
   {
@@ -3362,7 +3362,7 @@ export const weapons: Weapon[] = [
       "User is slowed down by 50% for 5 seconds after the effect ends and if the user did not get a kill.",
       "'Alt-Fire': Share some Turkey with a friend! (Medium Health Kit)"
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/8/83/Tenacious_Turkey.png/revision/latest?cb=20240801081711",
+    "iconUrl": "tc2-assets/weapons/tenacious-turkey-108d29111e.png",
     "type": "Melee"
   },
   {
@@ -3382,7 +3382,7 @@ export const weapons: Weapon[] = [
       "This weapon holsters 35% slower.",
       "+25% more knockback vulnerability."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/5/5e/Thousand_Degree_Axe.png/revision/latest?cb=20240731102816",
+    "iconUrl": "tc2-assets/weapons/thousand-degree-axe-642f011559.png",
     "type": "Melee"
   },
   {
@@ -3393,7 +3393,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/e/e4/Three_Rune_Blade.png/revision/latest?cb=20240801080933",
+    "iconUrl": "tc2-assets/weapons/three-rune-blade-1ccc2202a0.png",
     "type": "Melee"
   },
   {
@@ -3410,7 +3410,7 @@ export const weapons: Weapon[] = [
       "Taking damage while charging reduces remaining charge time.",
       "'Alt-Fire': Charge towards your enemies and remove debuffs."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/3/39/Tide_Turner_render.png/revision/latest?cb=20240826080803",
+    "iconUrl": "tc2-assets/weapons/tide-turner-0db67d1e7f.png",
     "type": "Melee"
   },
   {
@@ -3430,7 +3430,7 @@ export const weapons: Weapon[] = [
       "No ammo from dispensers when active.",
       "-50% strafing speed when spun up."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/6/62/Tomislav.png/revision/latest?cb=20240801081122",
+    "iconUrl": "tc2-assets/weapons/tomislav-6dc09fa5d0.png",
     "type": "Utility"
   },
   {
@@ -3441,7 +3441,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/3/3c/Tungsten_Torus.png/revision/latest?cb=20240801081633",
+    "iconUrl": "tc2-assets/weapons/tungsten-torus-a2d72c8d66.png",
     "type": "Hitscan"
   },
   {
@@ -3458,7 +3458,7 @@ export const weapons: Weapon[] = [
       "This weapon deploys 60% faster.",
       "-40% damage penalty."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/7b/Tunnel_Rat.png/revision/latest?cb=20240713101417",
+    "iconUrl": "tc2-assets/weapons/tunnel-rat-2ac61741ed.png",
     "type": "Melee"
   },
   {
@@ -3473,7 +3473,7 @@ export const weapons: Weapon[] = [
       "+25% fire damage resistance on wearer.",
       "Wearer is immune to the effects of afterburn."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/1/14/Turtle_Rock.png/revision/latest?cb=20240801075620",
+    "iconUrl": "tc2-assets/weapons/turtle-rock-8f09236617.png",
     "type": "Utility"
   },
   {
@@ -3484,7 +3484,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/c/c2/Twin-Turbolence.png/revision/latest?cb=20250210051459",
+    "iconUrl": "tc2-assets/weapons/twin-turbolence-3d6dc1b4ae.png",
     "type": "Hitscan"
   },
   {
@@ -3503,7 +3503,7 @@ export const weapons: Weapon[] = [
       "Deals 20% less damage under 40 studs and over 120 studs.",
       "Headshot kills cause decapitation (cosmetic feature)."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/3/30/Urban_Upriser.png/revision/latest?cb=20240801081903",
+    "iconUrl": "tc2-assets/weapons/urban-upriser-8e0601758a.png",
     "type": "Hitscan"
   },
   {
@@ -3522,7 +3522,7 @@ export const weapons: Weapon[] = [
       "Supercharge provides a 2.5 second resistance bubble that blocks 75% base damage and 100% crit damage of the selected type to the Doctor and Patient.",
       "Supercharge is divided into 4 separate charges."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/2/2d/Vaccinator_render.png/revision/latest?cb=20220419020752",
+    "iconUrl": "tc2-assets/weapons/vaccinator-434b1dd374.png",
     "type": "Healing"
   },
   {
@@ -3537,7 +3537,7 @@ export const weapons: Weapon[] = [
       "Marked For death when active and for a short time after.",
       "This weapon holsters 50% slower."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/f/f6/Warrior%27s_Spirit.png/revision/latest?cb=20240801090850",
+    "iconUrl": "tc2-assets/weapons/warrior-s-spirit-6abbaafe72.png",
     "type": "Melee"
   },
   {
@@ -3548,7 +3548,7 @@ export const weapons: Weapon[] = [
     "capacity": "N / A",
     "ammo": "N / A",
     "notes": [],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/4/45/Whirlpool_Wraith.png/revision/latest?cb=20240801091013",
+    "iconUrl": "tc2-assets/weapons/whirlpool-wraith-04156f0e79.png",
     "type": "Melee"
   },
   {
@@ -3565,7 +3565,7 @@ export const weapons: Weapon[] = [
       "Per Shot: -30 ammo.",
       "20% slower firing speed."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/4/44/Widowmaker.png/revision/latest?cb=20240801091056",
+    "iconUrl": "tc2-assets/weapons/widowmaker-920b2309f6.png",
     "type": "Hitscan"
   },
   {
@@ -3581,7 +3581,7 @@ export const weapons: Weapon[] = [
       "+15% damage bonus.",
       "-50% clip size."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/1/16/Winger.png/revision/latest?cb=20240727143207",
+    "iconUrl": "tc2-assets/weapons/winger-2925f9063f.png",
     "type": "Melee"
   },
   {
@@ -3599,7 +3599,7 @@ export const weapons: Weapon[] = [
       "Damage absorbed will slow you when the effect ends.",
       "+25% more knockback vulnerability under the effects."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/9/99/Witches_Brew.png/revision/latest?cb=20240801091753",
+    "iconUrl": "tc2-assets/weapons/witches-brew-b8778b186e.png",
     "type": "Utility"
   },
   {
@@ -3614,7 +3614,7 @@ export const weapons: Weapon[] = [
       "'Alt-Fire': Launches a ball that slows opponents.",
       "-20% damage penalty."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/c/cd/Wooden_Sword.png/revision/latest?cb=20240714140959",
+    "iconUrl": "tc2-assets/weapons/wooden-sword-aa3f23adf4.png",
     "type": "Melee"
   },
   {
@@ -3630,7 +3630,7 @@ export const weapons: Weapon[] = [
       "Gain a speed boost on kill.",
       "-25 max health on wearer."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/7c/Wraith.png/revision/latest?cb=20250209095141",
+    "iconUrl": "tc2-assets/weapons/wraith-7dacadb560.png",
     "type": "PDA"
   },
   {
@@ -3646,7 +3646,7 @@ export const weapons: Weapon[] = [
       "Wrangled sentries gain +50% faster firing speed.",
       "Sentries are disabled for 1 seconds after becoming unwrangled."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/3/3c/Wrangler.png/revision/latest?cb=20240801091848",
+    "iconUrl": "tc2-assets/weapons/wrangler-e2b2d92310.png",
     "type": "Hitscan"
   },
   {
@@ -3661,7 +3661,7 @@ export const weapons: Weapon[] = [
       "'Alt-Fire': Launches a ball that slows opponents.",
       "-20% damage penalty."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/e/ee/Wrap_Assassin.png/revision/latest?cb=20240801092206",
+    "iconUrl": "tc2-assets/weapons/wrap-assassin-51d2ccfaef.png",
     "type": "Melee"
   },
   {
@@ -3679,7 +3679,7 @@ export const weapons: Weapon[] = [
       "-20% explosion radius.",
       "30% slower reload time. (Unlisted)"
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/a/ad/Wrecker%27s_Yard.png/revision/latest?cb=20240801092518",
+    "iconUrl": "tc2-assets/weapons/wrecker-s-yard-41c7ad347f.png",
     "type": "Projectile"
   },
   {
@@ -3693,7 +3693,7 @@ export const weapons: Weapon[] = [
       "Always crits.",
       "Upgrades, repairs, and speeds up construction of friendly buildings on hit."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/7/7c/Wrench.png/revision/latest?cb=20240713063740",
+    "iconUrl": "tc2-assets/weapons/wrench-43cf0bc890.png",
     "type": "PDA"
   },
   {
@@ -3713,7 +3713,7 @@ export const weapons: Weapon[] = [
       "Disguising as an defense class: +20% damage resistance.",
       "Disguising as an support class: +4 health regenerated per second."
     ],
-    "iconUrl": "https://static.wikia.nocookie.net/tc2/images/0/05/Your_Eternal_Reward.png/revision/latest?cb=20240801092611",
+    "iconUrl": "tc2-assets/weapons/your-eternal-reward-bc3abc5707.png",
     "type": "PDA"
   }
 ];

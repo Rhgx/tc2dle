@@ -7,13 +7,14 @@ import { YesterdayAnswer } from "./components/YesterdayAnswer";
 import { WIKI_PAGE_URL } from "./constants/wiki";
 import { loadingScreenUrls } from "./data/loadingScreens.generated";
 import { generatedAt, weapons as generatedWeapons } from "./data/weapons.generated";
+import { resolveAssetUrl } from "./lib/assets";
 import { pickDailyLoadingScreen } from "./lib/loadingScreens";
 import { preloadWeaponImages } from "./lib/preload";
 import { theme } from "./theme";
 
 export default function App() {
-  const weapons = useMemo(() => generatedWeapons, []);
-  const backgroundUrl = useMemo(() => pickDailyLoadingScreen(loadingScreenUrls), []);
+  const weapons = useMemo(() => generatedWeapons.map((weapon) => ({ ...weapon, iconUrl: resolveAssetUrl(weapon.iconUrl) })), []);
+  const backgroundUrl = useMemo(() => pickDailyLoadingScreen(loadingScreenUrls.map(resolveAssetUrl)), []);
   const status = generatedAt
     ? `Loaded ${weapons.length} scraped weapons generated on ${new Date(generatedAt).toLocaleString()}.`
     : `Loaded ${weapons.length} bundled fallback weapons. Run npm run scrape:weapons to generate the full list.`;

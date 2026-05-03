@@ -1,4 +1,5 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
+import { mkdir, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { JSDOM } from "jsdom";
@@ -82,6 +83,29 @@ function normalizeImageUrl(url) {
   return parsed.toString();
 }
 
+function getImageExtension(url) {
+  try {
+    const parsed = new URL(url);
+    const withoutRevision = parsed.pathname.split("/revision/")[0];
+    const extension = path.extname(withoutRevision).toLowerCase();
+    return extension || ".png";
+  } catch {
+    return ".png";
+  }
+}
+
+function slugifyFileName(value) {
+  return cleanText(value)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 64) || "asset";
+}
+
+function hashValue(value) {
+  return createHash("sha1").update(value).digest("hex").slice(0, 10);
+}
+
 function isStaticBackgroundUrl(url) {
   try {
     const parsed = new URL(url);
@@ -89,6 +113,49 @@ function isStaticBackgroundUrl(url) {
   } catch {
     return false;
   }
+}
+
+async function prepareAssetDirectory(directoryPath) {
+  const resolved = path.resolve(directoryPath);
+  const publicRoot = path.join(projectRoot, "public");
+  if (!resolved.startsWith(publicRoot)) {
+    throw new Error(`Refusing to clean asset directory outside public: ${resolved}`);
+  }
+
+  await rm(resolved, { recursive: true, force: true });
+  await mkdir(resolved, { recursive: true });
+}
+
+async function downloadAsset(url, outputPath) {
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`Asset request failed with ${response.status}: ${url}`);
+  const bytes = Buffer.from(await response.arrayBuffer());
+  await writeFile(outputPath, bytes);
+}
+
+async function downloadAssets(items, directoryPath, publicPrefix) {
+  await prepareAssetDirectory(directoryPath);
+
+  const uniqueItems = [...new Map(items.filter((item) => item.url).map((item) => [item.url, item])).values()];
+  const pathByUrl = new Map();
+  let cursor = 0;
+  const workerCount = 8;
+
+  async function worker() {
+    while (cursor < uniqueItems.length) {
+      const item = uniqueItems[cursor];
+      cursor += 1;
+
+      const extension = getImageExtension(item.url);
+      const fileName = `${slugifyFileName(item.name)}-${hashValue(item.url)}${extension}`;
+      const outputPath = path.join(directoryPath, fileName);
+      await downloadAsset(item.url, outputPath);
+      pathByUrl.set(item.url, `${publicPrefix}/${fileName}`);
+    }
+  }
+
+  await Promise.all(Array.from({ length: Math.min(workerCount, uniqueItems.length) }, worker));
+  return pathByUrl;
 }
 
 function getImageUrl(img) {
@@ -405,6 +472,8 @@ export const loadingScreenUrls: string[] = ${JSON.stringify(urls, null, 2)};
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const weaponsOutputPath = path.join(projectRoot, "src", "data", "weapons.generated.ts");
 const loadingScreensOutputPath = path.join(projectRoot, "src", "data", "loadingScreens.generated.ts");
+const weaponAssetsPath = path.join(projectRoot, "public", "tc2-assets", "weapons");
+const loadingScreenAssetsPath = path.join(projectRoot, "public", "tc2-assets", "loading-screens");
 
 const target = process.argv[2] || "all";
 const validTargets = new Set(["all", "weapons", "loading-screens"]);
@@ -418,22 +487,52 @@ await mkdir(path.dirname(weaponsOutputPath), { recursive: true });
 
 if (target === "weapons") {
   const weapons = await scrapeWeaponsFromWiki();
-  await writeFile(weaponsOutputPath, renderWeaponsGeneratedFile(weapons), "utf8");
+  const iconPaths = await downloadAssets(
+    weapons.map((weapon) => ({ name: weapon.name, url: weapon.iconUrl })),
+    weaponAssetsPath,
+    "tc2-assets/weapons",
+  );
+  const localWeapons = weapons.map((weapon) => ({ ...weapon, iconUrl: iconPaths.get(weapon.iconUrl) || "" }));
+  await writeFile(weaponsOutputPath, renderWeaponsGeneratedFile(localWeapons), "utf8");
   console.log(`Scraped ${weapons.length} weapons into ${path.relative(projectRoot, weaponsOutputPath)}.`);
+  console.log(`Downloaded ${iconPaths.size} weapon icons into ${path.relative(projectRoot, weaponAssetsPath)}.`);
 }
 
 if (target === "loading-screens") {
   const loadingScreenUrls = await scrapeLoadingScreensFromWiki();
-  await writeFile(loadingScreensOutputPath, renderLoadingScreensGeneratedFile(loadingScreenUrls), "utf8");
+  const backgroundPaths = await downloadAssets(
+    loadingScreenUrls.map((url) => ({ name: path.basename(new URL(url).pathname.split("/revision/")[0]), url })),
+    loadingScreenAssetsPath,
+    "tc2-assets/loading-screens",
+  );
+  const localLoadingScreenUrls = loadingScreenUrls.map((url) => backgroundPaths.get(url)).filter(Boolean);
+  await writeFile(loadingScreensOutputPath, renderLoadingScreensGeneratedFile(localLoadingScreenUrls), "utf8");
   console.log(`Scraped ${loadingScreenUrls.length} loading screens into ${path.relative(projectRoot, loadingScreensOutputPath)}.`);
+  console.log(`Downloaded ${backgroundPaths.size} loading screens into ${path.relative(projectRoot, loadingScreenAssetsPath)}.`);
 }
 
 if (target === "all") {
   const [weapons, loadingScreenUrls] = await Promise.all([scrapeWeaponsFromWiki(), scrapeLoadingScreensFromWiki()]);
+  const [iconPaths, backgroundPaths] = await Promise.all([
+    downloadAssets(
+      weapons.map((weapon) => ({ name: weapon.name, url: weapon.iconUrl })),
+      weaponAssetsPath,
+      "tc2-assets/weapons",
+    ),
+    downloadAssets(
+      loadingScreenUrls.map((url) => ({ name: path.basename(new URL(url).pathname.split("/revision/")[0]), url })),
+      loadingScreenAssetsPath,
+      "tc2-assets/loading-screens",
+    ),
+  ]);
+  const localWeapons = weapons.map((weapon) => ({ ...weapon, iconUrl: iconPaths.get(weapon.iconUrl) || "" }));
+  const localLoadingScreenUrls = loadingScreenUrls.map((url) => backgroundPaths.get(url)).filter(Boolean);
   await Promise.all([
-    writeFile(weaponsOutputPath, renderWeaponsGeneratedFile(weapons), "utf8"),
-    writeFile(loadingScreensOutputPath, renderLoadingScreensGeneratedFile(loadingScreenUrls), "utf8"),
+    writeFile(weaponsOutputPath, renderWeaponsGeneratedFile(localWeapons), "utf8"),
+    writeFile(loadingScreensOutputPath, renderLoadingScreensGeneratedFile(localLoadingScreenUrls), "utf8"),
   ]);
   console.log(`Scraped ${weapons.length} weapons into ${path.relative(projectRoot, weaponsOutputPath)}.`);
+  console.log(`Downloaded ${iconPaths.size} weapon icons into ${path.relative(projectRoot, weaponAssetsPath)}.`);
   console.log(`Scraped ${loadingScreenUrls.length} loading screens into ${path.relative(projectRoot, loadingScreensOutputPath)}.`);
+  console.log(`Downloaded ${backgroundPaths.size} loading screens into ${path.relative(projectRoot, loadingScreenAssetsPath)}.`);
 }

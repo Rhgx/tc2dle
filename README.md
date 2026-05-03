@@ -15,6 +15,7 @@
 TC2DLE is a daily weapon guessing web app for **Typical Colors 2**. It works like a compact DLE-style puzzle: search for a weapon, submit guesses, and use color hints for class, slot, source, capacity, and ammo to solve the global daily answer.
 
 Weapon and loading-screen data are scraped ahead of time into generated TypeScript files, so the app does not need to scrape the wiki at runtime. Daily answers reset globally at UTC midnight.
+Weapon icons and loading-screen images are also downloaded into the app during scraping, so the deployed game serves them locally instead of depending on Fandom image URLs at runtime.
 
 ## Features
 
@@ -41,8 +42,9 @@ Generated data lives in:
 
 - `src/data/weapons.generated.ts`
 - `src/data/loadingScreens.generated.ts`
+- `public/tc2-assets/`
 
-Run `npm run scrape` to refresh both datasets.
+Run `npm run scrape` to refresh both datasets and their local image assets.
 
 ## Deploy
 
