@@ -18,9 +18,25 @@ export type Weapon = {
   type: string;
 };
 
+export type GameKind = "weapon" | "map";
+
+export type Tc2Map = {
+  name: string;
+  gameModes: string;
+  group: string;
+  status: string;
+  imageUrl: string;
+};
+
 export type GuessEntry = {
   id: string;
   weapon: Weapon;
+  revealStage: number;
+};
+
+export type MapGuessEntry = {
+  id: string;
+  map: Tc2Map;
   revealStage: number;
 };
 

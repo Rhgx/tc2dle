@@ -6,10 +6,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && node scripts/create-route-html.mjs",
     "preview": "vite preview --host 127.0.0.1",
     "scrape": "node scripts/scrape-data.mjs all",
     "scrape:weapons": "node scripts/scrape-data.mjs weapons",
+    "scrape:maps": "node scripts/scrape-data.mjs maps",
     "scrape:loading-screens": "node scripts/scrape-data.mjs loading-screens"
   },
   "dependencies": {
