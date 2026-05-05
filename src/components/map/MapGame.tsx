@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { fuzzyScore } from "../../lib/compare";
 import { readCachedGuessNames, writeCachedGuessNames } from "../../lib/guessCache";
 import { hashString, pickDaily } from "../../lib/hash";
+import { expandMapGameEntries, mapKey, mapLabel } from "../../lib/maps";
 import type { MapGuessEntry, Tc2Map } from "../../types";
 import { LegendChip } from "../shared/LegendChip";
 import { MapGuessGrid } from "./MapGuessGrid";
@@ -14,7 +15,8 @@ type MapGameProps = {
 };
 
 export function MapGame({ maps, status }: MapGameProps) {
-  const target = useMemo(() => pickDaily(maps, "map"), [maps]);
+  const mapEntries = useMemo(() => expandMapGameEntries(maps), [maps]);
+  const target = useMemo(() => pickDaily(mapEntries, "map"), [mapEntries]);
   const [query, setQuery] = useState("");
   const [highlightedIndex, setHighlightedIndex] = useState(0);
   const [guesses, setGuesses] = useState<MapGuessEntry[]>([]);
@@ -27,19 +29,19 @@ export function MapGame({ maps, status }: MapGameProps) {
     setQuery("");
     setHighlightedIndex(0);
     setMessage("");
-    setGuesses(readCachedMapGuesses(target.name, maps));
-    setLoadedAnswer(target.name);
-  }, [target, maps]);
+    setGuesses(readCachedMapGuesses(mapKey(target), mapEntries));
+    setLoadedAnswer(mapKey(target));
+  }, [target, mapEntries]);
 
   useEffect(() => {
-    if (!loadedAnswer || loadedAnswer !== target?.name) return;
+    if (!loadedAnswer || loadedAnswer !== (target ? mapKey(target) : "")) return;
     writeCachedMapGuesses(loadedAnswer, guesses);
   }, [guesses, loadedAnswer, target]);
 
   const revealing = false;
-  const won = guesses.some((entry) => entry.map.name === target?.name);
+  const won = guesses.some((entry) => target && mapKey(entry.map) === mapKey(target));
   const lost = guesses.length >= MAP_GUESS_LIMIT && !won;
-  const guessedNames = useMemo(() => new Set(guesses.map((entry) => entry.map.name)), [guesses]);
+  const guessedKeys = useMemo(() => new Set(guesses.map((entry) => mapKey(entry.map))), [guesses]);
   const failedGuesses = won ? Math.max(0, guesses.length - 1) : guesses.length;
   const zoom = MAP_ZOOM_STEPS[Math.min(failedGuesses, MAP_ZOOM_STEPS.length - 1)];
   const cropPosition = useMemo(() => (target ? getDailyCropPosition(target.name) : "50% 50%"), [target]);
@@ -47,14 +49,14 @@ export function MapGame({ maps, status }: MapGameProps) {
   const suggestions = useMemo(() => {
     const trimmed = query.trim();
     if (!trimmed) return [];
-    return maps
-      .filter((map) => !guessedNames.has(map.name))
-      .map((map) => ({ map, score: fuzzyScore(map.name, trimmed) }))
+    return mapEntries
+      .filter((map) => !guessedKeys.has(mapKey(map)))
+      .map((map) => ({ map, score: Math.max(fuzzyScore(map.name, trimmed), fuzzyScore(mapLabel(map), trimmed)) }))
       .filter((item) => item.score > 0)
-      .sort((a, b) => b.score - a.score || a.map.name.localeCompare(b.map.name))
+      .sort((a, b) => b.score - a.score || mapLabel(a.map).localeCompare(mapLabel(b.map)))
       .slice(0, 8)
       .map((item) => item.map);
-  }, [maps, query, guessedNames]);
+  }, [mapEntries, query, guessedKeys]);
 
   useEffect(() => {
     setHighlightedIndex(0);
@@ -69,21 +71,22 @@ export function MapGame({ maps, status }: MapGameProps) {
   function submit(map?: Tc2Map) {
     if (revealing || won || lost || !target) return;
 
-    const selected = map || suggestions[0] || maps.find((item) => item.name.toLowerCase() === query.trim().toLowerCase());
+    const normalizedQuery = query.trim().toLowerCase();
+    const selected = map || suggestions[0] || mapEntries.find((item) => mapLabel(item).toLowerCase() === normalizedQuery || item.name.toLowerCase() === normalizedQuery);
     if (!selected) {
       setMessage("Type a valid map name or pick a result from the fuzzy search.");
       return;
     }
-    if (guessedNames.has(selected.name)) {
-      setMessage("You already guessed that map.");
+    if (guessedKeys.has(mapKey(selected))) {
+      setMessage("You already guessed that map and gamemode.");
       return;
     }
 
-    const id = `${selected.name}-${Date.now()}-${Math.random().toString(16).slice(2)}`;
+    const id = `${mapKey(selected)}-${Date.now()}-${Math.random().toString(16).slice(2)}`;
     setGuesses((current) => [{ id, map: selected, revealStage: 1 }, ...current]);
     setQuery("");
     setHighlightedIndex(0);
-    const correct = selected.name === target.name;
+    const correct = mapKey(selected) === mapKey(target);
     setMessage(correct ? "Correct." : "");
     if (correct) {
       celebrateWin();
@@ -204,7 +207,7 @@ export function MapGame({ maps, status }: MapGameProps) {
             >
               {suggestions.map((map, index) => (
                 <Box
-                  key={map.name}
+                  key={mapKey(map)}
                   component="button"
                   type="button"
                   onMouseDown={(event) => event.preventDefault()}
@@ -231,6 +234,9 @@ export function MapGame({ maps, status }: MapGameProps) {
                   <MapImage map={map} width={54} height={34} />
                   <Box sx={{ minWidth: 0 }}>
                     <Typography sx={{ fontWeight: 900 }}>{map.name}</Typography>
+                    <Typography variant="caption" color="text.secondary" sx={{ display: "block", fontWeight: 800, lineHeight: 1.15 }}>
+                      {map.gameModes}
+                    </Typography>
                   </Box>
                 </Box>
               ))}
@@ -243,7 +249,7 @@ export function MapGame({ maps, status }: MapGameProps) {
 
         {(won || lost) && (
           <Alert severity={won ? "success" : "error"}>
-            <strong>{won ? "Solved:" : "Out of guesses. Answer:"}</strong> {target.name}
+            <strong>{won ? "Solved:" : "Out of guesses. Answer:"}</strong> {mapLabel(target)}
           </Alert>
         )}
 
@@ -282,10 +288,13 @@ function readCachedMapGuesses(answer: string, maps: Tc2Map[]): MapGuessEntry[] {
     const parsed = readCachedGuessNames("map", answer) as unknown;
     if (!Array.isArray(parsed)) return [];
 
-    const byName = new Map(maps.map((map) => [map.name, map]));
+    const byKey = new Map(maps.map((map) => [mapKey(map), map]));
     return parsed
       .filter((name): name is string => typeof name === "string")
-      .map((name, index) => byName.get(name) ? { id: `map-${answer}-${name}-${index}`, map: byName.get(name)!, revealStage: 1 } : null)
+      .map((name, index) => {
+        const map = byKey.get(name) || maps.find((entry) => entry.name === name);
+        return map ? { id: `map-${answer}-${name}-${index}`, map, revealStage: 1 } : null;
+      })
       .filter((entry): entry is MapGuessEntry => Boolean(entry));
   } catch {
     return [];
@@ -293,11 +302,11 @@ function readCachedMapGuesses(answer: string, maps: Tc2Map[]): MapGuessEntry[] {
 }
 
 function writeCachedMapGuesses(answer: string, guesses: MapGuessEntry[]) {
-  writeCachedGuessNames("map", answer, guesses.map((entry) => entry.map.name));
+  writeCachedGuessNames("map", answer, guesses.map((entry) => mapKey(entry.map)));
 }
 
 const MAP_GUESS_LIMIT = 10;
-const MAP_ZOOM_STEPS = [7.2, 6.4, 5.6, 4.8, 4.05, 3.35, 2.7, 2.1, 1.55, 1];
+const MAP_ZOOM_STEPS = [11, 9.5, 8.1, 6.9, 5.8, 4.75, 3.75, 2.75, 1.8, 1];
 
 function getDailyCropPosition(mapName: string) {
   const hash = hashString(`tc2dle-map-crop-${mapName}`);

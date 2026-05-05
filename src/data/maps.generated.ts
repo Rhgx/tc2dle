@@ -1,6 +1,6 @@
 import type { Tc2Map } from "../types";
 
-export const mapsGeneratedAt = "2026-05-05T17:11:58.829Z";
+export const mapsGeneratedAt = "2026-05-05T17:57:33.219Z";
 export const maps: Tc2Map[] = [
   {
     "name": "1979 Effect",
@@ -39,16 +39,23 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Badwater",
-    "gameModes": "Infection / Payload",
-    "group": "Special / Standard",
+    "gameModes": "Infection",
+    "group": "Special",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/badwater-6fb2185d92.png"
+  },
+  {
+    "name": "Badwater",
+    "gameModes": "Payload",
+    "group": "Standard",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/badwater-6fb2185d92.png"
   },
   {
     "name": "Badwater Event",
-    "gameModes": "Payload / Prop Hunt",
-    "group": "Special / Standard",
-    "status": "Active / Seasonal",
+    "gameModes": "Payload",
+    "group": "Standard",
+    "status": "Seasonal",
     "imageUrl": "tc2-assets/maps/badwater-event-c176bc46fb.png"
   },
   {
@@ -74,9 +81,16 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Baseplate",
-    "gameModes": "Infection / King of the Hill",
-    "group": "Special / Standard",
-    "status": "Active (Rare) / Community Server",
+    "gameModes": "Infection",
+    "group": "Special",
+    "status": "Active (Rare)",
+    "imageUrl": "tc2-assets/maps/baseplate-363dbad546.png"
+  },
+  {
+    "name": "Baseplate",
+    "gameModes": "King of the Hill",
+    "group": "Standard",
+    "status": "Community Server",
     "imageUrl": "tc2-assets/maps/baseplate-363dbad546.png"
   },
   {
@@ -113,13 +127,6 @@ export const maps: Tc2Map[] = [
     "group": "Special",
     "status": "Community Server",
     "imageUrl": "tc2-assets/maps/bluescreen-c7f78391b6.png"
-  },
-  {
-    "name": "Boundary",
-    "gameModes": "Prop Hunt",
-    "group": "Special",
-    "status": "Active",
-    "imageUrl": "tc2-assets/maps/boundary-3b08ac52fe.png"
   },
   {
     "name": "Calamity",
@@ -165,10 +172,17 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Citrus",
-    "gameModes": "Control Points / King of the Hill",
+    "gameModes": "Control Points",
     "group": "Standard",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/citrus-0a456115e5.png"
+  },
+  {
+    "name": "Citrus",
+    "gameModes": "King of the Hill",
+    "group": "Standard",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/citrus-fedaa82829.png"
   },
   {
     "name": "Cliffhanger",
@@ -179,16 +193,23 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Clutter",
-    "gameModes": "Prop Hunt / Vs. Bosses",
+    "gameModes": "Vs. Bosses",
     "group": "Special",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/clutter-29be9ccfac.png"
   },
   {
     "name": "Coldvine",
-    "gameModes": "Team Deathmatch / Vs. Bosses",
+    "gameModes": "Team Deathmatch",
     "group": "Special / Standard",
     "status": "Active / Active (Rare)",
+    "imageUrl": "tc2-assets/maps/coldvine-fb2e3b7554.png"
+  },
+  {
+    "name": "Coldvine",
+    "gameModes": "Vs. Bosses",
+    "group": "Special",
+    "status": "Active",
     "imageUrl": "tc2-assets/maps/coldvine-fb2e3b7554.png"
   },
   {
@@ -214,10 +235,17 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Datamass",
-    "gameModes": "Player Destruction / Vs. Bosses",
-    "group": "Special / Standard",
+    "gameModes": "Player Destruction",
+    "group": "Standard",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/datamass-4b592aa27f.png"
+  },
+  {
+    "name": "Datamass",
+    "gameModes": "Vs. Bosses",
+    "group": "Special",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/datamass-370d0f9e4b.png"
   },
   {
     "name": "Deadfall Ridge",
@@ -228,8 +256,8 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Defrost",
-    "gameModes": "King of the Hill / Prop Hunt",
-    "group": "Special / Standard",
+    "gameModes": "King of the Hill",
+    "group": "Standard",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/defrost-4966723263.png"
   },
@@ -277,9 +305,16 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Frost",
-    "gameModes": "Control Points / Infection",
-    "group": "Special / Standard",
-    "status": "Active / Active (Rare)",
+    "gameModes": "Control Points",
+    "group": "Standard",
+    "status": "Active (Rare)",
+    "imageUrl": "tc2-assets/maps/frost-7380484983.png"
+  },
+  {
+    "name": "Frost",
+    "gameModes": "Infection",
+    "group": "Special",
+    "status": "Active",
     "imageUrl": "tc2-assets/maps/frost-7380484983.png"
   },
   {
@@ -291,8 +326,15 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Gorge",
-    "gameModes": "Attack/Defense / Infection",
-    "group": "Special / Standard",
+    "gameModes": "Attack/Defense",
+    "group": "Standard",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/gorge-fb730d3ce9.png"
+  },
+  {
+    "name": "Gorge",
+    "gameModes": "Infection",
+    "group": "Special",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/gorge-fb730d3ce9.png"
   },
@@ -305,10 +347,31 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Harvest",
-    "gameModes": "Arena / King of the Hill / Team Deathmatch / Vs. Bosses",
+    "gameModes": "Arena",
+    "group": "Standard",
+    "status": "Active (Rare)",
+    "imageUrl": "tc2-assets/maps/harvest-c03c31bcaf.png"
+  },
+  {
+    "name": "Harvest",
+    "gameModes": "King of the Hill",
+    "group": "Standard",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/harvest-f0b1cfdf7d.png"
+  },
+  {
+    "name": "Harvest",
+    "gameModes": "Team Deathmatch",
     "group": "Special / Standard",
     "status": "Active / Active (Rare)",
-    "imageUrl": "tc2-assets/maps/harvest-c03c31bcaf.png"
+    "imageUrl": "tc2-assets/maps/harvest-f0b1cfdf7d.png"
+  },
+  {
+    "name": "Harvest",
+    "gameModes": "Vs. Bosses",
+    "group": "Special",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/harvest-8dca9ea58c.png"
   },
   {
     "name": "Harvest Alpine",
@@ -326,16 +389,30 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Harvest Winter",
-    "gameModes": "King of the Hill / Vs. Bosses",
-    "group": "Special / Standard",
+    "gameModes": "King of the Hill",
+    "group": "Standard",
     "status": "Seasonal",
     "imageUrl": "tc2-assets/maps/harvest-winter-5d8ca55a4d.png"
   },
   {
-    "name": "Haunted Mansion",
-    "gameModes": "Infection / Vs. Bosses",
+    "name": "Harvest Winter",
+    "gameModes": "Vs. Bosses",
     "group": "Special",
-    "status": "Active / Active (Rare)",
+    "status": "Seasonal",
+    "imageUrl": "tc2-assets/maps/harvest-winter-81405f73bb.png"
+  },
+  {
+    "name": "Haunted Mansion",
+    "gameModes": "Infection",
+    "group": "Special",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/haunted-mansion-27a0a404c9.png"
+  },
+  {
+    "name": "Haunted Mansion",
+    "gameModes": "Vs. Bosses",
+    "group": "Special",
+    "status": "Active (Rare)",
     "imageUrl": "tc2-assets/maps/haunted-mansion-27a0a404c9.png"
   },
   {
@@ -347,17 +424,31 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Himalaya",
-    "gameModes": "King of the Hill / Team Deathmatch",
-    "group": "Special / Standard",
+    "gameModes": "King of the Hill",
+    "group": "Standard",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/himalaya-4629fbc04f.png"
+  },
+  {
+    "name": "Himalaya",
+    "gameModes": "Team Deathmatch",
+    "group": "Special",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/himalaya-4629fbc04f.png"
   },
   {
     "name": "Hungry",
-    "gameModes": "Medieval / Vs. Bosses",
+    "gameModes": "Medieval",
     "group": "Special",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/hungry-cdaaf9f8b1.png"
+  },
+  {
+    "name": "Hungry",
+    "gameModes": "Vs. Bosses",
+    "group": "Special",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/hungry-817e395de9.png"
   },
   {
     "name": "Hydrovalley",
@@ -375,10 +466,17 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Lakeside",
-    "gameModes": "King of the Hill / Team Deathmatch",
-    "group": "Special / Standard",
+    "gameModes": "King of the Hill",
+    "group": "Standard",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/lakeside-16d54fe078.png"
+  },
+  {
+    "name": "Lakeside",
+    "gameModes": "Team Deathmatch",
+    "group": "Special",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/lakeside-60b96dfbaa.png"
   },
   {
     "name": "Liana",
@@ -403,10 +501,17 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Mach",
-    "gameModes": "Arena / Capture the Flag",
+    "gameModes": "Arena",
     "group": "Standard",
     "status": "Active (Rare)",
     "imageUrl": "tc2-assets/maps/mach-5152652703.png"
+  },
+  {
+    "name": "Mach",
+    "gameModes": "Capture the Flag",
+    "group": "Standard",
+    "status": "Active (Rare)",
+    "imageUrl": "tc2-assets/maps/mach-6cf8dacb6b.png"
   },
   {
     "name": "Manufacturing",
@@ -452,16 +557,30 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Orange Asylum",
-    "gameModes": "Control Points / Team Deathmatch",
-    "group": "Special / Standard",
-    "status": "Active / Community Server",
+    "gameModes": "Control Points",
+    "group": "Standard",
+    "status": "Community Server",
+    "imageUrl": "tc2-assets/maps/orange-asylum-b7886d781f.png"
+  },
+  {
+    "name": "Orange Asylum",
+    "gameModes": "Team Deathmatch",
+    "group": "Special",
+    "status": "Active",
     "imageUrl": "tc2-assets/maps/orange-asylum-b7886d781f.png"
   },
   {
     "name": "Outdoors",
-    "gameModes": "Prop Hunt / Team Deathmatch / Vs. Bosses",
+    "gameModes": "Team Deathmatch",
     "group": "Special / Standard",
     "status": "Active / Active (Rare)",
+    "imageUrl": "tc2-assets/maps/outdoors-f93f67327c.png"
+  },
+  {
+    "name": "Outdoors",
+    "gameModes": "Vs. Bosses",
+    "group": "Special",
+    "status": "Active",
     "imageUrl": "tc2-assets/maps/outdoors-f93f67327c.png"
   },
   {
@@ -508,17 +627,31 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Rig",
-    "gameModes": "Capture the Flag / Team Deathmatch",
-    "group": "Special / Standard",
-    "status": "Active / Active (Rare)",
+    "gameModes": "Capture the Flag",
+    "group": "Standard",
+    "status": "Active (Rare)",
     "imageUrl": "tc2-assets/maps/rig-9f2ece6d37.png"
   },
   {
-    "name": "Risky",
-    "gameModes": "King of the Hill / Vs. Bosses",
+    "name": "Rig",
+    "gameModes": "Team Deathmatch",
     "group": "Special / Standard",
+    "status": "Active / Active (Rare)",
+    "imageUrl": "tc2-assets/maps/rig-97f961aba3.png"
+  },
+  {
+    "name": "Risky",
+    "gameModes": "King of the Hill",
+    "group": "Standard",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/risky-175cc0de5f.png"
+  },
+  {
+    "name": "Risky",
+    "gameModes": "Vs. Bosses",
+    "group": "Special",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/risky-efb291893b.png"
   },
   {
     "name": "Roadway",
@@ -536,17 +669,38 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Rooftop",
-    "gameModes": "Arena / King of the Hill / Vs. Bosses",
-    "group": "Special / Standard",
-    "status": "Active / Active (Rare)",
+    "gameModes": "Arena",
+    "group": "Standard",
+    "status": "Active (Rare)",
     "imageUrl": "tc2-assets/maps/rooftop-f6a6dfb1ab.png"
   },
   {
+    "name": "Rooftop",
+    "gameModes": "King of the Hill",
+    "group": "Standard",
+    "status": "Active (Rare)",
+    "imageUrl": "tc2-assets/maps/rooftop-1aa90fb045.png"
+  },
+  {
+    "name": "Rooftop",
+    "gameModes": "Vs. Bosses",
+    "group": "Special",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/rooftop-585890d5a5.png"
+  },
+  {
     "name": "Rooftops",
-    "gameModes": "King of the Hill / Vs. Bosses",
-    "group": "Special / Standard",
+    "gameModes": "King of the Hill",
+    "group": "Standard",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/rooftops-ba0ca2736a.png"
+  },
+  {
+    "name": "Rooftops",
+    "gameModes": "Vs. Bosses",
+    "group": "Special",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/rooftops-1f3769b945.png"
   },
   {
     "name": "Runnel",
@@ -592,15 +746,36 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Sawmill",
-    "gameModes": "Arena / Capture the Flag / King of the Hill / Prop Hunt",
-    "group": "Special / Standard",
-    "status": "Active / Active (Rare)",
+    "gameModes": "Arena",
+    "group": "Standard",
+    "status": "Active (Rare)",
     "imageUrl": "tc2-assets/maps/sawmill-420ee7e1d3.png"
   },
   {
+    "name": "Sawmill",
+    "gameModes": "Capture the Flag",
+    "group": "Standard",
+    "status": "Active (Rare)",
+    "imageUrl": "tc2-assets/maps/sawmill-b2653e63b7.png"
+  },
+  {
+    "name": "Sawmill",
+    "gameModes": "King of the Hill",
+    "group": "Standard",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/sawmill-014401078e.png"
+  },
+  {
     "name": "Shiverift",
-    "gameModes": "King of the Hill / Team Deathmatch",
-    "group": "Special / Standard",
+    "gameModes": "King of the Hill",
+    "group": "Standard",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/shiverift-16d79eb0b1.png"
+  },
+  {
+    "name": "Shiverift",
+    "gameModes": "Team Deathmatch",
+    "group": "Special",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/shiverift-16d79eb0b1.png"
   },
@@ -760,16 +935,23 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Upward",
-    "gameModes": "Infection / Payload",
-    "group": "Special / Standard",
+    "gameModes": "Infection",
+    "group": "Special",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/upward-bba146c0ac.png"
+  },
+  {
+    "name": "Upward",
+    "gameModes": "Payload",
+    "group": "Standard",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/upward-bba146c0ac.png"
   },
   {
     "name": "Upward Event",
-    "gameModes": "Payload / Prop Hunt",
-    "group": "Special / Standard",
-    "status": "Active / Seasonal",
+    "gameModes": "Payload",
+    "group": "Standard",
+    "status": "Seasonal",
     "imageUrl": "tc2-assets/maps/upward-event-8c2d4554fb.png"
   },
   {
@@ -816,17 +998,31 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Wholesale",
-    "gameModes": "Team Deathmatch / Vs. Bosses",
+    "gameModes": "Team Deathmatch",
+    "group": "Special",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/wholesale-e0ad36b255.png"
+  },
+  {
+    "name": "Wholesale",
+    "gameModes": "Vs. Bosses",
     "group": "Special",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/wholesale-e0ad36b255.png"
   },
   {
     "name": "Yellowvalley",
-    "gameModes": "Attack/Defense / Infection",
-    "group": "Special / Standard",
+    "gameModes": "Attack/Defense",
+    "group": "Standard",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/yellowvalley-7331971af9.png"
+  },
+  {
+    "name": "Yellowvalley",
+    "gameModes": "Infection",
+    "group": "Special",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/yellowvalley-1f454737e2.png"
   },
   {
     "name": "Yellowvalley (3CP)",

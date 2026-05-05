@@ -42,7 +42,13 @@ function isAllowedMapStatus(status) {
   return ["Active", "Active (Console/Mobile Only)", "Active (Rare)", "Seasonal", "Community Server"].includes(status);
 }
 
+function isAllowedMapMode(gameMode) {
+  return !/^prop hunt$/i.test(cleanText(gameMode));
+}
+
 function extractMapItem(item, gameMode, group) {
+  if (!isAllowedMapMode(gameMode)) return null;
+
   const caption = item.querySelector(".lightbox-caption");
   const name = normalizeName(caption?.querySelector("a")?.textContent || "");
   if (!name) return null;
@@ -63,36 +69,35 @@ function extractMapItem(item, gameMode, group) {
 }
 
 function dedupeMaps(rows) {
-  const byName = new Map();
+  const byMapMode = new Map();
 
   rows.forEach((row) => {
-    const key = row.name.toLowerCase();
-    if (!byName.has(key)) {
-      byName.set(key, {
+    const key = `${row.name.toLowerCase()}::${row.gameMode.toLowerCase()}`;
+    if (!byMapMode.has(key)) {
+      byMapMode.set(key, {
         name: row.name,
+        gameModes: row.gameMode,
         imageUrl: row.imageUrl || "",
-        gameModes: new Set(),
         groups: new Set(),
         statuses: new Set(),
       });
     }
 
-    const item = byName.get(key);
+    const item = byMapMode.get(key);
     if (!item.imageUrl && row.imageUrl) item.imageUrl = row.imageUrl;
-    item.gameModes.add(row.gameMode);
     item.groups.add(row.group);
     item.statuses.add(row.status);
   });
 
-  return [...byName.values()]
+  return [...byMapMode.values()]
     .map((item) => ({
       name: item.name,
-      gameModes: [...item.gameModes].sort((a, b) => a.localeCompare(b)).join(" / "),
+      gameModes: item.gameModes,
       group: [...item.groups].sort((a, b) => a.localeCompare(b)).join(" / "),
       status: [...item.statuses].sort((a, b) => a.localeCompare(b)).join(" / "),
       imageUrl: item.imageUrl,
     }))
-    .sort((a, b) => a.name.localeCompare(b.name));
+    .sort((a, b) => a.name.localeCompare(b.name) || a.gameModes.localeCompare(b.gameModes));
 }
 
 function parseMapsHtml(html) {

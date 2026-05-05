@@ -1,10 +1,13 @@
 import { Box } from "@mui/material";
 import { useMemo } from "react";
 import { pickYesterday } from "../../lib/hash";
-import type { GameKind } from "../../types";
+import { mapLabel } from "../../lib/maps";
+import type { GameKind, Tc2Map } from "../../types";
+
+type YesterdayItem = { name: string } | Tc2Map;
 
 type YesterdayAnswerProps = {
-  items: { name: string }[];
+  items: YesterdayItem[];
   gameKind: GameKind;
 };
 
@@ -14,7 +17,11 @@ export function YesterdayAnswer({ items, gameKind }: YesterdayAnswerProps) {
 
   return (
     <Box component="span">
-      Yesterday&apos;s answer: <Box component="span" sx={{ color: "text.primary", fontWeight: 900 }}>{answer.name}</Box>
+      Yesterday&apos;s answer: <Box component="span" sx={{ color: "text.primary", fontWeight: 900 }}>{gameKind === "map" && isMapAnswer(answer) ? mapLabel(answer) : answer.name}</Box>
     </Box>
   );
+}
+
+function isMapAnswer(answer: YesterdayItem): answer is Tc2Map {
+  return "gameModes" in answer;
 }

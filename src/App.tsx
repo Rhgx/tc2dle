@@ -11,6 +11,7 @@ import { mapsGeneratedAt, maps as generatedMaps } from "./data/maps.generated";
 import { generatedAt, weapons as generatedWeapons } from "./data/weapons.generated";
 import { resolveAssetUrl } from "./lib/assets";
 import { pickDailyLoadingScreen } from "./lib/loadingScreens";
+import { expandMapGameEntries } from "./lib/maps";
 import { preloadMapImages, preloadWeaponImages } from "./lib/preload";
 import { theme } from "./theme";
 import type { GameKind } from "./types";
@@ -19,6 +20,7 @@ export default function App() {
   const [gameKind, setGameKind] = useState<GameKind>(() => getGameKindFromPath());
   const weapons = useMemo(() => generatedWeapons.map((weapon) => ({ ...weapon, iconUrl: resolveAssetUrl(weapon.iconUrl) })), []);
   const maps = useMemo(() => generatedMaps.map((map) => ({ ...map, imageUrl: resolveAssetUrl(map.imageUrl) })), []);
+  const mapEntries = useMemo(() => expandMapGameEntries(maps), [maps]);
   const backgroundUrl = useMemo(() => pickDailyLoadingScreen(loadingScreenUrls.map(resolveAssetUrl)), []);
   const weaponStatus = generatedAt
     ? `Loaded ${weapons.length} scraped weapons generated on ${new Date(generatedAt).toLocaleString()}.`
@@ -26,7 +28,7 @@ export default function App() {
   const mapStatus = mapsGeneratedAt
     ? `Loaded ${maps.length} scraped maps generated on ${new Date(mapsGeneratedAt).toLocaleString()}.`
     : `Loaded ${maps.length} bundled maps. Run npm run scrape:maps to generate the full list.`;
-  const activeItems = gameKind === "weapon" ? weapons : maps;
+  const activeItems = gameKind === "weapon" ? weapons : mapEntries;
 
   useEffect(() => {
     preloadWeaponImages(weapons);
