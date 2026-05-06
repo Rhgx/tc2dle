@@ -1,6 +1,6 @@
 import { JSDOM } from "jsdom";
-import { getImageUrl } from "./assets.mjs";
-import { cleanText, normalizeName } from "./text.mjs";
+import { getImageUrl } from "./shared/assets.mjs";
+import { cleanText, normalizeName } from "./shared/text.mjs";
 
 const COSMETICS_API_URL =
   "https://typicalcolors2.fandom.com/api.php?action=parse&page=Cosmetics&prop=text&format=json&origin=*";

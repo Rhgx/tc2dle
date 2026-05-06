@@ -1,6 +1,6 @@
 import { JSDOM } from "jsdom";
-import { getImageUrl } from "./assets.mjs";
-import { cellText, cleanText, getHeadingText, normalizeName, tableToGrid, textWithBreaks } from "./text.mjs";
+import { getImageUrl } from "./shared/assets.mjs";
+import { cellText, cleanText, getHeadingText, normalizeName, tableToGrid, textWithBreaks } from "./shared/text.mjs";
 
 const WIKI_API_URL =
   "https://typicalcolors2.fandom.com/api.php?action=parse&page=Weapons&prop=text&format=json&origin=*";

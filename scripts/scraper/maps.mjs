@@ -1,6 +1,6 @@
 import { JSDOM } from "jsdom";
-import { getImageUrl } from "./assets.mjs";
-import { cleanText, getHeadingText, normalizeName } from "./text.mjs";
+import { getImageUrl } from "./shared/assets.mjs";
+import { cleanText, getHeadingText, normalizeName } from "./shared/text.mjs";
 
 const MAPS_API_URL =
   "https://typicalcolors2.fandom.com/api.php?action=parse&page=Maps&prop=text&format=json&origin=*";

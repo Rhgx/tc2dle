@@ -1,11 +1,11 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { downloadAssets } from "./assets.mjs";
 import { scrapeCosmeticsFromWiki } from "./cosmetics.mjs";
 import { scrapeLoadingScreensFromWiki } from "./loadingScreens.mjs";
 import { scrapeMapsFromWiki } from "./maps.mjs";
-import { renderCosmeticsGeneratedFile, renderLoadingScreensGeneratedFile, renderMapsGeneratedFile, renderWeaponsGeneratedFile } from "./render.mjs";
+import { downloadAssets } from "./shared/assets.mjs";
+import { renderCosmeticsGeneratedFile, renderLoadingScreensGeneratedFile, renderMapsGeneratedFile, renderWeaponsGeneratedFile } from "./shared/render.mjs";
 import { scrapeWeaponsFromWiki } from "./weapons.mjs";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");

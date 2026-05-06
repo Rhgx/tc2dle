@@ -1,4 +1,4 @@
-import { isStaticBackgroundUrl, normalizeImageUrl } from "./assets.mjs";
+import { isStaticBackgroundUrl, normalizeImageUrl } from "./shared/assets.mjs";
 
 const LOADING_SCREENS_CATEGORY_API =
   "https://typicalcolors2.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category:Loading_screens&cmtype=file&cmlimit=max&format=json&origin=*";
