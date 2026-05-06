@@ -43,7 +43,7 @@ function isAllowedMapStatus(status) {
 }
 
 function isAllowedMapMode(gameMode) {
-  return !/^prop hunt$/i.test(cleanText(gameMode));
+  return !/^(infection|prop hunt)$/i.test(cleanText(gameMode));
 }
 
 function extractMapItem(item, gameMode, group) {

@@ -1,6 +1,6 @@
 import type { Tc2Map } from "../types";
 
-export const mapsGeneratedAt = "2026-05-05T17:57:33.219Z";
+export const mapsGeneratedAt = "2026-05-06T06:49:48.094Z";
 export const maps: Tc2Map[] = [
   {
     "name": "1979 Effect",
@@ -39,13 +39,6 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Badwater",
-    "gameModes": "Infection",
-    "group": "Special",
-    "status": "Active",
-    "imageUrl": "tc2-assets/maps/badwater-6fb2185d92.png"
-  },
-  {
-    "name": "Badwater",
     "gameModes": "Payload",
     "group": "Standard",
     "status": "Active",
@@ -78,13 +71,6 @@ export const maps: Tc2Map[] = [
     "group": "Standard",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/banana-shore-f4ed4cfc9a.png"
-  },
-  {
-    "name": "Baseplate",
-    "gameModes": "Infection",
-    "group": "Special",
-    "status": "Active (Rare)",
-    "imageUrl": "tc2-assets/maps/baseplate-363dbad546.png"
   },
   {
     "name": "Baseplate",
@@ -311,13 +297,6 @@ export const maps: Tc2Map[] = [
     "imageUrl": "tc2-assets/maps/frost-7380484983.png"
   },
   {
-    "name": "Frost",
-    "gameModes": "Infection",
-    "group": "Special",
-    "status": "Active",
-    "imageUrl": "tc2-assets/maps/frost-7380484983.png"
-  },
-  {
     "name": "Glass Houses",
     "gameModes": "Vs. Bosses",
     "group": "Special",
@@ -328,13 +307,6 @@ export const maps: Tc2Map[] = [
     "name": "Gorge",
     "gameModes": "Attack/Defense",
     "group": "Standard",
-    "status": "Active",
-    "imageUrl": "tc2-assets/maps/gorge-fb730d3ce9.png"
-  },
-  {
-    "name": "Gorge",
-    "gameModes": "Infection",
-    "group": "Special",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/gorge-fb730d3ce9.png"
   },
@@ -400,13 +372,6 @@ export const maps: Tc2Map[] = [
     "group": "Special",
     "status": "Seasonal",
     "imageUrl": "tc2-assets/maps/harvest-winter-81405f73bb.png"
-  },
-  {
-    "name": "Haunted Mansion",
-    "gameModes": "Infection",
-    "group": "Special",
-    "status": "Active",
-    "imageUrl": "tc2-assets/maps/haunted-mansion-27a0a404c9.png"
   },
   {
     "name": "Haunted Mansion",
@@ -892,13 +857,6 @@ export const maps: Tc2Map[] = [
     "imageUrl": "tc2-assets/maps/tropical-3b7afcf9b9.png"
   },
   {
-    "name": "Turbine",
-    "gameModes": "Infection",
-    "group": "Special",
-    "status": "Active",
-    "imageUrl": "tc2-assets/maps/turbine-02c51793fc.png"
-  },
-  {
     "name": "Turbine Maze",
     "gameModes": "Capture the Flag",
     "group": "Standard",
@@ -932,13 +890,6 @@ export const maps: Tc2Map[] = [
     "group": "Special",
     "status": "Seasonal",
     "imageUrl": "tc2-assets/maps/underworld-1965e9129c.png"
-  },
-  {
-    "name": "Upward",
-    "gameModes": "Infection",
-    "group": "Special",
-    "status": "Active",
-    "imageUrl": "tc2-assets/maps/upward-bba146c0ac.png"
   },
   {
     "name": "Upward",
@@ -1016,13 +967,6 @@ export const maps: Tc2Map[] = [
     "group": "Standard",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/yellowvalley-7331971af9.png"
-  },
-  {
-    "name": "Yellowvalley",
-    "gameModes": "Infection",
-    "group": "Special",
-    "status": "Active",
-    "imageUrl": "tc2-assets/maps/yellowvalley-1f454737e2.png"
   },
   {
     "name": "Yellowvalley (3CP)",
