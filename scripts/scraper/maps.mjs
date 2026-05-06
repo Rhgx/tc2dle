@@ -89,7 +89,7 @@ function dedupeMaps(rows) {
     item.statuses.add(row.status);
   });
 
-  return [...byMapMode.values()]
+  return keepUniqueMapImages([...byMapMode.values()])
     .map((item) => ({
       name: item.name,
       gameModes: item.gameModes,
@@ -98,6 +98,17 @@ function dedupeMaps(rows) {
       imageUrl: item.imageUrl,
     }))
     .sort((a, b) => a.name.localeCompare(b.name) || a.gameModes.localeCompare(b.gameModes));
+}
+
+function keepUniqueMapImages(rows) {
+  const seenImages = new Set();
+  return rows.filter((row) => {
+    const imageKey = row.imageUrl.toLowerCase();
+    if (!imageKey) return true;
+    if (seenImages.has(imageKey)) return false;
+    seenImages.add(imageKey);
+    return true;
+  });
 }
 
 function parseMapsHtml(html) {

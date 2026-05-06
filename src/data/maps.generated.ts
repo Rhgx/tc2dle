@@ -1,6 +1,6 @@
 import type { Tc2Map } from "../types";
 
-export const mapsGeneratedAt = "2026-05-06T06:49:48.094Z";
+export const mapsGeneratedAt = "2026-05-06T07:11:50.245Z";
 export const maps: Tc2Map[] = [
   {
     "name": "1979 Effect",
@@ -192,13 +192,6 @@ export const maps: Tc2Map[] = [
     "imageUrl": "tc2-assets/maps/coldvine-fb2e3b7554.png"
   },
   {
-    "name": "Coldvine",
-    "gameModes": "Vs. Bosses",
-    "group": "Special",
-    "status": "Active",
-    "imageUrl": "tc2-assets/maps/coldvine-fb2e3b7554.png"
-  },
-  {
     "name": "Crossroads",
     "gameModes": "Vs. Bosses",
     "group": "Special",
@@ -333,13 +326,6 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Harvest",
-    "gameModes": "Team Deathmatch",
-    "group": "Special / Standard",
-    "status": "Active / Active (Rare)",
-    "imageUrl": "tc2-assets/maps/harvest-f0b1cfdf7d.png"
-  },
-  {
-    "name": "Harvest",
     "gameModes": "Vs. Bosses",
     "group": "Special",
     "status": "Active",
@@ -391,13 +377,6 @@ export const maps: Tc2Map[] = [
     "name": "Himalaya",
     "gameModes": "King of the Hill",
     "group": "Standard",
-    "status": "Active",
-    "imageUrl": "tc2-assets/maps/himalaya-4629fbc04f.png"
-  },
-  {
-    "name": "Himalaya",
-    "gameModes": "Team Deathmatch",
-    "group": "Special",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/himalaya-4629fbc04f.png"
   },
@@ -528,24 +507,10 @@ export const maps: Tc2Map[] = [
     "imageUrl": "tc2-assets/maps/orange-asylum-b7886d781f.png"
   },
   {
-    "name": "Orange Asylum",
-    "gameModes": "Team Deathmatch",
-    "group": "Special",
-    "status": "Active",
-    "imageUrl": "tc2-assets/maps/orange-asylum-b7886d781f.png"
-  },
-  {
     "name": "Outdoors",
     "gameModes": "Team Deathmatch",
     "group": "Special / Standard",
     "status": "Active / Active (Rare)",
-    "imageUrl": "tc2-assets/maps/outdoors-f93f67327c.png"
-  },
-  {
-    "name": "Outdoors",
-    "gameModes": "Vs. Bosses",
-    "group": "Special",
-    "status": "Active",
     "imageUrl": "tc2-assets/maps/outdoors-f93f67327c.png"
   },
   {
@@ -734,13 +699,6 @@ export const maps: Tc2Map[] = [
     "name": "Shiverift",
     "gameModes": "King of the Hill",
     "group": "Standard",
-    "status": "Active",
-    "imageUrl": "tc2-assets/maps/shiverift-16d79eb0b1.png"
-  },
-  {
-    "name": "Shiverift",
-    "gameModes": "Team Deathmatch",
-    "group": "Special",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/shiverift-16d79eb0b1.png"
   },
@@ -950,13 +908,6 @@ export const maps: Tc2Map[] = [
   {
     "name": "Wholesale",
     "gameModes": "Team Deathmatch",
-    "group": "Special",
-    "status": "Active",
-    "imageUrl": "tc2-assets/maps/wholesale-e0ad36b255.png"
-  },
-  {
-    "name": "Wholesale",
-    "gameModes": "Vs. Bosses",
     "group": "Special",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/wholesale-e0ad36b255.png"
