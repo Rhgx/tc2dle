@@ -1,18 +1,21 @@
 import { Box, Button, ButtonGroup, Container, CssBaseline, GlobalStyles, ThemeProvider, Typography } from "@mui/material";
 import { useEffect, useMemo, useState } from "react";
+import { CosmeticGame } from "./components/cosmetic/CosmeticGame";
 import { MapGame } from "./components/map/MapGame";
 import { Header } from "./components/shared/Header";
 import { ResetCountdown } from "./components/shared/ResetCountdown";
 import { YesterdayAnswer } from "./components/shared/YesterdayAnswer";
 import { WeaponGame } from "./components/weapon/WeaponGame";
+import { GAME_MODES, DEFAULT_GAME_KIND } from "./constants/modes";
 import { WIKI_PAGE_URL } from "./constants/wiki";
+import { cosmeticsGeneratedAt, cosmetics as generatedCosmetics } from "./data/cosmetics.generated";
 import { loadingScreenUrls } from "./data/loadingScreens.generated";
 import { mapsGeneratedAt, maps as generatedMaps } from "./data/maps.generated";
 import { generatedAt, weapons as generatedWeapons } from "./data/weapons.generated";
 import { resolveAssetUrl } from "./lib/assets";
 import { pickDailyLoadingScreen } from "./lib/loadingScreens";
 import { expandMapGameEntries } from "./lib/maps";
-import { preloadMapImages, preloadWeaponImages } from "./lib/preload";
+import { preloadCosmeticImages, preloadMapImages, preloadWeaponImages } from "./lib/preload";
 import { theme } from "./theme";
 import type { GameKind } from "./types";
 
@@ -21,6 +24,7 @@ export default function App() {
   const weapons = useMemo(() => generatedWeapons.map((weapon) => ({ ...weapon, iconUrl: resolveAssetUrl(weapon.iconUrl) })), []);
   const maps = useMemo(() => generatedMaps.map((map) => ({ ...map, imageUrl: resolveAssetUrl(map.imageUrl) })), []);
   const mapEntries = useMemo(() => expandMapGameEntries(maps), [maps]);
+  const cosmetics = useMemo(() => generatedCosmetics.map((cosmetic) => ({ ...cosmetic, imageUrl: resolveAssetUrl(cosmetic.imageUrl) })), []);
   const backgroundUrl = useMemo(() => pickDailyLoadingScreen(loadingScreenUrls.map(resolveAssetUrl)), []);
   const weaponStatus = generatedAt
     ? `Loaded ${weapons.length} scraped weapons generated on ${new Date(generatedAt).toLocaleString()}.`
@@ -28,7 +32,10 @@ export default function App() {
   const mapStatus = mapsGeneratedAt
     ? `Loaded ${maps.length} scraped maps generated on ${new Date(mapsGeneratedAt).toLocaleString()}.`
     : `Loaded ${maps.length} bundled maps. Run npm run scrape:maps to generate the full list.`;
-  const activeItems = gameKind === "weapon" ? weapons : mapEntries;
+  const cosmeticStatus = cosmeticsGeneratedAt
+    ? `Loaded ${cosmetics.length} scraped cosmetics generated on ${new Date(cosmeticsGeneratedAt).toLocaleString()}.`
+    : `Loaded ${cosmetics.length} bundled cosmetics. Run npm run scrape:cosmetics to generate the full list.`;
+  const activeItems = gameKind === "weapon" ? weapons : gameKind === "map" ? mapEntries : cosmetics;
 
   useEffect(() => {
     preloadWeaponImages(weapons);
@@ -37,6 +44,10 @@ export default function App() {
   useEffect(() => {
     preloadMapImages(maps);
   }, [maps]);
+
+  useEffect(() => {
+    preloadCosmeticImages(cosmetics);
+  }, [cosmetics]);
 
   useEffect(() => {
     function handlePopState() {
@@ -134,20 +145,25 @@ export default function App() {
               justifyContent: "center",
               mb: { xs: 1.5, sm: 2 },
               "& .MuiButton-root": {
-                minWidth: { xs: 118, sm: 148 },
+                minWidth: { xs: 96, sm: 148 },
                 fontWeight: 900,
               },
             }}
           >
-            <Button variant={gameKind === "weapon" ? "contained" : "outlined"} onClick={() => selectGameKind("weapon")}>
-              Weapon
-            </Button>
-            <Button variant={gameKind === "map" ? "contained" : "outlined"} onClick={() => selectGameKind("map")}>
-              Map
-            </Button>
+            {GAME_MODES.map((mode) => (
+              <Button key={mode.kind} variant={gameKind === mode.kind ? "contained" : "outlined"} onClick={() => selectGameKind(mode.kind)}>
+                {mode.label}
+              </Button>
+            ))}
           </ButtonGroup>
 
-          {gameKind === "weapon" ? <WeaponGame weapons={weapons} status={weaponStatus} /> : <MapGame maps={maps} status={mapStatus} />}
+          {gameKind === "weapon" ? (
+            <WeaponGame weapons={weapons} status={weaponStatus} />
+          ) : gameKind === "map" ? (
+            <MapGame maps={maps} status={mapStatus} />
+          ) : (
+            <CosmeticGame cosmetics={cosmetics} status={cosmeticStatus} />
+          )}
           <Box component="footer" sx={{ mt: 2.25, textAlign: "center", color: "text.secondary" }}>
             <Box
               component="p"
@@ -200,11 +216,11 @@ export default function App() {
 
 function getGameKindFromPath(): GameKind {
   const route = currentRoutePath();
-  return route === "/maps" ? "map" : "weapon";
+  return GAME_MODES.find((mode) => mode.route === route || mode.legacyRoutes.includes(route))?.kind || DEFAULT_GAME_KIND;
 }
 
 function routeForGameKind(gameKind: GameKind) {
-  return gameKind === "map" ? "/maps" : "/weapons";
+  return GAME_MODES.find((mode) => mode.kind === gameKind)?.route || GAME_MODES[0].route;
 }
 
 function currentRoutePath() {
@@ -212,7 +228,7 @@ function currentRoutePath() {
   const pathname = window.location.pathname;
   const withoutBase = pathname.startsWith(basePath) ? pathname.slice(basePath.length - 1) : pathname;
   const route = withoutBase.replace(/\/+$/, "") || "/";
-  return route === "/map" ? "/maps" : route === "/weapon" ? "/weapons" : route;
+  return GAME_MODES.find((mode) => mode.legacyRoutes.includes(route))?.route || route;
 }
 
 function withBasePath(route: string) {

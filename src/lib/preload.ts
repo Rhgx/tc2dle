@@ -1,4 +1,4 @@
-import type { Tc2Map, Weapon } from "../types";
+import type { Cosmetic, Tc2Map, Weapon } from "../types";
 
 const preloadedImageUrls = new Set<string>();
 
@@ -8,6 +8,10 @@ export function preloadWeaponImages(weapons: Weapon[]) {
 
 export function preloadMapImages(maps: Tc2Map[]) {
   maps.forEach((map) => preloadImage(map.imageUrl));
+}
+
+export function preloadCosmeticImages(cosmetics: Cosmetic[]) {
+  cosmetics.forEach((cosmetic) => preloadImage(cosmetic.imageUrl));
 }
 
 function preloadImage(url: string) {

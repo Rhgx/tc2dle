@@ -18,7 +18,14 @@ export type Weapon = {
   type: string;
 };
 
-export type GameKind = "weapon" | "map";
+export type GameKind = "weapon" | "map" | "cosmetic";
+
+export type Cosmetic = {
+  name: string;
+  usedBy: string[];
+  slots: string[];
+  imageUrl: string;
+};
 
 export type Tc2Map = {
   name: string;
@@ -38,6 +45,11 @@ export type MapGuessEntry = {
   id: string;
   map: Tc2Map;
   revealStage: number;
+};
+
+export type CosmeticGuessEntry = {
+  id: string;
+  cosmetic: Cosmetic;
 };
 
 export type ComparisonStatus = "correct" | "partial" | "partial-light" | "wrong" | "higher" | "lower" | "neutral" | "header";

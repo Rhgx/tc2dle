@@ -4,6 +4,7 @@ import { fuzzyScore } from "../../lib/compare";
 import { readCachedGuessNames, writeCachedGuessNames } from "../../lib/guessCache";
 import { hashString, pickDaily } from "../../lib/hash";
 import { expandMapGameEntries, mapKey, mapLabel } from "../../lib/maps";
+import { MAP_GUESS_LIMIT, MAP_ZOOM_STEPS } from "../../constants/maps";
 import type { MapGuessEntry, Tc2Map } from "../../types";
 import { LegendChip } from "../shared/LegendChip";
 import { MapGuessGrid } from "./MapGuessGrid";
@@ -304,9 +305,6 @@ function readCachedMapGuesses(answer: string, maps: Tc2Map[]): MapGuessEntry[] {
 function writeCachedMapGuesses(answer: string, guesses: MapGuessEntry[]) {
   writeCachedGuessNames("map", answer, guesses.map((entry) => mapKey(entry.map)));
 }
-
-const MAP_GUESS_LIMIT = 10;
-const MAP_ZOOM_STEPS = [11, 9.5, 8.1, 6.9, 5.8, 4.75, 3.75, 2.75, 1.8, 1];
 
 function getDailyCropPosition(mapName: string) {
   const hash = hashString(`tc2dle-map-crop-${mapName}`);

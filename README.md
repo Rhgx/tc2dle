@@ -12,15 +12,15 @@
 
 # TC2DLE
 
-TC2DLE is a daily guessing web app for **Typical Colors 2**. It works like a compact DLE-style puzzle: choose weapons or maps, submit guesses, and use color hints to solve the global daily answer.
+TC2DLE is a daily guessing web app for **Typical Colors 2**. It works like a compact DLE-style puzzle: choose weapons, maps, or cosmetics, submit guesses, and use clues to solve the global daily answer.
 
-Weapon, map, and loading-screen data are scraped ahead of time into generated TypeScript files, so the app does not need to scrape the wiki at runtime. Daily answers reset globally at UTC midnight.
-Weapon icons, map previews, and loading-screen images are also downloaded into the app during scraping, so the deployed game serves them locally instead of depending on Fandom image URLs at runtime.
+Weapon, map, cosmetic, and loading-screen data are scraped ahead of time into generated TypeScript files, so the app does not need to scrape the wiki at runtime. Daily answers reset globally at UTC midnight.
+Weapon icons, map previews, cosmetic renders, and loading-screen images are also downloaded into the app during scraping, so the deployed game serves them locally instead of depending on Fandom image URLs at runtime.
 
 ## Features
 
-- Daily UTC-based weapon and map answers
-- Dedicated `/weapons` and `/maps` pages
+- Daily UTC-based weapon, map, and cosmetic answers
+- Dedicated `/weapons`, `/maps`, and `/cosmetics` pages
 - Cached guesses that survive page reloads
 - Mobile-friendly guess layout
 - Scraped TC2 weapon/map data and static loading-screen backgrounds
@@ -35,6 +35,7 @@ npm run preview
 npm run scrape
 npm run scrape:weapons
 npm run scrape:maps
+npm run scrape:cosmetics
 npm run scrape:loading-screens
 ```
 
@@ -44,6 +45,7 @@ Generated data lives in:
 
 - `src/data/weapons.generated.ts`
 - `src/data/maps.generated.ts`
+- `src/data/cosmetics.generated.ts`
 - `src/data/loadingScreens.generated.ts`
 - `public/tc2-assets/`
 

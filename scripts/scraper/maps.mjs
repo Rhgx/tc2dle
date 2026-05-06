@@ -4,6 +4,24 @@ import { cleanText, getHeadingText, normalizeName } from "./text.mjs";
 
 const MAPS_API_URL =
   "https://typicalcolors2.fandom.com/api.php?action=parse&page=Maps&prop=text&format=json&origin=*";
+const MAP_IMAGE_MODE_PRIORITY = [
+  "Attack Defense",
+  "Attack/Defense",
+  "King of the Hill",
+  "Payload",
+  "Capture the Flag",
+  "Control Points",
+  "Player Destruction",
+  "Arena",
+  "Vs. Bosses",
+  "Team Deathmatch",
+  "Medieaval",
+  "Medieval",
+  "Training",
+  "Infection",
+  "Prop Hunt",
+  "None",
+];
 
 export async function scrapeMapsFromWiki() {
   const response = await fetch(MAPS_API_URL);
@@ -102,13 +120,21 @@ function dedupeMaps(rows) {
 
 function keepUniqueMapImages(rows) {
   const seenImages = new Set();
-  return rows.filter((row) => {
+  return rows
+    .sort((a, b) => getMapModePriority(a.gameModes) - getMapModePriority(b.gameModes) || a.name.localeCompare(b.name))
+    .filter((row) => {
     const imageKey = row.imageUrl.toLowerCase();
     if (!imageKey) return true;
     if (seenImages.has(imageKey)) return false;
     seenImages.add(imageKey);
     return true;
   });
+}
+
+function getMapModePriority(gameMode) {
+  const normalized = cleanText(gameMode);
+  const index = MAP_IMAGE_MODE_PRIORITY.findIndex((mode) => mode.toLowerCase() === normalized.toLowerCase());
+  return index >= 0 ? index : MAP_IMAGE_MODE_PRIORITY.length;
 }
 
 function parseMapsHtml(html) {

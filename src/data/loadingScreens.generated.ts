@@ -1,4 +1,4 @@
-export const loadingScreensGeneratedAt = "2026-05-05T17:11:58.829Z";
+export const loadingScreensGeneratedAt = "2026-05-06T07:29:27.332Z";
 export const loadingScreenUrls: string[] = [
   "tc2-assets/loading-screens/annikillergrnplayer-png-cc25b114cb.png",
   "tc2-assets/loading-screens/respecttheirsightlinev3-png-0f07027f68.png",

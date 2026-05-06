@@ -1,6 +1,6 @@
 import type { Tc2Map } from "../types";
 
-export const mapsGeneratedAt = "2026-05-06T07:11:50.245Z";
+export const mapsGeneratedAt = "2026-05-06T07:29:27.332Z";
 export const maps: Tc2Map[] = [
   {
     "name": "1979 Effect",
@@ -186,9 +186,9 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Coldvine",
-    "gameModes": "Team Deathmatch",
-    "group": "Special / Standard",
-    "status": "Active / Active (Rare)",
+    "gameModes": "Vs. Bosses",
+    "group": "Special",
+    "status": "Active",
     "imageUrl": "tc2-assets/maps/coldvine-fb2e3b7554.png"
   },
   {
@@ -508,9 +508,9 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Outdoors",
-    "gameModes": "Team Deathmatch",
-    "group": "Special / Standard",
-    "status": "Active / Active (Rare)",
+    "gameModes": "Vs. Bosses",
+    "group": "Special",
+    "status": "Active",
     "imageUrl": "tc2-assets/maps/outdoors-f93f67327c.png"
   },
   {
@@ -907,7 +907,7 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Wholesale",
-    "gameModes": "Team Deathmatch",
+    "gameModes": "Vs. Bosses",
     "group": "Special",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/wholesale-e0ad36b255.png"

@@ -4,7 +4,7 @@ import path from "node:path";
 const distDir = path.resolve("dist");
 const indexPath = path.join(distDir, "index.html");
 const siteUrl = "https://rhgx.github.io/tc2dle";
-const routes = ["weapons", "maps"];
+const routes = ["weapons", "maps", "cosmetics"];
 
 const indexHtml = await readFile(indexPath, "utf8");
 

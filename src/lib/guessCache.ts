@@ -44,7 +44,7 @@ export function writeCachedGuessNames(gameKind: GameKind, answer: string, guesse
 
 function migrateLegacyGuessNames(cache: GuessCache, gameKind: GameKind, answer: string) {
   const day = dateKey();
-  const legacyMode = gameKind === "weapon" ? "daily" : "map";
+  const legacyMode = gameKind === "weapon" ? "daily" : gameKind === "map" ? "map" : "cosmetic";
   const legacyKey = `tc2dle:${day}:${legacyMode}:${answer}`;
   const existing = cache.days[day]?.[gameKind];
   if (existing?.answer === answer && existing.guesses.length) return;
