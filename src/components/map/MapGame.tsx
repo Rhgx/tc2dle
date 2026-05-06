@@ -308,7 +308,7 @@ function writeCachedMapGuesses(answer: string, guesses: MapGuessEntry[]) {
 
 function getDailyCropPosition(mapName: string) {
   const hash = hashString(`tc2dle-map-crop-${mapName}`);
-  const x = 22 + (hash % 57);
-  const y = 22 + (Math.floor(hash / 97) % 57);
+  const x = 8 + (hash % 85);
+  const y = 8 + (Math.floor(hash / 97) % 85);
   return `${x}% ${y}%`;
 }
