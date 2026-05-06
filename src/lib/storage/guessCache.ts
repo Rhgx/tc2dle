@@ -1,5 +1,5 @@
-import { dateKey } from "./date";
-import type { GameKind } from "../types";
+import type { GameKind } from "../../types";
+import { dateKey } from "../time/date";
 
 const CACHE_KEY = "tc2dle:guesses";
 const MAX_DAYS_TO_KEEP = 14;

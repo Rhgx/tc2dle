@@ -1,5 +1,5 @@
-import { dateKey, dateKeyForOffset } from "./date";
-import type { GameKind } from "../types";
+import type { GameKind } from "../../types";
+import { dateKey, dateKeyForOffset } from "../time/date";
 
 export function hashString(input: string) {
   let hash = 2166136261;

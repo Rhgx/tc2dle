@@ -12,10 +12,10 @@ import { cosmeticsGeneratedAt, cosmetics as generatedCosmetics } from "./data/co
 import { loadingScreenUrls } from "./data/loadingScreens.generated";
 import { mapsGeneratedAt, maps as generatedMaps } from "./data/maps.generated";
 import { generatedAt, weapons as generatedWeapons } from "./data/weapons.generated";
-import { resolveAssetUrl } from "./lib/assets";
-import { pickDailyLoadingScreen } from "./lib/loadingScreens";
-import { expandMapGameEntries } from "./lib/maps";
-import { preloadCosmeticImages, preloadMapImages, preloadWeaponImages } from "./lib/preload";
+import { pickDailyLoadingScreen } from "./lib/assets/loadingScreens";
+import { preloadCosmeticImages, preloadMapImages, preloadWeaponImages } from "./lib/assets/preload";
+import { resolveAssetUrl } from "./lib/assets/resolve";
+import { expandMapGameEntries } from "./lib/game/maps";
 import { theme } from "./theme";
 import type { GameKind } from "./types";
 

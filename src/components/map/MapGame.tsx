@@ -1,9 +1,9 @@
 import { Alert, Box, Button, CircularProgress, Divider, Paper, Stack, TextField, Typography } from "@mui/material";
 import { useEffect, useMemo, useState } from "react";
-import { fuzzyScore } from "../../lib/compare";
-import { readCachedGuessNames, writeCachedGuessNames } from "../../lib/guessCache";
-import { hashString, pickDaily } from "../../lib/hash";
-import { expandMapGameEntries, mapKey, mapLabel } from "../../lib/maps";
+import { fuzzyScore } from "../../lib/game/compare";
+import { hashString, pickDaily } from "../../lib/game/hash";
+import { expandMapGameEntries, mapKey, mapLabel } from "../../lib/game/maps";
+import { readCachedGuessNames, writeCachedGuessNames } from "../../lib/storage/guessCache";
 import { MAP_GUESS_LIMIT, MAP_ZOOM_STEPS } from "../../constants/maps";
 import type { MapGuessEntry, Tc2Map } from "../../types";
 import { LegendChip } from "../shared/LegendChip";

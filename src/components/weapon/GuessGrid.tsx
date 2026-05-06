@@ -1,6 +1,6 @@
 import { Box, Paper, Stack, Typography } from "@mui/material";
 import type { PropsWithChildren } from "react";
-import { compareWeapon } from "../../lib/compare";
+import { compareWeapon } from "../../lib/game/compare";
 import { getStatusStyles } from "../../styles/statusStyles";
 import type { ComparisonStatus, GuessEntry, Weapon } from "../../types";
 import { FadeCell, HeaderCell, ResultCell } from "../shared/ResultCell";

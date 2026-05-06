@@ -2,9 +2,9 @@ import { Alert, Box, Button, CircularProgress, Divider, Paper, Stack, TextField,
 import type { ReactNode } from "react";
 import { useEffect, useMemo, useState } from "react";
 import { COSMETIC_CLASS_REVEAL_GUESS, COSMETIC_COLOR_REVEAL_GUESS, COSMETIC_ROTATION_REVEAL_GUESS } from "../../constants/cosmetics";
-import { fuzzyScore } from "../../lib/compare";
-import { readCachedGuessNames, writeCachedGuessNames } from "../../lib/guessCache";
-import { hashString, pickDaily } from "../../lib/hash";
+import { fuzzyScore } from "../../lib/game/compare";
+import { hashString, pickDaily } from "../../lib/game/hash";
+import { readCachedGuessNames, writeCachedGuessNames } from "../../lib/storage/guessCache";
 import type { Cosmetic, CosmeticGuessEntry } from "../../types";
 import { CosmeticGuessList } from "./CosmeticGuessList";
 import { CosmeticImage } from "./CosmeticImage";

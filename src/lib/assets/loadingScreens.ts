@@ -1,5 +1,5 @@
-import { dateKey } from "./date";
-import { hashString } from "./hash";
+import { hashString } from "../game/hash";
+import { dateKey } from "../time/date";
 
 export function pickDailyLoadingScreen(urls: string[]) {
   if (!urls.length) return "";

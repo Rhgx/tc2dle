@@ -1,4 +1,4 @@
-import type { WeaponAttribute } from "../types";
+import type { WeaponAttribute } from "../../types";
 
 export function formatWeaponAttribute(attribute: WeaponAttribute) {
   return `${attribute.label}: ${attribute.text}`;

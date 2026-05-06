@@ -1,5 +1,5 @@
-import { inferType } from "../lib/weaponTypes";
-import { weaponAttributesText } from "../lib/attributes";
+import { weaponAttributesText } from "../lib/game/attributes";
+import { inferType } from "../lib/game/weaponTypes";
 import type { Weapon, WeaponAttribute } from "../types";
 
 const fallbackRows = [

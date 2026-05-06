@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import { useMemo } from "react";
-import { pickYesterday } from "../../lib/hash";
-import { mapLabel } from "../../lib/maps";
+import { pickYesterday } from "../../lib/game/hash";
+import { mapLabel } from "../../lib/game/maps";
 import type { GameKind, Tc2Map } from "../../types";
 
 type YesterdayItem = { name: string } | Tc2Map;

@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import { useEffect, useState } from "react";
-import { getNextResetText } from "../../lib/date";
+import { getNextResetText } from "../../lib/time/date";
 
 export function ResetCountdown() {
   const [remaining, setRemaining] = useState(() => getNextResetText());

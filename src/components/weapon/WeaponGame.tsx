@@ -1,8 +1,8 @@
 import { Alert, Box, Button, CircularProgress, Divider, Paper, Stack, TextField, Typography } from "@mui/material";
 import { useEffect, useMemo, useState } from "react";
-import { fuzzyScore } from "../../lib/compare";
-import { readCachedGuessNames, writeCachedGuessNames } from "../../lib/guessCache";
-import { pickDaily } from "../../lib/hash";
+import { fuzzyScore } from "../../lib/game/compare";
+import { pickDaily } from "../../lib/game/hash";
+import { readCachedGuessNames, writeCachedGuessNames } from "../../lib/storage/guessCache";
 import type { GuessEntry, Weapon } from "../../types";
 import { GuessGrid } from "./GuessGrid";
 import { LegendChip } from "../shared/LegendChip";

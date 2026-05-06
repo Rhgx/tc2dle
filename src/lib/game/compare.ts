@@ -1,5 +1,5 @@
-import { CLASSES, CLASS_ROLES } from "../constants/game";
-import type { ComparisonStatus, Weapon } from "../types";
+import { CLASSES, CLASS_ROLES } from "../../constants/game";
+import type { ComparisonStatus, Weapon } from "../../types";
 import { cleanText } from "./text";
 
 export function numeric(value: string) {

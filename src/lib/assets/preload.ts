@@ -1,4 +1,4 @@
-import type { Cosmetic, Tc2Map, Weapon } from "../types";
+import type { Cosmetic, Tc2Map, Weapon } from "../../types";
 
 const preloadedImageUrls = new Set<string>();
 
