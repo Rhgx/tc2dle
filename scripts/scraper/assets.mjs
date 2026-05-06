@@ -52,7 +52,8 @@ export async function downloadAssets(items, directoryPath, publicPrefix, project
       cursor += 1;
 
       const extension = getImageExtension(item.url);
-      const fileName = `${slugifyFileName(item.name)}-${hashValue(item.url)}${extension}`;
+      const baseName = item.namePrefix || slugifyFileName(item.name);
+      const fileName = item.fileName || `${baseName}-${hashValue(item.url)}${extension}`;
       const outputPath = path.join(directoryPath, fileName);
       await downloadAsset(item.url, outputPath);
       pathByUrl.set(item.url, `${publicPrefix}/${fileName}`);

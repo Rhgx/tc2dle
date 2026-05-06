@@ -1,14 +1,14 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { downloadAssets } from "./scraper/assets.mjs";
-import { scrapeCosmeticsFromWiki } from "./scraper/cosmetics.mjs";
-import { scrapeLoadingScreensFromWiki } from "./scraper/loadingScreens.mjs";
-import { scrapeMapsFromWiki } from "./scraper/maps.mjs";
-import { renderCosmeticsGeneratedFile, renderLoadingScreensGeneratedFile, renderMapsGeneratedFile, renderWeaponsGeneratedFile } from "./scraper/render.mjs";
-import { scrapeWeaponsFromWiki } from "./scraper/weapons.mjs";
+import { downloadAssets } from "./assets.mjs";
+import { scrapeCosmeticsFromWiki } from "./cosmetics.mjs";
+import { scrapeLoadingScreensFromWiki } from "./loadingScreens.mjs";
+import { scrapeMapsFromWiki } from "./maps.mjs";
+import { renderCosmeticsGeneratedFile, renderLoadingScreensGeneratedFile, renderMapsGeneratedFile, renderWeaponsGeneratedFile } from "./render.mjs";
+import { scrapeWeaponsFromWiki } from "./weapons.mjs";
 
-const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 const weaponsOutputPath = path.join(projectRoot, "src", "data", "weapons.generated.ts");
 const mapsOutputPath = path.join(projectRoot, "src", "data", "maps.generated.ts");
 const cosmeticsOutputPath = path.join(projectRoot, "src", "data", "cosmetics.generated.ts");
@@ -72,7 +72,7 @@ if (target === "all") {
       projectRoot,
     ),
     downloadAssets(
-      loadingScreenUrls.map((url) => ({ name: path.basename(new URL(url).pathname.split("/revision/")[0]), url })),
+      loadingScreenUrls.map((url, index) => loadingScreenAssetItem(url, index)),
       loadingScreenAssetsPath,
       "tc2-assets/loading-screens",
       projectRoot,
@@ -139,7 +139,7 @@ async function scrapeCosmetics() {
 async function scrapeLoadingScreens() {
   const loadingScreenUrls = await scrapeLoadingScreensFromWiki();
   const backgroundPaths = await downloadAssets(
-    loadingScreenUrls.map((url) => ({ name: path.basename(new URL(url).pathname.split("/revision/")[0]), url })),
+    loadingScreenUrls.map((url, index) => loadingScreenAssetItem(url, index)),
     loadingScreenAssetsPath,
     "tc2-assets/loading-screens",
     projectRoot,
@@ -167,4 +167,12 @@ function logCosmetics(count, assetCount) {
 function logLoadingScreens(count, assetCount) {
   console.log(`Scraped ${count} loading screens into ${path.relative(projectRoot, loadingScreensOutputPath)}.`);
   console.log(`Downloaded ${assetCount} loading screens into ${path.relative(projectRoot, loadingScreenAssetsPath)}.`);
+}
+
+function loadingScreenAssetItem(url, index) {
+  return {
+    name: path.basename(new URL(url).pathname.split("/revision/")[0]),
+    namePrefix: `loading-screen-${String(index + 1).padStart(3, "0")}`,
+    url,
+  };
 }

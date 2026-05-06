@@ -6,13 +6,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "tsc -b && vite build && node scripts/create-route-html.mjs",
+    "build": "tsc -b && vite build && node scripts/build/create-route-html.mjs",
     "preview": "vite preview --host 127.0.0.1",
-    "scrape": "node scripts/scrape-data.mjs all",
-    "scrape:weapons": "node scripts/scrape-data.mjs weapons",
-    "scrape:maps": "node scripts/scrape-data.mjs maps",
-    "scrape:cosmetics": "node scripts/scrape-data.mjs cosmetics",
-    "scrape:loading-screens": "node scripts/scrape-data.mjs loading-screens"
+    "scrape": "node scripts/scraper/run.mjs all",
+    "scrape:weapons": "node scripts/scraper/run.mjs weapons",
+    "scrape:maps": "node scripts/scraper/run.mjs maps",
+    "scrape:cosmetics": "node scripts/scraper/run.mjs cosmetics",
+    "scrape:loading-screens": "node scripts/scraper/run.mjs loading-screens"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",

@@ -11,7 +11,7 @@ import { WIKI_PAGE_URL } from "./constants/wiki";
 import { cosmeticsGeneratedAt, cosmetics as generatedCosmetics } from "./data/cosmetics.generated";
 import { loadingScreenUrls } from "./data/loadingScreens.generated";
 import { mapsGeneratedAt, maps as generatedMaps } from "./data/maps.generated";
-import { generatedAt, weapons as generatedWeapons } from "./data/weapons.generated";
+import { weapons, weaponsGeneratedAt } from "./data/weapons";
 import { pickDailyLoadingScreen } from "./lib/assets/loadingScreens";
 import { preloadCosmeticImages, preloadMapImages, preloadWeaponImages } from "./lib/assets/preload";
 import { resolveAssetUrl } from "./lib/assets/resolve";
@@ -21,25 +21,25 @@ import type { GameKind } from "./types";
 
 export default function App() {
   const [gameKind, setGameKind] = useState<GameKind>(() => getGameKindFromPath());
-  const weapons = useMemo(() => generatedWeapons.map((weapon) => ({ ...weapon, iconUrl: resolveAssetUrl(weapon.iconUrl) })), []);
+  const resolvedWeapons = useMemo(() => weapons.map((weapon) => ({ ...weapon, iconUrl: resolveAssetUrl(weapon.iconUrl) })), []);
   const maps = useMemo(() => generatedMaps.map((map) => ({ ...map, imageUrl: resolveAssetUrl(map.imageUrl) })), []);
   const mapEntries = useMemo(() => expandMapGameEntries(maps), [maps]);
   const cosmetics = useMemo(() => generatedCosmetics.map((cosmetic) => ({ ...cosmetic, imageUrl: resolveAssetUrl(cosmetic.imageUrl) })), []);
   const backgroundUrl = useMemo(() => pickDailyLoadingScreen(loadingScreenUrls.map(resolveAssetUrl)), []);
-  const weaponStatus = generatedAt
-    ? `Loaded ${weapons.length} scraped weapons generated on ${new Date(generatedAt).toLocaleString()}.`
-    : `Loaded ${weapons.length} bundled fallback weapons. Run npm run scrape:weapons to generate the full list.`;
+  const weaponStatus = weaponsGeneratedAt
+    ? `Loaded ${resolvedWeapons.length} scraped weapons generated on ${new Date(weaponsGeneratedAt).toLocaleString()}.`
+    : `Loaded ${resolvedWeapons.length} bundled fallback weapons. Run npm run scrape:weapons to generate the full list.`;
   const mapStatus = mapsGeneratedAt
     ? `Loaded ${maps.length} scraped maps generated on ${new Date(mapsGeneratedAt).toLocaleString()}.`
     : `Loaded ${maps.length} bundled maps. Run npm run scrape:maps to generate the full list.`;
   const cosmeticStatus = cosmeticsGeneratedAt
     ? `Loaded ${cosmetics.length} scraped cosmetics generated on ${new Date(cosmeticsGeneratedAt).toLocaleString()}.`
     : `Loaded ${cosmetics.length} bundled cosmetics. Run npm run scrape:cosmetics to generate the full list.`;
-  const activeItems = gameKind === "weapon" ? weapons : gameKind === "map" ? mapEntries : cosmetics;
+  const activeItems = gameKind === "weapon" ? resolvedWeapons : gameKind === "map" ? mapEntries : cosmetics;
 
   useEffect(() => {
-    preloadWeaponImages(weapons);
-  }, [weapons]);
+    preloadWeaponImages(resolvedWeapons);
+  }, [resolvedWeapons]);
 
   useEffect(() => {
     preloadMapImages(maps);
@@ -158,7 +158,7 @@ export default function App() {
           </ButtonGroup>
 
           {gameKind === "weapon" ? (
-            <WeaponGame weapons={weapons} status={weaponStatus} />
+            <WeaponGame weapons={resolvedWeapons} status={weaponStatus} />
           ) : gameKind === "map" ? (
             <MapGame maps={maps} status={mapStatus} />
           ) : (

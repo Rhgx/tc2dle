@@ -2,7 +2,7 @@ export function renderWeaponsGeneratedFile(weapons) {
   const generatedAt = new Date().toISOString();
   return `import type { Weapon } from "../types";
 
-export const generatedAt = ${JSON.stringify(generatedAt)};
+export const weaponsGeneratedAt = ${JSON.stringify(generatedAt)};
 export const weapons: Weapon[] = ${JSON.stringify(weapons, null, 2)};
 `;
 }

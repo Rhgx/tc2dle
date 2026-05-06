@@ -15,6 +15,7 @@ const MAP_IMAGE_MODE_PRIORITY = [
   "Arena",
   "Vs. Bosses",
   "Team Deathmatch",
+  // Preserve the wiki's historical misspelling so scraped rows still rank correctly.
   "Medieaval",
   "Medieval",
   "Training",
