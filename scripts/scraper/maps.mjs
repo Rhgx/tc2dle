@@ -37,8 +37,8 @@ export async function scrapeMapsFromWiki() {
 
 function getCurrentMapGroup(text, currentGroup) {
   const heading = cleanText(text);
-  if (/Standard Gamemodes/i.test(heading)) return "Standard";
-  if (/Special Gamemodes/i.test(heading)) return "Special";
+  if (/Standard game\s*mode/i.test(heading)) return "Standard";
+  if (/Special game\s*mode/i.test(heading)) return "Special";
   return currentGroup;
 }
 
@@ -95,7 +95,7 @@ function dedupeMaps(rows) {
     if (!byMapMode.has(key)) {
       byMapMode.set(key, {
         name: row.name,
-        gameModes: row.gameMode,
+        gameMode: row.gameMode,
         imageUrl: row.imageUrl || "",
         groups: new Set(),
         statuses: new Set(),
@@ -111,18 +111,18 @@ function dedupeMaps(rows) {
   return keepUniqueMapImages([...byMapMode.values()])
     .map((item) => ({
       name: item.name,
-      gameModes: item.gameModes,
+      gameMode: item.gameMode,
       group: [...item.groups].sort((a, b) => a.localeCompare(b)).join(" / "),
       status: [...item.statuses].sort((a, b) => a.localeCompare(b)).join(" / "),
       imageUrl: item.imageUrl,
     }))
-    .sort((a, b) => a.name.localeCompare(b.name) || a.gameModes.localeCompare(b.gameModes));
+    .sort((a, b) => a.name.localeCompare(b.name) || a.gameMode.localeCompare(b.gameMode));
 }
 
 function keepUniqueMapImages(rows) {
   const seenImages = new Set();
   return rows
-    .sort((a, b) => getMapModePriority(a.gameModes) - getMapModePriority(b.gameModes) || a.name.localeCompare(b.name))
+    .sort((a, b) => getMapModePriority(a.gameMode) - getMapModePriority(b.gameMode) || a.name.localeCompare(b.name))
     .filter((row) => {
     const imageKey = row.imageUrl.toLowerCase();
     if (!imageKey) return true;

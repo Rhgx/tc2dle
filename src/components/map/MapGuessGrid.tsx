@@ -31,10 +31,10 @@ export function MapGuessGrid({ guesses, target }: MapGuessGridProps) {
         {guesses.map((entry) => {
           const guess = entry.map;
           const imageStatus = guess.name === target.name ? "correct" : "wrong";
-          const gamemodeStatus = compareSet(guess.gameModes, target.gameModes);
+          const gameModeStatus = compareSet(guess.gameMode, target.gameMode);
 
           return (
-            <MapBoardRow key={entry.id} guess={guess} imageStatus={imageStatus} gamemodeStatus={gamemodeStatus} />
+            <MapBoardRow key={entry.id} guess={guess} imageStatus={imageStatus} gameModeStatus={gameModeStatus} />
           );
         })}
       </Box>
@@ -51,11 +51,11 @@ export function MapGuessGrid({ guesses, target }: MapGuessGridProps) {
         guesses.map((entry) => {
           const guess = entry.map;
           const imageStatus = guess.name === target.name ? "correct" : "wrong";
-          const gamemodeStatus = compareSet(guess.gameModes, target.gameModes);
+          const gameModeStatus = compareSet(guess.gameMode, target.gameMode);
 
           return (
             <Box key={entry.id} sx={{ display: { xs: "block", md: "none" } }}>
-              <MobileMapGuess guess={guess} imageStatus={imageStatus} gamemodeStatus={gamemodeStatus} />
+              <MobileMapGuess guess={guess} imageStatus={imageStatus} gameModeStatus={gameModeStatus} />
             </Box>
           );
         })
@@ -67,18 +67,18 @@ export function MapGuessGrid({ guesses, target }: MapGuessGridProps) {
 function MapBoardRow({
   guess,
   imageStatus,
-  gamemodeStatus,
+  gameModeStatus,
 }: {
   guess: Tc2Map;
   imageStatus: ComparisonStatus;
-  gamemodeStatus: ComparisonStatus;
+  gameModeStatus: ComparisonStatus;
 }) {
   return (
     <>
       <MapBoardCell status={imageStatus}>
         <MapImage map={guess} width={{ md: 190, lg: 224, xl: 252 }} height={{ md: 107, lg: 126, xl: 142 }} fit="contain" />
       </MapBoardCell>
-      <MapBoardCell status={gamemodeStatus}>{guess.gameModes}</MapBoardCell>
+      <MapBoardCell status={gameModeStatus}>{guess.gameMode}</MapBoardCell>
     </>
   );
 }
@@ -122,11 +122,11 @@ function MapBoardCell({
 function MobileMapGuess({
   guess,
   imageStatus,
-  gamemodeStatus,
+  gameModeStatus,
 }: {
   guess: Tc2Map;
   imageStatus: ComparisonStatus;
-  gamemodeStatus: ComparisonStatus;
+  gameModeStatus: ComparisonStatus;
 }) {
   return (
     <Paper variant="outlined" sx={{ display: { xs: "block", md: "none" }, bgcolor: "#181818", p: 1, borderRadius: 1 }}>
@@ -138,7 +138,7 @@ function MobileMapGuess({
           <Typography variant="caption" sx={{ display: "block", mb: 0.25, color: "text.secondary", fontWeight: 800, lineHeight: 1, fontSize: 10 }}>
             Gamemode
           </Typography>
-          <MobileValue status={gamemodeStatus}>{guess.gameModes}</MobileValue>
+          <MobileValue status={gameModeStatus}>{guess.gameMode}</MobileValue>
         </Box>
       </Stack>
     </Paper>

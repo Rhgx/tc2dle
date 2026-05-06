@@ -9,10 +9,11 @@ import { renderCosmeticsGeneratedFile, renderLoadingScreensGeneratedFile, render
 import { scrapeWeaponsFromWiki } from "./weapons.mjs";
 
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
-const weaponsOutputPath = path.join(projectRoot, "src", "data", "weapons.generated.ts");
-const mapsOutputPath = path.join(projectRoot, "src", "data", "maps.generated.ts");
-const cosmeticsOutputPath = path.join(projectRoot, "src", "data", "cosmetics.generated.ts");
-const loadingScreensOutputPath = path.join(projectRoot, "src", "data", "loadingScreens.generated.ts");
+const generatedDataPath = path.join(projectRoot, "src", "data", "generated");
+const weaponsOutputPath = path.join(generatedDataPath, "weapons.generated.ts");
+const mapsOutputPath = path.join(generatedDataPath, "maps.generated.ts");
+const cosmeticsOutputPath = path.join(generatedDataPath, "cosmetics.generated.ts");
+const loadingScreensOutputPath = path.join(generatedDataPath, "loadingScreens.generated.ts");
 const weaponAssetsPath = path.join(projectRoot, "public", "tc2-assets", "weapons");
 const mapAssetsPath = path.join(projectRoot, "public", "tc2-assets", "maps");
 const cosmeticAssetsPath = path.join(projectRoot, "public", "tc2-assets", "cosmetics");

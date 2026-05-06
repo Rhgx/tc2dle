@@ -210,7 +210,7 @@ export function WeaponGame({ weapons, status }: WeaponGameProps) {
 
         {(won || lost) && (
           <Alert severity={won ? "success" : "error"}>
-            <strong>{won ? "Solved:" : "Out of guesses. Answer:"}</strong> {target.name} - {target.className} · {target.slot} · {target.source}
+            <strong>{won ? "Solved:" : "Out of guesses. Answer:"}</strong> {target.name} - {target.className} - {target.slot} - {target.source}
           </Alert>
         )}
 

@@ -1,4 +1,4 @@
-import type { Cosmetic } from "../types";
+import type { Cosmetic } from "../../types";
 
 export const cosmeticsGeneratedAt = "2026-05-06T07:29:27.332Z";
 export const cosmetics: Cosmetic[] = [

@@ -43,10 +43,11 @@ npm run scrape:loading-screens
 
 Generated data lives in:
 
-- `src/data/weapons.generated.ts`
-- `src/data/maps.generated.ts`
-- `src/data/cosmetics.generated.ts`
-- `src/data/loadingScreens.generated.ts`
+- `src/data/generated/weapons.generated.ts`
+- `src/data/generated/weapons.generated.ts`
+- `src/data/generated/maps.generated.ts`
+- `src/data/generated/cosmetics.generated.ts`
+- `src/data/generated/loadingScreens.generated.ts`
 - `public/tc2-assets/`
 
 Run `npm run scrape` to refresh all datasets and their local image assets.

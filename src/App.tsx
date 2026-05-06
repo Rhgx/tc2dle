@@ -6,48 +6,49 @@ import { Header } from "./components/shared/Header";
 import { ResetCountdown } from "./components/shared/ResetCountdown";
 import { YesterdayAnswer } from "./components/shared/YesterdayAnswer";
 import { WeaponGame } from "./components/weapon/WeaponGame";
-import { GAME_MODES, DEFAULT_GAME_KIND } from "./constants/modes";
+import { GAME_MODES } from "./constants/modes";
 import { WIKI_PAGE_URL } from "./constants/wiki";
-import { cosmeticsGeneratedAt, cosmetics as generatedCosmetics } from "./data/cosmetics.generated";
-import { loadingScreenUrls } from "./data/loadingScreens.generated";
-import { mapsGeneratedAt, maps as generatedMaps } from "./data/maps.generated";
+import { cosmetics, cosmeticsGeneratedAt } from "./data/cosmetics";
+import { loadingScreenUrls } from "./data/loadingScreens";
+import { maps, mapsGeneratedAt } from "./data/maps";
 import { weapons, weaponsGeneratedAt } from "./data/weapons";
 import { pickDailyLoadingScreen } from "./lib/assets/loadingScreens";
 import { preloadCosmeticImages, preloadMapImages, preloadWeaponImages } from "./lib/assets/preload";
 import { resolveAssetUrl } from "./lib/assets/resolve";
 import { expandMapGameEntries } from "./lib/game/maps";
+import { currentRoutePath, getGameKindFromPath, routeForGameKind, withBasePath } from "./lib/routing/gameRoutes";
 import { theme } from "./theme";
-import type { GameKind } from "./types";
+import type { GameKind } from "./types/game";
 
 export default function App() {
   const [gameKind, setGameKind] = useState<GameKind>(() => getGameKindFromPath());
   const resolvedWeapons = useMemo(() => weapons.map((weapon) => ({ ...weapon, iconUrl: resolveAssetUrl(weapon.iconUrl) })), []);
-  const maps = useMemo(() => generatedMaps.map((map) => ({ ...map, imageUrl: resolveAssetUrl(map.imageUrl) })), []);
-  const mapEntries = useMemo(() => expandMapGameEntries(maps), [maps]);
-  const cosmetics = useMemo(() => generatedCosmetics.map((cosmetic) => ({ ...cosmetic, imageUrl: resolveAssetUrl(cosmetic.imageUrl) })), []);
+  const resolvedMaps = useMemo(() => maps.map((map) => ({ ...map, imageUrl: resolveAssetUrl(map.imageUrl) })), []);
+  const mapEntries = useMemo(() => expandMapGameEntries(resolvedMaps), [resolvedMaps]);
+  const resolvedCosmetics = useMemo(() => cosmetics.map((cosmetic) => ({ ...cosmetic, imageUrl: resolveAssetUrl(cosmetic.imageUrl) })), []);
   const backgroundUrl = useMemo(() => pickDailyLoadingScreen(loadingScreenUrls.map(resolveAssetUrl)), []);
   const weaponStatus = weaponsGeneratedAt
     ? `Loaded ${resolvedWeapons.length} scraped weapons generated on ${new Date(weaponsGeneratedAt).toLocaleString()}.`
     : `Loaded ${resolvedWeapons.length} bundled fallback weapons. Run npm run scrape:weapons to generate the full list.`;
   const mapStatus = mapsGeneratedAt
-    ? `Loaded ${maps.length} scraped maps generated on ${new Date(mapsGeneratedAt).toLocaleString()}.`
-    : `Loaded ${maps.length} bundled maps. Run npm run scrape:maps to generate the full list.`;
+    ? `Loaded ${resolvedMaps.length} scraped maps generated on ${new Date(mapsGeneratedAt).toLocaleString()}.`
+    : `Loaded ${resolvedMaps.length} bundled maps. Run npm run scrape:maps to generate the full list.`;
   const cosmeticStatus = cosmeticsGeneratedAt
-    ? `Loaded ${cosmetics.length} scraped cosmetics generated on ${new Date(cosmeticsGeneratedAt).toLocaleString()}.`
-    : `Loaded ${cosmetics.length} bundled cosmetics. Run npm run scrape:cosmetics to generate the full list.`;
-  const activeItems = gameKind === "weapon" ? resolvedWeapons : gameKind === "map" ? mapEntries : cosmetics;
+    ? `Loaded ${resolvedCosmetics.length} scraped cosmetics generated on ${new Date(cosmeticsGeneratedAt).toLocaleString()}.`
+    : `Loaded ${resolvedCosmetics.length} bundled cosmetics. Run npm run scrape:cosmetics to generate the full list.`;
+  const activeItems = gameKind === "weapon" ? resolvedWeapons : gameKind === "map" ? mapEntries : resolvedCosmetics;
 
   useEffect(() => {
     preloadWeaponImages(resolvedWeapons);
   }, [resolvedWeapons]);
 
   useEffect(() => {
-    preloadMapImages(maps);
-  }, [maps]);
+    preloadMapImages(resolvedMaps);
+  }, [resolvedMaps]);
 
   useEffect(() => {
-    preloadCosmeticImages(cosmetics);
-  }, [cosmetics]);
+    preloadCosmeticImages(resolvedCosmetics);
+  }, [resolvedCosmetics]);
 
   useEffect(() => {
     function handlePopState() {
@@ -160,9 +161,9 @@ export default function App() {
           {gameKind === "weapon" ? (
             <WeaponGame weapons={resolvedWeapons} status={weaponStatus} />
           ) : gameKind === "map" ? (
-            <MapGame maps={maps} status={mapStatus} />
+            <MapGame maps={resolvedMaps} status={mapStatus} />
           ) : (
-            <CosmeticGame cosmetics={cosmetics} status={cosmeticStatus} />
+            <CosmeticGame cosmetics={resolvedCosmetics} status={cosmeticStatus} />
           )}
           <Box component="footer" sx={{ mt: 2.25, textAlign: "center", color: "text.secondary" }}>
             <Box
@@ -212,30 +213,4 @@ export default function App() {
       </Box>
     </ThemeProvider>
   );
-}
-
-function getGameKindFromPath(): GameKind {
-  const route = currentRoutePath();
-  return GAME_MODES.find((mode) => mode.route === route || mode.legacyRoutes.includes(route))?.kind || DEFAULT_GAME_KIND;
-}
-
-function routeForGameKind(gameKind: GameKind) {
-  return GAME_MODES.find((mode) => mode.kind === gameKind)?.route || GAME_MODES[0].route;
-}
-
-function currentRoutePath() {
-  const basePath = normalizeBasePath(import.meta.env.BASE_URL);
-  const pathname = window.location.pathname;
-  const withoutBase = pathname.startsWith(basePath) ? pathname.slice(basePath.length - 1) : pathname;
-  const route = withoutBase.replace(/\/+$/, "") || "/";
-  return GAME_MODES.find((mode) => mode.legacyRoutes.includes(route))?.route || route;
-}
-
-function withBasePath(route: string) {
-  const basePath = normalizeBasePath(import.meta.env.BASE_URL);
-  return `${basePath.replace(/\/$/, "")}${route}`;
-}
-
-function normalizeBasePath(basePath: string) {
-  return basePath.endsWith("/") ? basePath : `${basePath}/`;
 }

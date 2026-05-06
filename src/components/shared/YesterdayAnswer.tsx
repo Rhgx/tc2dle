@@ -23,5 +23,5 @@ export function YesterdayAnswer({ items, gameKind }: YesterdayAnswerProps) {
 }
 
 function isMapAnswer(answer: YesterdayItem): answer is Tc2Map {
-  return "gameModes" in answer;
+  return "gameMode" in answer;
 }

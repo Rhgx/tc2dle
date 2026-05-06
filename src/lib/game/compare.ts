@@ -1,4 +1,4 @@
-import { CLASSES, CLASS_ROLES } from "../../constants/game";
+import { CLASSES, CLASS_ROLES } from "../../constants/classes";
 import type { ComparisonStatus, Weapon } from "../../types";
 import { cleanText } from "./text";
 

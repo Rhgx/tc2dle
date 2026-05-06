@@ -236,7 +236,7 @@ export function MapGame({ maps, status }: MapGameProps) {
                   <Box sx={{ minWidth: 0 }}>
                     <Typography sx={{ fontWeight: 900 }}>{map.name}</Typography>
                     <Typography variant="caption" color="text.secondary" sx={{ display: "block", fontWeight: 800, lineHeight: 1.15 }}>
-                      {map.gameModes}
+                      {map.gameMode}
                     </Typography>
                   </Box>
                 </Box>
