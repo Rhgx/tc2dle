@@ -143,7 +143,7 @@ export function MapGame({ maps, status }: MapGameProps) {
                   objectPosition: cropPosition,
                   transformOrigin: cropPosition,
                   transform: `scale(${won || lost ? 1 : zoom})`,
-                  transition: "transform 520ms ease, transform-origin 520ms ease",
+                  transition: won || lost ? "none" : "transform 520ms ease, transform-origin 520ms ease",
                   pointerEvents: "none",
                   userSelect: "none",
                   filter: won || lost ? "none" : "saturate(1.05) contrast(1.04)",
