@@ -3084,7 +3084,7 @@ export const weapons: Weapon[] = [
   },
   {
     "name": "Frying Pan",
-    "className": "All Classes",
+    "className": "Flanker / Trooper / Arsonist / Annihilator / Brute / Doctor / Marksman",
     "slot": "Melee",
     "source": "Distributed",
     "capacity": "N / A",

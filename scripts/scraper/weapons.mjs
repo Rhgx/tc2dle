@@ -33,6 +33,12 @@ const SOURCE_WORDS = [
   "Community",
 ];
 
+const WEAPON_OVERRIDES = {
+  "frying pan": {
+    className: "Flanker / Trooper / Arsonist / Annihilator / Brute / Doctor / Marksman",
+  },
+};
+
 export async function scrapeWeaponsFromWiki() {
   const response = await fetch(WIKI_API_URL);
   if (!response.ok) throw new Error(`TC2 wiki request failed with ${response.status}`);
@@ -241,9 +247,10 @@ function dedupeWeapons(rows) {
       const capacitySet = [...item.capacitySet].filter(Boolean);
       const ammoSet = [...item.ammoSet].filter(Boolean);
       const attributes = [...item.attributesByKey.values()];
+      const override = WEAPON_OVERRIDES[item.name.toLowerCase()] || {};
       return {
         name: item.name,
-        className: classSet.includes("All Classes") ? "All Classes" : classSet.join(" / ") || "Unknown",
+        className: override.className || (classSet.includes("All Classes") ? "All Classes" : classSet.join(" / ") || "Unknown"),
         slot: slotSet.join(" / ") || "Unknown",
         source: sourceSet.join(" / ") || "Unknown",
         capacity: capacitySet.join(" / ") || "N/A",
