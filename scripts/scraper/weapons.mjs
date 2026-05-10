@@ -37,6 +37,9 @@ const WEAPON_OVERRIDES = {
   "frying pan": {
     className: "Flanker / Trooper / Arsonist / Annihilator / Brute / Doctor / Marksman",
   },
+  objector: {
+    className: "Flanker / Trooper / Arsonist / Annihilator / Brute / Doctor / Marksman",
+  },
 };
 
 export async function scrapeWeaponsFromWiki() {

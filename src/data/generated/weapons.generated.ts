@@ -5590,7 +5590,7 @@ export const weapons: Weapon[] = [
   },
   {
     "name": "Objector",
-    "className": "All Classes",
+    "className": "Flanker / Trooper / Arsonist / Annihilator / Brute / Doctor / Marksman",
     "slot": "Melee",
     "source": "Shop",
     "capacity": "N / A",
