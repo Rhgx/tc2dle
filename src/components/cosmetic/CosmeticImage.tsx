@@ -7,9 +7,10 @@ type CosmeticImageProps = {
   size?: ResponsiveStyleValue<number | string>;
   grayscale?: boolean;
   rotation?: number;
+  animate?: boolean;
 };
 
-export function CosmeticImage({ cosmetic, size = 96, grayscale = false, rotation = 0 }: CosmeticImageProps) {
+export function CosmeticImage({ cosmetic, size = 96, grayscale = false, rotation = 0, animate = true }: CosmeticImageProps) {
   return (
     <Box
       onContextMenu={(event) => event.preventDefault()}
@@ -38,7 +39,7 @@ export function CosmeticImage({ cosmetic, size = 96, grayscale = false, rotation
             userSelect: "none",
             filter: grayscale ? "grayscale(1) contrast(1.08)" : "none",
             transform: `rotate(${rotation}deg)`,
-            transition: "filter 500ms ease, transform 500ms ease",
+            transition: animate ? "filter 500ms ease, transform 500ms ease" : "none",
           }}
         />
       ) : (

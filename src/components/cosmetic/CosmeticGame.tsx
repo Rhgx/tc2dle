@@ -124,8 +124,9 @@ export function CosmeticGame({ cosmetics, status }: CosmeticGameProps) {
           <CosmeticImage
             cosmetic={target}
             size={{ xs: 170, sm: 230, md: 280 }}
-            grayscale={!colorRevealed}
-            rotation={rotationRevealed ? 0 : rotation}
+            grayscale={!won && !colorRevealed}
+            rotation={won || rotationRevealed ? 0 : rotation}
+            animate={!won}
           />
         </Box>
 
