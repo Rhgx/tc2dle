@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { scrapeCosmeticsFromWiki } from "./cosmetics.mjs";
@@ -190,22 +190,35 @@ async function logAssetSummary(label, scrapedCount, directoryPath) {
 }
 
 async function writeManifest({ weapons, maps, cosmetics, loadingScreenUrls }) {
+  const existingManifest = await readExistingManifest();
   const manifest = {
     generatedAt: new Date().toISOString(),
-    weapons: await manifestSection(weapons, weaponAssetsPath),
-    maps: await manifestSection(maps, mapAssetsPath),
-    cosmetics: await manifestSection(cosmetics, cosmeticAssetsPath),
-    loadingScreens: await manifestSection(loadingScreenUrls, loadingScreenAssetsPath),
+    weapons: await manifestSection(weapons, weaponAssetsPath, existingManifest.weapons),
+    maps: await manifestSection(maps, mapAssetsPath, existingManifest.maps),
+    cosmetics: await manifestSection(cosmetics, cosmeticAssetsPath, existingManifest.cosmetics),
+    loadingScreens: await manifestSection(loadingScreenUrls, loadingScreenAssetsPath, existingManifest.loadingScreens),
   };
 
   await writeFile(manifestOutputPath, renderManifestGeneratedFile(manifest), "utf8");
 }
 
-async function manifestSection(items, assetsPath) {
+async function manifestSection(items, assetsPath, existingSection) {
   const assets = await summarizeAssetDirectory(assetsPath);
   return {
-    count: Array.isArray(items) ? items.length : 0,
+    count: Array.isArray(items) ? items.length : existingSection?.count || 0,
     assetCount: assets.count,
     assetBytes: assets.bytes,
   };
+}
+
+async function readExistingManifest() {
+  try {
+    const source = await readFile(manifestOutputPath, "utf8");
+    const start = source.indexOf("{");
+    const end = source.lastIndexOf("}");
+    if (start < 0 || end < start) return {};
+    return JSON.parse(source.slice(start, end + 1));
+  } catch {
+    return {};
+  }
 }

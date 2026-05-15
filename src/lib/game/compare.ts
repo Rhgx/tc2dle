@@ -25,16 +25,24 @@ export function compareValue(guess: WeaponStatValue, target: WeaponStatValue): C
   return g < t ? "higher" : "lower";
 }
 
-function splitValue(value: string) {
-  if (!value) return [];
-  if (value === "All Classes") return CLASSES.filter((item) => item !== "All Classes");
-  return String(value).split(/\s*\/\s*|\s*,\s*/).map(cleanText).filter(Boolean);
+export function formatClassNames(classNames: string[]) {
+  return classNames.join(" / ");
 }
 
-function setCompare(guessValue: string, targetValue: string, roleAware = false): ComparisonStatus {
-  if (guessValue === targetValue) return "correct";
+function splitValue(value: string | string[]) {
+  if (!value) return [];
+  if (Array.isArray(value)) {
+    if (value.includes("All Classes")) return CLASSES.filter((item) => item !== "All Classes");
+    return value.map(cleanText).filter(Boolean);
+  }
+  if (value === "All Classes") return CLASSES.filter((item) => item !== "All Classes");
+  return value.split(/\s*\/\s*|\s*,\s*/).map(cleanText).filter(Boolean);
+}
+
+function setCompare(guessValue: string | string[], targetValue: string | string[], roleAware = false): ComparisonStatus {
   const guess = splitValue(guessValue);
   const target = splitValue(targetValue);
+  if (guess.length === target.length && guess.every((item) => target.includes(item))) return "correct";
   const overlap = guess.filter((item) => target.includes(item));
   if (overlap.length) return "partial";
   // if (roleAware) {
@@ -47,7 +55,7 @@ function setCompare(guessValue: string, targetValue: string, roleAware = false):
 
 export function compareWeapon(guess: Weapon, target: Weapon) {
   return {
-    className: setCompare(guess.className, target.className, true),
+    className: setCompare(guess.classNames, target.classNames, true),
     slot: setCompare(guess.slot, target.slot),
     source: setCompare(guess.source, target.source),
     capacity: compareValue(guess.capacity, target.capacity),

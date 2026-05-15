@@ -1,6 +1,6 @@
 import { Box, Paper, Stack, Typography } from "@mui/material";
 import type { PropsWithChildren } from "react";
-import { compareWeapon } from "../../lib/game/compare";
+import { compareWeapon, formatClassNames } from "../../lib/game/compare";
 import { formatWeaponStat } from "../../lib/game/weaponStats";
 import { getStatusStyles } from "../../styles/statusStyles";
 import type { ComparisonStatus, GuessEntry, Weapon } from "../../types";
@@ -46,7 +46,7 @@ export function GuessGrid({ guesses, target }: GuessGridProps) {
                 <ResultCell status={imageStatus}>
                   <WeaponIcon weapon={guess} size={{ md: 88, lg: 112, xl: 126 }} bare />
                 </ResultCell>
-                <FadeCell visible={stage >= 1} status={result.className}>{guess.className}</FadeCell>
+                <FadeCell visible={stage >= 1} status={result.className}>{formatClassNames(guess.classNames)}</FadeCell>
                 <FadeCell visible={stage >= 2} status={result.slot}>{guess.slot}</FadeCell>
                 <FadeCell visible={stage >= 3} status={result.source}>{guess.source}</FadeCell>
                 <FadeCell visible={stage >= 4} status={result.capacity}>{formatWeaponStat(guess.capacity)}{arrow(result.capacity)}</FadeCell>
@@ -79,7 +79,7 @@ function MobileGuessCard({ guess, imageStatus, result, stage, arrow }: MobileGue
         </MobileValue>
 
         <Box sx={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 0.75, minWidth: 0 }}>
-          <MobileField label="Class" value={guess.className} status={result.className} revealed={stage >= 1} />
+          <MobileField label="Class" value={formatClassNames(guess.classNames)} status={result.className} revealed={stage >= 1} />
           <MobileField label="Slot" value={guess.slot} status={result.slot} revealed={stage >= 2} />
           <MobileField label="Source" value={guess.source} status={result.source} revealed={stage >= 3} />
           <Box sx={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 0.75 }}>

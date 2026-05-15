@@ -13,6 +13,8 @@ const issues = [
   ...validateNamedItems("weapon", weapons),
   ...validateNamedItems("map", maps),
   ...validateNamedItems("cosmetic", cosmetics),
+  ...validateWeaponClasses(weapons),
+  ...validateWeaponTypes(weapons),
   ...validateWeaponStats(weapons),
   ...validateUnique("weapon name", weapons.map((weapon) => weapon.name.toLowerCase())),
   ...validateUnique("map key", maps.map((map) => `${map.name.toLowerCase()}\u0000${map.gameMode.toLowerCase()}`)),
@@ -93,6 +95,32 @@ function validateWeaponStats(weapons) {
       if (typeof value === "string" && /∞|infinity/i.test(value)) issues.push(`${weapon.name} stores ${field} infinity as a string: ${value}.`);
       if (typeof value === "string" && /^[^:|]+:\s*N\s*\/\s*A$/i.test(value)) issues.push(`${weapon.name} has prefixed ${field}: ${value}.`);
     });
+    return issues;
+  });
+}
+
+function validateWeaponClasses(weapons) {
+  return weapons.flatMap((weapon) => {
+    const issues = [];
+    if ("className" in weapon) issues.push(`${weapon.name} still uses className instead of classNames.`);
+    if (!Array.isArray(weapon.classNames) || !weapon.classNames.length) {
+      issues.push(`${weapon.name} is missing classNames.`);
+    } else if (weapon.classNames.some((className) => typeof className !== "string" || !className.trim())) {
+      issues.push(`${weapon.name} has invalid classNames: ${JSON.stringify(weapon.classNames)}.`);
+    }
+    return issues;
+  });
+}
+
+function validateWeaponTypes(weapons) {
+  return weapons.flatMap((weapon) => {
+    const issues = [];
+    if ("type" in weapon) issues.push(`${weapon.name} still uses type instead of types.`);
+    if (!Array.isArray(weapon.types) || !weapon.types.length) {
+      issues.push(`${weapon.name} is missing types.`);
+    } else if (weapon.types.some((type) => typeof type !== "string" || !type.trim())) {
+      issues.push(`${weapon.name} has invalid types: ${JSON.stringify(weapon.types)}.`);
+    }
     return issues;
   });
 }

@@ -21,6 +21,7 @@ export function CosmeticGame({ cosmetics, status }: CosmeticGameProps) {
   const [guesses, setGuesses] = useState<CosmeticGuessEntry[]>([]);
   const [message, setMessage] = useState("");
   const [loadedAnswer, setLoadedAnswer] = useState("");
+  const [animatedSolvedAnswer, setAnimatedSolvedAnswer] = useState("");
 
   useEffect(() => {
     if (!target) return;
@@ -28,6 +29,7 @@ export function CosmeticGame({ cosmetics, status }: CosmeticGameProps) {
     setQuery("");
     setHighlightedIndex(0);
     setMessage("");
+    setAnimatedSolvedAnswer("");
     setGuesses(readCachedCosmeticGuesses(target.name, cosmetics));
     setLoadedAnswer(target.name);
   }, [target, cosmetics]);
@@ -44,6 +46,8 @@ export function CosmeticGame({ cosmetics, status }: CosmeticGameProps) {
   const colorRevealed = clueGuessCount >= COSMETIC_COLOR_REVEAL_GUESS;
   const classRevealed = clueGuessCount >= COSMETIC_CLASS_REVEAL_GUESS;
   const rotation = useMemo(() => (target ? getDailyCosmeticRotation(target.name) : 0), [target]);
+  const answerName = target?.name || "";
+  const animateSolvedReveal = Boolean(answerName && animatedSolvedAnswer === answerName);
 
   const suggestions = useMemo(() => {
     const trimmed = query.trim();
@@ -67,6 +71,15 @@ export function CosmeticGame({ cosmetics, status }: CosmeticGameProps) {
     }
   }, [suggestions.length, highlightedIndex]);
 
+  useEffect(() => {
+    if (!animateSolvedReveal || !answerName) return;
+    const timeoutId = window.setTimeout(() => {
+      setAnimatedSolvedAnswer((current) => (current === answerName ? "" : current));
+    }, 650);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [animateSolvedReveal, answerName]);
+
   function submit(cosmetic?: Cosmetic) {
     if (won || !target) return;
 
@@ -86,7 +99,10 @@ export function CosmeticGame({ cosmetics, status }: CosmeticGameProps) {
     setHighlightedIndex(0);
     const correct = selected.name === target.name;
     setMessage(correct ? "Correct." : "");
-    if (correct) celebrateWin();
+    if (correct) {
+      setAnimatedSolvedAnswer(target.name);
+      celebrateWin();
+    }
   }
 
   if (!target) {
@@ -126,7 +142,7 @@ export function CosmeticGame({ cosmetics, status }: CosmeticGameProps) {
             size={{ xs: 170, sm: 230, md: 280 }}
             grayscale={!won && !colorRevealed}
             rotation={won || rotationRevealed ? 0 : rotation}
-            animate={!won}
+            animate={!won || animateSolvedReveal}
           />
         </Box>
 

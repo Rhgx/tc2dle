@@ -1,6 +1,6 @@
 import { Alert, Box, Button, CircularProgress, Divider, Paper, Stack, TextField, Typography } from "@mui/material";
 import { useEffect, useMemo, useState } from "react";
-import { fuzzyScore } from "../../lib/game/compare";
+import { formatClassNames, fuzzyScore } from "../../lib/game/compare";
 import { pickDaily } from "../../lib/game/hash";
 import { readCachedGuessNames, writeCachedGuessNames } from "../../lib/storage/guessCache";
 import type { GuessEntry, Weapon } from "../../types";
@@ -210,7 +210,7 @@ export function WeaponGame({ weapons, status }: WeaponGameProps) {
 
         {(won || lost) && (
           <Alert severity={won ? "success" : "error"}>
-            <strong>{won ? "Solved:" : "Out of guesses. Answer:"}</strong> {target.name} - {target.className} - {target.slot} - {target.source}
+            <strong>{won ? "Solved:" : "Out of guesses. Answer:"}</strong> {target.name} - {formatClassNames(target.classNames)} - {target.slot} - {target.source}
           </Alert>
         )}
 

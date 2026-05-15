@@ -1,10 +1,12 @@
 import type { Weapon } from "../../types";
 
-export const weaponsGeneratedAt = "2026-05-15T17:55:37.797Z";
+export const weaponsGeneratedAt = "2026-05-15T18:35:35.075Z";
 export const weapons: Weapon[] = [
   {
     "name": "50-AE",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 6,
@@ -37,11 +39,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/50-ae-dbf003d959.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Acid Trader",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 4,
@@ -64,11 +70,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/acid-trader-54696cbcec.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Afterimage",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -131,11 +141,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/afterimage-21de5f27a0.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Amputator",
-    "className": "Doctor",
+    "classNames": [
+      "Doctor"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -168,11 +182,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/amputator-d0a066b7ac.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Apollo",
-    "className": "Doctor",
+    "classNames": [
+      "Doctor"
+    ],
     "slot": "Primary",
     "source": "Battle Pass",
     "capacity": 20,
@@ -200,22 +218,33 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/apollo-3eb5a35a62.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Armington",
-    "className": "Trooper / Arsonist / Brute / Mechanic",
+    "classNames": [
+      "Trooper",
+      "Arsonist",
+      "Brute",
+      "Mechanic"
+    ],
     "slot": "Secondary / Primary",
     "source": "Battle Pass",
     "capacity": 6,
     "ammo": 32,
     "attributes": [],
     "iconUrl": "tc2-assets/weapons/armington-bddfb17831.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Atomizer",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -253,11 +282,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/atomizer-08cb3ae724.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Avengeance",
-    "className": "Mechanic",
+    "classNames": [
+      "Mechanic"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 3,
@@ -290,11 +323,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/avengeance-f415a753d0.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "AWSM-SCE",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Primary",
     "source": "Season Pass",
     "capacity": 1,
@@ -307,11 +344,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/awsm-sce-98ce5d3ab0.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Baby Face's Blaster",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 6,
@@ -354,11 +395,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/baby-face-s-blaster-715777317f.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Bat",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Melee",
     "source": "Stock",
     "capacity": null,
@@ -376,11 +421,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/bat-9703426a92.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Batarang",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 1,
@@ -413,11 +462,16 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/batarang-1c003a5de6.webp",
-    "type": "Melee"
+    "types": [
+      "Melee",
+      "Projectile"
+    ]
   },
   {
     "name": "Battalion's Backup",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -445,11 +499,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/battalion-s-backup-e40679e83f.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Battle Axe",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -477,11 +535,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/battle-axe-064f68e589.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Battle Burrito",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 1,
@@ -514,22 +576,30 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/battle-burrito-0d2733b66f.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Big Bite",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Primary",
     "source": "Item Drop",
     "capacity": 4,
     "ammo": 20,
     "attributes": [],
     "iconUrl": "tc2-assets/weapons/big-bite-9269d4a446.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Biker's Blitz",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 200,
@@ -572,11 +642,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/biker-s-blitz-fa62c11276.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Black Death",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -614,11 +688,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/black-death-c94898e9a3.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Block-17",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 6,
@@ -656,11 +734,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/block-17-5c35d4247e.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Blood Doctor",
-    "className": "Doctor",
+    "classNames": [
+      "Doctor"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -693,11 +775,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/blood-doctor-b6dba9a03c.webp",
-    "type": "Healing"
+    "types": [
+      "Healing"
+    ]
   },
   {
     "name": "Bloody Blossom",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -730,11 +816,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/bloody-blossom-64e4a446c3.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Bloxaide",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Secondary",
     "source": "Item Drop",
     "capacity": 1,
@@ -767,11 +857,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/bloxaide-32601f7c94.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Bloxy Award",
-    "className": "All Classes",
+    "classNames": [
+      "All Classes"
+    ],
     "slot": "Melee",
     "source": "Distributed",
     "capacity": null,
@@ -834,11 +928,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/bloxy-award-a525216f52.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Bloxy Cola",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 1,
@@ -871,11 +969,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/bloxy-cola-d91a082560.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "BlunderBrass",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 4,
@@ -918,11 +1020,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/blunderbrass-eac99683f3.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Boonie Blaster",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 6,
@@ -945,11 +1051,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/boonie-blaster-2ac4048681.webp",
-    "type": "Flame"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Bottled Lemonade",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Secondary",
     "source": "Item Drop",
     "capacity": null,
@@ -997,11 +1107,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/bottled-lemonade-c129c79457.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Boxing Gloves",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -1019,11 +1133,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/boxing-gloves-281c05f89a.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Brash Burger",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 1,
@@ -1051,11 +1169,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/brash-burger-5278ca034a.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Broken Sword",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Melee",
     "source": "Stock",
     "capacity": null,
@@ -1068,11 +1190,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/broken-sword-c54ed33948.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Brooklyn Basher",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -1105,11 +1231,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/brooklyn-basher-84b20c1121.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Buff Banner",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -1142,11 +1272,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/buff-banner-2eb9ff384e.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Buffin' Blitz",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Secondary",
     "source": "Item Drop",
     "capacity": null,
@@ -1179,11 +1313,18 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/buffin-blitz-dba25e1141.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Bullet-stormer",
-    "className": "Trooper / Arsonist / Brute / Mechanic",
+    "classNames": [
+      "Trooper",
+      "Arsonist",
+      "Brute",
+      "Mechanic"
+    ],
     "slot": "Secondary / Primary",
     "source": "Shop",
     "capacity": "6-10",
@@ -1211,11 +1352,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/bullet-stormer-15d17c7654.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Camper's Climber",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -1253,11 +1398,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/camper-s-climber-1cb47fc194.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Candy Cane",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -1295,11 +1444,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/candy-cane-8eda076994.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Chargin' Targe",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -1327,11 +1480,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/chargin-targe-c7fb68e0d0.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Citric Reaction",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Secondary",
     "source": "Battle Pass",
     "capacity": 20,
@@ -1369,11 +1526,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/citric-reaction-7e48de89ce.webp",
-    "type": "Flame"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Classic",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 1,
@@ -1401,11 +1562,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/classic-71e88f3d5f.webp",
-    "type": "Flame"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Cloak and Dagger",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -1443,11 +1608,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/cloak-and-dagger-13eb4e7877.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Cloak Revolver",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 6,
@@ -1480,11 +1649,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/cloak-revolver-4d5d8bf41f.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Colbat",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 4,
@@ -1532,11 +1705,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/colbat-3313734a60.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Cold Shoulder",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -1584,11 +1761,16 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/cold-shoulder-bc82567dc0.webp",
-    "type": "Melee"
+    "types": [
+      "Melee",
+      "Projectile"
+    ]
   },
   {
     "name": "Concealed Carry",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 12,
@@ -1626,11 +1808,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/concealed-carry-3e4910a8b5.webp",
-    "type": "Healing"
+    "types": [
+      "Healing"
+    ]
   },
   {
     "name": "Concheror",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -1658,11 +1844,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/concheror-7d7a5d1d2f.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Conniver's Kunai",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -1690,11 +1880,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/conniver-s-kunai-0f92167c44.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Construct",
-    "className": "Mechanic",
+    "classNames": [
+      "Mechanic"
+    ],
     "slot": "PDA",
     "source": "Stock",
     "capacity": null,
@@ -1707,11 +1901,16 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/construct-85b1d7ca58.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Conventional",
-    "className": "Flanker / Mechanic",
+    "classNames": [
+      "Flanker",
+      "Mechanic"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 15,
@@ -1744,11 +1943,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/conventional-9fceae7814.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Counter-Service",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Secondary",
     "source": "Season Pass",
     "capacity": 30,
@@ -1761,11 +1964,18 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/counter-service-c8c5a0e4a2.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Crankenstein",
-    "className": "Trooper / Arsonist / Brute / Mechanic",
+    "classNames": [
+      "Trooper",
+      "Arsonist",
+      "Brute",
+      "Mechanic"
+    ],
     "slot": "Secondary / Primary",
     "source": "Shop",
     "capacity": "0-4",
@@ -1818,11 +2028,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/crankenstein-e0f0f2cd38.webp",
-    "type": "Flame"
+    "types": [
+      "Healing"
+    ]
   },
   {
     "name": "Crowbar",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Melee",
     "source": "Stock",
     "capacity": null,
@@ -1845,11 +2059,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/crowbar-929f7cce41.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Cuteness Overload",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Melee",
     "source": "Item Drop",
     "capacity": null,
@@ -1897,11 +2115,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/cuteness-overload-381f591353.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Dairy Douser",
-    "className": "Doctor",
+    "classNames": [
+      "Doctor"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 40,
@@ -1939,11 +2161,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/dairy-douser-30e36d84c3.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Darkness",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Melee",
     "source": "Item Drop",
     "capacity": null,
@@ -1981,11 +2207,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/darkness-cc701682a3.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Dead Ringer",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -2043,11 +2273,17 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/dead-ringer-84ac7122a9.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Deathblow",
-    "className": "Trooper / Arsonist / Brute",
+    "classNames": [
+      "Trooper",
+      "Arsonist",
+      "Brute"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 3,
@@ -2090,11 +2326,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/deathblow-1d91af520b.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Degreaser",
-    "className": "Arsonist",
+    "classNames": [
+      "Arsonist"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 200,
@@ -2137,11 +2377,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/degreaser-1c65161c28.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Demolish",
-    "className": "Mechanic",
+    "classNames": [
+      "Mechanic"
+    ],
     "slot": "PDA",
     "source": "Stock",
     "capacity": null,
@@ -2154,11 +2398,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/demolish-568207f5f3.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Dentist's Delight",
-    "className": "Doctor",
+    "classNames": [
+      "Doctor"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -2201,11 +2449,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/dentist-s-delight-92f528ace4.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Detonator",
-    "className": "Arsonist",
+    "classNames": [
+      "Arsonist"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 16,
@@ -2248,11 +2500,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/detonator-2ce7f9fb40.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Diavolo",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 6,
@@ -2295,11 +2551,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/diavolo-c6786acf60.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Diggity Dog",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Secondary",
     "source": "Item Drop",
     "capacity": 1,
@@ -2332,11 +2592,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/diggity-dog-c1b7425fac.webp",
-    "type": "Flame"
+    "types": [
+      "Healing"
+    ]
   },
   {
     "name": "Dire Donut",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 1,
@@ -2374,11 +2638,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/dire-donut-7601572365.webp",
-    "type": "Flame"
+    "types": [
+      "Healing"
+    ]
   },
   {
     "name": "Direct Hit",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 4,
@@ -2421,11 +2689,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/direct-hit-9e5c2e8cde.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Disguise Kit",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "PDA",
     "source": "Stock",
     "capacity": null,
@@ -2438,11 +2710,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/sapper-7bee1a187e.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Doll Maker",
-    "className": "Mechanic",
+    "classNames": [
+      "Mechanic"
+    ],
     "slot": "Melee",
     "source": "Item Drop",
     "capacity": null,
@@ -2460,11 +2736,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/doll-maker-ae910c76a7.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Double Trouble",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 1,
@@ -2507,11 +2787,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/double-trouble-ee69b6dfe4.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Efficient Eliminator",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 1,
@@ -2554,11 +2838,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/efficient-eliminator-6b2dc01166.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Einsteinium",
-    "className": "Mechanic",
+    "classNames": [
+      "Mechanic"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 4,
@@ -2596,11 +2884,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/einsteinium-caa13db0d7.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Elegant Blade",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -2633,11 +2925,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/elegant-blade-5c8680c314.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Equalizer",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -2670,11 +2966,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/equalizer-43e149c3c5.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Escape Plan",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -2707,11 +3007,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/escape-plan-d226405d86.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Escapist's Escapade",
-    "className": "Arsonist",
+    "classNames": [
+      "Arsonist"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -2744,11 +3048,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/escapist-s-escapade-9bc1477c36.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Eureka Effect",
-    "className": "Mechanic",
+    "classNames": [
+      "Mechanic"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -2791,11 +3099,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/eureka-effect-aba1ba6fbd.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Eviction Notice",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -2823,22 +3135,36 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/eviction-notice-82d88dea1e.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Eyes of Bermuda",
-    "className": "Trooper / Arsonist / Brute / Mechanic",
+    "classNames": [
+      "Trooper",
+      "Arsonist",
+      "Brute",
+      "Mechanic"
+    ],
     "slot": "Secondary / Primary",
     "source": "Battle Pass",
     "capacity": 6,
     "ammo": 32,
     "attributes": [],
     "iconUrl": "tc2-assets/weapons/eyes-of-bermuda-3760a1cffb.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Family Business",
-    "className": "Trooper / Arsonist / Brute / Mechanic",
+    "classNames": [
+      "Trooper",
+      "Arsonist",
+      "Brute",
+      "Mechanic"
+    ],
     "slot": "Secondary / Primary",
     "source": "Shop",
     "capacity": 8,
@@ -2861,11 +3187,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/family-business-71585564d4.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Fire Extinguisher",
-    "className": "Arsonist",
+    "classNames": [
+      "Arsonist"
+    ],
     "slot": "Melee",
     "source": "Stock",
     "capacity": null,
@@ -2883,11 +3213,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/fire-extinguisher-eb1c2ebf4b.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "First Responder",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": Infinity,
@@ -2935,11 +3269,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/first-responder-848719cc94.webp",
-    "type": "Flame"
+    "types": [
+      "Healing"
+    ]
   },
   {
     "name": "Fists",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Melee",
     "source": "Stock",
     "capacity": null,
@@ -2962,11 +3300,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/fists-c34773b98f.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Fists of Steel",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -2999,11 +3341,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/fists-of-steel-5208062763.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Flamethrower",
-    "className": "Arsonist",
+    "classNames": [
+      "Arsonist"
+    ],
     "slot": "Primary",
     "source": "Stock",
     "capacity": 200,
@@ -3026,11 +3372,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/flamethrower-d027385023.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Flare Gun",
-    "className": "Arsonist",
+    "classNames": [
+      "Arsonist"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 16,
@@ -3053,11 +3403,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/flare-gun-e42c63d30a.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Friendly Fire Foiler",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": null,
@@ -3080,11 +3434,21 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/friendly-fire-foiler-1c90e020a3.webp",
-    "type": "Flame"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Frying Pan",
-    "className": "Flanker / Trooper / Arsonist / Annihilator / Brute / Doctor / Marksman",
+    "classNames": [
+      "Flanker",
+      "Trooper",
+      "Arsonist",
+      "Annihilator",
+      "Brute",
+      "Doctor",
+      "Marksman"
+    ],
     "slot": "Melee",
     "source": "Distributed",
     "capacity": null,
@@ -3142,11 +3506,16 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/frying-pan-89d60215fa.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Furious Flagxe",
-    "className": "Trooper / Annihilator",
+    "classNames": [
+      "Trooper",
+      "Annihilator"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -3189,11 +3558,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/furious-flagxe-e45cf151ce.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "G-Bomb",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 1,
@@ -3241,11 +3614,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/g-bomb-9b96d759a2.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Galway Greaves",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": null,
@@ -3273,11 +3650,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/galway-greaves-d2596d1ee5.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Gladiator's Guard",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -3305,11 +3686,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/gladiator-s-guard-ccb5cd9dc6.webp",
-    "type": "Flame"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Goala Cola",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Secondary",
     "source": "Item Drop",
     "capacity": 1,
@@ -3342,11 +3727,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/goala-cola-63a1229777.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Golden Frying Pan",
-    "className": "All Classes",
+    "classNames": [
+      "All Classes"
+    ],
     "slot": "Melee",
     "source": "Distributed",
     "capacity": null,
@@ -3409,11 +3798,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/golden-frying-pan-e4f3f49920.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Golden Knife",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "Melee",
     "source": "Distributed",
     "capacity": null,
@@ -3436,11 +3829,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/golden-knife-eb888e3124.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Golden Wrench",
-    "className": "Mechanic",
+    "classNames": [
+      "Mechanic"
+    ],
     "slot": "Melee",
     "source": "Distributed",
     "capacity": null,
@@ -3463,11 +3860,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/golden-wrench-97e0a7f961.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Golf Club",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -3485,11 +3886,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/golf-club-c6c61b33ff.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Gravity Coil",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -3527,11 +3932,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/gravity-coil-f1bdc203bd.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Great Unifier",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 3,
@@ -3554,11 +3963,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/great-unifier-a8d894a525.webp",
-    "type": "Healing"
+    "types": [
+      "Healing"
+    ]
   },
   {
     "name": "Grenade Launcher",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Primary",
     "source": "Stock",
     "capacity": 4,
@@ -3576,11 +3989,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/grenade-launcher-357783074b.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Grill Scout",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -3628,11 +4045,16 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/grill-scout-0803e48991.webp",
-    "type": "Melee"
+    "types": [
+      "Melee",
+      "Projectile"
+    ]
   },
   {
     "name": "Grin Reaper",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "Melee",
     "source": "Season Pass",
     "capacity": null,
@@ -3660,11 +4082,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/grin-reaper-7c67953848.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Groovy Grinder",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Primary",
     "source": "Item Drop",
     "capacity": 200,
@@ -3677,11 +4103,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/groovy-grinder-2d2e9f2a1d.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Guardian's Oath",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Melee",
     "source": "Item Drop",
     "capacity": null,
@@ -3694,11 +4124,16 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/guardian-s-oath-f85a24c86a.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Gunboats",
-    "className": "Trooper / Annihilator",
+    "classNames": [
+      "Trooper",
+      "Annihilator"
+    ],
     "slot": "Secondary / Primary",
     "source": "Shop",
     "capacity": null,
@@ -3716,11 +4151,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/gunboats-f09fb95b80.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Gunslinger",
-    "className": "Mechanic",
+    "classNames": [
+      "Mechanic"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -3763,11 +4202,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/gunslinger-525934b6c3.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Gustabe",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -3795,11 +4238,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/gustabe-a4aae70075.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Gutbuster",
-    "className": "Mechanic",
+    "classNames": [
+      "Mechanic"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 6,
@@ -3817,11 +4264,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/gutbuster-08d9e392e1.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Handyman",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -3844,11 +4295,16 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/handyman-1d29b51812.webp",
-    "type": "Melee"
+    "types": [
+      "Melee",
+      "Projectile"
+    ]
   },
   {
     "name": "Heavy Metal",
-    "className": "Mechanic",
+    "classNames": [
+      "Mechanic"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -3871,11 +4327,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/heavy-metal-60459181cf.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Hermits' Haversack",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -3898,11 +4358,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/hermits-haversack-2afcb4caaf.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Holy Mackerel",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -3920,11 +4384,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/holy-mackerel-9b7ae79e75.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Hot Coco Blast",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Secondary",
     "source": "Item Drop",
     "capacity": 1,
@@ -3962,11 +4430,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/hot-coco-blast-94064f394b.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Hotwire",
-    "className": "Arsonist",
+    "classNames": [
+      "Arsonist"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -4004,11 +4476,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/hotwire-b33160a582.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "HuangLong's Wrath",
-    "className": "Arsonist",
+    "classNames": [
+      "Arsonist"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 30,
@@ -4051,11 +4527,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/huanglong-s-wrath-3221b56325.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Huntsman",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 1,
@@ -4093,11 +4573,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/huntsman-d943e8ec92.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Icicle",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -4130,11 +4614,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/icicle-1e7baf79d8.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Improvised Innovator",
-    "className": "Arsonist",
+    "classNames": [
+      "Arsonist"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -4162,11 +4650,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/improvised-innovator-6a99f208ca.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Interceptor",
-    "className": "Arsonist",
+    "classNames": [
+      "Arsonist"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 200,
@@ -4204,11 +4696,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/interceptor-e91aea920f.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Invis-Watch",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "Secondary",
     "source": "Stock",
     "capacity": null,
@@ -4221,11 +4717,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/invis-watch-cda54b6786.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Irish Guard",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 16,
@@ -4283,11 +4783,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/irish-guard-f3c3d680f4.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Iron Force",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 3,
@@ -4330,11 +4834,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/iron-force-796db5037f.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Jack-O Roger",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Primary",
     "source": "Item Drop",
     "capacity": 4,
@@ -4377,11 +4885,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/jack-o-roger-7a91d7c120.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Jolly Gingerbread",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Secondary",
     "source": "Item Drop",
     "capacity": 1,
@@ -4409,11 +4921,16 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/jolly-gingerbread-4eeb8b9b37.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Katana",
-    "className": "Trooper / Annihilator",
+    "classNames": [
+      "Trooper",
+      "Annihilator"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -4461,11 +4978,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/katana-3d8f9b5fd1.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Knife",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "Melee",
     "source": "Stock",
     "capacity": null,
@@ -4478,11 +4999,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/knife-9a8b461c25.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Kritzkrieg",
-    "className": "Doctor",
+    "classNames": [
+      "Doctor"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -4500,11 +5025,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/kritzkrieg-7546e6a027.webp",
-    "type": "Healing"
+    "types": [
+      "Healing"
+    ]
   },
   {
     "name": "Last Rite",
-    "className": "Arsonist",
+    "classNames": [
+      "Arsonist"
+    ],
     "slot": "Melee",
     "source": "Season Pass",
     "capacity": null,
@@ -4552,11 +5081,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/last-rite-b4378c5a5d.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Lemoblade",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -4589,11 +5122,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/lemoblade-3d8d9ec4bd.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Lemonade",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -4641,22 +5178,30 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/lemonade-af447948bb.webp",
-    "type": "Flame"
+    "types": [
+      "Healing"
+    ]
   },
   {
     "name": "Lever Shotgun",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Primary",
     "source": "Stock",
     "capacity": 6,
     "ammo": 32,
     "attributes": [],
     "iconUrl": "tc2-assets/weapons/lever-shotgun-f0cf0ee6de.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Liberty Launcher",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 5,
@@ -4684,11 +5229,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/liberty-launcher-7fbd51a336.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Lupara DB",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 2,
@@ -4726,11 +5275,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/lupara-db-6f1182ec87.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "M1 Garandier",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 4,
@@ -4763,11 +5316,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/m1-garandier-5ba7d65b5b.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "M249",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 100,
@@ -4815,11 +5372,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/m249-3f56b628a1.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "MAC-10",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Secondary",
     "source": "Stock",
     "capacity": 30,
@@ -4832,11 +5393,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/mac-10-727e4a4e92.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Mach-Coach",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Primary",
     "source": "Battle Pass",
     "capacity": 2,
@@ -4874,11 +5439,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/mach-coach-3fa991a962.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Machete",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Melee",
     "source": "Stock",
     "capacity": null,
@@ -4891,11 +5460,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/machete-0242556cca.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Mad Milk",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 1,
@@ -4933,11 +5506,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/mad-milk-9f7b50465a.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Malpractitioner",
-    "className": "Doctor",
+    "classNames": [
+      "Doctor"
+    ],
     "slot": "Secondary",
     "source": "Item Drop",
     "capacity": null,
@@ -4965,11 +5542,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/malpractitioner-423d002edc.webp",
-    "type": "Flame"
+    "types": [
+      "Healing"
+    ]
   },
   {
     "name": "Mantreads",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -4997,11 +5578,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/mantreads-b38d607278.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Market Gardener",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -5049,11 +5634,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/market-gardener-149b131246.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Maverick",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 4,
@@ -5086,11 +5675,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/maverick-c3522f2772.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Maxine",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 150,
@@ -5143,11 +5736,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/maxine-cbf08f69b0.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Medigun",
-    "className": "Doctor",
+    "classNames": [
+      "Doctor"
+    ],
     "slot": "Secondary",
     "source": "Stock",
     "capacity": null,
@@ -5175,11 +5772,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/medigun-03eda18f71.webp",
-    "type": "Flame"
+    "types": [
+      "Healing"
+    ]
   },
   {
     "name": "Mending Mallet",
-    "className": "Arsonist",
+    "classNames": [
+      "Arsonist"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -5207,11 +5808,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/mending-mallet-063f4340da.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Mercy Kill",
-    "className": "Doctor",
+    "classNames": [
+      "Doctor"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": null,
@@ -5244,11 +5849,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/mercy-kill-6d80331d6a.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Minigun",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Primary",
     "source": "Stock",
     "capacity": 200,
@@ -5261,11 +5870,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/minigun-17112b997c.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Mischievous Machete",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -5293,11 +5906,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/mischievous-machete-bcaade1211.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Mod Max",
-    "className": "All Classes",
+    "classNames": [
+      "All Classes"
+    ],
     "slot": "Melee",
     "source": "Battle Pass",
     "capacity": null,
@@ -5360,11 +5977,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/mod-max-94cf45caec.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Model IV",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 1,
@@ -5402,11 +6023,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/model-iv-330a95c2e5.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Monitor of Duty",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Primary",
     "source": "Item Drop",
     "capacity": 150,
@@ -5459,22 +6084,33 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/monitor-of-duty-5224726bc4.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Mule Mauler 600",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Primary",
     "source": "Item Drop",
     "capacity": 6,
     "ammo": 32,
     "attributes": [],
     "iconUrl": "tc2-assets/weapons/mule-mauler-600-d75a9dc2ca.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Mummy Khopesh",
-    "className": "Trooper / Arsonist / Annihilator / Marksman",
+    "classNames": [
+      "Trooper",
+      "Arsonist",
+      "Annihilator",
+      "Marksman"
+    ],
     "slot": "Melee",
     "source": "Awarded",
     "capacity": null,
@@ -5502,11 +6138,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/mummy-khopesh-bc1a933d54.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Night Sky Ignitor",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Primary",
     "source": "Battle Pass",
     "capacity": 4,
@@ -5549,11 +6189,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/night-sky-ignitor-4ad3901b64.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Noisy Cricket",
-    "className": "Mechanic",
+    "classNames": [
+      "Mechanic"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 6,
@@ -5586,11 +6230,21 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/noisy-cricket-1bcf23dd32.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Objector",
-    "className": "Flanker / Trooper / Arsonist / Annihilator / Brute / Doctor / Marksman",
+    "classNames": [
+      "Flanker",
+      "Trooper",
+      "Arsonist",
+      "Annihilator",
+      "Brute",
+      "Doctor",
+      "Marksman"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -5648,11 +6302,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/objector-e46ca228b4.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Original",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 4,
@@ -5665,11 +6323,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/original-d11ca15af4.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Overdrive",
-    "className": "Doctor",
+    "classNames": [
+      "Doctor"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": null,
@@ -5687,11 +6349,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/overdrive-dca99e04c8.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "P.D.Q",
-    "className": "Mechanic",
+    "classNames": [
+      "Mechanic"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -5734,11 +6400,16 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/p-d-q-3df3066f2e.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Parabomber",
-    "className": "Trooper / Annihilator",
+    "classNames": [
+      "Trooper",
+      "Annihilator"
+    ],
     "slot": "Secondary / Primary",
     "source": "Shop",
     "capacity": null,
@@ -5766,11 +6437,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/parabomber-0c628f3a46.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Perceptionist",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 6,
@@ -5793,11 +6468,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/perceptionist-86b097c394.webp",
-    "type": "Flame"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Personal Death Ray",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 4,
@@ -5850,11 +6529,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/personal-death-ray-61122fff98.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Pestilence Poker",
-    "className": "Doctor",
+    "classNames": [
+      "Doctor"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -5887,11 +6570,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/pestilence-poker-23af86ff2d.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Phlogistinator",
-    "className": "Arsonist",
+    "classNames": [
+      "Arsonist"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 200,
@@ -5924,11 +6611,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/phlogistinator-1d976238fd.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Pirate Cutlass",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Melee",
     "source": "Achievement",
     "capacity": null,
@@ -5946,11 +6637,16 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/pirate-cutlass-19468f5a17.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Pistol",
-    "className": "Flanker / Mechanic",
+    "classNames": [
+      "Flanker",
+      "Mechanic"
+    ],
     "slot": "Secondary",
     "source": "Stock",
     "capacity": 12,
@@ -5968,11 +6664,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/pistol-5fd04c6a5a.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Poacher's Pride",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 2,
@@ -6000,11 +6700,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/poacher-s-pride-dc73f7a848.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Quick Draw",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 6,
@@ -6052,11 +6756,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/quick-draw-0bbb038ef1.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Quickiebomb Launcher",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 4,
@@ -6104,11 +6812,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/quickiebomb-launcher-c89840ff1b.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Radius Scanner",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "PDA",
     "source": "Shop",
     "capacity": null,
@@ -6141,11 +6853,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/radius-scanner-0886fd62e5.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Ragin' Bull",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -6178,11 +6894,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/ragin-bull-734e46b48e.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Rally Racket",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Melee",
     "source": "Item Drop",
     "capacity": null,
@@ -6205,11 +6925,16 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/rally-racket-cd72dc0a7c.webp",
-    "type": "Melee"
+    "types": [
+      "Melee",
+      "Projectile"
+    ]
   },
   {
     "name": "Raven",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Secondary",
     "source": "Battle Pass",
     "capacity": 12,
@@ -6222,11 +6947,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/raven-c94c13eed0.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Razorback",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -6259,11 +6988,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/razorback-9e765feb03.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "RE:COIL",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 5,
@@ -6301,11 +7034,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/re-coil-467a445013.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Rejuvenator",
-    "className": "Doctor",
+    "classNames": [
+      "Doctor"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -6338,11 +7075,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/rejuvenator-65d1f0a6a6.webp",
-    "type": "Healing"
+    "types": [
+      "Healing"
+    ]
   },
   {
     "name": "Rescue Ranger",
-    "className": "Mechanic",
+    "classNames": [
+      "Mechanic"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 4,
@@ -6380,11 +7121,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/rescue-ranger-b7adad2e48.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Reserve Shooter",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 4,
@@ -6417,11 +7162,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/reserve-shooter-35580f02ad.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Revolver",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "Primary",
     "source": "Stock",
     "capacity": 6,
@@ -6439,11 +7188,16 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/revolver-d20819e855.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Rising Sun Katana",
-    "className": "Trooper / Annihilator",
+    "classNames": [
+      "Trooper",
+      "Annihilator"
+    ],
     "slot": "Melee",
     "source": "Item Drop",
     "capacity": null,
@@ -6496,11 +7250,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/rising-sun-katana-e43fa6c751.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "ROBAR",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 1,
@@ -6538,11 +7296,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/robar-15dff559e4.webp",
-    "type": "Flame"
+    "types": [
+      "Healing"
+    ]
   },
   {
     "name": "Rocket Jumper",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 4,
@@ -6575,22 +7337,30 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/rocket-jumper-2338917fd2.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Rocket Launcher",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Primary",
     "source": "Stock",
     "capacity": 4,
     "ammo": 20,
     "attributes": [],
     "iconUrl": "tc2-assets/weapons/rocket-launcher-3021d5e700.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Rubber Chicken",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Melee",
     "source": "Item Drop",
     "capacity": null,
@@ -6608,11 +7378,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/rubber-chicken-fefd9916d9.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Sandman",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -6635,11 +7409,16 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/sandman-12a14df774.webp",
-    "type": "Melee"
+    "types": [
+      "Melee",
+      "Projectile"
+    ]
   },
   {
     "name": "Sapper",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "PDA",
     "source": "Stock",
     "capacity": null,
@@ -6657,11 +7436,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/sapper-7bee1a187e.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Saw",
-    "className": "Doctor",
+    "classNames": [
+      "Doctor"
+    ],
     "slot": "Melee",
     "source": "Stock",
     "capacity": null,
@@ -6684,11 +7467,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/saw-385e5cd6a3.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Scythe for Sore Eyes",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Primary",
     "source": "Item Drop",
     "capacity": 1,
@@ -6706,11 +7493,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/scythe-for-sore-eyes-dd681ac61e.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Second Banana",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Secondary",
     "source": "Battle Pass",
     "capacity": 1,
@@ -6743,11 +7534,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/second-banana-d80b631b7f.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Shadow Blessing",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "Melee",
     "source": "Item Drop",
     "capacity": null,
@@ -6760,11 +7555,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/shadow-blessing-abc15ecaba.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Shock and Awe",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -6812,11 +7611,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/shock-and-awe-b1f1244c0c.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Short Circuit",
-    "className": "Mechanic",
+    "classNames": [
+      "Mechanic"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": Infinity,
@@ -6854,22 +7657,33 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/short-circuit-8434996ba1.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Shotgun",
-    "className": "Trooper / Arsonist / Brute / Mechanic",
+    "classNames": [
+      "Trooper",
+      "Arsonist",
+      "Brute",
+      "Mechanic"
+    ],
     "slot": "Secondary / Primary",
     "source": "Stock",
     "capacity": 6,
     "ammo": 32,
     "attributes": [],
     "iconUrl": "tc2-assets/weapons/shotgun-b45a3ef676.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Shotgun Cannon",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": "0-4",
@@ -6907,11 +7721,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/shotgun-cannon-bbdae2a1db.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Silenced Pistol",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 10,
@@ -6954,11 +7772,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/silenced-pistol-27a749fbaa.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Sinister Suit",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 10,
@@ -7001,11 +7823,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/sinister-suit-c8aa2884fd.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Skullbuster",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 1,
@@ -7033,11 +7859,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/skullbuster-e4a991c63d.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "SlapJock!",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -7085,11 +7915,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/slapjock-4e4f3b1f15.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Slow Burn",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "PDA",
     "source": "Shop",
     "capacity": null,
@@ -7117,11 +7951,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/slow-burn-28ca082f4b.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Sniper Rifle",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Primary",
     "source": "Stock",
     "capacity": 1,
@@ -7134,11 +7972,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/sniper-rifle-3e56c4adc6.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Soda Popper",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 2,
@@ -7176,11 +8018,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/soda-popper-1ee5e361c4.webp",
-    "type": "Flame"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Sour Shots",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 1,
@@ -7223,11 +8069,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/sour-shots-749fee25b5.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Southern Hospitality",
-    "className": "Mechanic",
+    "classNames": [
+      "Mechanic"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -7270,11 +8120,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/southern-hospitality-09ad170fe2.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Spare Hand",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Melee",
     "source": "Item Drop",
     "capacity": null,
@@ -7302,11 +8156,16 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/spare-hand-b71b336c5d.webp",
-    "type": "Melee"
+    "types": [
+      "Melee",
+      "Projectile"
+    ]
   },
   {
     "name": "Spartan Savior",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -7344,11 +8203,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/spartan-savior-f09ddc9da3.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Special-Ops Sushi",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 1,
@@ -7371,11 +8234,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/special-ops-sushi-4337329d1e.webp",
-    "type": "Flame"
+    "types": [
+      "Healing"
+    ]
   },
   {
     "name": "Specialist",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 6,
@@ -7398,11 +8265,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/specialist-1eea41d971.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Speed Coil",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -7425,11 +8296,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/speed-coil-a4a1327c98.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Spider Bite",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Primary",
     "source": "Item Drop",
     "capacity": 1,
@@ -7467,11 +8342,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/spider-bite-f28970dbec.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Spy Camera",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "PDA",
     "source": "Shop",
     "capacity": null,
@@ -7519,11 +8398,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/spy-camera-c711cd42a1.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Squid Coil",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Melee",
     "source": "Item Drop",
     "capacity": null,
@@ -7546,11 +8429,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/squid-coil-67f4b4cfca.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Squire Boots",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": null,
@@ -7578,11 +8465,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/squire-boots-5490c9b90b.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Stellar Carpet",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": "4-6",
@@ -7610,11 +8501,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/stellar-carpet-41f570c150.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Sticky Jumper",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 8,
@@ -7657,11 +8552,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/sticky-jumper-61e71a1768.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Stickybomb Launcher",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Secondary",
     "source": "Stock",
     "capacity": 8,
@@ -7674,11 +8573,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/stickybomb-launcher-98f763be8b.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Stray Reflex",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "PDA",
     "source": "Shop",
     "capacity": null,
@@ -7696,11 +8599,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/stray-reflex-a22b972020.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Sub Shotgun",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 4,
@@ -7723,11 +8630,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/sub-shotgun-b97ea9a0ba.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Super Sneakers",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -7750,11 +8661,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/super-sneakers-d2baee8a24.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Supersaw",
-    "className": "Doctor",
+    "classNames": [
+      "Doctor"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -7782,11 +8697,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/supersaw-f02d50d3de.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Suppressed Solution",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 20,
@@ -7824,11 +8743,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/suppressed-solution-de85b56ce1.webp",
-    "type": "Flame"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Swift Stiletto",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -7856,11 +8779,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/swift-stiletto-d40fa56129.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Syringe Crossbow",
-    "className": "Doctor",
+    "classNames": [
+      "Doctor"
+    ],
     "slot": "Primary",
     "source": "Stock",
     "capacity": 20,
@@ -7888,11 +8815,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/syringe-crossbow-2375533d17.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Syringe SMG",
-    "className": "Doctor",
+    "classNames": [
+      "Doctor"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 32,
@@ -7925,11 +8856,16 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/syringe-smg-508e6f3583.webp",
-    "type": "Projectile"
+    "types": [
+      "Hitscan",
+      "Projectile"
+    ]
   },
   {
     "name": "Tenacious Turkey",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 1,
@@ -7982,11 +8918,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/tenacious-turkey-108d29111e.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Thousand Degree Axe",
-    "className": "Arsonist",
+    "classNames": [
+      "Arsonist"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -8034,11 +8974,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/thousand-degree-axe-642f011559.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Three Rune Blade",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -8071,11 +9015,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/three-rune-blade-1ccc2202a0.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Tide Turner",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -8108,11 +9056,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/tide-turner-0db67d1e7f.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Tomislav",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 150,
@@ -8150,11 +9102,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/tomislav-6dc09fa5d0.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Tungsten Torus",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Secondary",
     "source": "Battle Pass",
     "capacity": 1,
@@ -8192,11 +9148,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/tungsten-torus-a2d72c8d66.webp",
-    "type": "Flame"
+    "types": [
+      "Healing"
+    ]
   },
   {
     "name": "Tunnel Rat",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -8229,11 +9189,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/tunnel-rat-2ac61741ed.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Turtle Rock",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -8256,11 +9220,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/turtle-rock-8f09236617.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Twin-Turbolence",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Primary",
     "source": "Item Drop",
     "capacity": 4,
@@ -8278,11 +9246,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/twin-turbolence-3d6dc1b4ae.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Urban Upriser",
-    "className": "Marksman",
+    "classNames": [
+      "Marksman"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": 1,
@@ -8325,11 +9297,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/urban-upriser-8e0601758a.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Vaccinator",
-    "className": "Doctor",
+    "classNames": [
+      "Doctor"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -8372,11 +9348,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/vaccinator-434b1dd374.webp",
-    "type": "Healing"
+    "types": [
+      "Healing"
+    ]
   },
   {
     "name": "Warrior's Spirit",
-    "className": "Brute",
+    "classNames": [
+      "Brute"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -8404,11 +9384,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/warrior-s-spirit-67934f6423.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Whirlpool Wraith",
-    "className": "Annihilator",
+    "classNames": [
+      "Annihilator"
+    ],
     "slot": "Melee",
     "source": "Item Drop",
     "capacity": null,
@@ -8441,11 +9425,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/whirlpool-wraith-04156f0e79.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Widowmaker",
-    "className": "Mechanic",
+    "classNames": [
+      "Mechanic"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": Infinity,
@@ -8478,11 +9466,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/widowmaker-920b2309f6.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Winger",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 6,
@@ -8510,11 +9502,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/winger-51c7125b2b.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Witches Brew",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": 1,
@@ -8537,11 +9533,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/witches-brew-b8778b186e.webp",
-    "type": "Utility"
+    "types": [
+      "Utility"
+    ]
   },
   {
     "name": "Wooden Sword",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -8564,11 +9564,16 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/wooden-sword-aa3f23adf4.webp",
-    "type": "Melee"
+    "types": [
+      "Melee",
+      "Projectile"
+    ]
   },
   {
     "name": "Wraith",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -8611,11 +9616,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/wraith-7dacadb560.webp",
-    "type": "Melee"
+    "types": [
+      "Melee"
+    ]
   },
   {
     "name": "Wrangler",
-    "className": "Mechanic",
+    "classNames": [
+      "Mechanic"
+    ],
     "slot": "Secondary",
     "source": "Shop",
     "capacity": null,
@@ -8643,11 +9652,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/wrangler-e2b2d92310.webp",
-    "type": "Hitscan"
+    "types": [
+      "Hitscan"
+    ]
   },
   {
     "name": "Wrap Assassin",
-    "className": "Flanker",
+    "classNames": [
+      "Flanker"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -8675,11 +9688,16 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/wrap-assassin-51d2ccfaef.webp",
-    "type": "Melee"
+    "types": [
+      "Melee",
+      "Projectile"
+    ]
   },
   {
     "name": "Wrecker's Yard",
-    "className": "Trooper",
+    "classNames": [
+      "Trooper"
+    ],
     "slot": "Primary",
     "source": "Shop",
     "capacity": "0-3",
@@ -8717,11 +9735,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/wrecker-s-yard-41c7ad347f.webp",
-    "type": "Projectile"
+    "types": [
+      "Projectile"
+    ]
   },
   {
     "name": "Wrench",
-    "className": "Mechanic",
+    "classNames": [
+      "Mechanic"
+    ],
     "slot": "Melee",
     "source": "Stock",
     "capacity": null,
@@ -8739,11 +9761,15 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/wrench-43cf0bc890.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   },
   {
     "name": "Your Eternal Reward",
-    "className": "Agent",
+    "classNames": [
+      "Agent"
+    ],
     "slot": "Melee",
     "source": "Shop",
     "capacity": null,
@@ -8791,6 +9817,8 @@ export const weapons: Weapon[] = [
       }
     ],
     "iconUrl": "tc2-assets/weapons/your-eternal-reward-bc3abc5707.webp",
-    "type": "PDA"
+    "types": [
+      "PDA"
+    ]
   }
 ];

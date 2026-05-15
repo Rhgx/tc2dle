@@ -1,4 +1,5 @@
 import { JSDOM } from "jsdom";
+import { inferType } from "../../src/lib/game/weaponTypes.ts";
 import { getImageUrl } from "./shared/assets.mjs";
 import { cellText, cleanText, getHeadingText, normalizeName, tableToGrid, textWithBreaks } from "./shared/text.mjs";
 
@@ -35,10 +36,10 @@ const SOURCE_WORDS = [
 
 const WEAPON_OVERRIDES = {
   "frying pan": {
-    className: "Flanker / Trooper / Arsonist / Annihilator / Brute / Doctor / Marksman",
+    classNames: ["Flanker", "Trooper", "Arsonist", "Annihilator", "Brute", "Doctor", "Marksman"],
   },
   objector: {
-    className: "Flanker / Trooper / Arsonist / Annihilator / Brute / Doctor / Marksman",
+    classNames: ["Flanker", "Trooper", "Arsonist", "Annihilator", "Brute", "Doctor", "Marksman"],
   },
 };
 
@@ -183,17 +184,6 @@ function extractRowAttributes(cells, indexes) {
   return extractAttributes(fallbackCell);
 }
 
-function inferType(name, slot, attributes) {
-  const text = `${name} ${slot} ${attributes}`.toLowerCase();
-  if (/pda|watch|cloak|disguise|sapper|building/.test(text)) return "PDA";
-  if (/melee|bat|pan|fists|sword|knife|wrench|saw|axe|shovel|bottle|club|blade|machete|sign|racket|cane/.test(text)) return "Melee";
-  if (/lunchbox|cola|milk|drink|consume|sandvich|burger|banana|sneakers|boots|wearer/.test(text)) return "Utility";
-  if (/rocket|grenade|sticky|flare|syringe|arrow|projectile|launcher|cannon|throw|ball/.test(text)) return "Projectile";
-  if (/flame|fire|burn|ignite|afterburn/.test(text)) return "Flame";
-  if (/medigun|heal|overheal|supercharge/.test(text)) return "Healing";
-  return "Hitscan";
-}
-
 function attributeKey(attribute) {
   return `${attribute.kind}\u0000${attribute.text}`;
 }
@@ -257,19 +247,25 @@ function dedupeWeapons(rows) {
       const ammoSet = [...item.ammoSet].filter(Boolean);
       const attributes = [...item.attributesByKey.values()];
       const override = WEAPON_OVERRIDES[item.name.toLowerCase()] || {};
+      const classNames = normalizeClassSet(override.classNames || classSet);
       return {
         name: item.name,
-        className: override.className || (classSet.includes("All Classes") ? "All Classes" : classSet.join(" / ") || "Unknown"),
+        classNames,
         slot: slotSet.join(" / ") || "Unknown",
         source: sourceSet.join(" / ") || "Unknown",
         capacity: joinStatSet(capacitySet),
         ammo: joinStatSet(ammoSet),
         attributes,
         iconUrl: item.iconUrl || "",
-        type: inferType(item.name, slotSet.join(" "), attributesText(attributes)),
+        types: inferType(item.name, slotSet.join(" "), attributesText(attributes)),
       };
     })
     .sort((a, b) => a.name.localeCompare(b.name));
+}
+
+function normalizeClassSet(classSet) {
+  if (classSet.includes("All Classes")) return ["All Classes"];
+  return classSet.filter(Boolean).length ? classSet.filter(Boolean) : ["Unknown"];
 }
 
 function joinStatSet(values) {

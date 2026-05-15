@@ -8,14 +8,14 @@ export type WeaponAttribute = {
 
 export type Weapon = {
   name: string;
-  className: string;
+  classNames: string[];
   slot: string;
   source: string;
   capacity: string | number | null;
   ammo: string | number | null;
   iconUrl: string;
   attributes: WeaponAttribute[];
-  type: string;
+  types: string[];
 };
 
 export type GuessEntry = {

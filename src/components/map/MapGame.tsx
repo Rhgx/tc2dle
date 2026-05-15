@@ -23,6 +23,7 @@ export function MapGame({ maps, status }: MapGameProps) {
   const [guesses, setGuesses] = useState<MapGuessEntry[]>([]);
   const [message, setMessage] = useState("");
   const [loadedAnswer, setLoadedAnswer] = useState("");
+  const [animatedSolvedAnswer, setAnimatedSolvedAnswer] = useState("");
 
   useEffect(() => {
     if (!target) return;
@@ -30,6 +31,7 @@ export function MapGame({ maps, status }: MapGameProps) {
     setQuery("");
     setHighlightedIndex(0);
     setMessage("");
+    setAnimatedSolvedAnswer("");
     setGuesses(readCachedMapGuesses(mapKey(target), mapEntries));
     setLoadedAnswer(mapKey(target));
   }, [target, mapEntries]);
@@ -46,6 +48,9 @@ export function MapGame({ maps, status }: MapGameProps) {
   const failedGuesses = won ? Math.max(0, guesses.length - 1) : guesses.length;
   const zoom = MAP_ZOOM_STEPS[Math.min(failedGuesses, MAP_ZOOM_STEPS.length - 1)];
   const cropPosition = useMemo(() => (target ? getDailyCropPosition(target.name) : "50% 50%"), [target]);
+  const answerKey = target ? mapKey(target) : "";
+  const animateSolvedReveal = Boolean(answerKey && animatedSolvedAnswer === answerKey);
+  const animateMapImage = (!won && !lost) || animateSolvedReveal;
 
   const suggestions = useMemo(() => {
     const trimmed = query.trim();
@@ -69,6 +74,15 @@ export function MapGame({ maps, status }: MapGameProps) {
     }
   }, [suggestions.length, highlightedIndex]);
 
+  useEffect(() => {
+    if (!animateSolvedReveal || !answerKey) return;
+    const timeoutId = window.setTimeout(() => {
+      setAnimatedSolvedAnswer((current) => (current === answerKey ? "" : current));
+    }, 650);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [animateSolvedReveal, answerKey]);
+
   function submit(map?: Tc2Map) {
     if (revealing || won || lost || !target) return;
 
@@ -90,6 +104,7 @@ export function MapGame({ maps, status }: MapGameProps) {
     const correct = mapKey(selected) === mapKey(target);
     setMessage(correct ? "Correct." : "");
     if (correct) {
+      setAnimatedSolvedAnswer(mapKey(target));
       celebrateWin();
     }
   }
@@ -143,7 +158,7 @@ export function MapGame({ maps, status }: MapGameProps) {
                   objectPosition: cropPosition,
                   transformOrigin: cropPosition,
                   transform: `scale(${won || lost ? 1 : zoom})`,
-                  transition: won || lost ? "none" : "transform 520ms ease, transform-origin 520ms ease",
+                  transition: animateMapImage ? "transform 520ms ease, transform-origin 520ms ease" : "none",
                   pointerEvents: "none",
                   userSelect: "none",
                   filter: won || lost ? "none" : "saturate(1.05) contrast(1.04)",
