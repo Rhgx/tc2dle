@@ -15,6 +15,7 @@ import { weapons, weaponsGeneratedAt } from "./data/weapons";
 import { pickDailyLoadingScreen } from "./lib/assets/loadingScreens";
 import { preloadCosmeticImages, preloadMapImages, preloadWeaponImages } from "./lib/assets/preload";
 import { resolveAssetUrl } from "./lib/assets/resolve";
+import { pickDaily, pickYesterday } from "./lib/game/hash";
 import { expandMapGameEntries } from "./lib/game/maps";
 import { currentRoutePath, getGameKindFromPath, routeForGameKind, withBasePath } from "./lib/routing/gameRoutes";
 import { theme } from "./theme";
@@ -27,6 +28,15 @@ export default function App() {
   const mapEntries = useMemo(() => expandMapGameEntries(resolvedMaps), [resolvedMaps]);
   const resolvedCosmetics = useMemo(() => cosmetics.map((cosmetic) => ({ ...cosmetic, imageUrl: resolveAssetUrl(cosmetic.imageUrl) })), []);
   const backgroundUrl = useMemo(() => pickDailyLoadingScreen(loadingScreenUrls.map(resolveAssetUrl)), []);
+  const priorityImageUrls = useMemo(() => {
+    if (gameKind === "weapon") {
+      return compactUrls([pickDaily(resolvedWeapons)?.iconUrl, pickYesterday(resolvedWeapons)?.iconUrl]);
+    }
+    if (gameKind === "map") {
+      return compactUrls([pickDaily(mapEntries, "map")?.imageUrl, pickYesterday(mapEntries, "map")?.imageUrl]);
+    }
+    return compactUrls([pickDaily(resolvedCosmetics, "cosmetic")?.imageUrl, pickYesterday(resolvedCosmetics, "cosmetic")?.imageUrl]);
+  }, [gameKind, mapEntries, resolvedCosmetics, resolvedWeapons]);
   const weaponStatus = weaponsGeneratedAt
     ? `Loaded ${resolvedWeapons.length} scraped weapons generated on ${new Date(weaponsGeneratedAt).toLocaleString()}.`
     : `Loaded ${resolvedWeapons.length} bundled fallback weapons. Run npm run scrape:weapons to generate the full list.`;
@@ -39,10 +49,10 @@ export default function App() {
   const activeItems = gameKind === "weapon" ? resolvedWeapons : gameKind === "map" ? mapEntries : resolvedCosmetics;
 
   useEffect(() => {
-    if (gameKind === "weapon") return preloadWeaponImages(resolvedWeapons);
-    if (gameKind === "map") return preloadMapImages(resolvedMaps);
-    return preloadCosmeticImages(resolvedCosmetics);
-  }, [gameKind, resolvedCosmetics, resolvedMaps, resolvedWeapons]);
+    if (gameKind === "weapon") return preloadWeaponImages(resolvedWeapons, priorityImageUrls);
+    if (gameKind === "map") return preloadMapImages(resolvedMaps, priorityImageUrls);
+    return preloadCosmeticImages(resolvedCosmetics, priorityImageUrls);
+  }, [gameKind, priorityImageUrls, resolvedCosmetics, resolvedMaps, resolvedWeapons]);
 
   useEffect(() => {
     function handlePopState() {
@@ -207,4 +217,8 @@ export default function App() {
       </Box>
     </ThemeProvider>
   );
+}
+
+function compactUrls(urls: Array<string | undefined>) {
+  return urls.filter((url): url is string => Boolean(url));
 }
