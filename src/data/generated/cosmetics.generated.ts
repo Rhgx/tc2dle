@@ -1,6 +1,6 @@
 import type { Cosmetic } from "../../types";
 
-export const cosmeticsGeneratedAt = "2026-05-06T07:29:27.332Z";
+export const cosmeticsGeneratedAt = "2026-05-15T17:55:37.799Z";
 export const cosmetics: Cosmetic[] = [
   {
     "name": "ABH4",
@@ -10,7 +10,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/abh4-adb6cceb88.png"
+    "imageUrl": "tc2-assets/cosmetics/abh4-adb6cceb88.webp"
   },
   {
     "name": "Ace Shot",
@@ -22,7 +22,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/ace-shot-f112bf9c19.png"
+    "imageUrl": "tc2-assets/cosmetics/ace-shot-f112bf9c19.webp"
   },
   {
     "name": "Aces High",
@@ -33,7 +33,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/aces-high-9226e34431.png"
+    "imageUrl": "tc2-assets/cosmetics/aces-high-9226e34431.webp"
   },
   {
     "name": "Advertisement Assassin",
@@ -44,7 +44,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/advertisement-assassin-27d8847bb0.png"
+    "imageUrl": "tc2-assets/cosmetics/advertisement-assassin-27d8847bb0.webp"
   },
   {
     "name": "Affluxed Arson",
@@ -54,7 +54,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/affluxed-arson-18171a0d93.png"
+    "imageUrl": "tc2-assets/cosmetics/affluxed-arson-18171a0d93.webp"
   },
   {
     "name": "Alien Artifact",
@@ -64,7 +64,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/alien-artifact-44c27d3f7c.png"
+    "imageUrl": "tc2-assets/cosmetics/alien-artifact-44c27d3f7c.webp"
   },
   {
     "name": "Alltime Affliction",
@@ -75,7 +75,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/alltime-affliction-bae207693e.png"
+    "imageUrl": "tc2-assets/cosmetics/alltime-affliction-bae207693e.webp"
   },
   {
     "name": "American Anomaly",
@@ -86,7 +86,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/american-anomaly-a252bb18d6.png"
+    "imageUrl": "tc2-assets/cosmetics/american-anomaly-a252bb18d6.webp"
   },
   {
     "name": "Ancient Arbiter",
@@ -96,7 +96,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/ancient-arbiter-bc9de68a9d.png"
+    "imageUrl": "tc2-assets/cosmetics/ancient-arbiter-bc9de68a9d.webp"
   },
   {
     "name": "Antler Branches",
@@ -107,7 +107,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/antler-branches-8dc975d451.png"
+    "imageUrl": "tc2-assets/cosmetics/antler-branches-8dc975d451.webp"
   },
   {
     "name": "Aramid Operative",
@@ -118,7 +118,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/aramid-operative-7c4effa6ba.png"
+    "imageUrl": "tc2-assets/cosmetics/aramid-operative-7c4effa6ba.webp"
   },
   {
     "name": "Arcade Ace",
@@ -129,7 +129,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/arcade-ace-715781608f.png"
+    "imageUrl": "tc2-assets/cosmetics/arcade-ace-715781608f.webp"
   },
   {
     "name": "Arsonist's Beanie",
@@ -139,7 +139,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/arsonist-s-beanie-5c2de17bfb.png"
+    "imageUrl": "tc2-assets/cosmetics/arsonist-s-beanie-5c2de17bfb.webp"
   },
   {
     "name": "Attack Wrap",
@@ -149,7 +149,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/attack-wrap-627ed8f34e.png"
+    "imageUrl": "tc2-assets/cosmetics/attack-wrap-627ed8f34e.webp"
   },
   {
     "name": "Augment Thesis",
@@ -160,7 +160,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/augment-thesis-862a1a91c5.png"
+    "imageUrl": "tc2-assets/cosmetics/augment-thesis-862a1a91c5.webp"
   },
   {
     "name": "Automaton",
@@ -171,7 +171,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/automaton-707dc0c13f.png"
+    "imageUrl": "tc2-assets/cosmetics/automaton-707dc0c13f.webp"
   },
   {
     "name": "Autumn Pilot",
@@ -181,7 +181,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/autumn-pilot-b65b3cd822.png"
+    "imageUrl": "tc2-assets/cosmetics/autumn-pilot-b65b3cd822.webp"
   },
   {
     "name": "Backup",
@@ -191,7 +191,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/backup-f9ad22a299.png"
+    "imageUrl": "tc2-assets/cosmetics/backup-f9ad22a299.webp"
   },
   {
     "name": "Bad Day",
@@ -201,7 +201,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/bad-day-c1a08a7fb7.png"
+    "imageUrl": "tc2-assets/cosmetics/bad-day-c1a08a7fb7.webp"
   },
   {
     "name": "Bald Protector",
@@ -211,7 +211,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/bald-protector-eb7953e8e4.png"
+    "imageUrl": "tc2-assets/cosmetics/bald-protector-eb7953e8e4.webp"
   },
   {
     "name": "Ballcap",
@@ -221,7 +221,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/ballcap-47cecfe969.png"
+    "imageUrl": "tc2-assets/cosmetics/ballcap-47cecfe969.webp"
   },
   {
     "name": "Bandito",
@@ -231,7 +231,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/bandito-391aabfaa0.png"
+    "imageUrl": "tc2-assets/cosmetics/bandito-391aabfaa0.webp"
   },
   {
     "name": "Baseball Muff",
@@ -241,7 +241,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/baseball-muff-9f93ee041a.png"
+    "imageUrl": "tc2-assets/cosmetics/baseball-muff-9f93ee041a.webp"
   },
   {
     "name": "Bat Blockers",
@@ -251,7 +251,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/bat-blockers-463c0c132e.png"
+    "imageUrl": "tc2-assets/cosmetics/bat-blockers-463c0c132e.webp"
   },
   {
     "name": "Batter's Helmet",
@@ -261,7 +261,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/batter-s-helmet-0dadf07127.png"
+    "imageUrl": "tc2-assets/cosmetics/batter-s-helmet-0dadf07127.webp"
   },
   {
     "name": "Battle Bronco",
@@ -273,7 +273,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/battle-bronco-f4539534d1.png"
+    "imageUrl": "tc2-assets/cosmetics/battle-bronco-f4539534d1.webp"
   },
   {
     "name": "Battle Ready",
@@ -283,7 +283,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/battle-ready-73aeb37ecb.png"
+    "imageUrl": "tc2-assets/cosmetics/battle-ready-73aeb37ecb.webp"
   },
   {
     "name": "Beard Beanie",
@@ -293,7 +293,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/beard-beanie-7c09f75b5e.png"
+    "imageUrl": "tc2-assets/cosmetics/beard-beanie-7c09f75b5e.webp"
   },
   {
     "name": "Beast's Bonnet",
@@ -303,7 +303,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/beast-s-bonnet-c6423186fb.png"
+    "imageUrl": "tc2-assets/cosmetics/beast-s-bonnet-c6423186fb.webp"
   },
   {
     "name": "Beesy Entomologist",
@@ -314,7 +314,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/beesy-entomologist-0a31921994.png"
+    "imageUrl": "tc2-assets/cosmetics/beesy-entomologist-0a31921994.webp"
   },
   {
     "name": "Beetle Brooch",
@@ -324,7 +324,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/beetle-brooch-a5948aae83.png"
+    "imageUrl": "tc2-assets/cosmetics/beetle-brooch-a5948aae83.webp"
   },
   {
     "name": "Big Bruncher",
@@ -335,7 +335,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/big-bruncher-8e4dd061f7.png"
+    "imageUrl": "tc2-assets/cosmetics/big-bruncher-8e4dd061f7.webp"
   },
   {
     "name": "Big Fix",
@@ -345,7 +345,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/big-fix-0cfc44ef77.png"
+    "imageUrl": "tc2-assets/cosmetics/big-fix-0cfc44ef77.webp"
   },
   {
     "name": "Big Shot",
@@ -356,7 +356,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/big-shot-6c38185ab0.png"
+    "imageUrl": "tc2-assets/cosmetics/big-shot-6c38185ab0.webp"
   },
   {
     "name": "Biker X",
@@ -367,7 +367,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/biker-x-5109485d3b.png"
+    "imageUrl": "tc2-assets/cosmetics/biker-x-5109485d3b.webp"
   },
   {
     "name": "Blind Warrior",
@@ -378,7 +378,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/blind-warrior-cbbcc86d3e.png"
+    "imageUrl": "tc2-assets/cosmetics/blind-warrior-cbbcc86d3e.webp"
   },
   {
     "name": "Bloxy Helm",
@@ -388,7 +388,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/bloxy-helm-b450fa68b3.png"
+    "imageUrl": "tc2-assets/cosmetics/bloxy-helm-b450fa68b3.webp"
   },
   {
     "name": "Bone Dome",
@@ -398,7 +398,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/bone-dome-224485fa83.png"
+    "imageUrl": "tc2-assets/cosmetics/bone-dome-224485fa83.webp"
   },
   {
     "name": "Bowling Bob",
@@ -408,7 +408,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/bowling-bob-4a5071be1d.png"
+    "imageUrl": "tc2-assets/cosmetics/bowling-bob-4a5071be1d.webp"
   },
   {
     "name": "Brain Jam",
@@ -419,7 +419,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/brain-jam-f58fbf83ed.png"
+    "imageUrl": "tc2-assets/cosmetics/brain-jam-f58fbf83ed.webp"
   },
   {
     "name": "Breaker's Beatdown",
@@ -430,7 +430,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/breaker-s-beatdown-1143a2a93e.png"
+    "imageUrl": "tc2-assets/cosmetics/breaker-s-beatdown-1143a2a93e.webp"
   },
   {
     "name": "Brim Full of Brains",
@@ -440,7 +440,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/brim-full-of-brains-f10ca9ca4b.png"
+    "imageUrl": "tc2-assets/cosmetics/brim-full-of-brains-f10ca9ca4b.webp"
   },
   {
     "name": "Brisk Bomber",
@@ -452,7 +452,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/brisk-bomber-cd6f561e6e.png"
+    "imageUrl": "tc2-assets/cosmetics/brisk-bomber-cd6f561e6e.webp"
   },
   {
     "name": "Broken Rank",
@@ -463,7 +463,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/broken-rank-8fc83dccf2.png"
+    "imageUrl": "tc2-assets/cosmetics/broken-rank-8fc83dccf2.webp"
   },
   {
     "name": "Brutal Butler",
@@ -474,7 +474,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/brutal-butler-818b778746.png"
+    "imageUrl": "tc2-assets/cosmetics/brutal-butler-818b778746.webp"
   },
   {
     "name": "Brutish Captain",
@@ -486,7 +486,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/brutish-captain-a5c2334fe0.png"
+    "imageUrl": "tc2-assets/cosmetics/brutish-captain-a5c2334fe0.webp"
   },
   {
     "name": "Builder Man",
@@ -497,7 +497,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/builder-man-35d9a59ee5.png"
+    "imageUrl": "tc2-assets/cosmetics/builder-man-35d9a59ee5.webp"
   },
   {
     "name": "Builder's Brainguard",
@@ -508,7 +508,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/builder-s-brainguard-54d1c004d2.png"
+    "imageUrl": "tc2-assets/cosmetics/builder-s-brainguard-54d1c004d2.webp"
   },
   {
     "name": "Burger Boss",
@@ -520,7 +520,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/burger-boss-c91e313808.png"
+    "imageUrl": "tc2-assets/cosmetics/burger-boss-c91e313808.webp"
   },
   {
     "name": "Burger Boy",
@@ -531,7 +531,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/burger-boy-fea2068bef.png"
+    "imageUrl": "tc2-assets/cosmetics/burger-boy-fea2068bef.webp"
   },
   {
     "name": "Burnaclava",
@@ -541,7 +541,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/burnaclava-d42ea8469a.png"
+    "imageUrl": "tc2-assets/cosmetics/burnaclava-d42ea8469a.webp"
   },
   {
     "name": "Bushman",
@@ -552,7 +552,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/bushman-54dd318183.png"
+    "imageUrl": "tc2-assets/cosmetics/bushman-54dd318183.webp"
   },
   {
     "name": "Camo Cap",
@@ -562,7 +562,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/camo-cap-3777ca9bc5.png"
+    "imageUrl": "tc2-assets/cosmetics/camo-cap-3777ca9bc5.webp"
   },
   {
     "name": "Camp Sniping",
@@ -572,7 +572,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/camp-sniping-4a69b1a4f6.png"
+    "imageUrl": "tc2-assets/cosmetics/camp-sniping-4a69b1a4f6.webp"
   },
   {
     "name": "Carter Cut",
@@ -582,7 +582,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/carter-cut-2bc8986b88.png"
+    "imageUrl": "tc2-assets/cosmetics/carter-cut-2bc8986b88.webp"
   },
   {
     "name": "Cassel's Tilt",
@@ -592,7 +592,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/cassel-s-tilt-84db8c7019.png"
+    "imageUrl": "tc2-assets/cosmetics/cassel-s-tilt-84db8c7019.webp"
   },
   {
     "name": "Casual",
@@ -604,7 +604,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/casual-1eee211b10.png"
+    "imageUrl": "tc2-assets/cosmetics/casual-1eee211b10.webp"
   },
   {
     "name": "Cavalier",
@@ -616,7 +616,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/cavalier-af80d9fab4.png"
+    "imageUrl": "tc2-assets/cosmetics/cavalier-af80d9fab4.webp"
   },
   {
     "name": "Cheshire Cowl",
@@ -626,7 +626,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/cheshire-cowl-41acb84a27.png"
+    "imageUrl": "tc2-assets/cosmetics/cheshire-cowl-41acb84a27.webp"
   },
   {
     "name": "Circumference Cut",
@@ -636,7 +636,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/circumference-cut-652afc6013.png"
+    "imageUrl": "tc2-assets/cosmetics/circumference-cut-652afc6013.webp"
   },
   {
     "name": "Civil Custodian",
@@ -646,7 +646,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/civil-custodian-5dace3bb16.png"
+    "imageUrl": "tc2-assets/cosmetics/civil-custodian-5dace3bb16.webp"
   },
   {
     "name": "Classic Cut",
@@ -657,7 +657,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/classic-cut-a3ab68a5d0.png"
+    "imageUrl": "tc2-assets/cosmetics/classic-cut-a3ab68a5d0.webp"
   },
   {
     "name": "Cloaked Caster",
@@ -668,7 +668,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/cloaked-caster-6ce60d4875.png"
+    "imageUrl": "tc2-assets/cosmetics/cloaked-caster-6ce60d4875.webp"
   },
   {
     "name": "Cogsmith",
@@ -678,7 +678,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/cogsmith-49d73ed897.png"
+    "imageUrl": "tc2-assets/cosmetics/cogsmith-49d73ed897.webp"
   },
   {
     "name": "Cold Case",
@@ -689,7 +689,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/cold-case-6cfb7205c3.png"
+    "imageUrl": "tc2-assets/cosmetics/cold-case-6cfb7205c3.webp"
   },
   {
     "name": "Cold Companion",
@@ -699,7 +699,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/cold-companion-03ae45b8c5.png"
+    "imageUrl": "tc2-assets/cosmetics/cold-companion-03ae45b8c5.webp"
   },
   {
     "name": "Cold Days",
@@ -709,7 +709,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/cold-days-7c0ab7ece7.png"
+    "imageUrl": "tc2-assets/cosmetics/cold-days-7c0ab7ece7.webp"
   },
   {
     "name": "Cold Fuse",
@@ -720,7 +720,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/cold-fuse-e6553d5cae.png"
+    "imageUrl": "tc2-assets/cosmetics/cold-fuse-e6553d5cae.webp"
   },
   {
     "name": "Cold Treatment",
@@ -731,7 +731,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/cold-treatment-5e953eb369.png"
+    "imageUrl": "tc2-assets/cosmetics/cold-treatment-5e953eb369.webp"
   },
   {
     "name": "Coldchack Flaps",
@@ -742,7 +742,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/coldchack-flaps-e82c0e04d2.png"
+    "imageUrl": "tc2-assets/cosmetics/coldchack-flaps-e82c0e04d2.webp"
   },
   {
     "name": "Colonial Corporal",
@@ -753,7 +753,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/colonial-corporal-130c94c43e.png"
+    "imageUrl": "tc2-assets/cosmetics/colonial-corporal-130c94c43e.webp"
   },
   {
     "name": "Comandante",
@@ -764,7 +764,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/comandante-ca74af07ef.png"
+    "imageUrl": "tc2-assets/cosmetics/comandante-ca74af07ef.webp"
   },
   {
     "name": "Combat Carry",
@@ -775,7 +775,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/combat-carry-886b4fc5a8.png"
+    "imageUrl": "tc2-assets/cosmetics/combat-carry-886b4fc5a8.webp"
   },
   {
     "name": "Common Warmth",
@@ -785,7 +785,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/common-warmth-a034acae6a.png"
+    "imageUrl": "tc2-assets/cosmetics/common-warmth-a034acae6a.webp"
   },
   {
     "name": "Cowboy Hat",
@@ -795,7 +795,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/cowboy-hat-e05f7b573e.png"
+    "imageUrl": "tc2-assets/cosmetics/cowboy-hat-e05f7b573e.webp"
   },
   {
     "name": "Cozier Cap",
@@ -805,7 +805,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/cozier-cap-142fd8096e.png"
+    "imageUrl": "tc2-assets/cosmetics/cozier-cap-142fd8096e.webp"
   },
   {
     "name": "Cozy Charger",
@@ -815,7 +815,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/cozy-charger-8ae494c164.png"
+    "imageUrl": "tc2-assets/cosmetics/cozy-charger-8ae494c164.webp"
   },
   {
     "name": "Critical Wound",
@@ -826,7 +826,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/critical-wound-de80b25278.png"
+    "imageUrl": "tc2-assets/cosmetics/critical-wound-de80b25278.webp"
   },
   {
     "name": "Croaker Beanie",
@@ -836,7 +836,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/croaker-beanie-963c2a7211.png"
+    "imageUrl": "tc2-assets/cosmetics/croaker-beanie-963c2a7211.webp"
   },
   {
     "name": "Cunning Cook",
@@ -847,7 +847,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/cunning-cook-d874fd13de.png"
+    "imageUrl": "tc2-assets/cosmetics/cunning-cook-d874fd13de.webp"
   },
   {
     "name": "Cyber Crime",
@@ -857,7 +857,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/cyber-crime-49b14c81c8.png"
+    "imageUrl": "tc2-assets/cosmetics/cyber-crime-49b14c81c8.webp"
   },
   {
     "name": "Cyclops",
@@ -867,7 +867,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/cyclops-e4d48bd1e6.png"
+    "imageUrl": "tc2-assets/cosmetics/cyclops-e4d48bd1e6.webp"
   },
   {
     "name": "Damage Control",
@@ -877,7 +877,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/damage-control-dde2709cb9.png"
+    "imageUrl": "tc2-assets/cosmetics/damage-control-dde2709cb9.webp"
   },
   {
     "name": "Dapper Dome",
@@ -887,7 +887,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/dapper-dome-bd71f5596c.png"
+    "imageUrl": "tc2-assets/cosmetics/dapper-dome-bd71f5596c.webp"
   },
   {
     "name": "Day Worker",
@@ -897,7 +897,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/day-worker-5658cac236.png"
+    "imageUrl": "tc2-assets/cosmetics/day-worker-5658cac236.webp"
   },
   {
     "name": "Dead Eye",
@@ -908,7 +908,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/dead-eye-03ed1eb081.png"
+    "imageUrl": "tc2-assets/cosmetics/dead-eye-03ed1eb081.webp"
   },
   {
     "name": "Death Doctor",
@@ -918,7 +918,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/death-doctor-eca945d3eb.png"
+    "imageUrl": "tc2-assets/cosmetics/death-doctor-eca945d3eb.webp"
   },
   {
     "name": "Deep Sea",
@@ -928,7 +928,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/deep-sea-3912293af1.png"
+    "imageUrl": "tc2-assets/cosmetics/deep-sea-3912293af1.webp"
   },
   {
     "name": "Designated Demo",
@@ -940,7 +940,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/designated-demo-b6fe6a249f.png"
+    "imageUrl": "tc2-assets/cosmetics/designated-demo-b6fe6a249f.webp"
   },
   {
     "name": "Designated Runner",
@@ -950,7 +950,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/designated-runner-74710cb64b.png"
+    "imageUrl": "tc2-assets/cosmetics/designated-runner-74710cb64b.webp"
   },
   {
     "name": "Desperado",
@@ -961,7 +961,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/desperado-800ff0dfa1.png"
+    "imageUrl": "tc2-assets/cosmetics/desperado-800ff0dfa1.webp"
   },
   {
     "name": "Detective",
@@ -972,7 +972,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/detective-c6c6be517d.png"
+    "imageUrl": "tc2-assets/cosmetics/detective-c6c6be517d.webp"
   },
   {
     "name": "Detonator's Do",
@@ -982,7 +982,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/detonator-s-do-c04131faf1.png"
+    "imageUrl": "tc2-assets/cosmetics/detonator-s-do-c04131faf1.webp"
   },
   {
     "name": "Devil's Advocate",
@@ -993,7 +993,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/devil-s-advocate-7cf176d0e2.png"
+    "imageUrl": "tc2-assets/cosmetics/devil-s-advocate-7cf176d0e2.webp"
   },
   {
     "name": "Disaster Spellcaster",
@@ -1003,7 +1003,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/disaster-spellcaster-ced6498e2a.png"
+    "imageUrl": "tc2-assets/cosmetics/disaster-spellcaster-ced6498e2a.webp"
   },
   {
     "name": "Diver Goggles",
@@ -1014,7 +1014,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/diver-goggles-203a14598a.png"
+    "imageUrl": "tc2-assets/cosmetics/diver-goggles-203a14598a.webp"
   },
   {
     "name": "Docking Chief",
@@ -1024,7 +1024,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/docking-chief-e5cc16b0d5.png"
+    "imageUrl": "tc2-assets/cosmetics/docking-chief-e5cc16b0d5.webp"
   },
   {
     "name": "Dollar Maker",
@@ -1034,7 +1034,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/dollar-maker-0ef45e33ae.png"
+    "imageUrl": "tc2-assets/cosmetics/dollar-maker-0ef45e33ae.webp"
   },
   {
     "name": "Doomsday Helm",
@@ -1044,7 +1044,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/doomsday-helm-f2d526309f.png"
+    "imageUrl": "tc2-assets/cosmetics/doomsday-helm-f2d526309f.webp"
   },
   {
     "name": "Dorcus Cap",
@@ -1054,7 +1054,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/dorcus-cap-a45e1f5f83.png"
+    "imageUrl": "tc2-assets/cosmetics/dorcus-cap-a45e1f5f83.webp"
   },
   {
     "name": "Doughboy",
@@ -1064,7 +1064,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/doughboy-a9f06bd778.png"
+    "imageUrl": "tc2-assets/cosmetics/doughboy-a9f06bd778.webp"
   },
   {
     "name": "Down Air",
@@ -1074,7 +1074,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/down-air-bc38531ac5.png"
+    "imageUrl": "tc2-assets/cosmetics/down-air-bc38531ac5.webp"
   },
   {
     "name": "Dozy Designer",
@@ -1086,7 +1086,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/dozy-designer-d6b178ad53.png"
+    "imageUrl": "tc2-assets/cosmetics/dozy-designer-d6b178ad53.webp"
   },
   {
     "name": "Dr. Delight",
@@ -1098,7 +1098,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/dr-delight-c93dff98ff.png"
+    "imageUrl": "tc2-assets/cosmetics/dr-delight-c93dff98ff.webp"
   },
   {
     "name": "Dragoon",
@@ -1109,7 +1109,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/dragoon-0e972bd713.png"
+    "imageUrl": "tc2-assets/cosmetics/dragoon-0e972bd713.webp"
   },
   {
     "name": "Drama Queen",
@@ -1119,7 +1119,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/drama-queen-44c1f7413a.png"
+    "imageUrl": "tc2-assets/cosmetics/drama-queen-44c1f7413a.webp"
   },
   {
     "name": "Dream Hunter",
@@ -1130,7 +1130,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/dream-hunter-3dfb91dab0.png"
+    "imageUrl": "tc2-assets/cosmetics/dream-hunter-3dfb91dab0.webp"
   },
   {
     "name": "Driller",
@@ -1140,7 +1140,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/driller-cf7aa4ce82.png"
+    "imageUrl": "tc2-assets/cosmetics/driller-cf7aa4ce82.webp"
   },
   {
     "name": "Dublin Tieback",
@@ -1150,7 +1150,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/dublin-tieback-099782764b.png"
+    "imageUrl": "tc2-assets/cosmetics/dublin-tieback-099782764b.webp"
   },
   {
     "name": "Dune Rover",
@@ -1160,7 +1160,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/dune-rover-b6ee955f67.png"
+    "imageUrl": "tc2-assets/cosmetics/dune-rover-b6ee955f67.webp"
   },
   {
     "name": "Easter Ears",
@@ -1170,7 +1170,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/easter-ears-f3cbfb3e96.png"
+    "imageUrl": "tc2-assets/cosmetics/easter-ears-f3cbfb3e96.webp"
   },
   {
     "name": "Educated Opinion",
@@ -1180,7 +1180,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/educated-opinion-54d8915c00.png"
+    "imageUrl": "tc2-assets/cosmetics/educated-opinion-54d8915c00.webp"
   },
   {
     "name": "Egghead",
@@ -1190,7 +1190,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/egghead-2e1aeb3dec.png"
+    "imageUrl": "tc2-assets/cosmetics/egghead-2e1aeb3dec.webp"
   },
   {
     "name": "Eggsecutive",
@@ -1201,7 +1201,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/eggsecutive-3c6b80db8b.png"
+    "imageUrl": "tc2-assets/cosmetics/eggsecutive-3c6b80db8b.webp"
   },
   {
     "name": "Electric Energy",
@@ -1213,7 +1213,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/electric-energy-181d6cc1a9.png"
+    "imageUrl": "tc2-assets/cosmetics/electric-energy-181d6cc1a9.webp"
   },
   {
     "name": "Entrenched Bombardier",
@@ -1225,7 +1225,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/entrenched-bombardier-afdd53d42c.png"
+    "imageUrl": "tc2-assets/cosmetics/entrenched-bombardier-afdd53d42c.webp"
   },
   {
     "name": "Exposed Nerves",
@@ -1236,7 +1236,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/exposed-nerves-db67f59b63.png"
+    "imageUrl": "tc2-assets/cosmetics/exposed-nerves-db67f59b63.webp"
   },
   {
     "name": "Extra Prep",
@@ -1246,7 +1246,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/extra-prep-80da02962f.png"
+    "imageUrl": "tc2-assets/cosmetics/extra-prep-80da02962f.webp"
   },
   {
     "name": "Fall Fashion",
@@ -1256,7 +1256,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/fall-fashion-29de27c601.png"
+    "imageUrl": "tc2-assets/cosmetics/fall-fashion-29de27c601.webp"
   },
   {
     "name": "Faux Fawkes",
@@ -1266,7 +1266,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/faux-fawkes-ef63bf0f46.png"
+    "imageUrl": "tc2-assets/cosmetics/faux-fawkes-ef63bf0f46.webp"
   },
   {
     "name": "Fearsome Force",
@@ -1278,7 +1278,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/fearsome-force-55683dd58b.png"
+    "imageUrl": "tc2-assets/cosmetics/fearsome-force-55683dd58b.webp"
   },
   {
     "name": "Fending Farmhand",
@@ -1289,7 +1289,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/fending-farmhand-2dc2a3dbbd.png"
+    "imageUrl": "tc2-assets/cosmetics/fending-farmhand-2dc2a3dbbd.webp"
   },
   {
     "name": "Field Fighter",
@@ -1300,7 +1300,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/field-fighter-839b547d76.png"
+    "imageUrl": "tc2-assets/cosmetics/field-fighter-839b547d76.webp"
   },
   {
     "name": "Field Ready",
@@ -1310,7 +1310,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/field-ready-f16d0ed031.png"
+    "imageUrl": "tc2-assets/cosmetics/field-ready-f16d0ed031.webp"
   },
   {
     "name": "Fighting Spirit",
@@ -1322,7 +1322,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/fighting-spirit-fc7058c6a4.png"
+    "imageUrl": "tc2-assets/cosmetics/fighting-spirit-fc7058c6a4.webp"
   },
   {
     "name": "Filter Feeder",
@@ -1332,7 +1332,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/filter-feeder-236b9caec0.png"
+    "imageUrl": "tc2-assets/cosmetics/filter-feeder-236b9caec0.webp"
   },
   {
     "name": "Fire Hazard",
@@ -1342,7 +1342,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/fire-hazard-42124fbd59.png"
+    "imageUrl": "tc2-assets/cosmetics/fire-hazard-42124fbd59.webp"
   },
   {
     "name": "Fire Starter",
@@ -1352,7 +1352,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/fire-starter-e1fc074fd0.png"
+    "imageUrl": "tc2-assets/cosmetics/fire-starter-e1fc074fd0.webp"
   },
   {
     "name": "Firefighter",
@@ -1363,7 +1363,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/firefighter-4ead5973db.png"
+    "imageUrl": "tc2-assets/cosmetics/firefighter-4ead5973db.webp"
   },
   {
     "name": "First Impression",
@@ -1373,7 +1373,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/first-impression-1ac8bba74b.png"
+    "imageUrl": "tc2-assets/cosmetics/first-impression-1ac8bba74b.webp"
   },
   {
     "name": "Fisher Man",
@@ -1383,7 +1383,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/fisher-man-521a28f7e1.png"
+    "imageUrl": "tc2-assets/cosmetics/fisher-man-521a28f7e1.webp"
   },
   {
     "name": "Flared Furnace",
@@ -1394,7 +1394,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/flared-furnace-921e1c5676.png"
+    "imageUrl": "tc2-assets/cosmetics/flared-furnace-921e1c5676.webp"
   },
   {
     "name": "Floor Plans",
@@ -1404,7 +1404,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/floor-plans-e0358b78c1.png"
+    "imageUrl": "tc2-assets/cosmetics/floor-plans-e0358b78c1.webp"
   },
   {
     "name": "Fool's Fandango",
@@ -1414,7 +1414,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/fool-s-fandango-f88238daaf.png"
+    "imageUrl": "tc2-assets/cosmetics/fool-s-fandango-f88238daaf.webp"
   },
   {
     "name": "Football Helmet",
@@ -1424,7 +1424,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/football-helmet-797ece328c.png"
+    "imageUrl": "tc2-assets/cosmetics/football-helmet-797ece328c.webp"
   },
   {
     "name": "Frantic Field Nurse",
@@ -1434,7 +1434,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/frantic-field-nurse-62555949d4.png"
+    "imageUrl": "tc2-assets/cosmetics/frantic-field-nurse-62555949d4.webp"
   },
   {
     "name": "Friday Night",
@@ -1444,7 +1444,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/friday-night-6e06fc1fc3.png"
+    "imageUrl": "tc2-assets/cosmetics/friday-night-6e06fc1fc3.webp"
   },
   {
     "name": "Frozen Capper",
@@ -1454,7 +1454,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/frozen-capper-b724e9d35d.png"
+    "imageUrl": "tc2-assets/cosmetics/frozen-capper-b724e9d35d.webp"
   },
   {
     "name": "Frozen Knight",
@@ -1464,7 +1464,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/frozen-knight-6aaccef2db.png"
+    "imageUrl": "tc2-assets/cosmetics/frozen-knight-6aaccef2db.webp"
   },
   {
     "name": "Gambler's Gambit",
@@ -1475,7 +1475,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/gambler-s-gambit-1ea4fa34d0.png"
+    "imageUrl": "tc2-assets/cosmetics/gambler-s-gambit-1ea4fa34d0.webp"
   },
   {
     "name": "Gas Hazmask",
@@ -1485,7 +1485,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/gas-hazmask-7ebcd421d5.png"
+    "imageUrl": "tc2-assets/cosmetics/gas-hazmask-7ebcd421d5.webp"
   },
   {
     "name": "Gear Shifter",
@@ -1495,7 +1495,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/gear-shifter-f2ac8d544b.png"
+    "imageUrl": "tc2-assets/cosmetics/gear-shifter-f2ac8d544b.webp"
   },
   {
     "name": "Ghast Mask",
@@ -1505,7 +1505,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/ghast-mask-3e8045239e.png"
+    "imageUrl": "tc2-assets/cosmetics/ghast-mask-3e8045239e.webp"
   },
   {
     "name": "Ghoulish Gibus",
@@ -1515,7 +1515,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/ghoulish-gibus-559567e62a.png"
+    "imageUrl": "tc2-assets/cosmetics/ghoulish-gibus-559567e62a.webp"
   },
   {
     "name": "GI Joseph",
@@ -1526,7 +1526,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/gi-joseph-46abb3a99e.png"
+    "imageUrl": "tc2-assets/cosmetics/gi-joseph-46abb3a99e.webp"
   },
   {
     "name": "Golf Champ",
@@ -1537,7 +1537,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/golf-champ-225c5cd3ad.png"
+    "imageUrl": "tc2-assets/cosmetics/golf-champ-225c5cd3ad.webp"
   },
   {
     "name": "Good-willed Gifter",
@@ -1547,7 +1547,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/good-willed-gifter-9ca5214502.png"
+    "imageUrl": "tc2-assets/cosmetics/good-willed-gifter-9ca5214502.webp"
   },
   {
     "name": "Googly Guy",
@@ -1557,7 +1557,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/googly-guy-23843cebdb.png"
+    "imageUrl": "tc2-assets/cosmetics/googly-guy-23843cebdb.webp"
   },
   {
     "name": "Grease Worker",
@@ -1569,7 +1569,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/grease-worker-be7a0ad9d4.png"
+    "imageUrl": "tc2-assets/cosmetics/grease-worker-be7a0ad9d4.webp"
   },
   {
     "name": "Greasy Goon",
@@ -1581,7 +1581,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/greasy-goon-33338b326f.png"
+    "imageUrl": "tc2-assets/cosmetics/greasy-goon-33338b326f.webp"
   },
   {
     "name": "Greek",
@@ -1591,7 +1591,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/greek-b43d2d16b7.png"
+    "imageUrl": "tc2-assets/cosmetics/greek-b43d2d16b7.webp"
   },
   {
     "name": "Grizzled Gote",
@@ -1601,7 +1601,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/grizzled-gote-65801267e6.png"
+    "imageUrl": "tc2-assets/cosmetics/grizzled-gote-65801267e6.webp"
   },
   {
     "name": "Guardian Angel",
@@ -1612,7 +1612,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/guardian-angel-cf52caba14.png"
+    "imageUrl": "tc2-assets/cosmetics/guardian-angel-cf52caba14.webp"
   },
   {
     "name": "Hanbok",
@@ -1622,7 +1622,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/hanbok-314cfb781e.png"
+    "imageUrl": "tc2-assets/cosmetics/hanbok-314cfb781e.webp"
   },
   {
     "name": "Hard News",
@@ -1632,7 +1632,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/hard-news-e2cd100fe1.png"
+    "imageUrl": "tc2-assets/cosmetics/hard-news-e2cd100fe1.webp"
   },
   {
     "name": "Hare Guise",
@@ -1642,7 +1642,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/hare-guise-9c00d52ccf.png"
+    "imageUrl": "tc2-assets/cosmetics/hare-guise-9c00d52ccf.webp"
   },
   {
     "name": "Hatless",
@@ -1657,7 +1657,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/hatless-b223fed0dd.png"
+    "imageUrl": "tc2-assets/cosmetics/hatless-b223fed0dd.webp"
   },
   {
     "name": "Haunted Headgear",
@@ -1667,7 +1667,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/haunted-headgear-219006645a.png"
+    "imageUrl": "tc2-assets/cosmetics/haunted-headgear-219006645a.webp"
   },
   {
     "name": "Haunter's Guise",
@@ -1677,7 +1677,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/haunter-s-guise-2c37592c9e.png"
+    "imageUrl": "tc2-assets/cosmetics/haunter-s-guise-2c37592c9e.webp"
   },
   {
     "name": "Head Haunters",
@@ -1687,7 +1687,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/head-haunters-f275a2fcac.png"
+    "imageUrl": "tc2-assets/cosmetics/head-haunters-f275a2fcac.webp"
   },
   {
     "name": "Healthy Handlebar",
@@ -1697,7 +1697,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/healthy-handlebar-41d82d3e0a.png"
+    "imageUrl": "tc2-assets/cosmetics/healthy-handlebar-41d82d3e0a.webp"
   },
   {
     "name": "Heated Hitman",
@@ -1709,7 +1709,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/heated-hitman-652dd6ea1c.png"
+    "imageUrl": "tc2-assets/cosmetics/heated-hitman-652dd6ea1c.webp"
   },
   {
     "name": "High Heater",
@@ -1720,7 +1720,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/high-heater-3ac4c7ba12.png"
+    "imageUrl": "tc2-assets/cosmetics/high-heater-3ac4c7ba12.webp"
   },
   {
     "name": "High Stakes",
@@ -1730,7 +1730,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/high-stakes-a6971fd1b1.png"
+    "imageUrl": "tc2-assets/cosmetics/high-stakes-a6971fd1b1.webp"
   },
   {
     "name": "Highway Chef",
@@ -1740,7 +1740,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/highway-chef-78748a531f.png"
+    "imageUrl": "tc2-assets/cosmetics/highway-chef-78748a531f.webp"
   },
   {
     "name": "HJW",
@@ -1752,7 +1752,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/hjw-76e9c5a5ad.png"
+    "imageUrl": "tc2-assets/cosmetics/hjw-76e9c5a5ad.webp"
   },
   {
     "name": "Holiday Conductor",
@@ -1762,7 +1762,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/holiday-conductor-2bb929a06e.png"
+    "imageUrl": "tc2-assets/cosmetics/holiday-conductor-2bb929a06e.webp"
   },
   {
     "name": "Home Readers",
@@ -1773,7 +1773,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/home-readers-c047a2c1f7.png"
+    "imageUrl": "tc2-assets/cosmetics/home-readers-c047a2c1f7.webp"
   },
   {
     "name": "Horrible Hector",
@@ -1783,7 +1783,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/horrible-hector-6d5e5eeb74.png"
+    "imageUrl": "tc2-assets/cosmetics/horrible-hector-6d5e5eeb74.webp"
   },
   {
     "name": "Hot Head",
@@ -1793,7 +1793,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/hot-head-7297e3c975.png"
+    "imageUrl": "tc2-assets/cosmetics/hot-head-7297e3c975.webp"
   },
   {
     "name": "Hotshot Lawyer",
@@ -1804,7 +1804,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/hotshot-lawyer-27b3f7463f.png"
+    "imageUrl": "tc2-assets/cosmetics/hotshot-lawyer-27b3f7463f.webp"
   },
   {
     "name": "Humid Helper",
@@ -1816,7 +1816,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/humid-helper-3687f4f5c5.png"
+    "imageUrl": "tc2-assets/cosmetics/humid-helper-3687f4f5c5.webp"
   },
   {
     "name": "Hunter's Hunch",
@@ -1828,7 +1828,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/hunter-s-hunch-07c05638d7.png"
+    "imageUrl": "tc2-assets/cosmetics/hunter-s-hunch-07c05638d7.webp"
   },
   {
     "name": "Hunter's Slouch",
@@ -1838,7 +1838,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/hunter-s-slouch-771220104c.png"
+    "imageUrl": "tc2-assets/cosmetics/hunter-s-slouch-771220104c.webp"
   },
   {
     "name": "Ice Queen",
@@ -1848,7 +1848,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/ice-queen-8448a5e1f3.png"
+    "imageUrl": "tc2-assets/cosmetics/ice-queen-8448a5e1f3.webp"
   },
   {
     "name": "Ifrit's Shroud",
@@ -1858,7 +1858,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/ifrit-s-shroud-9cfa4c4dc4.png"
+    "imageUrl": "tc2-assets/cosmetics/ifrit-s-shroud-9cfa4c4dc4.webp"
   },
   {
     "name": "Incognito",
@@ -1868,7 +1868,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/incognito-a622356980.png"
+    "imageUrl": "tc2-assets/cosmetics/incognito-a622356980.webp"
   },
   {
     "name": "Infiltrator",
@@ -1879,7 +1879,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/infiltrator-6748cf0a5d.png"
+    "imageUrl": "tc2-assets/cosmetics/infiltrator-6748cf0a5d.webp"
   },
   {
     "name": "Insulator",
@@ -1889,7 +1889,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/insulator-d1f94d9951.png"
+    "imageUrl": "tc2-assets/cosmetics/insulator-d1f94d9951.webp"
   },
   {
     "name": "Iron Maw",
@@ -1902,7 +1902,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/iron-maw-4535208e29.png"
+    "imageUrl": "tc2-assets/cosmetics/iron-maw-4535208e29.webp"
   },
   {
     "name": "Irony",
@@ -1912,7 +1912,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/irony-6258783563.png"
+    "imageUrl": "tc2-assets/cosmetics/irony-6258783563.webp"
   },
   {
     "name": "Joy Bringer",
@@ -1922,7 +1922,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/joy-bringer-fb00ca9c9e.png"
+    "imageUrl": "tc2-assets/cosmetics/joy-bringer-fb00ca9c9e.webp"
   },
   {
     "name": "Jumper's Jammies",
@@ -1933,7 +1933,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/jumper-s-jammies-000eda7a07.png"
+    "imageUrl": "tc2-assets/cosmetics/jumper-s-jammies-000eda7a07.webp"
   },
   {
     "name": "Jungle Helmet",
@@ -1943,7 +1943,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/jungle-helmet-a2e92cdb61.png"
+    "imageUrl": "tc2-assets/cosmetics/jungle-helmet-a2e92cdb61.webp"
   },
   {
     "name": "Kaboom Cap",
@@ -1953,7 +1953,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/kaboom-cap-b52d8724fe.png"
+    "imageUrl": "tc2-assets/cosmetics/kaboom-cap-b52d8724fe.webp"
   },
   {
     "name": "Killer's Catch",
@@ -1965,7 +1965,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/killer-s-catch-cfce62656b.png"
+    "imageUrl": "tc2-assets/cosmetics/killer-s-catch-cfce62656b.webp"
   },
   {
     "name": "King Kringle",
@@ -1976,7 +1976,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/king-kringle-783a022cda.png"
+    "imageUrl": "tc2-assets/cosmetics/king-kringle-783a022cda.webp"
   },
   {
     "name": "Knightmare",
@@ -1986,7 +1986,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/knightmare-3d0acd5274.png"
+    "imageUrl": "tc2-assets/cosmetics/knightmare-3d0acd5274.webp"
   },
   {
     "name": "Knit Hat",
@@ -1996,7 +1996,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/knit-hat-68d4248878.png"
+    "imageUrl": "tc2-assets/cosmetics/knit-hat-68d4248878.webp"
   },
   {
     "name": "Krampus",
@@ -2007,7 +2007,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/krampus-a84ea6fb37.png"
+    "imageUrl": "tc2-assets/cosmetics/krampus-a84ea6fb37.webp"
   },
   {
     "name": "Lad's Lid",
@@ -2018,7 +2018,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/lad-s-lid-0b89eed0a4.png"
+    "imageUrl": "tc2-assets/cosmetics/lad-s-lid-0b89eed0a4.webp"
   },
   {
     "name": "Ladra",
@@ -2028,7 +2028,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/ladra-f9f46076f6.png"
+    "imageUrl": "tc2-assets/cosmetics/ladra-f9f46076f6.webp"
   },
   {
     "name": "Lakeside Killer",
@@ -2038,7 +2038,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/lakeside-killer-afaabf91f6.png"
+    "imageUrl": "tc2-assets/cosmetics/lakeside-killer-afaabf91f6.webp"
   },
   {
     "name": "Last Bastion",
@@ -2049,7 +2049,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/last-bastion-ba798556c3.png"
+    "imageUrl": "tc2-assets/cosmetics/last-bastion-ba798556c3.webp"
   },
   {
     "name": "Law",
@@ -2059,7 +2059,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/law-e82c5fc834.png"
+    "imageUrl": "tc2-assets/cosmetics/law-e82c5fc834.webp"
   },
   {
     "name": "Layered",
@@ -2069,7 +2069,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/layered-0ac7508c20.png"
+    "imageUrl": "tc2-assets/cosmetics/layered-0ac7508c20.webp"
   },
   {
     "name": "Leaf Dweller",
@@ -2081,7 +2081,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/leaf-dweller-32a5e6a94a.png"
+    "imageUrl": "tc2-assets/cosmetics/leaf-dweller-32a5e6a94a.webp"
   },
   {
     "name": "Lethal Laurel",
@@ -2091,7 +2091,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/lethal-laurel-9afa093b72.png"
+    "imageUrl": "tc2-assets/cosmetics/lethal-laurel-9afa093b72.webp"
   },
   {
     "name": "Life Doctor",
@@ -2102,7 +2102,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/life-doctor-f09f429609.png"
+    "imageUrl": "tc2-assets/cosmetics/life-doctor-f09f429609.webp"
   },
   {
     "name": "Life Sentence",
@@ -2112,7 +2112,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/life-sentence-3ab8c5f5d1.png"
+    "imageUrl": "tc2-assets/cosmetics/life-sentence-3ab8c5f5d1.webp"
   },
   {
     "name": "Lil' Munchy",
@@ -2122,7 +2122,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/lil-munchy-796365bb17.png"
+    "imageUrl": "tc2-assets/cosmetics/lil-munchy-796365bb17.webp"
   },
   {
     "name": "Loveable Librarian",
@@ -2134,7 +2134,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/loveable-librarian-5f724370ad.png"
+    "imageUrl": "tc2-assets/cosmetics/loveable-librarian-5f724370ad.webp"
   },
   {
     "name": "Lucky Lid",
@@ -2144,7 +2144,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/lucky-lid-12a9bcb15a.png"
+    "imageUrl": "tc2-assets/cosmetics/lucky-lid-12a9bcb15a.webp"
   },
   {
     "name": "Lumbering Jack",
@@ -2154,7 +2154,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/lumbering-jack-40ea1cf7c3.png"
+    "imageUrl": "tc2-assets/cosmetics/lumbering-jack-40ea1cf7c3.webp"
   },
   {
     "name": "Mad Doctor",
@@ -2165,7 +2165,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/mad-doctor-00136c88d0.png"
+    "imageUrl": "tc2-assets/cosmetics/mad-doctor-00136c88d0.webp"
   },
   {
     "name": "Mad Hattress",
@@ -2175,7 +2175,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/mad-hattress-57036d32bf.png"
+    "imageUrl": "tc2-assets/cosmetics/mad-hattress-57036d32bf.webp"
   },
   {
     "name": "Made Man",
@@ -2186,7 +2186,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/made-man-bb76667267.png"
+    "imageUrl": "tc2-assets/cosmetics/made-man-bb76667267.webp"
   },
   {
     "name": "Mafioso",
@@ -2199,7 +2199,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/mafioso-a89f02e8f0.png"
+    "imageUrl": "tc2-assets/cosmetics/mafioso-a89f02e8f0.webp"
   },
   {
     "name": "Marker Mayhem",
@@ -2209,7 +2209,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/marker-mayhem-4e47322e85.png"
+    "imageUrl": "tc2-assets/cosmetics/marker-mayhem-4e47322e85.webp"
   },
   {
     "name": "Marketeer Munch",
@@ -2219,7 +2219,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/marketeer-munch-1d8847c7d7.png"
+    "imageUrl": "tc2-assets/cosmetics/marketeer-munch-1d8847c7d7.webp"
   },
   {
     "name": "Martyr",
@@ -2229,7 +2229,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/martyr-a757795bce.png"
+    "imageUrl": "tc2-assets/cosmetics/martyr-a757795bce.webp"
   },
   {
     "name": "Mecha Punk",
@@ -2241,7 +2241,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/mecha-punk-ac889a24f8.png"
+    "imageUrl": "tc2-assets/cosmetics/mecha-punk-ac889a24f8.webp"
   },
   {
     "name": "Medal of War",
@@ -2251,7 +2251,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/medal-of-war-85e50865d3.png"
+    "imageUrl": "tc2-assets/cosmetics/medal-of-war-85e50865d3.webp"
   },
   {
     "name": "Medibun",
@@ -2261,7 +2261,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/medibun-7e148cf24b.png"
+    "imageUrl": "tc2-assets/cosmetics/medibun-7e148cf24b.webp"
   },
   {
     "name": "Medieval Practice",
@@ -2272,7 +2272,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/medieval-practice-ecd64b794c.png"
+    "imageUrl": "tc2-assets/cosmetics/medieval-practice-ecd64b794c.webp"
   },
   {
     "name": "Messy Monday",
@@ -2283,7 +2283,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/messy-monday-7bd31d03f4.png"
+    "imageUrl": "tc2-assets/cosmetics/messy-monday-7bd31d03f4.webp"
   },
   {
     "name": "Metal Head",
@@ -2293,7 +2293,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/metal-head-92fc076f55.png"
+    "imageUrl": "tc2-assets/cosmetics/metal-head-92fc076f55.webp"
   },
   {
     "name": "Midlife Manager",
@@ -2305,7 +2305,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/midlife-manager-26c79f972d.png"
+    "imageUrl": "tc2-assets/cosmetics/midlife-manager-26c79f972d.webp"
   },
   {
     "name": "Mighty Mask",
@@ -2316,7 +2316,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/mighty-mask-3e5185a7a2.png"
+    "imageUrl": "tc2-assets/cosmetics/mighty-mask-3e5185a7a2.webp"
   },
   {
     "name": "Military Doctor",
@@ -2327,7 +2327,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/military-doctor-3e6f624a91.png"
+    "imageUrl": "tc2-assets/cosmetics/military-doctor-3e6f624a91.webp"
   },
   {
     "name": "Military Grade",
@@ -2337,7 +2337,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/military-grade-2c44ab8200.png"
+    "imageUrl": "tc2-assets/cosmetics/military-grade-2c44ab8200.webp"
   },
   {
     "name": "Military Man",
@@ -2348,7 +2348,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/military-man-5d0f0dc8db.png"
+    "imageUrl": "tc2-assets/cosmetics/military-man-5d0f0dc8db.webp"
   },
   {
     "name": "Mimicry Mayhem",
@@ -2359,7 +2359,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/mimicry-mayhem-3f6d5cd460.png"
+    "imageUrl": "tc2-assets/cosmetics/mimicry-mayhem-3f6d5cd460.webp"
   },
   {
     "name": "Mining Light",
@@ -2369,7 +2369,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/mining-light-44d61677b1.png"
+    "imageUrl": "tc2-assets/cosmetics/mining-light-44d61677b1.webp"
   },
   {
     "name": "Minute Man",
@@ -2380,7 +2380,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/minute-man-7d1f03243b.png"
+    "imageUrl": "tc2-assets/cosmetics/minute-man-7d1f03243b.webp"
   },
   {
     "name": "MK1",
@@ -2391,7 +2391,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/mk1-18ca53bcd7.png"
+    "imageUrl": "tc2-assets/cosmetics/mk1-18ca53bcd7.webp"
   },
   {
     "name": "Modern Nobility",
@@ -2402,7 +2402,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/modern-nobility-febfcfdf90.png"
+    "imageUrl": "tc2-assets/cosmetics/modern-nobility-febfcfdf90.webp"
   },
   {
     "name": "Most Wanted",
@@ -2414,7 +2414,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/most-wanted-47897cae9d.png"
+    "imageUrl": "tc2-assets/cosmetics/most-wanted-47897cae9d.webp"
   },
   {
     "name": "Motivator",
@@ -2424,7 +2424,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/motivator-1a2ad415ad.png"
+    "imageUrl": "tc2-assets/cosmetics/motivator-1a2ad415ad.webp"
   },
   {
     "name": "Mountain Man",
@@ -2434,7 +2434,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/mountain-man-350991db17.png"
+    "imageUrl": "tc2-assets/cosmetics/mountain-man-350991db17.webp"
   },
   {
     "name": "Movie Villain",
@@ -2444,7 +2444,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/movie-villain-de9e9e4c6d.png"
+    "imageUrl": "tc2-assets/cosmetics/movie-villain-de9e9e4c6d.webp"
   },
   {
     "name": "Mr. Malice",
@@ -2455,7 +2455,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/mr-malice-4002b51645.png"
+    "imageUrl": "tc2-assets/cosmetics/mr-malice-4002b51645.webp"
   },
   {
     "name": "Mr. Wonderland",
@@ -2465,7 +2465,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/mr-wonderland-77812a0dcd.png"
+    "imageUrl": "tc2-assets/cosmetics/mr-wonderland-77812a0dcd.webp"
   },
   {
     "name": "Ms. Mystery",
@@ -2476,7 +2476,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/ms-mystery-6f6e0f9842.png"
+    "imageUrl": "tc2-assets/cosmetics/ms-mystery-6f6e0f9842.webp"
   },
   {
     "name": "Mystic's Mark",
@@ -2486,7 +2486,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/mystic-s-mark-d5d6e4dccd.png"
+    "imageUrl": "tc2-assets/cosmetics/mystic-s-mark-d5d6e4dccd.webp"
   },
   {
     "name": "Mystique Pearls",
@@ -2496,7 +2496,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/mystique-pearls-05937f5df7.png"
+    "imageUrl": "tc2-assets/cosmetics/mystique-pearls-05937f5df7.webp"
   },
   {
     "name": "Neat Knight",
@@ -2507,7 +2507,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/neat-knight-b70fcc4d35.png"
+    "imageUrl": "tc2-assets/cosmetics/neat-knight-b70fcc4d35.webp"
   },
   {
     "name": "Neek",
@@ -2518,7 +2518,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/neek-04a5c21205.png"
+    "imageUrl": "tc2-assets/cosmetics/neek-04a5c21205.webp"
   },
   {
     "name": "Night Walker",
@@ -2530,7 +2530,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/night-walker-823515594b.png"
+    "imageUrl": "tc2-assets/cosmetics/night-walker-823515594b.webp"
   },
   {
     "name": "Night Watcher",
@@ -2540,7 +2540,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/night-watcher-87fa96c43b.png"
+    "imageUrl": "tc2-assets/cosmetics/night-watcher-87fa96c43b.webp"
   },
   {
     "name": "Nimble Sash",
@@ -2550,7 +2550,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/nimble-sash-59944ed8ad.png"
+    "imageUrl": "tc2-assets/cosmetics/nimble-sash-59944ed8ad.webp"
   },
   {
     "name": "Occult Classic",
@@ -2560,7 +2560,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/occult-classic-fd78f6bddc.png"
+    "imageUrl": "tc2-assets/cosmetics/occult-classic-fd78f6bddc.webp"
   },
   {
     "name": "Off the Case",
@@ -2570,7 +2570,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/off-the-case-42d419ef3d.png"
+    "imageUrl": "tc2-assets/cosmetics/off-the-case-42d419ef3d.webp"
   },
   {
     "name": "Ominous Cone",
@@ -2580,7 +2580,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/ominous-cone-9890ca0500.png"
+    "imageUrl": "tc2-assets/cosmetics/ominous-cone-9890ca0500.webp"
   },
   {
     "name": "Omniscient Oculi",
@@ -2590,7 +2590,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/omniscient-oculi-0e8d2f5501.png"
+    "imageUrl": "tc2-assets/cosmetics/omniscient-oculi-0e8d2f5501.webp"
   },
   {
     "name": "On the Case",
@@ -2600,7 +2600,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/on-the-case-d7da9f0a46.png"
+    "imageUrl": "tc2-assets/cosmetics/on-the-case-d7da9f0a46.webp"
   },
   {
     "name": "Open Mind",
@@ -2610,7 +2610,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/open-mind-6e3b8611ec.png"
+    "imageUrl": "tc2-assets/cosmetics/open-mind-6e3b8611ec.webp"
   },
   {
     "name": "Operational Status",
@@ -2620,7 +2620,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/operational-status-c006ecc47d.png"
+    "imageUrl": "tc2-assets/cosmetics/operational-status-c006ecc47d.webp"
   },
   {
     "name": "Ostracized Elephant",
@@ -2630,7 +2630,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/ostracized-elephant-4c88f00274.png"
+    "imageUrl": "tc2-assets/cosmetics/ostracized-elephant-4c88f00274.webp"
   },
   {
     "name": "Outlaw",
@@ -2641,7 +2641,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/outlaw-f68e1dbf43.png"
+    "imageUrl": "tc2-assets/cosmetics/outlaw-f68e1dbf43.webp"
   },
   {
     "name": "Outlaw Hunter",
@@ -2651,7 +2651,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/outlaw-hunter-94d002386f.png"
+    "imageUrl": "tc2-assets/cosmetics/outlaw-hunter-94d002386f.webp"
   },
   {
     "name": "P.H.D.",
@@ -2661,7 +2661,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/p-h-d-c2bc245896.png"
+    "imageUrl": "tc2-assets/cosmetics/p-h-d-c2bc245896.webp"
   },
   {
     "name": "Paper Craft",
@@ -2671,7 +2671,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/paper-craft-91b6c764f1.png"
+    "imageUrl": "tc2-assets/cosmetics/paper-craft-91b6c764f1.webp"
   },
   {
     "name": "Paperboy",
@@ -2681,7 +2681,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/paperboy-64b2abcea1.png"
+    "imageUrl": "tc2-assets/cosmetics/paperboy-64b2abcea1.webp"
   },
   {
     "name": "Paranoid Paramedic",
@@ -2692,7 +2692,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/paranoid-paramedic-6ecee49834.png"
+    "imageUrl": "tc2-assets/cosmetics/paranoid-paramedic-6ecee49834.webp"
   },
   {
     "name": "Party Hat",
@@ -2702,7 +2702,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/party-hat-fcbd413bbb.png"
+    "imageUrl": "tc2-assets/cosmetics/party-hat-fcbd413bbb.webp"
   },
   {
     "name": "Party Horn",
@@ -2712,7 +2712,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/party-horn-d8c17e0649.png"
+    "imageUrl": "tc2-assets/cosmetics/party-horn-d8c17e0649.webp"
   },
   {
     "name": "Party Topper",
@@ -2722,7 +2722,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/party-topper-c3309a01ed.png"
+    "imageUrl": "tc2-assets/cosmetics/party-topper-c3309a01ed.webp"
   },
   {
     "name": "Peace Doctor",
@@ -2734,7 +2734,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/peace-doctor-e293af1f93.png"
+    "imageUrl": "tc2-assets/cosmetics/peace-doctor-e293af1f93.webp"
   },
   {
     "name": "Peppermint Power",
@@ -2745,7 +2745,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/peppermint-power-d58ad77bc7.png"
+    "imageUrl": "tc2-assets/cosmetics/peppermint-power-d58ad77bc7.webp"
   },
   {
     "name": "Pester Jester",
@@ -2756,7 +2756,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/pester-jester-85ee992c7f.png"
+    "imageUrl": "tc2-assets/cosmetics/pester-jester-85ee992c7f.webp"
   },
   {
     "name": "Phoney Frank",
@@ -2768,7 +2768,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/phoney-frank-5812a351f0.png"
+    "imageUrl": "tc2-assets/cosmetics/phoney-frank-5812a351f0.webp"
   },
   {
     "name": "Pigeon Mask",
@@ -2778,7 +2778,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/pigeon-mask-3535c67877.png"
+    "imageUrl": "tc2-assets/cosmetics/pigeon-mask-3535c67877.webp"
   },
   {
     "name": "Pillow Fort",
@@ -2789,7 +2789,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/pillow-fort-032dc23dd1.png"
+    "imageUrl": "tc2-assets/cosmetics/pillow-fort-032dc23dd1.webp"
   },
   {
     "name": "Plain Sight",
@@ -2799,7 +2799,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/plain-sight-ebb4d6cb38.png"
+    "imageUrl": "tc2-assets/cosmetics/plain-sight-ebb4d6cb38.webp"
   },
   {
     "name": "Polar Puffs",
@@ -2809,7 +2809,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/polar-puffs-2d2334da25.png"
+    "imageUrl": "tc2-assets/cosmetics/polar-puffs-2d2334da25.webp"
   },
   {
     "name": "Pollinator",
@@ -2819,7 +2819,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/pollinator-fb0e5ad8d7.png"
+    "imageUrl": "tc2-assets/cosmetics/pollinator-fb0e5ad8d7.webp"
   },
   {
     "name": "Poolshark",
@@ -2829,7 +2829,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/poolshark-4e6ed9898e.png"
+    "imageUrl": "tc2-assets/cosmetics/poolshark-4e6ed9898e.webp"
   },
   {
     "name": "Power Mech",
@@ -2839,7 +2839,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/power-mech-ccb6cd0b57.png"
+    "imageUrl": "tc2-assets/cosmetics/power-mech-ccb6cd0b57.webp"
   },
   {
     "name": "Power Parka",
@@ -2849,7 +2849,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/power-parka-2b43abed76.png"
+    "imageUrl": "tc2-assets/cosmetics/power-parka-2b43abed76.webp"
   },
   {
     "name": "Power Pauldron",
@@ -2859,7 +2859,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/power-pauldron-de425cb8eb.png"
+    "imageUrl": "tc2-assets/cosmetics/power-pauldron-de425cb8eb.webp"
   },
   {
     "name": "Prestigious P.I.",
@@ -2870,7 +2870,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/prestigious-p-i-874bfedfe8.png"
+    "imageUrl": "tc2-assets/cosmetics/prestigious-p-i-874bfedfe8.webp"
   },
   {
     "name": "Prestigious Pompadour",
@@ -2882,7 +2882,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/prestigious-pompadour-3c5f5298e2.png"
+    "imageUrl": "tc2-assets/cosmetics/prestigious-pompadour-3c5f5298e2.webp"
   },
   {
     "name": "Private Sandbox",
@@ -2892,7 +2892,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/private-sandbox-b473223c50.png"
+    "imageUrl": "tc2-assets/cosmetics/private-sandbox-b473223c50.webp"
   },
   {
     "name": "Professional Promise",
@@ -2902,7 +2902,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/professional-promise-0cec5f754b.png"
+    "imageUrl": "tc2-assets/cosmetics/professional-promise-0cec5f754b.webp"
   },
   {
     "name": "Provisions",
@@ -2912,7 +2912,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/provisions-5ff3201cec.png"
+    "imageUrl": "tc2-assets/cosmetics/provisions-5ff3201cec.webp"
   },
   {
     "name": "Psyched Up",
@@ -2922,7 +2922,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/psyched-up-2e6cd09c59.png"
+    "imageUrl": "tc2-assets/cosmetics/psyched-up-2e6cd09c59.webp"
   },
   {
     "name": "Puff Piece",
@@ -2932,7 +2932,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/puff-piece-154a37d30a.png"
+    "imageUrl": "tc2-assets/cosmetics/puff-piece-154a37d30a.webp"
   },
   {
     "name": "Pure Class",
@@ -2942,7 +2942,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/pure-class-75731f4b6a.png"
+    "imageUrl": "tc2-assets/cosmetics/pure-class-75731f4b6a.webp"
   },
   {
     "name": "Racing Vet",
@@ -2952,7 +2952,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/racing-vet-b2036adea2.png"
+    "imageUrl": "tc2-assets/cosmetics/racing-vet-b2036adea2.webp"
   },
   {
     "name": "Radio Runner",
@@ -2964,7 +2964,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/radio-runner-5996803122.png"
+    "imageUrl": "tc2-assets/cosmetics/radio-runner-5996803122.webp"
   },
   {
     "name": "Raid Ready",
@@ -2976,7 +2976,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/raid-ready-9b8d40ec95.png"
+    "imageUrl": "tc2-assets/cosmetics/raid-ready-9b8d40ec95.webp"
   },
   {
     "name": "Rangini Rango",
@@ -2987,7 +2987,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/rangini-rango-c752daeb5e.png"
+    "imageUrl": "tc2-assets/cosmetics/rangini-rango-c752daeb5e.webp"
   },
   {
     "name": "Reinfear",
@@ -2998,7 +2998,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/reinfear-34a32d5a21.png"
+    "imageUrl": "tc2-assets/cosmetics/reinfear-34a32d5a21.webp"
   },
   {
     "name": "Response Unit",
@@ -3008,7 +3008,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/response-unit-fdd439eddb.png"
+    "imageUrl": "tc2-assets/cosmetics/response-unit-fdd439eddb.webp"
   },
   {
     "name": "Rider",
@@ -3018,7 +3018,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/rider-be79878e46.png"
+    "imageUrl": "tc2-assets/cosmetics/rider-be79878e46.webp"
   },
   {
     "name": "Rider's Rag",
@@ -3029,7 +3029,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/rider-s-rag-85bc0a65d9.png"
+    "imageUrl": "tc2-assets/cosmetics/rider-s-rag-85bc0a65d9.webp"
   },
   {
     "name": "Rifleman",
@@ -3039,7 +3039,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/rifleman-222d3327ab.png"
+    "imageUrl": "tc2-assets/cosmetics/rifleman-222d3327ab.webp"
   },
   {
     "name": "Road Runner",
@@ -3050,7 +3050,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/road-runner-c6c772d874.png"
+    "imageUrl": "tc2-assets/cosmetics/road-runner-c6c772d874.webp"
   },
   {
     "name": "Roadie Shades",
@@ -3061,7 +3061,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/roadie-shades-f473835c3a.png"
+    "imageUrl": "tc2-assets/cosmetics/roadie-shades-f473835c3a.webp"
   },
   {
     "name": "Rockers Rollout",
@@ -3072,7 +3072,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/rockers-rollout-b8b733bc39.png"
+    "imageUrl": "tc2-assets/cosmetics/rockers-rollout-b8b733bc39.webp"
   },
   {
     "name": "Rough Patch",
@@ -3082,7 +3082,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/rough-patch-e75338f45b.png"
+    "imageUrl": "tc2-assets/cosmetics/rough-patch-e75338f45b.webp"
   },
   {
     "name": "Royal Rags",
@@ -3094,7 +3094,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/royal-rags-3ab0065461.png"
+    "imageUrl": "tc2-assets/cosmetics/royal-rags-3ab0065461.webp"
   },
   {
     "name": "Rude Awakening",
@@ -3106,7 +3106,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/rude-awakening-3c0f9959c6.png"
+    "imageUrl": "tc2-assets/cosmetics/rude-awakening-3c0f9959c6.webp"
   },
   {
     "name": "Rugged Looks",
@@ -3116,7 +3116,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/rugged-looks-d2ef04efdd.png"
+    "imageUrl": "tc2-assets/cosmetics/rugged-looks-d2ef04efdd.webp"
   },
   {
     "name": "Rugged Warrior",
@@ -3128,7 +3128,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/rugged-warrior-d314cc4f35.png"
+    "imageUrl": "tc2-assets/cosmetics/rugged-warrior-d314cc4f35.webp"
   },
   {
     "name": "Runner's Cap",
@@ -3139,7 +3139,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/runner-s-cap-12633e0f56.png"
+    "imageUrl": "tc2-assets/cosmetics/runner-s-cap-12633e0f56.webp"
   },
   {
     "name": "Safe Cracker",
@@ -3149,7 +3149,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/safe-cracker-b888e41e59.png"
+    "imageUrl": "tc2-assets/cosmetics/safe-cracker-b888e41e59.webp"
   },
   {
     "name": "Safety First",
@@ -3160,7 +3160,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/safety-first-940895543b.png"
+    "imageUrl": "tc2-assets/cosmetics/safety-first-940895543b.webp"
   },
   {
     "name": "Saintess Sleuth",
@@ -3171,7 +3171,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/saintess-sleuth-75eb85c81c.png"
+    "imageUrl": "tc2-assets/cosmetics/saintess-sleuth-75eb85c81c.webp"
   },
   {
     "name": "Salted Sailor",
@@ -3181,7 +3181,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/salted-sailor-0fbb57d7ed.png"
+    "imageUrl": "tc2-assets/cosmetics/salted-sailor-0fbb57d7ed.webp"
   },
   {
     "name": "Savior's Badge",
@@ -3191,7 +3191,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/savior-s-badge-f4494213cd.png"
+    "imageUrl": "tc2-assets/cosmetics/savior-s-badge-f4494213cd.webp"
   },
   {
     "name": "Science Team",
@@ -3201,7 +3201,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/science-team-0e61275397.png"
+    "imageUrl": "tc2-assets/cosmetics/science-team-0e61275397.webp"
   },
   {
     "name": "Scorching Sentai",
@@ -3212,7 +3212,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/scorching-sentai-6fc8c4f11d.png"
+    "imageUrl": "tc2-assets/cosmetics/scorching-sentai-6fc8c4f11d.webp"
   },
   {
     "name": "Scubanist",
@@ -3223,7 +3223,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/scubanist-0622558625.png"
+    "imageUrl": "tc2-assets/cosmetics/scubanist-0622558625.webp"
   },
   {
     "name": "Sea Fairer",
@@ -3235,7 +3235,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/sea-fairer-616515667e.png"
+    "imageUrl": "tc2-assets/cosmetics/sea-fairer-616515667e.webp"
   },
   {
     "name": "Searing Soul",
@@ -3246,7 +3246,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/searing-soul-f61ebcd65d.png"
+    "imageUrl": "tc2-assets/cosmetics/searing-soul-f61ebcd65d.webp"
   },
   {
     "name": "Seasoned Surgeon Specs",
@@ -3258,7 +3258,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/seasoned-surgeon-specs-d1090adb14.png"
+    "imageUrl": "tc2-assets/cosmetics/seasoned-surgeon-specs-d1090adb14.webp"
   },
   {
     "name": "Secret Servitor",
@@ -3268,7 +3268,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/secret-servitor-d173472563.png"
+    "imageUrl": "tc2-assets/cosmetics/secret-servitor-d173472563.webp"
   },
   {
     "name": "Sector Protector",
@@ -3278,7 +3278,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/sector-protector-474d64e2d3.png"
+    "imageUrl": "tc2-assets/cosmetics/sector-protector-474d64e2d3.webp"
   },
   {
     "name": "Senza Vista",
@@ -3288,7 +3288,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/senza-vista-0271f46de6.png"
+    "imageUrl": "tc2-assets/cosmetics/senza-vista-0271f46de6.webp"
   },
   {
     "name": "Service Man",
@@ -3298,7 +3298,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/service-man-7bd60cfc9c.png"
+    "imageUrl": "tc2-assets/cosmetics/service-man-7bd60cfc9c.webp"
   },
   {
     "name": "Shady Agent",
@@ -3310,7 +3310,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/shady-agent-77be15406a.png"
+    "imageUrl": "tc2-assets/cosmetics/shady-agent-77be15406a.webp"
   },
   {
     "name": "Shady Character",
@@ -3320,7 +3320,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/shady-character-ac551b3179.png"
+    "imageUrl": "tc2-assets/cosmetics/shady-character-ac551b3179.webp"
   },
   {
     "name": "Sharp Specs",
@@ -3332,7 +3332,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/sharp-specs-632d8db05a.png"
+    "imageUrl": "tc2-assets/cosmetics/sharp-specs-632d8db05a.webp"
   },
   {
     "name": "Sheik",
@@ -3342,7 +3342,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/sheik-318dc617fa.png"
+    "imageUrl": "tc2-assets/cosmetics/sheik-318dc617fa.webp"
   },
   {
     "name": "Shifty Seller",
@@ -3353,7 +3353,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/shifty-seller-c120ae3d46.png"
+    "imageUrl": "tc2-assets/cosmetics/shifty-seller-c120ae3d46.webp"
   },
   {
     "name": "Shopper's Spirit",
@@ -3364,7 +3364,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/shopper-s-spirit-7e7561b626.png"
+    "imageUrl": "tc2-assets/cosmetics/shopper-s-spirit-7e7561b626.webp"
   },
   {
     "name": "Shoreline Shot",
@@ -3375,7 +3375,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/shoreline-shot-14acae3cf7.png"
+    "imageUrl": "tc2-assets/cosmetics/shoreline-shot-14acae3cf7.webp"
   },
   {
     "name": "Shotgun's Shade",
@@ -3386,7 +3386,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/shotgun-s-shade-ea1e501f9f.png"
+    "imageUrl": "tc2-assets/cosmetics/shotgun-s-shade-ea1e501f9f.webp"
   },
   {
     "name": "Silent Showman",
@@ -3396,7 +3396,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/silent-showman-d42f9660d9.png"
+    "imageUrl": "tc2-assets/cosmetics/silent-showman-d42f9660d9.webp"
   },
   {
     "name": "Silly Serpent",
@@ -3407,7 +3407,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/silly-serpent-7cc306b8a5.png"
+    "imageUrl": "tc2-assets/cosmetics/silly-serpent-7cc306b8a5.webp"
   },
   {
     "name": "Sinister Gourd",
@@ -3417,7 +3417,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/sinister-gourd-86183f6347.png"
+    "imageUrl": "tc2-assets/cosmetics/sinister-gourd-86183f6347.webp"
   },
   {
     "name": "Skully Skulker",
@@ -3429,7 +3429,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/skully-skulker-c78ad7df72.png"
+    "imageUrl": "tc2-assets/cosmetics/skully-skulker-c78ad7df72.webp"
   },
   {
     "name": "Sleep Walker",
@@ -3440,7 +3440,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/sleep-walker-82dd6b136d.png"
+    "imageUrl": "tc2-assets/cosmetics/sleep-walker-82dd6b136d.webp"
   },
   {
     "name": "Sneaking Suspicion",
@@ -3451,7 +3451,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/sneaking-suspicion-2fa0c52515.png"
+    "imageUrl": "tc2-assets/cosmetics/sneaking-suspicion-2fa0c52515.webp"
   },
   {
     "name": "Snow Stompers",
@@ -3461,7 +3461,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/snow-stompers-fed49c75a1.png"
+    "imageUrl": "tc2-assets/cosmetics/snow-stompers-fed49c75a1.webp"
   },
   {
     "name": "Soldier of Athens",
@@ -3471,7 +3471,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/soldier-of-athens-c09504e281.png"
+    "imageUrl": "tc2-assets/cosmetics/soldier-of-athens-c09504e281.webp"
   },
   {
     "name": "Soldier on Safari",
@@ -3481,7 +3481,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/soldier-on-safari-8aa1867a6b.png"
+    "imageUrl": "tc2-assets/cosmetics/soldier-on-safari-8aa1867a6b.webp"
   },
   {
     "name": "Solemn Sheriff",
@@ -3491,7 +3491,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/solemn-sheriff-2e05a6c21e.png"
+    "imageUrl": "tc2-assets/cosmetics/solemn-sheriff-2e05a6c21e.webp"
   },
   {
     "name": "Somber Scrooge",
@@ -3503,7 +3503,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/somber-scrooge-d2b9005dc7.png"
+    "imageUrl": "tc2-assets/cosmetics/somber-scrooge-d2b9005dc7.webp"
   },
   {
     "name": "Spare Plug",
@@ -3513,7 +3513,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/spare-plug-5c7d59c26d.png"
+    "imageUrl": "tc2-assets/cosmetics/spare-plug-5c7d59c26d.webp"
   },
   {
     "name": "Speed Demon",
@@ -3524,7 +3524,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/speed-demon-24d89f5882.png"
+    "imageUrl": "tc2-assets/cosmetics/speed-demon-24d89f5882.webp"
   },
   {
     "name": "Spiked Raider",
@@ -3534,7 +3534,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/spiked-raider-3e55fd46b5.png"
+    "imageUrl": "tc2-assets/cosmetics/spiked-raider-3e55fd46b5.webp"
   },
   {
     "name": "Spring Casual",
@@ -3544,7 +3544,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/spring-casual-54c43c3ccd.png"
+    "imageUrl": "tc2-assets/cosmetics/spring-casual-54c43c3ccd.webp"
   },
   {
     "name": "Spring Chicken",
@@ -3554,7 +3554,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/spring-chicken-7c0a7ab541.png"
+    "imageUrl": "tc2-assets/cosmetics/spring-chicken-7c0a7ab541.webp"
   },
   {
     "name": "Squared Shades",
@@ -3567,7 +3567,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/squared-shades-91e147628a.png"
+    "imageUrl": "tc2-assets/cosmetics/squared-shades-91e147628a.webp"
   },
   {
     "name": "Squire Helmet",
@@ -3578,7 +3578,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/squire-helmet-274c039b21.png"
+    "imageUrl": "tc2-assets/cosmetics/squire-helmet-274c039b21.webp"
   },
   {
     "name": "Stainless Pot",
@@ -3588,7 +3588,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/stainless-pot-16b82b0f6f.png"
+    "imageUrl": "tc2-assets/cosmetics/stainless-pot-16b82b0f6f.webp"
   },
   {
     "name": "Status Quo",
@@ -3599,7 +3599,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/status-quo-a92d7a99b6.png"
+    "imageUrl": "tc2-assets/cosmetics/status-quo-a92d7a99b6.webp"
   },
   {
     "name": "Stranded Shark",
@@ -3609,7 +3609,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/stranded-shark-d2ed52a721.png"
+    "imageUrl": "tc2-assets/cosmetics/stranded-shark-d2ed52a721.webp"
   },
   {
     "name": "Strangers Shade",
@@ -3619,7 +3619,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/strangers-shade-ce0d5bd494.png"
+    "imageUrl": "tc2-assets/cosmetics/strangers-shade-ce0d5bd494.webp"
   },
   {
     "name": "Street Brawler",
@@ -3633,7 +3633,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/street-brawler-0ff9209bf3.png"
+    "imageUrl": "tc2-assets/cosmetics/street-brawler-0ff9209bf3.webp"
   },
   {
     "name": "Submachine Specialist",
@@ -3643,7 +3643,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/submachine-specialist-56d95aac7d.png"
+    "imageUrl": "tc2-assets/cosmetics/submachine-specialist-56d95aac7d.webp"
   },
   {
     "name": "Subway Sprayer",
@@ -3655,7 +3655,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/subway-sprayer-9b882cd7d5.png"
+    "imageUrl": "tc2-assets/cosmetics/subway-sprayer-9b882cd7d5.webp"
   },
   {
     "name": "Sugarlined Topper",
@@ -3667,7 +3667,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/sugarlined-topper-e9a4090386.png"
+    "imageUrl": "tc2-assets/cosmetics/sugarlined-topper-e9a4090386.webp"
   },
   {
     "name": "Summer Blockers",
@@ -3677,7 +3677,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/summer-blockers-e0b7d7ff8b.png"
+    "imageUrl": "tc2-assets/cosmetics/summer-blockers-e0b7d7ff8b.webp"
   },
   {
     "name": "Summer Sickness",
@@ -3688,7 +3688,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/summer-sickness-239690c9ed.png"
+    "imageUrl": "tc2-assets/cosmetics/summer-sickness-239690c9ed.webp"
   },
   {
     "name": "Summer Striker",
@@ -3699,7 +3699,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/summer-striker-cab19dca6d.png"
+    "imageUrl": "tc2-assets/cosmetics/summer-striker-cab19dca6d.webp"
   },
   {
     "name": "Sunny Straw",
@@ -3711,7 +3711,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/sunny-straw-17a84b7252.png"
+    "imageUrl": "tc2-assets/cosmetics/sunny-straw-17a84b7252.webp"
   },
   {
     "name": "Sunset Surfer",
@@ -3722,7 +3722,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/sunset-surfer-ddb1efe43c.png"
+    "imageUrl": "tc2-assets/cosmetics/sunset-surfer-ddb1efe43c.webp"
   },
   {
     "name": "Super Trooper",
@@ -3733,7 +3733,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/super-trooper-230292e491.png"
+    "imageUrl": "tc2-assets/cosmetics/super-trooper-230292e491.webp"
   },
   {
     "name": "Surveyor",
@@ -3745,7 +3745,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/surveyor-4495d6c628.png"
+    "imageUrl": "tc2-assets/cosmetics/surveyor-4495d6c628.webp"
   },
   {
     "name": "Survival Stripes",
@@ -3755,7 +3755,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/survival-stripes-a0adfebb34.png"
+    "imageUrl": "tc2-assets/cosmetics/survival-stripes-a0adfebb34.webp"
   },
   {
     "name": "Sweat Swarm",
@@ -3766,7 +3766,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/sweat-swarm-1dfc40c782.png"
+    "imageUrl": "tc2-assets/cosmetics/sweat-swarm-1dfc40c782.webp"
   },
   {
     "name": "Sweet Memories",
@@ -3777,7 +3777,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/sweet-memories-821f466343.png"
+    "imageUrl": "tc2-assets/cosmetics/sweet-memories-821f466343.webp"
   },
   {
     "name": "Sweet Season",
@@ -3789,7 +3789,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/sweet-season-12da42a270.png"
+    "imageUrl": "tc2-assets/cosmetics/sweet-season-12da42a270.webp"
   },
   {
     "name": "Sweet Treat",
@@ -3799,7 +3799,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/sweet-treat-9eff14c313.png"
+    "imageUrl": "tc2-assets/cosmetics/sweet-treat-9eff14c313.webp"
   },
   {
     "name": "Sweets Sweeper",
@@ -3810,7 +3810,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/sweets-sweeper-8c569c1cb0.png"
+    "imageUrl": "tc2-assets/cosmetics/sweets-sweeper-8c569c1cb0.webp"
   },
   {
     "name": "System Override",
@@ -3821,7 +3821,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/system-override-430a5dd9fb.png"
+    "imageUrl": "tc2-assets/cosmetics/system-override-430a5dd9fb.webp"
   },
   {
     "name": "Tactical Terror",
@@ -3832,7 +3832,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/tactical-terror-9521d6bdc3.png"
+    "imageUrl": "tc2-assets/cosmetics/tactical-terror-9521d6bdc3.webp"
   },
   {
     "name": "Tailor Made",
@@ -3842,7 +3842,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/tailor-made-3406a25c7a.png"
+    "imageUrl": "tc2-assets/cosmetics/tailor-made-3406a25c7a.webp"
   },
   {
     "name": "Tang Suit",
@@ -3852,7 +3852,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/tang-suit-ca84249a75.png"
+    "imageUrl": "tc2-assets/cosmetics/tang-suit-ca84249a75.webp"
   },
   {
     "name": "Team Beret",
@@ -3864,7 +3864,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/team-beret-e5c89b4d32.png"
+    "imageUrl": "tc2-assets/cosmetics/team-beret-e5c89b4d32.webp"
   },
   {
     "name": "Team Cap",
@@ -3874,7 +3874,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/team-cap-955860e903.png"
+    "imageUrl": "tc2-assets/cosmetics/team-cap-955860e903.webp"
   },
   {
     "name": "Terrible Teach",
@@ -3885,7 +3885,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/terrible-teach-7182ba4545.png"
+    "imageUrl": "tc2-assets/cosmetics/terrible-teach-7182ba4545.webp"
   },
   {
     "name": "Terror-Vision",
@@ -3895,7 +3895,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/terror-vision-d19be9ac16.png"
+    "imageUrl": "tc2-assets/cosmetics/terror-vision-d19be9ac16.webp"
   },
   {
     "name": "Tie Up",
@@ -3905,7 +3905,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/tie-up-355e8862ac.png"
+    "imageUrl": "tc2-assets/cosmetics/tie-up-355e8862ac.webp"
   },
   {
     "name": "Tough Metal",
@@ -3915,7 +3915,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/tough-metal-ebdea41018.png"
+    "imageUrl": "tc2-assets/cosmetics/tough-metal-ebdea41018.webp"
   },
   {
     "name": "Tourist Trap",
@@ -3927,7 +3927,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/tourist-trap-97c35e3c30.png"
+    "imageUrl": "tc2-assets/cosmetics/tourist-trap-97c35e3c30.webp"
   },
   {
     "name": "Track Star",
@@ -3937,7 +3937,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/track-star-284bf0dc46.png"
+    "imageUrl": "tc2-assets/cosmetics/track-star-284bf0dc46.webp"
   },
   {
     "name": "Trackstar's Cardigan",
@@ -3947,7 +3947,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/trackstar-s-cardigan-52d9c7af7b.png"
+    "imageUrl": "tc2-assets/cosmetics/trackstar-s-cardigan-52d9c7af7b.webp"
   },
   {
     "name": "Traditional Cut",
@@ -3957,7 +3957,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/traditional-cut-8fc44b5c38.png"
+    "imageUrl": "tc2-assets/cosmetics/traditional-cut-8fc44b5c38.webp"
   },
   {
     "name": "Traffic Control",
@@ -3969,7 +3969,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/traffic-control-104b26a3c6.png"
+    "imageUrl": "tc2-assets/cosmetics/traffic-control-104b26a3c6.webp"
   },
   {
     "name": "Transylvanian Terror",
@@ -3979,7 +3979,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/transylvanian-terror-d28e0cb51d.png"
+    "imageUrl": "tc2-assets/cosmetics/transylvanian-terror-d28e0cb51d.webp"
   },
   {
     "name": "Trendsetter",
@@ -3991,7 +3991,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/trendsetter-e5a6381743.png"
+    "imageUrl": "tc2-assets/cosmetics/trendsetter-e5a6381743.webp"
   },
   {
     "name": "Trilby Thriller",
@@ -4001,7 +4001,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/trilby-thriller-472d07d2fa.png"
+    "imageUrl": "tc2-assets/cosmetics/trilby-thriller-472d07d2fa.webp"
   },
   {
     "name": "Troopceratops",
@@ -4011,7 +4011,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/troopceratops-ee8af04a83.png"
+    "imageUrl": "tc2-assets/cosmetics/troopceratops-ee8af04a83.webp"
   },
   {
     "name": "Truck Month",
@@ -4022,7 +4022,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/truck-month-2b176eb695.png"
+    "imageUrl": "tc2-assets/cosmetics/truck-month-2b176eb695.webp"
   },
   {
     "name": "Typical Colors Cap",
@@ -4032,7 +4032,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/typical-colors-cap-cb7eb6c36c.png"
+    "imageUrl": "tc2-assets/cosmetics/typical-colors-cap-cb7eb6c36c.webp"
   },
   {
     "name": "Ugly Ursidae",
@@ -4042,7 +4042,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/ugly-ursidae-0e1065abcf.png"
+    "imageUrl": "tc2-assets/cosmetics/ugly-ursidae-0e1065abcf.webp"
   },
   {
     "name": "Umbrella Hat",
@@ -4052,7 +4052,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/umbrella-hat-01bbc9d655.png"
+    "imageUrl": "tc2-assets/cosmetics/umbrella-hat-01bbc9d655.webp"
   },
   {
     "name": "Unpaid Time Off",
@@ -4062,7 +4062,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/unpaid-time-off-032ccf12a7.png"
+    "imageUrl": "tc2-assets/cosmetics/unpaid-time-off-032ccf12a7.webp"
   },
   {
     "name": "Unsound Mind",
@@ -4074,7 +4074,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/unsound-mind-79f329b510.png"
+    "imageUrl": "tc2-assets/cosmetics/unsound-mind-79f329b510.webp"
   },
   {
     "name": "Ushanka",
@@ -4084,7 +4084,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/ushanka-ad746cf178.png"
+    "imageUrl": "tc2-assets/cosmetics/ushanka-ad746cf178.webp"
   },
   {
     "name": "Vae Victis",
@@ -4094,7 +4094,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/vae-victis-fe6350c92b.png"
+    "imageUrl": "tc2-assets/cosmetics/vae-victis-fe6350c92b.webp"
   },
   {
     "name": "Valhalla Viking",
@@ -4106,7 +4106,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/valhalla-viking-5dda8e6976.png"
+    "imageUrl": "tc2-assets/cosmetics/valhalla-viking-5dda8e6976.webp"
   },
   {
     "name": "Veteran",
@@ -4118,7 +4118,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/veteran-5e6ee333cc.png"
+    "imageUrl": "tc2-assets/cosmetics/veteran-5e6ee333cc.webp"
   },
   {
     "name": "Veteran Attire",
@@ -4129,7 +4129,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/veteran-attire-336cfd918b.png"
+    "imageUrl": "tc2-assets/cosmetics/veteran-attire-336cfd918b.webp"
   },
   {
     "name": "VIP Crown",
@@ -4140,7 +4140,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/vip-crown-0f70052554.png"
+    "imageUrl": "tc2-assets/cosmetics/vip-crown-0f70052554.webp"
   },
   {
     "name": "Vicious Visor",
@@ -4150,7 +4150,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/vicious-visor-7c34c084c0.png"
+    "imageUrl": "tc2-assets/cosmetics/vicious-visor-7c34c084c0.webp"
   },
   {
     "name": "Viking Helm",
@@ -4160,7 +4160,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/viking-helm-2281a250e1.png"
+    "imageUrl": "tc2-assets/cosmetics/viking-helm-2281a250e1.webp"
   },
   {
     "name": "Visor Advisor",
@@ -4170,7 +4170,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/visor-advisor-a286ff3bc7.png"
+    "imageUrl": "tc2-assets/cosmetics/visor-advisor-a286ff3bc7.webp"
   },
   {
     "name": "Vogue Vagrant",
@@ -4181,7 +4181,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/vogue-vagrant-dbd811e8f4.png"
+    "imageUrl": "tc2-assets/cosmetics/vogue-vagrant-dbd811e8f4.webp"
   },
   {
     "name": "Voice of Command",
@@ -4191,7 +4191,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/voice-of-command-e02b359c12.png"
+    "imageUrl": "tc2-assets/cosmetics/voice-of-command-e02b359c12.webp"
   },
   {
     "name": "VR Helm",
@@ -4201,7 +4201,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/vr-helm-485fe78b76.png"
+    "imageUrl": "tc2-assets/cosmetics/vr-helm-485fe78b76.webp"
   },
   {
     "name": "Walking Death",
@@ -4213,7 +4213,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/walking-death-00fa2b5ddd.png"
+    "imageUrl": "tc2-assets/cosmetics/walking-death-00fa2b5ddd.webp"
   },
   {
     "name": "Warm Wear",
@@ -4223,7 +4223,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/warm-wear-a12c4f1541.png"
+    "imageUrl": "tc2-assets/cosmetics/warm-wear-a12c4f1541.webp"
   },
   {
     "name": "Warranty Void",
@@ -4233,7 +4233,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/warranty-void-1c488baa75.png"
+    "imageUrl": "tc2-assets/cosmetics/warranty-void-1c488baa75.webp"
   },
   {
     "name": "Water Boy",
@@ -4244,7 +4244,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/water-boy-b8cb738f01.png"
+    "imageUrl": "tc2-assets/cosmetics/water-boy-b8cb738f01.webp"
   },
   {
     "name": "Wee-Lad",
@@ -4254,7 +4254,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/wee-lad-a04755d261.png"
+    "imageUrl": "tc2-assets/cosmetics/wee-lad-a04755d261.webp"
   },
   {
     "name": "Welding Mask",
@@ -4264,7 +4264,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/welding-mask-a11e4827a1.png"
+    "imageUrl": "tc2-assets/cosmetics/welding-mask-a11e4827a1.webp"
   },
   {
     "name": "Whereville Wardrobe",
@@ -4274,7 +4274,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/whereville-wardrobe-26555afe69.png"
+    "imageUrl": "tc2-assets/cosmetics/whereville-wardrobe-26555afe69.webp"
   },
   {
     "name": "Whiteout Scout",
@@ -4284,7 +4284,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/whiteout-scout-660e46b5fb.png"
+    "imageUrl": "tc2-assets/cosmetics/whiteout-scout-660e46b5fb.webp"
   },
   {
     "name": "Whittled Warrior",
@@ -4295,7 +4295,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/whittled-warrior-59ca4e00af.png"
+    "imageUrl": "tc2-assets/cosmetics/whittled-warrior-59ca4e00af.webp"
   },
   {
     "name": "Wicked Winter",
@@ -4305,7 +4305,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/wicked-winter-02d7977844.png"
+    "imageUrl": "tc2-assets/cosmetics/wicked-winter-02d7977844.webp"
   },
   {
     "name": "Wig Doctor",
@@ -4315,7 +4315,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/wig-doctor-9271c998ed.png"
+    "imageUrl": "tc2-assets/cosmetics/wig-doctor-9271c998ed.webp"
   },
   {
     "name": "Wild Ride",
@@ -4327,7 +4327,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/wild-ride-95f067bdc5.png"
+    "imageUrl": "tc2-assets/cosmetics/wild-ride-95f067bdc5.webp"
   },
   {
     "name": "Wind Shield",
@@ -4337,7 +4337,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/wind-shield-9864575151.png"
+    "imageUrl": "tc2-assets/cosmetics/wind-shield-9864575151.webp"
   },
   {
     "name": "Windy Hunter",
@@ -4349,7 +4349,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/windy-hunter-075d745c41.png"
+    "imageUrl": "tc2-assets/cosmetics/windy-hunter-075d745c41.webp"
   },
   {
     "name": "Winter Post",
@@ -4359,7 +4359,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Body"
     ],
-    "imageUrl": "tc2-assets/cosmetics/winter-post-cc6d7b8612.png"
+    "imageUrl": "tc2-assets/cosmetics/winter-post-cc6d7b8612.webp"
   },
   {
     "name": "Winter Walsh",
@@ -4371,7 +4371,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/winter-walsh-5f1ef920d2.png"
+    "imageUrl": "tc2-assets/cosmetics/winter-walsh-5f1ef920d2.webp"
   },
   {
     "name": "Winter Woodsman",
@@ -4382,7 +4382,7 @@ export const cosmetics: Cosmetic[] = [
       "Body",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/winter-woodsman-a970d691fc.png"
+    "imageUrl": "tc2-assets/cosmetics/winter-woodsman-a970d691fc.webp"
   },
   {
     "name": "Wonder Worker",
@@ -4395,7 +4395,7 @@ export const cosmetics: Cosmetic[] = [
       "Head",
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/wonder-worker-34afcd2c19.png"
+    "imageUrl": "tc2-assets/cosmetics/wonder-worker-34afcd2c19.webp"
   },
   {
     "name": "Woolen Wrap",
@@ -4405,7 +4405,7 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Misc"
     ],
-    "imageUrl": "tc2-assets/cosmetics/woolen-wrap-06dd8d7af5.png"
+    "imageUrl": "tc2-assets/cosmetics/woolen-wrap-06dd8d7af5.webp"
   },
   {
     "name": "Yuletide Yeti",
@@ -4415,6 +4415,6 @@ export const cosmetics: Cosmetic[] = [
     "slots": [
       "Head"
     ],
-    "imageUrl": "tc2-assets/cosmetics/yuletide-yeti-8c32c28dd0.png"
+    "imageUrl": "tc2-assets/cosmetics/yuletide-yeti-8c32c28dd0.webp"
   }
 ];

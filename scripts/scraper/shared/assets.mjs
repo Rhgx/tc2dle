@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
-import { mkdir, rm, writeFile } from "node:fs/promises";
+import { access, mkdir, readdir, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
+import sharp from "sharp";
 import { cleanText } from "./text.mjs";
 
 export function normalizeImageUrl(url) {
@@ -51,28 +52,17 @@ export async function downloadAssets(items, directoryPath, publicPrefix, project
       const item = uniqueItems[cursor];
       cursor += 1;
 
-      const extension = getImageExtension(item.url);
       const baseName = item.namePrefix || slugifyFileName(item.name);
-      const fileName = item.fileName || `${baseName}-${hashValue(item.url)}${extension}`;
+      const fileName = item.fileName || `${baseName}-${hashValue(item.url)}.webp`;
       const outputPath = path.join(directoryPath, fileName);
-      await downloadAsset(item.url, outputPath);
+      await writeAsset(item.url, outputPath, directoryPath, path.parse(fileName).name);
       pathByUrl.set(item.url, `${publicPrefix}/${fileName}`);
     }
   }
 
   await Promise.all(Array.from({ length: Math.min(workerCount, uniqueItems.length) }, worker));
+  await pruneAssetDirectory(directoryPath, new Set([...pathByUrl.values()].map((url) => path.basename(url))));
   return pathByUrl;
-}
-
-function getImageExtension(url) {
-  try {
-    const parsed = new URL(url);
-    const withoutRevision = parsed.pathname.split("/revision/")[0];
-    const extension = path.extname(withoutRevision).toLowerCase();
-    return extension || ".png";
-  } catch {
-    return ".png";
-  }
 }
 
 function slugifyFileName(value) {
@@ -94,13 +84,74 @@ async function prepareAssetDirectory(directoryPath, projectRoot) {
     throw new Error(`Refusing to clean asset directory outside public: ${resolved}`);
   }
 
-  await rm(resolved, { recursive: true, force: true });
   await mkdir(resolved, { recursive: true });
 }
 
-async function downloadAsset(url, outputPath) {
+async function writeAsset(url, outputPath, directoryPath, outputBaseName) {
+  if (await fileExists(outputPath)) return;
+
+  const existingPath = await findExistingAsset(directoryPath, outputBaseName);
+  if (existingPath) {
+    await writeWebpAsset(await readExistingAsset(existingPath), outputPath);
+    return;
+  }
+
   const response = await fetch(url);
   if (!response.ok) throw new Error(`Asset request failed with ${response.status}: ${url}`);
   const bytes = Buffer.from(await response.arrayBuffer());
-  await writeFile(outputPath, bytes);
+  await writeWebpAsset(bytes, outputPath);
+}
+
+async function writeWebpAsset(bytes, outputPath) {
+  const webp = await sharp(bytes).webp({ quality: 82, effort: 5 }).toBuffer();
+  await writeFile(outputPath, webp);
+}
+
+async function findExistingAsset(directoryPath, outputBaseName) {
+  const entries = await readdir(directoryPath).catch(() => []);
+  const match = entries.find((entry) => path.parse(entry).name === outputBaseName && path.extname(entry).toLowerCase() !== ".webp");
+  return match ? path.join(directoryPath, match) : "";
+}
+
+async function readExistingAsset(filePath) {
+  const { readFile } = await import("node:fs/promises");
+  return readFile(filePath);
+}
+
+async function fileExists(filePath) {
+  try {
+    await access(filePath);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function pruneAssetDirectory(directoryPath, expectedFileNames) {
+  const entries = await readdir(directoryPath).catch(() => []);
+  await Promise.all(entries.map(async (entry) => {
+    if (expectedFileNames.has(entry)) return;
+    await rm(path.join(directoryPath, entry), { force: true, recursive: true });
+  }));
+}
+
+export async function summarizeAssetDirectory(directoryPath) {
+  const entries = await readdir(directoryPath).catch(() => []);
+  let count = 0;
+  let bytes = 0;
+
+  await Promise.all(entries.map(async (entry) => {
+    const filePath = path.join(directoryPath, entry);
+    const info = await stat(filePath);
+    if (!info.isFile()) return;
+    count += 1;
+    bytes += info.size;
+  }));
+
+  return { count, bytes };
+}
+
+export function formatBytes(bytes) {
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
 }

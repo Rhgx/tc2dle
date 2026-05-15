@@ -1,6 +1,7 @@
 import { Box, Paper, Stack, Typography } from "@mui/material";
 import type { PropsWithChildren } from "react";
 import { compareWeapon } from "../../lib/game/compare";
+import { formatWeaponStat } from "../../lib/game/weaponStats";
 import { getStatusStyles } from "../../styles/statusStyles";
 import type { ComparisonStatus, GuessEntry, Weapon } from "../../types";
 import { FadeCell, HeaderCell, ResultCell } from "../shared/ResultCell";
@@ -48,8 +49,8 @@ export function GuessGrid({ guesses, target }: GuessGridProps) {
                 <FadeCell visible={stage >= 1} status={result.className}>{guess.className}</FadeCell>
                 <FadeCell visible={stage >= 2} status={result.slot}>{guess.slot}</FadeCell>
                 <FadeCell visible={stage >= 3} status={result.source}>{guess.source}</FadeCell>
-                <FadeCell visible={stage >= 4} status={result.capacity}>{guess.capacity}{arrow(result.capacity)}</FadeCell>
-                <FadeCell visible={stage >= 5} status={result.ammo}>{guess.ammo}{arrow(result.ammo)}</FadeCell>
+                <FadeCell visible={stage >= 4} status={result.capacity}>{formatWeaponStat(guess.capacity)}{arrow(result.capacity)}</FadeCell>
+                <FadeCell visible={stage >= 5} status={result.ammo}>{formatWeaponStat(guess.ammo)}{arrow(result.ammo)}</FadeCell>
               </Box>
 
               <MobileGuessCard guess={guess} imageStatus={imageStatus} result={result} stage={stage} arrow={arrow} />
@@ -82,8 +83,8 @@ function MobileGuessCard({ guess, imageStatus, result, stage, arrow }: MobileGue
           <MobileField label="Slot" value={guess.slot} status={result.slot} revealed={stage >= 2} />
           <MobileField label="Source" value={guess.source} status={result.source} revealed={stage >= 3} />
           <Box sx={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 0.75 }}>
-            <MobileField label="Clip" value={`${guess.capacity}${arrow(result.capacity)}`} status={result.capacity} revealed={stage >= 4} />
-            <MobileField label="Reserve" value={`${guess.ammo}${arrow(result.ammo)}`} status={result.ammo} revealed={stage >= 5} />
+            <MobileField label="Clip" value={`${formatWeaponStat(guess.capacity)}${arrow(result.capacity)}`} status={result.capacity} revealed={stage >= 4} />
+            <MobileField label="Reserve" value={`${formatWeaponStat(guess.ammo)}${arrow(result.ammo)}`} status={result.ammo} revealed={stage >= 5} />
           </Box>
         </Box>
       </Box>

@@ -11,8 +11,8 @@ export type Weapon = {
   className: string;
   slot: string;
   source: string;
-  capacity: string;
-  ammo: string;
+  capacity: string | number | null;
+  ammo: string | number | null;
   iconUrl: string;
   attributes: WeaponAttribute[];
   type: string;

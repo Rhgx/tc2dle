@@ -159,10 +159,12 @@ function getTableColumnIndexes(grid) {
 }
 
 function normalizeStatCell(value) {
-  const text = cleanText(value).replace(/^[^:|]+:\s*N\s*\/\s*A$/i, "N / A");
-  if (!text) return "N/A";
-  if (text.length > 40 && !/^[0-9. /-]+$/.test(text) && text !== "\u221e") return "N/A";
-  if (/cloak type:|cannot attack|move speed|debuff|bosses|invisible|meter|regen/i.test(text)) return "N/A";
+  const text = cleanText(value).replace(/^[^:|]+:\s*(?=(?:N\s*\/\s*A|\u221e|[0-9]))/i, "");
+  if (!text || /^N\s*\/\s*A$/i.test(text)) return null;
+  if (text === "\u221e") return Number.POSITIVE_INFINITY;
+  if (text.length > 40 && !/^[0-9. /-]+$/.test(text) && text !== "\u221e") return null;
+  if (/cloak type:|cannot attack|move speed|debuff|bosses|invisible|meter|regen/i.test(text)) return null;
+  if (/^[0-9]+$/.test(text)) return Number(text);
   return text;
 }
 
@@ -201,8 +203,12 @@ function attributesText(attributes) {
 }
 
 function addSetValue(map, key, value) {
-  if (!value) return;
+  if (value === null || value === undefined || value === "") return;
   if (!map[key]) map[key] = new Set();
+  if (typeof value === "number") {
+    map[key].add(value);
+    return;
+  }
   String(value)
     .split(/\s*\/\s*|\s*,\s*/)
     .map(cleanText)
@@ -256,14 +262,20 @@ function dedupeWeapons(rows) {
         className: override.className || (classSet.includes("All Classes") ? "All Classes" : classSet.join(" / ") || "Unknown"),
         slot: slotSet.join(" / ") || "Unknown",
         source: sourceSet.join(" / ") || "Unknown",
-        capacity: capacitySet.join(" / ") || "N/A",
-        ammo: ammoSet.join(" / ") || "N/A",
+        capacity: joinStatSet(capacitySet),
+        ammo: joinStatSet(ammoSet),
         attributes,
         iconUrl: item.iconUrl || "",
         type: inferType(item.name, slotSet.join(" "), attributesText(attributes)),
       };
     })
     .sort((a, b) => a.name.localeCompare(b.name));
+}
+
+function joinStatSet(values) {
+  if (!values.length) return null;
+  if (values.length === 1) return values[0];
+  return values.map((value) => (value === Number.POSITIVE_INFINITY ? "\u221e" : value)).join(" / ");
 }
 
 function parseWeaponsHtml(html) {

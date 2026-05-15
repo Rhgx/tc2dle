@@ -3,7 +3,7 @@ export function renderWeaponsGeneratedFile(weapons) {
   return `import type { Weapon } from "../../types";
 
 export const weaponsGeneratedAt = ${JSON.stringify(generatedAt)};
-export const weapons: Weapon[] = ${JSON.stringify(weapons, null, 2)};
+export const weapons: Weapon[] = ${stringifyWithInfinity(weapons)};
 `;
 }
 
@@ -30,4 +30,14 @@ export function renderLoadingScreensGeneratedFile(urls) {
   return `export const loadingScreensGeneratedAt = ${JSON.stringify(generatedAt)};
 export const loadingScreenUrls: string[] = ${JSON.stringify(urls, null, 2)};
 `;
+}
+
+export function renderManifestGeneratedFile(manifest) {
+  return `export const generatedManifest = ${JSON.stringify(manifest, null, 2)} as const;
+`;
+}
+
+function stringifyWithInfinity(value) {
+  return JSON.stringify(value, (_key, item) => (item === Number.POSITIVE_INFINITY ? "__TC2DLE_INFINITY__" : item), 2)
+    .replace(/"__TC2DLE_INFINITY__"/g, "Infinity");
 }

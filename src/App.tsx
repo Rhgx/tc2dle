@@ -8,10 +8,6 @@ import { YesterdayAnswer } from "./components/shared/YesterdayAnswer";
 import { WeaponGame } from "./components/weapon/WeaponGame";
 import { GAME_MODES } from "./constants/modes";
 import { WIKI_PAGE_URL } from "./constants/wiki";
-import { cosmetics, cosmeticsGeneratedAt } from "./data/cosmetics";
-import { loadingScreenUrls } from "./data/loadingScreens";
-import { maps, mapsGeneratedAt } from "./data/maps";
-import { weapons, weaponsGeneratedAt } from "./data/weapons";
 import { pickDailyLoadingScreen } from "./lib/assets/loadingScreens";
 import { preloadCosmeticImages, preloadMapImages, preloadWeaponImages } from "./lib/assets/preload";
 import { resolveAssetUrl } from "./lib/assets/resolve";
@@ -19,15 +15,27 @@ import { pickDaily, pickYesterday } from "./lib/game/hash";
 import { expandMapGameEntries } from "./lib/game/maps";
 import { currentRoutePath, getGameKindFromPath, routeForGameKind, withBasePath } from "./lib/routing/gameRoutes";
 import { theme } from "./theme";
+import type { Cosmetic, Tc2Map, Weapon } from "./types";
 import type { GameKind } from "./types/game";
+
+type DataState<T> = {
+  items: T[];
+  generatedAt: string;
+  loaded: boolean;
+};
+
+const emptyData = { items: [], generatedAt: "", loaded: false };
 
 export default function App() {
   const [gameKind, setGameKind] = useState<GameKind>(() => getGameKindFromPath());
-  const resolvedWeapons = useMemo(() => weapons.map((weapon) => ({ ...weapon, iconUrl: resolveAssetUrl(weapon.iconUrl) })), []);
-  const resolvedMaps = useMemo(() => maps.map((map) => ({ ...map, imageUrl: resolveAssetUrl(map.imageUrl) })), []);
+  const [weaponData, setWeaponData] = useState<DataState<Weapon>>(emptyData);
+  const [mapData, setMapData] = useState<DataState<Tc2Map>>(emptyData);
+  const [cosmeticData, setCosmeticData] = useState<DataState<Cosmetic>>(emptyData);
+  const [backgroundUrl, setBackgroundUrl] = useState("");
+  const resolvedWeapons = useMemo(() => weaponData.items.map((weapon) => ({ ...weapon, iconUrl: resolveAssetUrl(weapon.iconUrl) })), [weaponData.items]);
+  const resolvedMaps = useMemo(() => mapData.items.map((map) => ({ ...map, imageUrl: resolveAssetUrl(map.imageUrl) })), [mapData.items]);
   const mapEntries = useMemo(() => expandMapGameEntries(resolvedMaps), [resolvedMaps]);
-  const resolvedCosmetics = useMemo(() => cosmetics.map((cosmetic) => ({ ...cosmetic, imageUrl: resolveAssetUrl(cosmetic.imageUrl) })), []);
-  const backgroundUrl = useMemo(() => pickDailyLoadingScreen(loadingScreenUrls.map(resolveAssetUrl)), []);
+  const resolvedCosmetics = useMemo(() => cosmeticData.items.map((cosmetic) => ({ ...cosmetic, imageUrl: resolveAssetUrl(cosmetic.imageUrl) })), [cosmeticData.items]);
   const priorityImageUrls = useMemo(() => {
     if (gameKind === "weapon") {
       return compactUrls([pickDaily(resolvedWeapons)?.iconUrl, pickYesterday(resolvedWeapons)?.iconUrl]);
@@ -37,16 +45,53 @@ export default function App() {
     }
     return compactUrls([pickDaily(resolvedCosmetics, "cosmetic")?.imageUrl, pickYesterday(resolvedCosmetics, "cosmetic")?.imageUrl]);
   }, [gameKind, mapEntries, resolvedCosmetics, resolvedWeapons]);
-  const weaponStatus = weaponsGeneratedAt
-    ? `Loaded ${resolvedWeapons.length} scraped weapons generated on ${new Date(weaponsGeneratedAt).toLocaleString()}.`
-    : `Loaded ${resolvedWeapons.length} bundled fallback weapons. Run npm run scrape:weapons to generate the full list.`;
-  const mapStatus = mapsGeneratedAt
-    ? `Loaded ${resolvedMaps.length} scraped maps generated on ${new Date(mapsGeneratedAt).toLocaleString()}.`
-    : `Loaded ${resolvedMaps.length} bundled maps. Run npm run scrape:maps to generate the full list.`;
-  const cosmeticStatus = cosmeticsGeneratedAt
-    ? `Loaded ${resolvedCosmetics.length} scraped cosmetics generated on ${new Date(cosmeticsGeneratedAt).toLocaleString()}.`
-    : `Loaded ${resolvedCosmetics.length} bundled cosmetics. Run npm run scrape:cosmetics to generate the full list.`;
+  const weaponStatus = dataStatus("weapons", resolvedWeapons.length, weaponData);
+  const mapStatus = dataStatus("maps", resolvedMaps.length, mapData);
+  const cosmeticStatus = dataStatus("cosmetics", resolvedCosmetics.length, cosmeticData);
   const activeItems = gameKind === "weapon" ? resolvedWeapons : gameKind === "map" ? mapEntries : resolvedCosmetics;
+
+  useEffect(() => {
+    let cancelled = false;
+    import("./data/loadingScreens").then(({ loadingScreenUrls }) => {
+      if (!cancelled) setBackgroundUrl(pickDailyLoadingScreen(loadingScreenUrls.map(resolveAssetUrl)) || "");
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (gameKind !== "weapon" || weaponData.loaded) return;
+    let cancelled = false;
+    import("./data/weapons").then(({ weapons, weaponsGeneratedAt }) => {
+      if (!cancelled) setWeaponData({ items: weapons, generatedAt: weaponsGeneratedAt, loaded: true });
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [gameKind, weaponData.loaded]);
+
+  useEffect(() => {
+    if (gameKind !== "map" || mapData.loaded) return;
+    let cancelled = false;
+    import("./data/maps").then(({ maps, mapsGeneratedAt }) => {
+      if (!cancelled) setMapData({ items: maps, generatedAt: mapsGeneratedAt, loaded: true });
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [gameKind, mapData.loaded]);
+
+  useEffect(() => {
+    if (gameKind !== "cosmetic" || cosmeticData.loaded) return;
+    let cancelled = false;
+    import("./data/cosmetics").then(({ cosmetics, cosmeticsGeneratedAt }) => {
+      if (!cancelled) setCosmeticData({ items: cosmetics, generatedAt: cosmeticsGeneratedAt, loaded: true });
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [cosmeticData.loaded, gameKind]);
 
   useEffect(() => {
     if (gameKind === "weapon") return preloadWeaponImages(resolvedWeapons, priorityImageUrls);
@@ -221,4 +266,11 @@ export default function App() {
 
 function compactUrls(urls: Array<string | undefined>) {
   return urls.filter((url): url is string => Boolean(url));
+}
+
+function dataStatus<T>(label: string, count: number, data: DataState<T>) {
+  if (!data.loaded) return `Loading ${label}...`;
+  return data.generatedAt
+    ? `Loaded ${count} scraped ${label} generated on ${new Date(data.generatedAt).toLocaleString()}.`
+    : `Loaded ${count} bundled ${label}. Run npm run scrape to generate the full list.`;
 }

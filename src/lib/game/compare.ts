@@ -1,18 +1,20 @@
 import { CLASSES, CLASS_ROLES } from "../../constants/classes";
 import type { ComparisonStatus, Weapon } from "../../types";
 import { cleanText } from "./text";
+import type { WeaponStatValue } from "./weaponStats";
 
-export function numeric(value: string) {
+export function numeric(value: WeaponStatValue) {
+  if (typeof value === "number") return value;
+
   const text = String(value || "").trim();
-  if (!text || /N\/A|unknown/i.test(text)) return null;
-  if (text.includes("∞")) return Number.POSITIVE_INFINITY;
+  if (!text || /N\s*\/\s*A|unknown/i.test(text)) return null;
+  if (text.includes("\u221e") || /infinity/i.test(text)) return Number.POSITIVE_INFINITY;
 
   const numbers = text.match(/[0-9]+([.][0-9]+)?/g)?.map(Number) || [];
   if (!numbers.length) return null;
   return Math.max(...numbers);
 }
-
-export function compareValue(guess: string, target: string): ComparisonStatus {
+export function compareValue(guess: WeaponStatValue, target: WeaponStatValue): ComparisonStatus {
   if (cleanText(guess) === cleanText(target)) return "correct";
 
   const g = numeric(guess);
