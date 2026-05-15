@@ -159,7 +159,7 @@ function getTableColumnIndexes(grid) {
 }
 
 function normalizeStatCell(value) {
-  const text = cleanText(value);
+  const text = cleanText(value).replace(/^[^:|]+:\s*N\s*\/\s*A$/i, "N / A");
   if (!text) return "N/A";
   if (text.length > 40 && !/^[0-9. /-]+$/.test(text) && text !== "\u221e") return "N/A";
   if (/cloak type:|cannot attack|move speed|debuff|bosses|invisible|meter|regen/i.test(text)) return "N/A";

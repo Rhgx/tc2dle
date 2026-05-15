@@ -1,28 +1,51 @@
 import type { Cosmetic, Tc2Map, Weapon } from "../../types";
 
 const preloadedImageUrls = new Set<string>();
+const PRELOAD_BATCH_SIZE = 8;
 
 export function preloadWeaponImages(weapons: Weapon[]) {
-  weapons.forEach((weapon) => preloadImage(weapon.iconUrl));
+  return preloadImageUrls(weapons.map((weapon) => weapon.iconUrl));
 }
 
 export function preloadMapImages(maps: Tc2Map[]) {
-  maps.forEach((map) => preloadImage(map.imageUrl));
+  return preloadImageUrls(maps.map((map) => map.imageUrl));
 }
 
 export function preloadCosmeticImages(cosmetics: Cosmetic[]) {
-  cosmetics.forEach((cosmetic) => preloadImage(cosmetic.imageUrl));
+  return preloadImageUrls(cosmetics.map((cosmetic) => cosmetic.imageUrl));
 }
 
-function preloadImage(url: string) {
-  if (!url || preloadedImageUrls.has(url)) return;
-  preloadedImageUrls.add(url);
+function preloadImageUrls(urls: string[]) {
+  const pendingUrls = urls.filter((url) => url && !preloadedImageUrls.has(url));
+  let cursor = 0;
+  let cancelled = false;
+  let timeoutId = 0;
 
-  const image = new Image();
-  image.decoding = "async";
-  image.src = url;
+  function preloadBatch() {
+    if (cancelled) return;
 
-  if (typeof image.decode === "function") {
-    image.decode().catch(() => undefined);
+    const batch = pendingUrls.slice(cursor, cursor + PRELOAD_BATCH_SIZE);
+    cursor += PRELOAD_BATCH_SIZE;
+
+    batch.forEach((url) => {
+      if (preloadedImageUrls.has(url)) return;
+      preloadedImageUrls.add(url);
+
+      const image = new Image();
+      image.loading = "lazy";
+      image.decoding = "async";
+      image.src = url;
+    });
+
+    if (cursor < pendingUrls.length) {
+      timeoutId = window.setTimeout(preloadBatch, 250);
+    }
   }
+
+  timeoutId = window.setTimeout(preloadBatch, 250);
+
+  return () => {
+    cancelled = true;
+    window.clearTimeout(timeoutId);
+  };
 }

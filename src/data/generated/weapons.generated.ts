@@ -1539,7 +1539,7 @@ export const weapons: Weapon[] = [
     "className": "Flanker",
     "slot": "Melee",
     "source": "Shop",
-    "capacity": "Bat: N / A",
+    "capacity": "N / A",
     "ammo": "N / A",
     "attributes": [
       {
@@ -6185,7 +6185,7 @@ export const weapons: Weapon[] = [
     "className": "Flanker",
     "slot": "Melee",
     "source": "Item Drop",
-    "capacity": "Bat: N / A",
+    "capacity": "N / A",
     "ammo": "N / A",
     "attributes": [
       {
@@ -6615,7 +6615,7 @@ export const weapons: Weapon[] = [
     "className": "Flanker",
     "slot": "Melee",
     "source": "Shop",
-    "capacity": "Bat: N / A",
+    "capacity": "N / A",
     "ammo": "N / A",
     "attributes": [
       {
@@ -7277,7 +7277,7 @@ export const weapons: Weapon[] = [
     "className": "Flanker",
     "slot": "Melee",
     "source": "Item Drop",
-    "capacity": "Bat: N / A",
+    "capacity": "N / A",
     "ammo": "N / A",
     "attributes": [
       {
@@ -8650,7 +8650,7 @@ export const weapons: Weapon[] = [
     "className": "Flanker",
     "slot": "Melee",
     "source": "Shop",
-    "capacity": "Bat: N / A",
+    "capacity": "N / A",
     "ammo": "N / A",
     "attributes": [
       {

@@ -39,16 +39,10 @@ export default function App() {
   const activeItems = gameKind === "weapon" ? resolvedWeapons : gameKind === "map" ? mapEntries : resolvedCosmetics;
 
   useEffect(() => {
-    preloadWeaponImages(resolvedWeapons);
-  }, [resolvedWeapons]);
-
-  useEffect(() => {
-    preloadMapImages(resolvedMaps);
-  }, [resolvedMaps]);
-
-  useEffect(() => {
-    preloadCosmeticImages(resolvedCosmetics);
-  }, [resolvedCosmetics]);
+    if (gameKind === "weapon") return preloadWeaponImages(resolvedWeapons);
+    if (gameKind === "map") return preloadMapImages(resolvedMaps);
+    return preloadCosmeticImages(resolvedCosmetics);
+  }, [gameKind, resolvedCosmetics, resolvedMaps, resolvedWeapons]);
 
   useEffect(() => {
     function handlePopState() {
