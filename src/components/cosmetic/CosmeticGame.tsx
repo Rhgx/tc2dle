@@ -224,7 +224,7 @@ export function CosmeticGame({ cosmetics, status }: CosmeticGameProps) {
                     outlineOffset: "-1px",
                   }}
                 >
-                  <CosmeticImage cosmetic={cosmetic} size={42} />
+                  {/* <CosmeticImage cosmetic={cosmetic} size={42} /> */}
                   <Box sx={{ minWidth: 0 }}>
                     <Typography sx={{ fontWeight: 900 }}>{cosmetic.name}</Typography>
                     <Typography variant="caption" color="text.secondary" sx={{ display: "block", fontWeight: 800, lineHeight: 1.15 }}>
