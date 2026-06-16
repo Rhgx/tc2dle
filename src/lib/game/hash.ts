@@ -2,7 +2,7 @@ import type { GameKind } from "../../types";
 import { dateKey, dateKeyForOffset } from "../time/date";
 
 const MS_PER_DAY = 24 * 60 * 60 * 1000;
-const RECENT_PICK_WINDOW_DAYS = 7;
+const RECENT_PICK_WINDOW_DAYS = 30;
 
 export function hashString(input: string) {
   let hash = 2166136261;
