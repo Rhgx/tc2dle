@@ -2,6 +2,7 @@ import type { GameKind } from "../../types";
 import { dateKey, dateKeyForOffset } from "../time/date";
 
 const MS_PER_DAY = 24 * 60 * 60 * 1000;
+const RECENT_PICK_WINDOW_DAYS = 7;
 
 export function hashString(input: string) {
   let hash = 2166136261;
@@ -35,15 +36,33 @@ function pickForDate<T>(list: T[], key: string, seed: string) {
 
 function orderForCycle(length: number, seed: string, cycle: number) {
   let order: number[] = [];
-  let previousLast: number | undefined;
+  let previousTail: number[] = [];
+  const recentWindow = Math.min(RECENT_PICK_WINDOW_DAYS, length - 1);
 
   for (let currentCycle = 0; currentCycle <= cycle; currentCycle += 1) {
-    order = rawOrderForCycle(length, seed, currentCycle);
-    if (previousLast !== undefined && order[0] === previousLast) order.push(order.shift()!);
-    previousLast = order[order.length - 1];
+    order = avoidRecentCycleRepeats(rawOrderForCycle(length, seed, currentCycle), previousTail, recentWindow);
+    previousTail = order.slice(-recentWindow);
   }
 
   return order;
+}
+
+function avoidRecentCycleRepeats(order: number[], previousTail: number[], recentWindow: number) {
+  if (!previousTail.length || recentWindow <= 0) return order;
+
+  const remaining = [...order];
+  const protectedPrefix: number[] = [];
+  const prefixLength = Math.min(recentWindow, remaining.length);
+
+  for (let position = 0; position < prefixLength; position += 1) {
+    const forbiddenCount = recentWindow - position;
+    const forbidden = new Set(previousTail.slice(Math.max(0, previousTail.length - forbiddenCount)));
+    const nextIndex = remaining.findIndex((item) => !forbidden.has(item));
+    if (nextIndex === -1) break;
+    protectedPrefix.push(remaining.splice(nextIndex, 1)[0]);
+  }
+
+  return [...protectedPrefix, ...remaining];
 }
 
 function rawOrderForCycle(length: number, seed: string, cycle: number) {
