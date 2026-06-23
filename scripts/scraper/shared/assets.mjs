@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { access, mkdir, readdir, rm, stat, writeFile } from "node:fs/promises";
+import { access, mkdir, readFile, readdir, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
 import { cleanText } from "./text.mjs";
@@ -61,6 +61,7 @@ export async function downloadAssets(items, directoryPath, publicPrefix, project
   }
 
   await Promise.all(Array.from({ length: Math.min(workerCount, uniqueItems.length) }, worker));
+  await canonicalizeDuplicateAssets(uniqueItems, directoryPath, publicPrefix, pathByUrl);
   await pruneAssetDirectory(directoryPath, new Set([...pathByUrl.values()].map((url) => path.basename(url))));
   return pathByUrl;
 }
@@ -127,12 +128,36 @@ async function fileExists(filePath) {
   }
 }
 
-async function pruneAssetDirectory(directoryPath, expectedFileNames) {
+export async function pruneAssetDirectory(directoryPath, expectedFileNames) {
   const entries = await readdir(directoryPath).catch(() => []);
   await Promise.all(entries.map(async (entry) => {
     if (expectedFileNames.has(entry)) return;
     await rm(path.join(directoryPath, entry), { force: true, recursive: true });
   }));
+}
+
+async function canonicalizeDuplicateAssets(uniqueItems, directoryPath, publicPrefix, pathByUrl) {
+  const pathByContentHash = new Map();
+
+  for (const item of uniqueItems) {
+    const publicPath = pathByUrl.get(item.url);
+    if (!publicPath) continue;
+
+    const fileName = path.basename(publicPath);
+    const bytes = await readFile(path.join(directoryPath, fileName));
+    const contentHash = hashBytes(bytes);
+    const canonicalPath = pathByContentHash.get(contentHash);
+
+    if (canonicalPath) {
+      pathByUrl.set(item.url, canonicalPath);
+    } else {
+      pathByContentHash.set(contentHash, `${publicPrefix}/${fileName}`);
+    }
+  }
+}
+
+function hashBytes(bytes) {
+  return createHash("sha1").update(bytes).digest("hex");
 }
 
 export async function summarizeAssetDirectory(directoryPath) {

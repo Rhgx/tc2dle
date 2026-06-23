@@ -1,10 +1,11 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import sharp from "sharp";
 import { scrapeCosmeticsFromWiki } from "./cosmetics.mjs";
 import { scrapeLoadingScreensFromWiki } from "./loadingScreens.mjs";
-import { scrapeMapsFromWiki } from "./maps.mjs";
-import { downloadAssets, formatBytes, summarizeAssetDirectory } from "./shared/assets.mjs";
+import { keepUniqueMapImages, scrapeMapsFromWiki } from "./maps.mjs";
+import { downloadAssets, formatBytes, pruneAssetDirectory, summarizeAssetDirectory } from "./shared/assets.mjs";
 import { renderCosmeticsGeneratedFile, renderLoadingScreensGeneratedFile, renderManifestGeneratedFile, renderMapsGeneratedFile, renderWeaponsGeneratedFile } from "./shared/render.mjs";
 import { scrapeWeaponsFromWiki } from "./weapons.mjs";
 
@@ -82,9 +83,10 @@ if (target === "all") {
   ]);
 
   const localWeapons = weapons.map((weapon) => ({ ...weapon, iconUrl: iconPaths.get(weapon.iconUrl) || "" }));
-  const localMaps = maps.map((map) => ({ ...map, imageUrl: mapImagePaths.get(map.imageUrl) || "" }));
+  const localMaps = await finalizeLocalMaps(maps.map((map) => ({ ...map, imageUrl: mapImagePaths.get(map.imageUrl) || "" })));
   const localCosmetics = cosmetics.map((cosmetic) => ({ ...cosmetic, imageUrl: cosmeticImagePaths.get(cosmetic.imageUrl) || "" }));
   const localLoadingScreenUrls = loadingScreenUrls.map((url) => backgroundPaths.get(url)).filter(Boolean);
+  await pruneLocalMapAssets(localMaps);
 
   await Promise.all([
     writeFile(weaponsOutputPath, renderWeaponsGeneratedFile(localWeapons), "utf8"),
@@ -95,7 +97,7 @@ if (target === "all") {
   await writeManifest({ weapons: localWeapons, maps: localMaps, cosmetics: localCosmetics, loadingScreenUrls: localLoadingScreenUrls });
 
   await logWeapons(weapons.length, iconPaths.size);
-  await logMaps(maps.length, mapImagePaths.size);
+  await logMaps(localMaps.length, mapImagePaths.size);
   await logCosmetics(cosmetics.length, cosmeticImagePaths.size);
   await logLoadingScreens(loadingScreenUrls.length, backgroundPaths.size);
 }
@@ -123,9 +125,11 @@ async function scrapeMaps() {
     projectRoot,
   );
   const localMaps = maps.map((map) => ({ ...map, imageUrl: imagePaths.get(map.imageUrl) || "" }));
-  await writeFile(mapsOutputPath, renderMapsGeneratedFile(localMaps), "utf8");
-  await writeManifest({ maps: localMaps });
-  await logMaps(maps.length, imagePaths.size);
+  const filteredMaps = await finalizeLocalMaps(localMaps);
+  await pruneLocalMapAssets(filteredMaps);
+  await writeFile(mapsOutputPath, renderMapsGeneratedFile(filteredMaps), "utf8");
+  await writeManifest({ maps: filteredMaps });
+  await logMaps(filteredMaps.length, imagePaths.size);
 }
 
 async function scrapeCosmetics() {
@@ -189,6 +193,10 @@ async function logAssetSummary(label, scrapedCount, directoryPath) {
   console.log(`${label}: ${summary.count} WebP files, ${formatBytes(summary.bytes)} (${scrapedCount} referenced this run).`);
 }
 
+async function pruneLocalMapAssets(maps) {
+  await pruneAssetDirectory(mapAssetsPath, new Set(maps.map((map) => path.basename(map.imageUrl)).filter(Boolean)));
+}
+
 async function writeManifest({ weapons, maps, cosmetics, loadingScreenUrls }) {
   const existingManifest = await readExistingManifest();
   const manifest = {
@@ -209,6 +217,59 @@ async function manifestSection(items, assetsPath, existingSection) {
     assetCount: assets.count,
     assetBytes: assets.bytes,
   };
+}
+
+async function finalizeLocalMaps(maps) {
+  return (await keepUniqueMapVisuals(keepUniqueMapImages(maps)))
+    .sort((a, b) => a.name.localeCompare(b.name) || a.gameMode.localeCompare(b.gameMode));
+}
+
+async function keepUniqueMapVisuals(maps) {
+  const kept = [];
+  const signaturesByName = new Map();
+
+  for (const map of maps) {
+    const nameKey = map.name.toLowerCase();
+    const signature = await mapImageSignature(map.imageUrl);
+    const signatures = signaturesByName.get(nameKey) || [];
+
+    if (signature && signatures.some((existing) => signatureDistance(signature, existing) <= 2)) {
+      continue;
+    }
+
+    kept.push(map);
+    if (signature) {
+      signatures.push(signature);
+      signaturesByName.set(nameKey, signatures);
+    }
+  }
+
+  return kept;
+}
+
+async function mapImageSignature(imageUrl) {
+  if (!imageUrl) return "";
+
+  try {
+    const source = await readFile(path.join(projectRoot, "public", imageUrl));
+    const bytes = await sharp(source)
+      .resize(8, 8, { fit: "fill" })
+      .grayscale()
+      .raw()
+      .toBuffer();
+    const average = bytes.reduce((sum, value) => sum + value, 0) / bytes.length;
+    return [...bytes].map((value) => (value >= average ? "1" : "0")).join("");
+  } catch {
+    return "";
+  }
+}
+
+function signatureDistance(left, right) {
+  let distance = 0;
+  for (let index = 0; index < left.length; index += 1) {
+    if (left[index] !== right[index]) distance += 1;
+  }
+  return distance;
 }
 
 async function readExistingManifest() {

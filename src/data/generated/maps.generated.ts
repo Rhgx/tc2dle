@@ -1,6 +1,6 @@
 import type { Tc2Map } from "../../types";
 
-export const mapsGeneratedAt = "2026-05-15T17:55:37.799Z";
+export const mapsGeneratedAt = "2026-06-23T06:42:02.231Z";
 export const maps: Tc2Map[] = [
   {
     "name": "1979 Effect",
@@ -125,7 +125,7 @@ export const maps: Tc2Map[] = [
     "name": "Cargo",
     "gameMode": "Team Deathmatch",
     "group": "Special / Standard",
-    "status": "Active / Active (Rare)",
+    "status": "Active",
     "imageUrl": "tc2-assets/maps/cargo-9840279b5e.webp"
   },
   {
@@ -206,13 +206,6 @@ export const maps: Tc2Map[] = [
     "imageUrl": "tc2-assets/maps/cruciatus-437449675a.webp"
   },
   {
-    "name": "Dam",
-    "gameMode": "Team Deathmatch",
-    "group": "Standard",
-    "status": "Active (Rare)",
-    "imageUrl": "tc2-assets/maps/dam-1d8018f073.webp"
-  },
-  {
     "name": "Datamass",
     "gameMode": "Player Destruction",
     "group": "Standard",
@@ -269,6 +262,13 @@ export const maps: Tc2Map[] = [
     "imageUrl": "tc2-assets/maps/drainage-03dbe8e208.webp"
   },
   {
+    "name": "Dusk",
+    "gameMode": "King of the Hill",
+    "group": "Standard",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/dusk-92d0ece240.webp"
+  },
+  {
     "name": "Financial",
     "gameMode": "Attack/Defense",
     "group": "Standard",
@@ -281,13 +281,6 @@ export const maps: Tc2Map[] = [
     "group": "Special",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/fitten-co-0ce11eed03.webp"
-  },
-  {
-    "name": "Frost",
-    "gameMode": "Control Points",
-    "group": "Standard",
-    "status": "Active (Rare)",
-    "imageUrl": "tc2-assets/maps/frost-7380484983.webp"
   },
   {
     "name": "Glass Houses",
@@ -312,15 +305,8 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Harvest",
-    "gameMode": "Arena",
-    "group": "Standard",
-    "status": "Active (Rare)",
-    "imageUrl": "tc2-assets/maps/harvest-c03c31bcaf.webp"
-  },
-  {
-    "name": "Harvest",
-    "gameMode": "King of the Hill",
-    "group": "Standard",
+    "gameMode": "Team Deathmatch",
+    "group": "Special",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/harvest-f0b1cfdf7d.webp"
   },
@@ -337,13 +323,6 @@ export const maps: Tc2Map[] = [
     "group": "Standard",
     "status": "Seasonal",
     "imageUrl": "tc2-assets/maps/harvest-alpine-e1beff0ca6.webp"
-  },
-  {
-    "name": "Harvest Retro",
-    "gameMode": "King of the Hill",
-    "group": "Standard",
-    "status": "Active (Rare)",
-    "imageUrl": "tc2-assets/maps/harvest-retro-3586b1aa52.webp"
   },
   {
     "name": "Harvest Winter",
@@ -382,13 +361,6 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Hungry",
-    "gameMode": "Medieval",
-    "group": "Special",
-    "status": "Active",
-    "imageUrl": "tc2-assets/maps/hungry-cdaaf9f8b1.webp"
-  },
-  {
-    "name": "Hungry",
     "gameMode": "Vs. Bosses",
     "group": "Special",
     "status": "Active",
@@ -398,7 +370,7 @@ export const maps: Tc2Map[] = [
     "name": "Hydrovalley",
     "gameMode": "Team Deathmatch",
     "group": "Special / Standard",
-    "status": "Active / Active (Rare)",
+    "status": "Active",
     "imageUrl": "tc2-assets/maps/hydrovalley-a276bf15e8.webp"
   },
   {
@@ -442,20 +414,6 @@ export const maps: Tc2Map[] = [
     "group": "Standard",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/lumber-80efb5c447.webp"
-  },
-  {
-    "name": "Mach",
-    "gameMode": "Arena",
-    "group": "Standard",
-    "status": "Active (Rare)",
-    "imageUrl": "tc2-assets/maps/mach-5152652703.webp"
-  },
-  {
-    "name": "Mach",
-    "gameMode": "Capture the Flag",
-    "group": "Standard",
-    "status": "Active (Rare)",
-    "imageUrl": "tc2-assets/maps/mach-6cf8dacb6b.webp"
   },
   {
     "name": "Manufacturing",
@@ -521,6 +479,13 @@ export const maps: Tc2Map[] = [
     "imageUrl": "tc2-assets/maps/pervade-8fbffe0f6d.webp"
   },
   {
+    "name": "Pineway",
+    "gameMode": "Capture the Flag",
+    "group": "Standard",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/pineway-684bd48069.webp"
+  },
+  {
     "name": "Pineyard",
     "gameMode": "Vs. Bosses",
     "group": "Special",
@@ -533,13 +498,6 @@ export const maps: Tc2Map[] = [
     "group": "Standard",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/power-plant-f97702acd2.webp"
-  },
-  {
-    "name": "Product",
-    "gameMode": "King of the Hill",
-    "group": "Standard",
-    "status": "Active",
-    "imageUrl": "tc2-assets/maps/product-dac8b5d050.webp"
   },
   {
     "name": "Purgatory",
@@ -557,16 +515,9 @@ export const maps: Tc2Map[] = [
   },
   {
     "name": "Rig",
-    "gameMode": "Capture the Flag",
-    "group": "Standard",
-    "status": "Active (Rare)",
-    "imageUrl": "tc2-assets/maps/rig-9f2ece6d37.webp"
-  },
-  {
-    "name": "Rig",
     "gameMode": "Team Deathmatch",
-    "group": "Special / Standard",
-    "status": "Active / Active (Rare)",
+    "group": "Special",
+    "status": "Active",
     "imageUrl": "tc2-assets/maps/rig-97f961aba3.webp"
   },
   {
@@ -596,20 +547,6 @@ export const maps: Tc2Map[] = [
     "group": "Special",
     "status": "Active (Rare)",
     "imageUrl": "tc2-assets/maps/roblox-hq-fc69f299ce.webp"
-  },
-  {
-    "name": "Rooftop",
-    "gameMode": "Arena",
-    "group": "Standard",
-    "status": "Active (Rare)",
-    "imageUrl": "tc2-assets/maps/rooftop-f6a6dfb1ab.webp"
-  },
-  {
-    "name": "Rooftop",
-    "gameMode": "King of the Hill",
-    "group": "Standard",
-    "status": "Active (Rare)",
-    "imageUrl": "tc2-assets/maps/rooftop-1aa90fb045.webp"
   },
   {
     "name": "Rooftop",
@@ -673,20 +610,6 @@ export const maps: Tc2Map[] = [
     "group": "Special",
     "status": "Seasonal",
     "imageUrl": "tc2-assets/maps/santa-s-workshop-87b4fc394d.webp"
-  },
-  {
-    "name": "Sawmill",
-    "gameMode": "Arena",
-    "group": "Standard",
-    "status": "Active (Rare)",
-    "imageUrl": "tc2-assets/maps/sawmill-420ee7e1d3.webp"
-  },
-  {
-    "name": "Sawmill",
-    "gameMode": "Capture the Flag",
-    "group": "Standard",
-    "status": "Active (Rare)",
-    "imageUrl": "tc2-assets/maps/sawmill-b2653e63b7.webp"
   },
   {
     "name": "Sawmill",
@@ -829,6 +752,13 @@ export const maps: Tc2Map[] = [
     "imageUrl": "tc2-assets/maps/turbine-pro-e23cefd414.webp"
   },
   {
+    "name": "Twilight",
+    "gameMode": "King of the Hill",
+    "group": "Standard",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/twilight-7598fadd13.webp"
+  },
+  {
     "name": "Undergrove",
     "gameMode": "Control Points",
     "group": "Standard",
@@ -890,13 +820,6 @@ export const maps: Tc2Map[] = [
     "group": "Standard",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/waterbog-955eb0650c.webp"
-  },
-  {
-    "name": "Well",
-    "gameMode": "Arena",
-    "group": "Standard",
-    "status": "Active (Rare)",
-    "imageUrl": "tc2-assets/maps/well-ec81f7d9ec.webp"
   },
   {
     "name": "Whitelane",

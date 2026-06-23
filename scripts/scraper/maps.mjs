@@ -119,17 +119,17 @@ function dedupeMaps(rows) {
     .sort((a, b) => a.name.localeCompare(b.name) || a.gameMode.localeCompare(b.gameMode));
 }
 
-function keepUniqueMapImages(rows) {
+export function keepUniqueMapImages(rows) {
   const seenImages = new Set();
   return rows
     .sort((a, b) => getMapModePriority(a.gameMode) - getMapModePriority(b.gameMode) || a.name.localeCompare(b.name))
     .filter((row) => {
-    const imageKey = row.imageUrl.toLowerCase();
-    if (!imageKey) return true;
-    if (seenImages.has(imageKey)) return false;
-    seenImages.add(imageKey);
-    return true;
-  });
+      const imageKey = row.imageUrl.toLowerCase();
+      if (!imageKey) return true;
+      if (seenImages.has(imageKey)) return false;
+      seenImages.add(imageKey);
+      return true;
+    });
 }
 
 function getMapModePriority(gameMode) {
