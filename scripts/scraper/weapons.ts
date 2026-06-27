@@ -1,7 +1,8 @@
 import { JSDOM } from "jsdom";
 import { inferType } from "../../src/lib/game/weaponTypes.ts";
-import { getImageUrl } from "./shared/assets.mjs";
-import { cellText, cleanText, getHeadingText, normalizeName, tableToGrid, textWithBreaks } from "./shared/text.mjs";
+import { getImageUrl } from "./shared/assets.ts";
+import { cellText, cleanText, getHeadingText, normalizeName, tableToGrid, textWithBreaks } from "./shared/text.ts";
+import type { ScrapedWeapon, StatValue, WeaponAttribute, WeaponAttributeKind, WeaponTableRow } from "./types.ts";
 
 const WIKI_API_URL =
   "https://typicalcolors2.fandom.com/api.php?action=parse&page=Weapons&prop=text&format=json&origin=*";
@@ -34,7 +35,7 @@ const SOURCE_WORDS = [
   "Community",
 ];
 
-const WEAPON_OVERRIDES = {
+const WEAPON_OVERRIDES: Record<string, { classNames?: string[] }> = {
   "frying pan": {
     classNames: ["Flanker", "Trooper", "Arsonist", "Annihilator", "Brute", "Doctor", "Marksman"],
   },
@@ -43,7 +44,31 @@ const WEAPON_OVERRIDES = {
   },
 };
 
-export async function scrapeWeaponsFromWiki() {
+type WeaponCell = {
+  name: string;
+  source: string;
+  iconUrl: string;
+};
+
+type WeaponColumnIndexes = {
+  weapon: number;
+  capacity: number;
+  ammo: number;
+  attributes: number;
+  dataStart: number;
+};
+
+type WeaponAccumulator = Omit<WeaponTableRow, "className" | "slot" | "source" | "capacity" | "ammo" | "attributes"> & {
+  classSet: Set<string>;
+  slotSet: Set<string>;
+  sourceSet: Set<string>;
+  capacitySet: Set<string | number>;
+  ammoSet: Set<string | number>;
+  attributesByKey: Map<string, WeaponAttribute>;
+};
+type WeaponSetKey = "classSet" | "slotSet" | "sourceSet" | "capacitySet" | "ammoSet";
+
+export async function scrapeWeaponsFromWiki(): Promise<ScrapedWeapon[]> {
   const response = await fetch(WIKI_API_URL);
   if (!response.ok) throw new Error(`TC2 wiki request failed with ${response.status}`);
   const json = await response.json();
@@ -54,7 +79,7 @@ export async function scrapeWeaponsFromWiki() {
   return weapons;
 }
 
-function extractWeaponCell(cell) {
+function extractWeaponCell(cell: Element): WeaponCell | null {
   const image = cell.querySelector("img");
   const iconUrl = getImageUrl(image);
   const links = [...cell.querySelectorAll("a[href*='/wiki/']")]
@@ -81,18 +106,18 @@ function extractWeaponCell(cell) {
   return { name, source: cleanText(source) || "Unknown", iconUrl };
 }
 
-function getCurrentClassFromHeading(text) {
+function getCurrentClassFromHeading(text: string): string | null {
   const heading = cleanText(text);
   if (/Community-Only Weapons/i.test(heading)) return "Community Only";
   return CLASSES.find((className) => heading.includes(className)) || null;
 }
 
-function getCurrentSlotFromHeading(text, currentSlot) {
+function getCurrentSlotFromHeading(text: string, currentSlot: string): string {
   const heading = cleanText(text);
   return ["Primary", "Secondary", "Melee", "PDA"].find((slot) => heading.includes(slot)) || currentSlot || "Unknown";
 }
 
-function weaponAttribute(kind, text) {
+function weaponAttribute(kind: WeaponAttributeKind, text: string): WeaponAttribute {
   const labels = {
     positive: "Positive trait",
     negative: "Negative trait",
@@ -104,7 +129,7 @@ function weaponAttribute(kind, text) {
   return { kind, label: labels[kind], text };
 }
 
-function extractAttributes(cell) {
+function extractAttributes(cell: Element | null | undefined): WeaponAttribute[] {
   if (!cell) return [];
   const statBlocks = [...cell.querySelectorAll(".bannedgun, .bosspro, .pro, .con, .note")];
   if (statBlocks.length) {
@@ -122,7 +147,7 @@ function extractAttributes(cell) {
         if (block.classList.contains("con")) return weaponAttribute("negative", text);
         return weaponAttribute("neutral", text);
       })
-      .filter(Boolean);
+      .filter((attribute): attribute is WeaponAttribute => Boolean(attribute));
   }
 
   const text = cellText(cell).replace(/This item always /gi, "Always ").replace(/Image:/gi, "").replace(/\s+/g, " ");
@@ -133,16 +158,16 @@ function extractAttributes(cell) {
     .map((note) => weaponAttribute("neutral", note));
 }
 
-function headerText(cell) {
+function headerText(cell: Element): string {
   return cleanText(cellText(cell)).toLowerCase();
 }
 
-function getTableColumnIndexes(grid) {
+function getTableColumnIndexes(grid: Element[][]): WeaponColumnIndexes {
   const headerRowIndex = grid.findIndex((row) => row.some((cell) => cell?.tagName === "TH"));
   const headerRow = headerRowIndex >= 0 ? grid[headerRowIndex] : grid[0] || [];
   const headers = headerRow.map(headerText);
 
-  const findHeader = (tests) => headers.findIndex((text) => tests.some((test) => test.test(text)));
+  const findHeader = (tests: RegExp[]) => headers.findIndex((text) => tests.some((test) => test.test(text)));
   const weapon = Math.max(0, findHeader([/^weapon$/, /weapon name/, /^item$/]));
   const capacity = findHeader([/capacity/, /clip/, /magazine/, /loaded/]);
   const ammo = findHeader([/^ammo$/, /reserve/, /ammo carried/, /ammunition/]);
@@ -159,7 +184,7 @@ function getTableColumnIndexes(grid) {
   };
 }
 
-function normalizeStatCell(value) {
+function normalizeStatCell(value: string): StatValue {
   const text = cleanText(value).replace(/^[^:|]+:\s*(?=(?:N\s*\/\s*A|\u221e|[0-9]))/i, "");
   if (!text || /^N\s*\/\s*A$/i.test(text)) return null;
   if (text === "\u221e") return Number.POSITIVE_INFINITY;
@@ -169,7 +194,7 @@ function normalizeStatCell(value) {
   return text;
 }
 
-function extractRowAttributes(cells, indexes) {
+function extractRowAttributes(cells: Element[], indexes: WeaponColumnIndexes): WeaponAttribute[] {
   const attributesCell = indexes.attributes >= 0 ? cells[indexes.attributes] : null;
   const attributes = extractAttributes(attributesCell);
   if (attributes.length) return attributes;
@@ -184,51 +209,39 @@ function extractRowAttributes(cells, indexes) {
   return extractAttributes(fallbackCell);
 }
 
-function attributeKey(attribute) {
+function attributeKey(attribute: WeaponAttribute): string {
   return `${attribute.kind}\u0000${attribute.text}`;
 }
 
-function attributesText(attributes) {
+function attributesText(attributes: WeaponAttribute[]): string {
   return attributes.map((attribute) => `${attribute.label}: ${attribute.text}`).join(" ");
 }
 
-function addSetValue(map, key, value) {
+function addSetValue(map: WeaponAccumulator, key: WeaponSetKey, value: StatValue | string): void {
   if (value === null || value === undefined || value === "") return;
-  if (!map[key]) map[key] = new Set();
+  const set = map[key] as Set<string | number>;
   if (typeof value === "number") {
-    map[key].add(value);
+    set.add(value);
     return;
   }
   String(value)
     .split(/\s*\/\s*|\s*,\s*/)
     .map(cleanText)
     .filter(Boolean)
-    .forEach((item) => map[key].add(item));
+    .forEach((item) => set.add(item));
 }
 
-function normalizeSlotSet(slotSet) {
+function normalizeSlotSet(slotSet: string[]): string[] {
   const slots = slotSet.filter((slot) => slot && slot !== "Unknown");
   return slots.length ? slots : slotSet;
 }
 
-function dedupeWeapons(rows) {
-  const byName = new Map();
+function dedupeWeapons(rows: WeaponTableRow[]): ScrapedWeapon[] {
+  const byName = new Map<string, WeaponAccumulator>();
 
   rows.forEach((row) => {
     const key = row.name.toLowerCase();
-    if (!byName.has(key)) {
-      byName.set(key, {
-        ...row,
-        classSet: new Set(),
-        slotSet: new Set(),
-        sourceSet: new Set(),
-        capacitySet: new Set(),
-        ammoSet: new Set(),
-        attributesByKey: new Map(),
-        iconUrl: row.iconUrl || "",
-      });
-    }
-    const item = byName.get(key);
+    const item = getOrCreateWeaponAccumulator(byName, key, row);
     if (!item.iconUrl && row.iconUrl) item.iconUrl = row.iconUrl;
     addSetValue(item, "classSet", row.className);
     addSetValue(item, "slotSet", row.slot);
@@ -263,22 +276,40 @@ function dedupeWeapons(rows) {
     .sort((a, b) => a.name.localeCompare(b.name));
 }
 
-function normalizeClassSet(classSet) {
+function getOrCreateWeaponAccumulator(byName: Map<string, WeaponAccumulator>, key: string, row: WeaponTableRow): WeaponAccumulator {
+  const existing = byName.get(key);
+  if (existing) return existing;
+
+  const created = {
+    ...row,
+    classSet: new Set<string>(),
+    slotSet: new Set<string>(),
+    sourceSet: new Set<string>(),
+    capacitySet: new Set<string | number>(),
+    ammoSet: new Set<string | number>(),
+    attributesByKey: new Map<string, WeaponAttribute>(),
+    iconUrl: row.iconUrl || "",
+  };
+  byName.set(key, created);
+  return created;
+}
+
+function normalizeClassSet(classSet: string[]): string[] {
   if (classSet.includes("All Classes")) return ["All Classes"];
   return classSet.filter(Boolean).length ? classSet.filter(Boolean) : ["Unknown"];
 }
 
-function joinStatSet(values) {
+function joinStatSet(values: Array<string | number>): StatValue {
   if (!values.length) return null;
   if (values.length === 1) return values[0];
   return values.map((value) => (value === Number.POSITIVE_INFINITY ? "\u221e" : value)).join(" / ");
 }
 
-function parseWeaponsHtml(html) {
+function parseWeaponsHtml(html: string): ScrapedWeapon[] {
   const dom = new JSDOM(html);
   const doc = dom.window.document;
   const output = doc.querySelector(".mw-parser-output") || doc.body;
-  const parsed = [];
+  const parsed: WeaponTableRow[] = [];
   let currentClass = "";
   let currentSlot = "";
   let withinWeapons = false;

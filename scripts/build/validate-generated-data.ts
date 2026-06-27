@@ -4,10 +4,12 @@ import path from "node:path";
 const projectRoot = path.resolve(".");
 const generatedDir = path.join(projectRoot, "src", "data", "generated");
 
-const weapons = await readGeneratedArray("weapons.generated.ts", "weapons");
-const maps = await readGeneratedArray("maps.generated.ts", "maps");
-const cosmetics = await readGeneratedArray("cosmetics.generated.ts", "cosmetics");
-const loadingScreenUrls = await readGeneratedArray("loadingScreens.generated.ts", "loadingScreenUrls");
+type GeneratedRecord = Record<string, any>;
+
+const weapons = await readGeneratedArray<GeneratedRecord>("weapons.generated.ts", "weapons");
+const maps = await readGeneratedArray<GeneratedRecord>("maps.generated.ts", "maps");
+const cosmetics = await readGeneratedArray<GeneratedRecord>("cosmetics.generated.ts", "cosmetics");
+const loadingScreenUrls = await readGeneratedArray<string>("loadingScreens.generated.ts", "loadingScreenUrls");
 
 const issues = [
   ...validateNamedItems("weapon", weapons),
@@ -34,7 +36,7 @@ if (issues.length) {
 
 console.log(`Validated generated data: ${weapons.length} weapons, ${maps.length} maps, ${cosmetics.length} cosmetics, ${loadingScreenUrls.length} loading screens.`);
 
-async function readGeneratedArray(fileName, exportName) {
+async function readGeneratedArray<T>(fileName: string, exportName: string): Promise<T[]> {
   const source = await readFile(path.join(generatedDir, fileName), "utf8");
   const exportMatch = new RegExp(`export\\s+const\\s+${exportName}(?:\\s|:)`).exec(source);
   if (!exportMatch) throw new Error(`Could not find export ${exportName} in ${fileName}.`);
@@ -48,10 +50,10 @@ async function readGeneratedArray(fileName, exportName) {
 
   const arrayEnd = findMatchingBracket(source, arrayStart);
   const jsonLike = source.slice(arrayStart, arrayEnd + 1).replace(/:\s*Infinity([,}\]])/g, ': "__TC2DLE_INFINITY__"$1');
-  return reviveInfinity(JSON.parse(jsonLike));
+  return reviveInfinity(JSON.parse(jsonLike)) as T[];
 }
 
-function findMatchingBracket(source, start) {
+function findMatchingBracket(source: string, start: number): number {
   let depth = 0;
   let inString = false;
   let escaped = false;
@@ -78,17 +80,17 @@ function findMatchingBracket(source, start) {
   throw new Error("Unclosed generated array.");
 }
 
-function validateNamedItems(label, items) {
+function validateNamedItems(label: string, items: GeneratedRecord[]): string[] {
   return items.flatMap((item, index) => {
-    const issues = [];
+    const issues: string[] = [];
     if (!item.name || typeof item.name !== "string") issues.push(`${label} at index ${index} is missing a name.`);
     return issues;
   });
 }
 
-function validateWeaponStats(weapons) {
+function validateWeaponStats(weapons: GeneratedRecord[]): string[] {
   return weapons.flatMap((weapon) => {
-    const issues = [];
+    const issues: string[] = [];
     ["capacity", "ammo"].forEach((field) => {
       const value = weapon[field];
       if (value !== null && typeof value !== "string" && typeof value !== "number") issues.push(`${weapon.name} has invalid ${field}: ${value}.`);
@@ -99,9 +101,9 @@ function validateWeaponStats(weapons) {
   });
 }
 
-function validateWeaponClasses(weapons) {
+function validateWeaponClasses(weapons: GeneratedRecord[]): string[] {
   return weapons.flatMap((weapon) => {
-    const issues = [];
+    const issues: string[] = [];
     if ("className" in weapon) issues.push(`${weapon.name} still uses className instead of classNames.`);
     if (!Array.isArray(weapon.classNames) || !weapon.classNames.length) {
       issues.push(`${weapon.name} is missing classNames.`);
@@ -112,9 +114,9 @@ function validateWeaponClasses(weapons) {
   });
 }
 
-function validateWeaponTypes(weapons) {
+function validateWeaponTypes(weapons: GeneratedRecord[]): string[] {
   return weapons.flatMap((weapon) => {
-    const issues = [];
+    const issues: string[] = [];
     if ("type" in weapon) issues.push(`${weapon.name} still uses type instead of types.`);
     if (!Array.isArray(weapon.types) || !weapon.types.length) {
       issues.push(`${weapon.name} is missing types.`);
@@ -125,7 +127,7 @@ function validateWeaponTypes(weapons) {
   });
 }
 
-function reviveInfinity(value) {
+function reviveInfinity(value: any): any {
   if (value === "__TC2DLE_INFINITY__") return Number.POSITIVE_INFINITY;
   if (Array.isArray(value)) return value.map(reviveInfinity);
   if (value && typeof value === "object") {
@@ -134,9 +136,9 @@ function reviveInfinity(value) {
   return value;
 }
 
-function validateUnique(label, keys) {
+function validateUnique(label: string, keys: string[]): string[] {
   const seen = new Set();
-  const issues = [];
+  const issues: string[] = [];
   keys.forEach((key) => {
     if (seen.has(key)) issues.push(`Duplicate ${label}: ${key}.`);
     seen.add(key);
@@ -144,8 +146,8 @@ function validateUnique(label, keys) {
   return issues;
 }
 
-async function validateAssetPaths(label, urls) {
-  const issues = [];
+async function validateAssetPaths(label: string, urls: string[]): Promise<string[]> {
+  const issues: string[] = [];
   await Promise.all(urls.filter(Boolean).map(async (url) => {
     if (!url.endsWith(".webp")) {
       issues.push(`${label} is not WebP: ${url}.`);

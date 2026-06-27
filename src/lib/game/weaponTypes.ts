@@ -4,7 +4,7 @@ export function inferType(name: string, slot: string, attributes: string) {
   if (hasMeleeSignal(text)) return hasMeleeProjectileSignal(text) ? ["Melee", "Projectile"] : ["Melee"];
   if (/lunchbox|cola|milk|drink|consume|sandvich|burger|banana|sneakers|boots|wearer/.test(text)) return ["Utility"];
 
-  const types = [];
+  const types: string[] = [];
   if (hasHitscanSignal(text)) types.push("Hitscan");
   if (hasProjectileSignal(text)) types.push("Projectile");
   if (!types.length && /medigun|heal|overheal|supercharge/.test(text)) return ["Healing"];

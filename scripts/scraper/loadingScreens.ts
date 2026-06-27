@@ -1,14 +1,22 @@
-import { isStaticBackgroundUrl, normalizeImageUrl } from "./shared/assets.mjs";
+import { isStaticBackgroundUrl, normalizeImageUrl } from "./shared/assets.ts";
 
 const LOADING_SCREENS_CATEGORY_API =
   "https://typicalcolors2.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category:Loading_screens&cmtype=file&cmlimit=max&format=json&origin=*";
 
-export async function scrapeLoadingScreensFromWiki() {
+type CategoryMember = {
+  title?: string;
+};
+
+type ImageInfoPage = {
+  imageinfo?: Array<{ url?: string }>;
+};
+
+export async function scrapeLoadingScreensFromWiki(): Promise<string[]> {
   const categoryResponse = await fetch(LOADING_SCREENS_CATEGORY_API);
   if (!categoryResponse.ok) throw new Error(`Loading screens category request failed with ${categoryResponse.status}`);
 
   const categoryJson = await categoryResponse.json();
-  const members = categoryJson?.query?.categorymembers || [];
+  const members = (categoryJson?.query?.categorymembers || []) as CategoryMember[];
   const titles = members.map((member) => member.title).filter(Boolean);
   if (!titles.length) return [];
 
@@ -19,7 +27,7 @@ export async function scrapeLoadingScreensFromWiki() {
   if (!imageResponse.ok) throw new Error(`Loading screen image request failed with ${imageResponse.status}`);
 
   const imageJson = await imageResponse.json();
-  const pages = Object.values(imageJson?.query?.pages || {});
+  const pages = Object.values(imageJson?.query?.pages || {}) as ImageInfoPage[];
   return pages
     .map((page) => normalizeImageUrl(page?.imageinfo?.[0]?.url || ""))
     .filter(isStaticBackgroundUrl)

@@ -16,7 +16,7 @@ for (const route of routes) {
 
 await writeFile(path.join(distDir, "404.html"), indexHtml);
 
-function withRouteUrl(html, route) {
+function withRouteUrl(html: string, route: string): string {
   const routeUrl = `${siteUrl}/${route}/`;
   return html
     .replace(

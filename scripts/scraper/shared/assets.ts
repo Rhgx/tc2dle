@@ -2,9 +2,18 @@ import { createHash } from "node:crypto";
 import { access, mkdir, readFile, readdir, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
-import { cleanText } from "./text.mjs";
+import { cleanText } from "./text.ts";
 
-export function normalizeImageUrl(url) {
+type AssetItem = {
+  fileName?: string;
+  name: string;
+  namePrefix?: string;
+  url: string;
+};
+
+type AssetPathMap = Map<string, string>;
+
+export function normalizeImageUrl(url: string): string {
   if (!url) return "";
   const absolute = url.startsWith("//")
     ? `https:${url}`
@@ -24,13 +33,13 @@ export function normalizeImageUrl(url) {
   return parsed.toString();
 }
 
-export function getImageUrl(img) {
+export function getImageUrl(img: Element | null): string {
   if (!img) return "";
   const raw = img.getAttribute("data-src") || img.getAttribute("src") || "";
   return normalizeImageUrl(raw);
 }
 
-export function isStaticBackgroundUrl(url) {
+export function isStaticBackgroundUrl(url: string): boolean {
   try {
     const parsed = new URL(url);
     return !/\.(gif)(?:$|[/?#])/i.test(parsed.pathname);
@@ -39,11 +48,16 @@ export function isStaticBackgroundUrl(url) {
   }
 }
 
-export async function downloadAssets(items, directoryPath, publicPrefix, projectRoot) {
+export async function downloadAssets(
+  items: AssetItem[],
+  directoryPath: string,
+  publicPrefix: string,
+  projectRoot: string,
+): Promise<AssetPathMap> {
   await prepareAssetDirectory(directoryPath, projectRoot);
 
-  const uniqueItems = [...new Map(items.filter((item) => item.url).map((item) => [item.url, item])).values()];
-  const pathByUrl = new Map();
+  const uniqueItems = uniqueByUrl(items);
+  const pathByUrl: AssetPathMap = new Map();
   let cursor = 0;
   const workerCount = 8;
 
@@ -66,7 +80,11 @@ export async function downloadAssets(items, directoryPath, publicPrefix, project
   return pathByUrl;
 }
 
-function slugifyFileName(value) {
+function uniqueByUrl(items: AssetItem[]): AssetItem[] {
+  return [...new Map(items.filter((item) => item.url).map((item) => [item.url, item])).values()];
+}
+
+function slugifyFileName(value: string): string {
   return cleanText(value)
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
@@ -74,11 +92,11 @@ function slugifyFileName(value) {
     .slice(0, 64) || "asset";
 }
 
-function hashValue(value) {
+function hashValue(value: string): string {
   return createHash("sha1").update(value).digest("hex").slice(0, 10);
 }
 
-async function prepareAssetDirectory(directoryPath, projectRoot) {
+async function prepareAssetDirectory(directoryPath: string, projectRoot: string): Promise<void> {
   const resolved = path.resolve(directoryPath);
   const publicRoot = path.join(projectRoot, "public");
   if (!resolved.startsWith(publicRoot)) {
@@ -88,7 +106,7 @@ async function prepareAssetDirectory(directoryPath, projectRoot) {
   await mkdir(resolved, { recursive: true });
 }
 
-async function writeAsset(url, outputPath, directoryPath, outputBaseName) {
+async function writeAsset(url: string, outputPath: string, directoryPath: string, outputBaseName: string): Promise<void> {
   if (await fileExists(outputPath)) return;
 
   const existingPath = await findExistingAsset(directoryPath, outputBaseName);
@@ -103,23 +121,22 @@ async function writeAsset(url, outputPath, directoryPath, outputBaseName) {
   await writeWebpAsset(bytes, outputPath);
 }
 
-async function writeWebpAsset(bytes, outputPath) {
+async function writeWebpAsset(bytes: Buffer, outputPath: string): Promise<void> {
   const webp = await sharp(bytes).webp({ quality: 82, effort: 5 }).toBuffer();
   await writeFile(outputPath, webp);
 }
 
-async function findExistingAsset(directoryPath, outputBaseName) {
+async function findExistingAsset(directoryPath: string, outputBaseName: string): Promise<string> {
   const entries = await readdir(directoryPath).catch(() => []);
   const match = entries.find((entry) => path.parse(entry).name === outputBaseName && path.extname(entry).toLowerCase() !== ".webp");
   return match ? path.join(directoryPath, match) : "";
 }
 
-async function readExistingAsset(filePath) {
-  const { readFile } = await import("node:fs/promises");
+async function readExistingAsset(filePath: string): Promise<Buffer> {
   return readFile(filePath);
 }
 
-async function fileExists(filePath) {
+async function fileExists(filePath: string): Promise<boolean> {
   try {
     await access(filePath);
     return true;
@@ -128,7 +145,7 @@ async function fileExists(filePath) {
   }
 }
 
-export async function pruneAssetDirectory(directoryPath, expectedFileNames) {
+export async function pruneAssetDirectory(directoryPath: string, expectedFileNames: Set<string>): Promise<void> {
   const entries = await readdir(directoryPath).catch(() => []);
   await Promise.all(entries.map(async (entry) => {
     if (expectedFileNames.has(entry)) return;
@@ -136,8 +153,13 @@ export async function pruneAssetDirectory(directoryPath, expectedFileNames) {
   }));
 }
 
-async function canonicalizeDuplicateAssets(uniqueItems, directoryPath, publicPrefix, pathByUrl) {
-  const pathByContentHash = new Map();
+async function canonicalizeDuplicateAssets(
+  uniqueItems: AssetItem[],
+  directoryPath: string,
+  publicPrefix: string,
+  pathByUrl: AssetPathMap,
+): Promise<void> {
+  const pathByContentHash = new Map<string, string>();
 
   for (const item of uniqueItems) {
     const publicPath = pathByUrl.get(item.url);
@@ -156,11 +178,11 @@ async function canonicalizeDuplicateAssets(uniqueItems, directoryPath, publicPre
   }
 }
 
-function hashBytes(bytes) {
+function hashBytes(bytes: Buffer): string {
   return createHash("sha1").update(bytes).digest("hex");
 }
 
-export async function summarizeAssetDirectory(directoryPath) {
+export async function summarizeAssetDirectory(directoryPath: string): Promise<{ count: number; bytes: number }> {
   const entries = await readdir(directoryPath).catch(() => []);
   let count = 0;
   let bytes = 0;
@@ -176,7 +198,7 @@ export async function summarizeAssetDirectory(directoryPath) {
   return { count, bytes };
 }
 
-export function formatBytes(bytes) {
+export function formatBytes(bytes: number): string {
   if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
   return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
 }

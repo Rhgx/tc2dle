@@ -1,6 +1,7 @@
 import { JSDOM } from "jsdom";
-import { getImageUrl } from "./shared/assets.mjs";
-import { cleanText, getHeadingText, normalizeName } from "./shared/text.mjs";
+import { getImageUrl } from "./shared/assets.ts";
+import { cleanText, getHeadingText, normalizeName } from "./shared/text.ts";
+import type { ScrapedMap } from "./types.ts";
 
 const MAPS_API_URL =
   "https://typicalcolors2.fandom.com/api.php?action=parse&page=Maps&prop=text&format=json&origin=*";
@@ -24,7 +25,12 @@ const MAP_IMAGE_MODE_PRIORITY = [
   "None",
 ];
 
-export async function scrapeMapsFromWiki() {
+type MapAccumulator = Omit<ScrapedMap, "group" | "status"> & {
+  groups: Set<string>;
+  statuses: Set<string>;
+};
+
+export async function scrapeMapsFromWiki(): Promise<ScrapedMap[]> {
   const response = await fetch(MAPS_API_URL);
   if (!response.ok) throw new Error(`TC2 maps wiki request failed with ${response.status}`);
   const json = await response.json();
@@ -35,14 +41,14 @@ export async function scrapeMapsFromWiki() {
   return maps;
 }
 
-function getCurrentMapGroup(text, currentGroup) {
+function getCurrentMapGroup(text: string, currentGroup: string): string {
   const heading = cleanText(text);
   if (/Standard game\s*mode/i.test(heading)) return "Standard";
   if (/Special game\s*mode/i.test(heading)) return "Special";
   return currentGroup;
 }
 
-function normalizeMapStatus(value) {
+function normalizeMapStatus(value: string): string {
   const text = cleanText(value)
     .replace(/\u2b24/g, "")
     .replace(/\u25cf/g, "")
@@ -57,15 +63,15 @@ function normalizeMapStatus(value) {
   return text;
 }
 
-function isAllowedMapStatus(status) {
+function isAllowedMapStatus(status: string): boolean {
   return ["Active", "Active (Console/Mobile Only)", "Active (Rare)", "Seasonal", "Community Server"].includes(status);
 }
 
-function isAllowedMapMode(gameMode) {
+function isAllowedMapMode(gameMode: string): boolean {
   return !/^(infection|prop hunt)$/i.test(cleanText(gameMode));
 }
 
-function extractMapItem(item, gameMode, group) {
+function extractMapItem(item: Element, gameMode: string, group: string): ScrapedMap | null {
   if (!isAllowedMapMode(gameMode)) return null;
 
   const caption = item.querySelector(".lightbox-caption");
@@ -87,22 +93,12 @@ function extractMapItem(item, gameMode, group) {
   };
 }
 
-function dedupeMaps(rows) {
-  const byMapMode = new Map();
+function dedupeMaps(rows: ScrapedMap[]): ScrapedMap[] {
+  const byMapMode = new Map<string, MapAccumulator>();
 
   rows.forEach((row) => {
     const key = `${row.name.toLowerCase()}::${row.gameMode.toLowerCase()}`;
-    if (!byMapMode.has(key)) {
-      byMapMode.set(key, {
-        name: row.name,
-        gameMode: row.gameMode,
-        imageUrl: row.imageUrl || "",
-        groups: new Set(),
-        statuses: new Set(),
-      });
-    }
-
-    const item = byMapMode.get(key);
+    const item = getOrCreateMapAccumulator(byMapMode, key, row);
     if (!item.imageUrl && row.imageUrl) item.imageUrl = row.imageUrl;
     item.groups.add(row.group);
     item.statuses.add(row.status);
@@ -119,7 +115,22 @@ function dedupeMaps(rows) {
     .sort((a, b) => a.name.localeCompare(b.name) || a.gameMode.localeCompare(b.gameMode));
 }
 
-export function keepUniqueMapImages(rows) {
+function getOrCreateMapAccumulator(byMapMode: Map<string, MapAccumulator>, key: string, row: ScrapedMap): MapAccumulator {
+  const existing = byMapMode.get(key);
+  if (existing) return existing;
+
+  const created = {
+    name: row.name,
+    gameMode: row.gameMode,
+    imageUrl: row.imageUrl || "",
+    groups: new Set<string>(),
+    statuses: new Set<string>(),
+  };
+  byMapMode.set(key, created);
+  return created;
+}
+
+export function keepUniqueMapImages<T extends Pick<ScrapedMap, "gameMode" | "imageUrl" | "name">>(rows: T[]): T[] {
   const seenImages = new Set();
   return rows
     .sort((a, b) => getMapModePriority(a.gameMode) - getMapModePriority(b.gameMode) || a.name.localeCompare(b.name))
@@ -132,17 +143,17 @@ export function keepUniqueMapImages(rows) {
     });
 }
 
-function getMapModePriority(gameMode) {
+function getMapModePriority(gameMode: string): number {
   const normalized = cleanText(gameMode);
   const index = MAP_IMAGE_MODE_PRIORITY.findIndex((mode) => mode.toLowerCase() === normalized.toLowerCase());
   return index >= 0 ? index : MAP_IMAGE_MODE_PRIORITY.length;
 }
 
-function parseMapsHtml(html) {
+function parseMapsHtml(html: string): ScrapedMap[] {
   const dom = new JSDOM(html);
   const doc = dom.window.document;
   const output = doc.querySelector(".mw-parser-output") || doc.body;
-  const parsed = [];
+  const parsed: ScrapedMap[] = [];
   let currentGroup = "";
   let currentMode = "";
 
@@ -163,7 +174,7 @@ function parseMapsHtml(html) {
     if (element.classList.contains("wikia-gallery")) {
       [...element.querySelectorAll(".wikia-gallery-item")]
         .map((item) => extractMapItem(item, currentMode, currentGroup))
-        .filter(Boolean)
+        .filter((map): map is ScrapedMap => Boolean(map))
         .forEach((map) => parsed.push(map));
     }
   });

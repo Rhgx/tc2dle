@@ -1,6 +1,7 @@
 import { JSDOM } from "jsdom";
-import { getImageUrl } from "./shared/assets.mjs";
-import { cleanText, normalizeName } from "./shared/text.mjs";
+import { getImageUrl } from "./shared/assets.ts";
+import { cleanText, normalizeName } from "./shared/text.ts";
+import type { ScrapedCosmetic } from "./types.ts";
 
 const COSMETICS_API_URL =
   "https://typicalcolors2.fandom.com/api.php?action=parse&page=Cosmetics&prop=text&format=json&origin=*";
@@ -18,7 +19,21 @@ const ALLOWED_TABLES = new Set([
   "All-Class",
 ]);
 
-export async function scrapeCosmeticsFromWiki() {
+type CosmeticRow = {
+  name: string;
+  usedBy: string;
+  slot: string;
+  imageUrl: string;
+};
+
+type CosmeticAccumulator = {
+  name: string;
+  usedBy: Set<string>;
+  slots: Set<string>;
+  imageUrl: string;
+};
+
+export async function scrapeCosmeticsFromWiki(): Promise<ScrapedCosmetic[]> {
   const response = await fetch(COSMETICS_API_URL);
   if (!response.ok) throw new Error(`TC2 cosmetics wiki request failed with ${response.status}`);
   const json = await response.json();
@@ -29,10 +44,10 @@ export async function scrapeCosmeticsFromWiki() {
   return cosmetics;
 }
 
-function parseCosmeticsHtml(html) {
+function parseCosmeticsHtml(html: string): ScrapedCosmetic[] {
   const dom = new JSDOM(html);
   const doc = dom.window.document;
-  const cosmetics = [];
+  const cosmetics: CosmeticRow[] = [];
 
   doc.querySelectorAll("table.navbox__container").forEach((table) => {
     const tableName = getTableName(table);
@@ -53,17 +68,17 @@ function parseCosmeticsHtml(html) {
   return dedupeCosmetics(cosmetics);
 }
 
-function getTableName(table) {
+function getTableName(table: Element): string {
   const headerText = cleanText(table.querySelector(".navbox__header-cell")?.childNodes?.[0]?.textContent || table.querySelector(".navbox__header-cell")?.textContent || "");
   const match = headerText.match(CLASS_TABLE_PATTERN);
   return match ? cleanText(match[1]) : "";
 }
 
-function normalizeSlot(value) {
+function normalizeSlot(value: string): string {
   return cleanText(value).replace(/\s+Cosmetics$/i, "");
 }
 
-function extractCosmeticItem(item, usedBy, slot) {
+function extractCosmeticItem(item: Element, usedBy: string, slot: string): CosmeticRow | null {
   const caption = item.querySelector(".navbox__image-item-caption a");
   const name = normalizeName(caption?.textContent || caption?.getAttribute("title") || "");
   if (!name) return null;
@@ -75,21 +90,12 @@ function extractCosmeticItem(item, usedBy, slot) {
   return { name, usedBy, slot, imageUrl };
 }
 
-function dedupeCosmetics(rows) {
-  const byName = new Map();
+function dedupeCosmetics(rows: CosmeticRow[]): ScrapedCosmetic[] {
+  const byName = new Map<string, CosmeticAccumulator>();
 
   rows.forEach((row) => {
     const key = row.name.toLowerCase();
-    if (!byName.has(key)) {
-      byName.set(key, {
-        name: row.name,
-        usedBy: new Set(),
-        slots: new Set(),
-        imageUrl: row.imageUrl,
-      });
-    }
-
-    const item = byName.get(key);
+    const item = getOrCreateCosmeticAccumulator(byName, key, row);
     item.usedBy.add(row.usedBy);
     item.slots.add(row.slot);
     if (!item.imageUrl && row.imageUrl) item.imageUrl = row.imageUrl;
@@ -105,11 +111,25 @@ function dedupeCosmetics(rows) {
     .sort((a, b) => a.name.localeCompare(b.name));
 }
 
-function sortUsedBy(a, b) {
+function getOrCreateCosmeticAccumulator(byName: Map<string, CosmeticAccumulator>, key: string, row: CosmeticRow): CosmeticAccumulator {
+  const existing = byName.get(key);
+  if (existing) return existing;
+
+  const created = {
+    name: row.name,
+    usedBy: new Set<string>(),
+    slots: new Set<string>(),
+    imageUrl: row.imageUrl,
+  };
+  byName.set(key, created);
+  return created;
+}
+
+function sortUsedBy(a: string, b: string): number {
   return getClassOrder(a) - getClassOrder(b) || a.localeCompare(b);
 }
 
-function getClassOrder(className) {
+function getClassOrder(className: string): number {
   const order = ["Flanker", "Trooper", "Arsonist", "Annihilator", "Brute", "Mechanic", "Doctor", "Marksman", "Agent", "All Classes"];
   const index = order.indexOf(className);
   return index >= 0 ? index : order.length;
