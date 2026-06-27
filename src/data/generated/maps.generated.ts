@@ -1,6 +1,6 @@
 import type { Tc2Map } from "../../types";
 
-export const mapsGeneratedAt = "2026-06-23T06:42:02.231Z";
+export const mapsGeneratedAt = "2026-06-27T15:32:25.177Z";
 export const maps: Tc2Map[] = [
   {
     "name": "1979 Effect",

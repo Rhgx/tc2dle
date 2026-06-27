@@ -1,6 +1,6 @@
 import type { Weapon } from "../../types";
 
-export const weaponsGeneratedAt = "2026-06-23T06:42:02.229Z";
+export const weaponsGeneratedAt = "2026-06-27T15:32:10.542Z";
 export const weapons: Weapon[] = [
   {
     "name": "50-AE",
