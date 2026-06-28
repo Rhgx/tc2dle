@@ -4,9 +4,10 @@ import { CosmeticGame } from "./components/cosmetic/CosmeticGame";
 import { MapGame } from "./components/map/MapGame";
 import { Header } from "./components/shared/Header";
 import { ResetCountdown } from "./components/shared/ResetCountdown";
+import { UpdateLog } from "./components/shared/UpdateLog";
 import { YesterdayAnswer } from "./components/shared/YesterdayAnswer";
 import { WeaponGame } from "./components/weapon/WeaponGame";
-import { GAME_MODES } from "./constants/modes";
+import { DEFAULT_GAME_KIND, GAME_MODES } from "./constants/modes";
 import { WIKI_PAGE_URL } from "./constants/wiki";
 import { pickDailyLoadingScreen } from "./lib/assets/loadingScreens";
 import { preloadCosmeticImages, preloadMapImages, preloadWeaponImages } from "./lib/assets/preload";
@@ -18,6 +19,8 @@ import { theme } from "./theme";
 import type { Cosmetic, Tc2Map, Weapon } from "./types";
 import type { GameKind } from "./types/game";
 
+type AppRoute = GameKind | "updates";
+
 type DataState<T> = {
   items: T[];
   generatedAt: string;
@@ -27,7 +30,8 @@ type DataState<T> = {
 const emptyData = { items: [], generatedAt: "", loaded: false };
 
 export default function App() {
-  const [gameKind, setGameKind] = useState<GameKind>(() => getGameKindFromPath());
+  const [activeRoute, setActiveRoute] = useState<AppRoute>(() => getAppRouteFromPath());
+  const gameKind = activeRoute === "updates" ? DEFAULT_GAME_KIND : activeRoute;
   const [weaponData, setWeaponData] = useState<DataState<Weapon>>(emptyData);
   const [mapData, setMapData] = useState<DataState<Tc2Map>>(emptyData);
   const [cosmeticData, setCosmeticData] = useState<DataState<Cosmetic>>(emptyData);
@@ -101,11 +105,12 @@ export default function App() {
 
   useEffect(() => {
     function handlePopState() {
-      setGameKind(getGameKindFromPath());
+      setActiveRoute(getAppRouteFromPath());
     }
 
     window.addEventListener("popstate", handlePopState);
-    const route = routeForGameKind(getGameKindFromPath());
+    const initialRoute = getAppRouteFromPath();
+    const route = initialRoute === "updates" ? "/updates" : routeForGameKind(initialRoute);
     if (currentRoutePath() !== route) {
       window.history.replaceState(null, "", withBasePath(route));
     }
@@ -114,10 +119,17 @@ export default function App() {
   }, []);
 
   function selectGameKind(nextGameKind: GameKind) {
-    setGameKind(nextGameKind);
+    setActiveRoute(nextGameKind);
     const route = routeForGameKind(nextGameKind);
     if (currentRoutePath() !== route) {
       window.history.pushState(null, "", withBasePath(route));
+    }
+  }
+
+  function selectUpdates() {
+    setActiveRoute("updates");
+    if (currentRoutePath() !== "/updates") {
+      window.history.pushState(null, "", withBasePath("/updates"));
     }
   }
 
@@ -187,27 +199,31 @@ export default function App() {
       >
         <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1, px: { xs: 1.25, sm: 3 } }}>
           <Header />
-          <ButtonGroup
-            variant="outlined"
-            aria-label="Game selector"
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              mb: { xs: 1.5, sm: 2 },
-              "& .MuiButton-root": {
-                minWidth: { xs: 96, sm: 148 },
-                fontWeight: 900,
-              },
-            }}
-          >
-            {GAME_MODES.map((mode) => (
-              <Button key={mode.kind} variant={gameKind === mode.kind ? "contained" : "outlined"} onClick={() => selectGameKind(mode.kind)}>
-                {mode.label}
-              </Button>
-            ))}
-          </ButtonGroup>
+          {activeRoute !== "updates" && (
+            <ButtonGroup
+              variant="outlined"
+              aria-label="Game selector"
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                mb: { xs: 1.5, sm: 2 },
+                "& .MuiButton-root": {
+                  minWidth: { xs: 96, sm: 148 },
+                  fontWeight: 900,
+                },
+              }}
+            >
+              {GAME_MODES.map((mode) => (
+                <Button key={mode.kind} variant={gameKind === mode.kind ? "contained" : "outlined"} onClick={() => selectGameKind(mode.kind)}>
+                  {mode.label}
+                </Button>
+              ))}
+            </ButtonGroup>
+          )}
 
-          {gameKind === "weapon" ? (
+          {activeRoute === "updates" ? (
+            <UpdateLog onBack={() => selectGameKind(DEFAULT_GAME_KIND)} />
+          ) : gameKind === "weapon" ? (
             <WeaponGame weapons={resolvedWeapons} status={weaponStatus} />
           ) : gameKind === "map" ? (
             <MapGame maps={resolvedMaps} status={mapStatus} />
@@ -256,6 +272,18 @@ export default function App() {
             </Box>
             <Typography variant="caption" color="text.secondary" sx={{ display: "block", mt: 0.5 }}>
               Made by Rocks - Data from the <Box component="a" href={WIKI_PAGE_URL} target="_blank" rel="noreferrer" sx={{ color: "primary.main", fontWeight: 800 }}>TC2 Wiki</Box>
+              {" - "}
+              <Box
+                component="a"
+                href={withBasePath("/updates")}
+                onClick={(event) => {
+                  event.preventDefault();
+                  selectUpdates();
+                }}
+                sx={{ color: "text.secondary", fontWeight: 800, textDecoration: "underline", textUnderlineOffset: "3px" }}
+              >
+                Update log
+              </Box>
             </Typography>
           </Box>
         </Container>
@@ -266,6 +294,10 @@ export default function App() {
 
 function compactUrls(urls: Array<string | undefined>) {
   return urls.filter((url): url is string => Boolean(url));
+}
+
+function getAppRouteFromPath(): AppRoute {
+  return currentRoutePath() === "/updates" ? "updates" : getGameKindFromPath();
 }
 
 function dataStatus<T>(label: string, count: number, data: DataState<T>) {
