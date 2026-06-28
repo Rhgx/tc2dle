@@ -324,6 +324,8 @@ function writeCachedCosmeticGuesses(answer: string, guesses: CosmeticGuessEntry[
 }
 
 function getDailyCosmeticRotation(name: string) {
-  const rotations = [90, 180, 270];
-  return rotations[hashString(`tc2dle-cosmetic-rotation-${name}`) % rotations.length];
+  const minimumRotation = 30;
+  const maximumRotation = 330;
+  const rotationRange = maximumRotation - minimumRotation + 1;
+  return minimumRotation + (hashString(`tc2dle-cosmetic-rotation-${name}`) % rotationRange);
 }
