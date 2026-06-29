@@ -1,6 +1,7 @@
-import { Box, Button, Divider, Pagination, Paper, Stack, Typography } from "@mui/material";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { Box, Divider, IconButton, Pagination, Paper, Stack, Tooltip, Typography } from "@mui/material";
 import type { ReactNode } from "react";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import type { ChangelogBlock, ChangelogListItem } from "../../lib/changelog";
 import { changelogEntries, currentSiteVersion } from "../../lib/changelog";
 
@@ -12,11 +13,19 @@ const UPDATES_PER_PAGE = 4;
 
 export function UpdateLog({ onBack }: UpdateLogProps) {
   const [page, setPage] = useState(1);
+  const [pageMotion, setPageMotion] = useState<"forward" | "backward">("forward");
+  const previousPageRef = useRef(page);
   const pageCount = Math.max(1, Math.ceil(changelogEntries.length / UPDATES_PER_PAGE));
   const visibleEntries = useMemo(() => {
     const start = (page - 1) * UPDATES_PER_PAGE;
     return changelogEntries.slice(start, start + UPDATES_PER_PAGE);
   }, [page]);
+
+  function changePage(nextPage: number) {
+    setPageMotion(nextPage > previousPageRef.current ? "forward" : "backward");
+    previousPageRef.current = nextPage;
+    setPage(nextPage);
+  }
 
   return (
     <Paper elevation={4} sx={{ p: { xs: 1.5, sm: 3 }, bgcolor: "background.paper", borderRadius: { xs: 1, sm: 1.25 } }}>
@@ -28,46 +37,92 @@ export function UpdateLog({ onBack }: UpdateLogProps) {
               Current site version v{currentSiteVersion}
             </Typography>
           </Box>
-          <Button variant="outlined" onClick={onBack} sx={{ alignSelf: { xs: "stretch", sm: "auto" }, fontWeight: 900 }}>
-            Back to game
-          </Button>
+          <Tooltip title="Back to game">
+            <IconButton
+              aria-label="Back to game"
+              onClick={onBack}
+              sx={{
+                alignSelf: { xs: "flex-end", sm: "center" },
+                width: 40,
+                height: 40,
+                border: "1px solid rgba(255,255,255,0.18)",
+                color: "text.secondary",
+                bgcolor: "rgba(255,255,255,0.03)",
+                "&:hover": {
+                  color: "primary.light",
+                  borderColor: "rgba(245,158,11,0.54)",
+                  bgcolor: "rgba(245,158,11,0.12)",
+                },
+              }}
+            >
+              <ArrowBackIcon fontSize="small" />
+            </IconButton>
+          </Tooltip>
         </Box>
 
         <Divider />
 
-        <Stack component="ol" spacing={1.5} sx={{ m: 0, p: 0, listStyle: "none" }}>
-          {visibleEntries.map((entry) => (
-            <Box
-              key={entry.version}
-              component="li"
-              sx={{
-                borderLeft: "3px solid",
-                borderColor: entry.version === currentSiteVersion ? "primary.main" : "rgba(255,255,255,0.16)",
-                pl: { xs: 1.25, sm: 1.5 },
-                py: 0.25,
-              }}
-            >
-              <Typography sx={{ fontWeight: 950, fontSize: { xs: 16, sm: 18 }, lineHeight: 1.2 }}>
-                v{entry.version}
-              </Typography>
-              <Typography color="text.secondary" sx={{ mt: 0.25, fontWeight: 800, fontSize: 12 }}>
-                {formatDate(entry.date)}
-              </Typography>
-              <Stack spacing={0.85} sx={{ mt: 1 }}>
-                {entry.blocks.map((block, index) => (
-                  <ChangelogBlockView key={`${entry.version}-${index}`} block={block} />
-                ))}
-              </Stack>
-            </Box>
-          ))}
-        </Stack>
+        <Box
+          sx={{
+            minHeight: { xs: 620, sm: 560, md: 520 },
+            overflow: "hidden",
+            "@keyframes tc2dleUpdatePageForward": {
+              from: { opacity: 0, transform: "translateX(10px)" },
+              to: { opacity: 1, transform: "translateX(0)" },
+            },
+            "@keyframes tc2dleUpdatePageBackward": {
+              from: { opacity: 0, transform: "translateX(-10px)" },
+              to: { opacity: 1, transform: "translateX(0)" },
+            },
+          }}
+        >
+          <Stack
+            key={page}
+            component="ol"
+            spacing={1.5}
+            sx={{
+              m: 0,
+              p: 0,
+              listStyle: "none",
+              animation: `${pageMotion === "forward" ? "tc2dleUpdatePageForward" : "tc2dleUpdatePageBackward"} 180ms ease-out both`,
+              "@media (prefers-reduced-motion: reduce)": {
+                animation: "none",
+              },
+            }}
+          >
+            {visibleEntries.map((entry) => (
+              <Box
+                key={entry.version}
+                component="li"
+                sx={{
+                  borderLeft: "3px solid",
+                  borderColor: entry.version === currentSiteVersion ? "primary.main" : "rgba(255,255,255,0.16)",
+                  pl: { xs: 1.25, sm: 1.5 },
+                  py: 0.25,
+                }}
+              >
+                <Typography sx={{ fontWeight: 950, fontSize: { xs: 16, sm: 18 }, lineHeight: 1.2 }}>
+                  v{entry.version}
+                </Typography>
+                <Typography color="text.secondary" sx={{ mt: 0.25, fontWeight: 800, fontSize: 12 }}>
+                  {formatDate(entry.date)}
+                </Typography>
+                <Stack spacing={0.85} sx={{ mt: 1 }}>
+                  {entry.blocks.map((block, index) => (
+                    <ChangelogBlockView key={`${entry.version}-${index}`} block={block} />
+                  ))}
+                </Stack>
+              </Box>
+            ))}
+          </Stack>
+        </Box>
 
         {pageCount > 1 && (
           <Box sx={{ display: "flex", justifyContent: "center", pt: 0.5 }}>
             <Pagination
               count={pageCount}
               page={page}
-              onChange={(_event, nextPage) => setPage(nextPage)}
+              onChange={(_event, nextPage) => changePage(nextPage)}
               color="primary"
               size="small"
               siblingCount={0}

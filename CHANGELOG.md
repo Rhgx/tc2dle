@@ -1,5 +1,12 @@
 # TC2DLE Changelog
 
+## v0.4.2 - 2026-06-29
+
+### Update log
+
+- Added a small page-change animation to the update log.
+- Reduced layout jumping when moving between update log pages.
+
 ## v0.4.1 - 2026-06-28
 
 ### Site
