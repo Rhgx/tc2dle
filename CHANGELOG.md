@@ -1,5 +1,12 @@
 # TC2DLE Changelog
 
+## v0.4.3 - 2026-06-29
+
+### Maps
+
+- Refreshed map pictures from the TC2 wiki.
+- Removed a duplicate Harvest map preview from the map answer pool.
+
 ## v0.4.2 - 2026-06-29
 
 ### Update log

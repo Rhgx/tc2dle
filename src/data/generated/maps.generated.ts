@@ -1,6 +1,6 @@
 import type { Tc2Map } from "../../types";
 
-export const mapsGeneratedAt = "2026-06-27T15:32:25.177Z";
+export const mapsGeneratedAt = "2026-06-29T15:30:02.197Z";
 export const maps: Tc2Map[] = [
   {
     "name": "1979 Effect",
@@ -105,7 +105,7 @@ export const maps: Tc2Map[] = [
     "gameMode": "Attack/Defense",
     "group": "Standard",
     "status": "Seasonal",
-    "imageUrl": "tc2-assets/maps/bloodauth-f097caa80a.webp"
+    "imageUrl": "tc2-assets/maps/bloodauth-2ccbb2a97b.webp"
   },
   {
     "name": "Bluescreen",
@@ -203,14 +203,14 @@ export const maps: Tc2Map[] = [
     "gameMode": "Payload",
     "group": "Standard",
     "status": "Seasonal",
-    "imageUrl": "tc2-assets/maps/cruciatus-437449675a.webp"
+    "imageUrl": "tc2-assets/maps/cruciatus-80106402ef.webp"
   },
   {
     "name": "Datamass",
     "gameMode": "Player Destruction",
     "group": "Standard",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/datamass-4b592aa27f.webp"
+    "imageUrl": "tc2-assets/maps/datamass-9a1190ff74.webp"
   },
   {
     "name": "Datamass",
@@ -311,13 +311,6 @@ export const maps: Tc2Map[] = [
     "imageUrl": "tc2-assets/maps/harvest-f0b1cfdf7d.webp"
   },
   {
-    "name": "Harvest",
-    "gameMode": "Vs. Bosses",
-    "group": "Special",
-    "status": "Active",
-    "imageUrl": "tc2-assets/maps/harvest-8dca9ea58c.webp"
-  },
-  {
     "name": "Harvest Alpine",
     "gameMode": "King of the Hill",
     "group": "Standard",
@@ -371,7 +364,7 @@ export const maps: Tc2Map[] = [
     "gameMode": "Team Deathmatch",
     "group": "Special / Standard",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/hydrovalley-a276bf15e8.webp"
+    "imageUrl": "tc2-assets/maps/hydrovalley-cea31903ce.webp"
   },
   {
     "name": "Isolated",
@@ -406,7 +399,7 @@ export const maps: Tc2Map[] = [
     "gameMode": "Attack/Defense",
     "group": "Standard",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/lift-auth-7b35075b8d.webp"
+    "imageUrl": "tc2-assets/maps/lift-auth-539897e6fc.webp"
   },
   {
     "name": "Lumber",
@@ -651,7 +644,7 @@ export const maps: Tc2Map[] = [
     "gameMode": "Attack/Defense",
     "group": "Standard",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/solarpower-e6725a7b8e.webp"
+    "imageUrl": "tc2-assets/maps/solarpower-146f1b4445.webp"
   },
   {
     "name": "Spookyvalley",
@@ -672,7 +665,7 @@ export const maps: Tc2Map[] = [
     "gameMode": "Control Points",
     "group": "Standard",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/staredawn-cc84d53019.webp"
+    "imageUrl": "tc2-assets/maps/staredawn-b10ad0e309.webp"
   },
   {
     "name": "Surf",
@@ -791,7 +784,7 @@ export const maps: Tc2Map[] = [
     "gameMode": "Payload",
     "group": "Standard",
     "status": "Seasonal",
-    "imageUrl": "tc2-assets/maps/upward-event-8c2d4554fb.webp"
+    "imageUrl": "tc2-assets/maps/upward-event-5d3a89d6a7.webp"
   },
   {
     "name": "Warmlane",
@@ -826,7 +819,7 @@ export const maps: Tc2Map[] = [
     "gameMode": "Capture the Flag",
     "group": "Standard",
     "status": "Seasonal",
-    "imageUrl": "tc2-assets/maps/whitelane-ae100abf17.webp"
+    "imageUrl": "tc2-assets/maps/whitelane-a2a1579dc5.webp"
   },
   {
     "name": "Wholesale",
