@@ -1,5 +1,11 @@
 # TC2DLE Changelog
 
+## v0.4.4 - 2026-07-06
+
+### Maps
+
+- Updated the map images for `pl_calamity`, `pl_manufacturing`, `koth_sawmill` and, `ad_tropical`.
+
 ## v0.4.3 - 2026-06-29
 
 ### Maps

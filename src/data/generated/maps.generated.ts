@@ -1,6 +1,6 @@
 import type { Tc2Map } from "../../types";
 
-export const mapsGeneratedAt = "2026-06-29T15:30:02.197Z";
+export const mapsGeneratedAt = "2026-07-06T08:11:13.781Z";
 export const maps: Tc2Map[] = [
   {
     "name": "1979 Effect",
@@ -119,7 +119,7 @@ export const maps: Tc2Map[] = [
     "gameMode": "Payload",
     "group": "Standard",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/calamity-deba32eed5.webp"
+    "imageUrl": "tc2-assets/maps/calamity-4d0fae28b2.webp"
   },
   {
     "name": "Cargo",
@@ -413,7 +413,7 @@ export const maps: Tc2Map[] = [
     "gameMode": "Payload",
     "group": "Standard",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/manufacturing-be6ac89058.webp"
+    "imageUrl": "tc2-assets/maps/manufacturing-a0cb1d733c.webp"
   },
   {
     "name": "Maple",
@@ -609,7 +609,7 @@ export const maps: Tc2Map[] = [
     "gameMode": "King of the Hill",
     "group": "Standard",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/sawmill-014401078e.webp"
+    "imageUrl": "tc2-assets/maps/sawmill-9d5770a367.webp"
   },
   {
     "name": "Shiverift",
@@ -728,7 +728,7 @@ export const maps: Tc2Map[] = [
     "gameMode": "Attack/Defense",
     "group": "Standard",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/tropical-3b7afcf9b9.webp"
+    "imageUrl": "tc2-assets/maps/tropical-db38d6b50a.webp"
   },
   {
     "name": "Turbine Maze",
