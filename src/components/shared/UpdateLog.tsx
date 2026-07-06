@@ -201,5 +201,5 @@ function renderInlineMarkdown(text: string): ReactNode[] {
 }
 
 function formatDate(date: string) {
-  return new Intl.DateTimeFormat(undefined, { year: "numeric", month: "short", day: "numeric" }).format(new Date(`${date}T00:00:00.000Z`));
+  return new Intl.DateTimeFormat("en", { year: "numeric", month: "short", day: "numeric" }).format(new Date(`${date}T00:00:00.000Z`));
 }
