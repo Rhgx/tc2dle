@@ -1,5 +1,17 @@
 # TC2DLE Changelog
 
+## v0.5.0 - 2026-11-08
+
+### Content
+
+- Refreshed weapon, map, and cosmetic content for TC2's [Typical Horrors VI](https://typicalcolors2.fandom.com/wiki/Typical_Horrors_VI) update.
+  - Added the Dual Dread, Favoring Seas and Hellraiser weapons.
+  - Added the update's 15 new cosmetics, plus 10 Typical Horrors V cosmetics that were missing.
+  - Added Folly, Shower Shore, Winter Clutter and the Vs. Bosses version of Dusk.
+  - Removed the retired Harvest Alpine, Harvest Winter, Reap and Snoduct maps.
+- Updated weapon stats, cosmetic slots and map pictures to match the TC2 wiki.
+- The daily answer pools changed size, so today's answers may differ from before this update.
+
 ## v0.4.4 - 2026-07-06
 
 ### Maps

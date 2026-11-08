@@ -1,6 +1,6 @@
 import { JSDOM } from "jsdom";
 import { inferType } from "../../src/lib/game/weaponTypes.ts";
-import { getImageUrl } from "./shared/assets.ts";
+import { fetchInfoboxImageUrl, getImageUrl } from "./shared/assets.ts";
 import { cellText, cleanText, getHeadingText, normalizeName, tableToGrid, textWithBreaks } from "./shared/text.ts";
 import type { ScrapedWeapon, StatValue, WeaponAttribute, WeaponAttributeKind, WeaponTableRow } from "./types.ts";
 
@@ -76,7 +76,31 @@ export async function scrapeWeaponsFromWiki(): Promise<ScrapedWeapon[]> {
   if (!html) throw new Error("TC2 wiki API returned no rendered HTML.");
   const weapons = parseWeaponsHtml(html);
   if (weapons.length < 50) throw new Error(`Scrape returned only ${weapons.length} weapons.`);
-  return weapons;
+  return addPendingWikiWeapons(weapons);
+}
+
+// Typical Horrors VI reskins that the wiki's class weapon tables do not list yet.
+// Each one is skipped once the tables include it, so entries can be removed after the wiki catches up.
+const PENDING_WIKI_WEAPONS: Array<{ name: string; reskinOf: string; source: string }> = [
+  { name: "Dual Dread", reskinOf: "Double Trouble", source: "Crate" },
+  { name: "Favoring Seas", reskinOf: "Escape Plan", source: "Crate" },
+  { name: "Hellraiser", reskinOf: "Phlogistinator", source: "Crate" },
+];
+
+async function addPendingWikiWeapons(weapons: ScrapedWeapon[]): Promise<ScrapedWeapon[]> {
+  const byName = new Map(weapons.map((weapon) => [weapon.name.toLowerCase(), weapon]));
+  const pending: ScrapedWeapon[] = [];
+  for (const { name, reskinOf, source } of PENDING_WIKI_WEAPONS) {
+    if (byName.has(name.toLowerCase())) {
+      console.log(`[scrape] Weapons: the wiki tables now list ${name}; remove it from PENDING_WIKI_WEAPONS.`);
+      continue;
+    }
+    const base = byName.get(reskinOf.toLowerCase());
+    if (!base) throw new Error(`Base weapon ${reskinOf} for ${name} was not scraped.`);
+    // Reskins share their base weapon's classes, slot and stats; like other reskin rows, they list no attributes.
+    pending.push({ ...base, name, source, attributes: [], iconUrl: await fetchInfoboxImageUrl(name) });
+  }
+  return [...weapons, ...pending].sort((a, b) => a.name.localeCompare(b.name));
 }
 
 function extractWeaponCell(cell: Element): WeaponCell | null {
@@ -163,7 +187,11 @@ function headerText(cell: Element): string {
 }
 
 function getTableColumnIndexes(grid: Element[][]): WeaponColumnIndexes {
-  const headerRowIndex = grid.findIndex((row) => row.some((cell) => cell?.tagName === "TH"));
+  // Newer wiki tables put headers in <td><b> cells and mark each weapon cell as a row <th>,
+  // so find the header row by its text before falling back to the first row with a <th>.
+  const weaponHeader = /^weapon$|weapon name|^item$/;
+  let headerRowIndex = grid.findIndex((row) => row.some((cell) => cell && weaponHeader.test(headerText(cell))));
+  if (headerRowIndex < 0) headerRowIndex = grid.findIndex((row) => row.some((cell) => cell?.tagName === "TH"));
   const headerRow = headerRowIndex >= 0 ? grid[headerRowIndex] : grid[0] || [];
   const headers = headerRow.map(headerText);
 

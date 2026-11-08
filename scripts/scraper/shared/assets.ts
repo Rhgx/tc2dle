@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 import { access, mkdir, readFile, readdir, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { JSDOM } from "jsdom";
 import sharp from "sharp";
 import { cleanText } from "./text.ts";
 
@@ -37,6 +38,17 @@ export function getImageUrl(img: Element | null): string {
   if (!img) return "";
   const raw = img.getAttribute("data-src") || img.getAttribute("src") || "";
   return normalizeImageUrl(raw);
+}
+
+// Used for new items the wiki's list pages have not caught up with yet: their own page's infobox has the icon.
+export async function fetchInfoboxImageUrl(page: string): Promise<string> {
+  const url = `https://typicalcolors2.fandom.com/api.php?action=parse&page=${encodeURIComponent(page)}&prop=text&format=json&origin=*`;
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`TC2 wiki request failed with ${response.status}: ${page}`);
+  const html = (await response.json())?.parse?.text?.["*"];
+  const imageUrl = typeof html === "string" ? getImageUrl(new JSDOM(html).window.document.querySelector(".portable-infobox img")) : "";
+  if (!imageUrl) throw new Error(`No infobox image found on the ${page} wiki page.`);
+  return imageUrl;
 }
 
 export function isStaticBackgroundUrl(url: string): boolean {
@@ -115,7 +127,8 @@ async function writeAsset(url: string, outputPath: string, directoryPath: string
     return;
   }
 
-  const response = await fetch(url);
+  // The wiki image CDN serves a Cloudflare challenge to requests without a wiki Referer.
+  const response = await fetch(url, { headers: { Referer: "https://typicalcolors2.fandom.com/" } });
   if (!response.ok) throw new Error(`Asset request failed with ${response.status}: ${url}`);
   const bytes = Buffer.from(await response.arrayBuffer());
   await writeWebpAsset(bytes, outputPath);

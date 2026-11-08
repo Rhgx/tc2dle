@@ -1,6 +1,6 @@
 import type { Tc2Map } from "../../types";
 
-export const mapsGeneratedAt = "2026-07-06T08:11:13.781Z";
+export const mapsGeneratedAt = "2026-11-08T14:21:11.897Z";
 export const maps: Tc2Map[] = [
   {
     "name": "1979 Effect",
@@ -34,8 +34,8 @@ export const maps: Tc2Map[] = [
     "name": "Atlantis",
     "gameMode": "Attack/Defense",
     "group": "Standard",
-    "status": "Community Server",
-    "imageUrl": "tc2-assets/maps/atlantis-35b1ce3db6.webp"
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/atlantis-c08b092114.webp"
   },
   {
     "name": "Badwater",
@@ -160,7 +160,7 @@ export const maps: Tc2Map[] = [
     "name": "Citrus",
     "gameMode": "Control Points",
     "group": "Standard",
-    "status": "Active",
+    "status": "Community Server",
     "imageUrl": "tc2-assets/maps/citrus-0a456115e5.webp"
   },
   {
@@ -189,7 +189,7 @@ export const maps: Tc2Map[] = [
     "gameMode": "Vs. Bosses",
     "group": "Special",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/coldvine-fb2e3b7554.webp"
+    "imageUrl": "tc2-assets/maps/coldvine-b81cbde341.webp"
   },
   {
     "name": "Crossroads",
@@ -269,6 +269,13 @@ export const maps: Tc2Map[] = [
     "imageUrl": "tc2-assets/maps/dusk-92d0ece240.webp"
   },
   {
+    "name": "Dusk",
+    "gameMode": "Vs. Bosses",
+    "group": "Special",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/dusk-1d34edc956.webp"
+  },
+  {
     "name": "Financial",
     "gameMode": "Attack/Defense",
     "group": "Standard",
@@ -281,6 +288,13 @@ export const maps: Tc2Map[] = [
     "group": "Special",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/fitten-co-0ce11eed03.webp"
+  },
+  {
+    "name": "Folly",
+    "gameMode": "Control Points",
+    "group": "Standard",
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/folly-02d56d9362.webp"
   },
   {
     "name": "Glass Houses",
@@ -311,27 +325,6 @@ export const maps: Tc2Map[] = [
     "imageUrl": "tc2-assets/maps/harvest-f0b1cfdf7d.webp"
   },
   {
-    "name": "Harvest Alpine",
-    "gameMode": "King of the Hill",
-    "group": "Standard",
-    "status": "Seasonal",
-    "imageUrl": "tc2-assets/maps/harvest-alpine-e1beff0ca6.webp"
-  },
-  {
-    "name": "Harvest Winter",
-    "gameMode": "King of the Hill",
-    "group": "Standard",
-    "status": "Seasonal",
-    "imageUrl": "tc2-assets/maps/harvest-winter-5d8ca55a4d.webp"
-  },
-  {
-    "name": "Harvest Winter",
-    "gameMode": "Vs. Bosses",
-    "group": "Special",
-    "status": "Seasonal",
-    "imageUrl": "tc2-assets/maps/harvest-winter-81405f73bb.webp"
-  },
-  {
     "name": "Haunted Mansion",
     "gameMode": "Vs. Bosses",
     "group": "Special",
@@ -357,7 +350,7 @@ export const maps: Tc2Map[] = [
     "gameMode": "Vs. Bosses",
     "group": "Special",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/hungry-817e395de9.webp"
+    "imageUrl": "tc2-assets/maps/hungry-9b7537dc57.webp"
   },
   {
     "name": "Hydrovalley",
@@ -434,7 +427,7 @@ export const maps: Tc2Map[] = [
     "gameMode": "Vs. Bosses",
     "group": "Special",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/military-14593547b0.webp"
+    "imageUrl": "tc2-assets/maps/military-29e124cf10.webp"
   },
   {
     "name": "Nonurban",
@@ -462,14 +455,14 @@ export const maps: Tc2Map[] = [
     "gameMode": "Vs. Bosses",
     "group": "Special",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/outdoors-f93f67327c.webp"
+    "imageUrl": "tc2-assets/maps/outdoors-289ef0ece8.webp"
   },
   {
     "name": "Pervade",
     "gameMode": "Payload",
     "group": "Standard",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/pervade-8fbffe0f6d.webp"
+    "imageUrl": "tc2-assets/maps/pervade-ff680e2e99.webp"
   },
   {
     "name": "Pineway",
@@ -483,7 +476,7 @@ export const maps: Tc2Map[] = [
     "gameMode": "Vs. Bosses",
     "group": "Special",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/pineyard-a9d9152faa.webp"
+    "imageUrl": "tc2-assets/maps/pineyard-b1abcda393.webp"
   },
   {
     "name": "Power Plant",
@@ -498,13 +491,6 @@ export const maps: Tc2Map[] = [
     "group": "Standard",
     "status": "Seasonal",
     "imageUrl": "tc2-assets/maps/purgatory-83b9060395.webp"
-  },
-  {
-    "name": "Reap",
-    "gameMode": "King of the Hill",
-    "group": "Standard",
-    "status": "Seasonal",
-    "imageUrl": "tc2-assets/maps/reap-f6646457c7.webp"
   },
   {
     "name": "Rig",
@@ -546,7 +532,7 @@ export const maps: Tc2Map[] = [
     "gameMode": "Vs. Bosses",
     "group": "Special",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/rooftop-585890d5a5.webp"
+    "imageUrl": "tc2-assets/maps/rooftop-65e1f7ac89.webp"
   },
   {
     "name": "Rooftops",
@@ -560,7 +546,7 @@ export const maps: Tc2Map[] = [
     "gameMode": "Vs. Bosses",
     "group": "Special",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/rooftops-1f3769b945.webp"
+    "imageUrl": "tc2-assets/maps/rooftops-2fb8d7087a.webp"
   },
   {
     "name": "Runnel",
@@ -581,14 +567,14 @@ export const maps: Tc2Map[] = [
     "gameMode": "Vs. Bosses",
     "group": "Special",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/rust-6fc4b0a2cb.webp"
+    "imageUrl": "tc2-assets/maps/rust-bedd06e2b7.webp"
   },
   {
     "name": "Sahara",
     "gameMode": "King of the Hill",
     "group": "Standard",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/sahara-7965c5c672.webp"
+    "imageUrl": "tc2-assets/maps/sahara-3265b8a4c2.webp"
   },
   {
     "name": "Sanity",
@@ -601,8 +587,8 @@ export const maps: Tc2Map[] = [
     "name": "Santa's Workshop",
     "gameMode": "Vs. Bosses",
     "group": "Special",
-    "status": "Seasonal",
-    "imageUrl": "tc2-assets/maps/santa-s-workshop-87b4fc394d.webp"
+    "status": "Active",
+    "imageUrl": "tc2-assets/maps/santa-s-workshop-864b2f19b8.webp"
   },
   {
     "name": "Sawmill",
@@ -619,6 +605,13 @@ export const maps: Tc2Map[] = [
     "imageUrl": "tc2-assets/maps/shiverift-16d79eb0b1.webp"
   },
   {
+    "name": "Shower Shore",
+    "gameMode": "Payload",
+    "group": "Standard",
+    "status": "Seasonal",
+    "imageUrl": "tc2-assets/maps/shower-shore-f1ea66a2db.webp"
+  },
+  {
     "name": "Skyfall",
     "gameMode": "King of the Hill",
     "group": "Standard",
@@ -631,13 +624,6 @@ export const maps: Tc2Map[] = [
     "group": "Standard",
     "status": "Active",
     "imageUrl": "tc2-assets/maps/smog-18ba99ef88.webp"
-  },
-  {
-    "name": "Snoduct",
-    "gameMode": "King of the Hill",
-    "group": "Standard",
-    "status": "Seasonal",
-    "imageUrl": "tc2-assets/maps/snoduct-2acbfb6657.webp"
   },
   {
     "name": "Solarpower",
@@ -749,7 +735,7 @@ export const maps: Tc2Map[] = [
     "gameMode": "King of the Hill",
     "group": "Standard",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/twilight-7598fadd13.webp"
+    "imageUrl": "tc2-assets/maps/twilight-5e5358c6a1.webp"
   },
   {
     "name": "Undergrove",
@@ -812,7 +798,7 @@ export const maps: Tc2Map[] = [
     "gameMode": "Team Deathmatch",
     "group": "Standard",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/waterbog-955eb0650c.webp"
+    "imageUrl": "tc2-assets/maps/waterbog-8395283b7e.webp"
   },
   {
     "name": "Whitelane",
@@ -826,7 +812,14 @@ export const maps: Tc2Map[] = [
     "gameMode": "Vs. Bosses",
     "group": "Special",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/wholesale-e0ad36b255.webp"
+    "imageUrl": "tc2-assets/maps/wholesale-95f9305725.webp"
+  },
+  {
+    "name": "Winter Clutter",
+    "gameMode": "Vs. Bosses",
+    "group": "Special",
+    "status": "Seasonal",
+    "imageUrl": "tc2-assets/maps/winter-clutter-be15deaff9.webp"
   },
   {
     "name": "Yellowvalley",
@@ -840,6 +833,6 @@ export const maps: Tc2Map[] = [
     "gameMode": "Control Points",
     "group": "Standard",
     "status": "Active",
-    "imageUrl": "tc2-assets/maps/yellowvalley-3cp-32e79ba063.webp"
+    "imageUrl": "tc2-assets/maps/yellowvalley-3cp-0d6a21f755.webp"
   }
 ];
